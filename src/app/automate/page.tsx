@@ -374,16 +374,32 @@ export default function AutomatePage() {
                         type="button"
                         aria-label={`Inspect ${mod.title}`}
                         onClick={() => setModalModule(mod)}
-                        className="c-button -icon -blur-dark c-tile-feature_button cursor-pointer"
+                        className="c-button -icon -blur-dark c-tile-feature_button ml-auto shrink-0 text-white cursor-pointer"
+                        style={
+                          {
+                            "--button-color": "#ffffff",
+                            color: "#ffffff",
+                          } as React.CSSProperties
+                        }
                       >
-                        <span className="c-button_inner">
-                          <span className="c-icon c-button_icon">
+                        <span className="c-button_inner text-white">
+                          <span className="c-icon c-button_icon text-white">
                             <svg
                               aria-hidden="true"
                               className="svg-plus"
+                              viewBox="0 0 16 16"
                               focusable="false"
+                              style={{
+                                width: "1rem",
+                                height: "1rem",
+                                fill: "#ffffff",
+                                color: "#ffffff",
+                              }}
                             >
-                              <use href="/assets/svgs/sprite.svg#plus" />
+                              <path
+                                fill="#ffffff"
+                                d="M8.755 2v5.245H14v1.5H8.755V14h-1.5V8.745H2v-1.5h5.255V2h1.5Z"
+                              />
                             </svg>
                           </span>
                         </span>

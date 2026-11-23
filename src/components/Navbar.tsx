@@ -205,7 +205,7 @@ export function Navbar() {
               </ul>
             </div>
 
-            {/* Center Logo: Twin four-point star SVG emblem + ONSPEC wordmark (collapsing to twin-star on scroll) */}
+            {/* Center Logo: Single twin four-point star SVG emblem + ONSPEC wordmark (collapsing cleanly to 1 twin-star pair on scroll) */}
             <div className="c-header_logo">
               <Link
                 href="/"
@@ -213,12 +213,12 @@ export function Navbar() {
                 aria-label="ONSPEC Homepage"
               >
                 <span className="sr-only">ONSPEC Homepage</span>
-                {/* Desktop morphing logo container */}
                 <div
-                  className="c-header_logo_lottie flex items-center justify-center gap-2.5"
+                  className="c-header_logo_lottie flex items-center justify-center transition-all duration-300"
+                  style={{ gap: collapseWordmark ? "0px" : "0.625rem" }}
                   data-header-logo
                 >
-                  <span className="c-icon inline-flex items-center justify-center">
+                  <span className="c-icon inline-flex items-center justify-center shrink-0">
                     <svg
                       className="svg-symbol-double"
                       viewBox="0 0 28 13"
@@ -236,27 +236,11 @@ export function Navbar() {
                     style={{
                       maxWidth: collapseWordmark ? "0px" : "110px",
                       opacity: collapseWordmark ? 0 : 1,
-                      marginLeft: collapseWordmark ? "-6px" : "0px",
                     }}
                   >
                     ONSPEC
                   </span>
                 </div>
-
-                {/* Mobile twin-star icon */}
-                <span className="c-icon c-header_logo_icon">
-                  <svg
-                    className="svg-symbol-double"
-                    viewBox="0 0 28 13"
-                    focusable="false"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="m7.1.4.7 2.3c.4 1.2 1.3 2.2 2.5 2.5l2.3.9c.4.1.4.7 0 .8l-2.3.9c-1.1.4-2.1 1.3-2.5 2.5l-.7 2.3c-.1.4-.7.4-.8 0l-.8-2.3c-.3-1.2-1.3-2.1-2.4-2.5L.8 7c-.4-.1-.4-.7 0-.8l2.3-.8C4.2 4.9 5.2 4 5.5 2.7L6.2.4c.2-.4.8-.4.9 0zm14.6 0c-.1-.4-.7-.4-.8 0l-.7 2.3c-.4 1.2-1.3 2.2-2.5 2.5l-2.3.9c-.4.1-.4.7 0 .8l2.2.8c1.2.4 2.1 1.3 2.5 2.5l.7 2.3c.1.4.7.4.8 0l.7-2.3c.4-1.2 1.3-2.2 2.5-2.5l2.3-.7c.5-.1.5-.7.1-.8l-2.3-.8c-1.2-.4-2.1-1.3-2.5-2.5L21.7.4z"
-                    />
-                  </svg>
-                </span>
               </Link>
             </div>
 
@@ -286,7 +270,13 @@ export function Navbar() {
             data-header-menu
             data-lenis-prevent
           >
-            <div className="c-menu_inner">
+            <div
+              className="c-menu_inner"
+              style={{
+                overflowY: "auto",
+                maxHeight: "calc(100vh - 80px)",
+              }}
+            >
               {/* Right side on desktop: 4 oversized primary links + 2-column secondary link list */}
               <div className="c-menu_navigations">
                 <nav className="c-menu_primary" aria-label="Primary menu">
@@ -310,7 +300,7 @@ export function Navbar() {
                           className="c-menu_primary_link hover-parent"
                           onClick={() => setMenuOpen(false)}
                         >
-                          <span className="c-menu_primary_label hover-underline max-md:text-heading-md md:text-heading-xl">
+                          <span className="c-menu_primary_label hover-underline max-md:text-heading-sm md:text-heading-md">
                             {item.label}
                           </span>
                         </Link>

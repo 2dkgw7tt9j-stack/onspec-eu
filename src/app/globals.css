@@ -149,3 +149,73 @@ body {
   opacity: 1 !important;
   transform: translate(0) !important;
 }
+
+/* Mega-drawer menu scrollability & height guard on <= 900px viewports */
+.c-menu_inner {
+  overflow-y: auto !important;
+  max-height: calc(100vh - 80px) !important;
+  padding-top: clamp(1.25rem, 2.5vh, 2.5rem) !important;
+  padding-bottom: 1.5rem !important;
+}
+
+/* Ensure only 1 twin-star emblem renders inside .c-header_logo across all viewports */
+.c-header_logo_lottie {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-header_logo_icon {
+  display: none !important;
+}
+
+/* Guarantee every .c-tile-feature card renders its circular + button at bottom-right with a crisp white + icon */
+.c-tile-feature_inner {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  column-gap: 1rem !important;
+}
+
+.c-tile-feature_content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.c-tile-feature_button {
+  margin-left: auto !important;
+  align-self: flex-end !important;
+  flex-shrink: 0 !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  color: #ffffff !important;
+  --button-color: #ffffff !important;
+}
+
+.c-tile-feature_button .c-button_inner {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  min-width: 2.5rem !important;
+  min-height: 2.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+}
+
+.c-tile-feature_button .c-button_icon,
+.c-tile-feature_button svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  display: block !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  flex-shrink: 0 !important;
+}
+

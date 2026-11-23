@@ -724,19 +724,16 @@ export default function HomePage() {
             <div ref={innerRef} className="c-hero-home_inner" data-inner="">
               <div className="c-hero-home_background">
                 <div className="relative block w-full h-full c-hero-home_background">
-                  <video
-                    className="absolute inset-0 object-cover w-full h-full"
-                    loop
-                    muted
-                    autoPlay
-                    playsInline
-                    poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85"
-                  >
-                    <source
-                      src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-11-large.mp4"
-                      type="video/mp4"
+                  <picture className="c-image_inner block w-full h-full">
+                    <img
+                      className="absolute inset-0 object-cover w-full h-full c-image_img is-loaded"
+                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85"
+                      alt="ONSPEC Architectural Execution Hero"
+                      width={2000}
+                      height={1200}
+                      fetchPriority="high"
                     />
-                  </video>
+                  </picture>
                   {/* Deep Navy architectural tint for high-contrast Lightship typography */}
                   <div
                     className="absolute inset-0 pointer-events-none"
@@ -1320,20 +1317,31 @@ export default function HomePage() {
                           setSelectedOpportunity(item.modalSpec);
                         }}
                         aria-label={`Open specification for ${item.label}`}
-                        className="c-button -icon -blur-dark c-tile-feature_button"
-                        style={{ pointerEvents: "auto" }}
+                        className="c-button -icon -blur-dark c-tile-feature_button ml-auto shrink-0 text-white"
+                        style={
+                          {
+                            pointerEvents: "auto",
+                            "--button-color": "#ffffff",
+                            color: "#ffffff",
+                          } as React.CSSProperties
+                        }
                       >
-                        <span className="c-button_inner">
-                          <span className="c-icon c-button_icon">
+                        <span className="c-button_inner text-white">
+                          <span className="c-icon c-button_icon text-white">
                             <svg
                               className="svg-plus"
                               viewBox="0 0 16 16"
                               focusable="false"
                               aria-hidden="true"
-                              style={{ width: "1rem", height: "1rem" }}
+                              style={{
+                                width: "1rem",
+                                height: "1rem",
+                                fill: "#ffffff",
+                                color: "#ffffff",
+                              }}
                             >
                               <path
-                                fill="currentColor"
+                                fill="#ffffff"
                                 d="M8.755 2v5.245H14v1.5H8.755V14h-1.5V8.745H2v-1.5h5.255V2h1.5Z"
                               />
                             </svg>
