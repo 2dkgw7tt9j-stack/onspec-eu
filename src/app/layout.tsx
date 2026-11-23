@@ -27,7 +27,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ONSPEC (onspec.eu) — Your Vision. Our Execution. | Business Solutions & AI Automation",
+  title:
+    "ONSPEC (onspec.eu) — Your Vision. Our Execution. | Business Solutions & AI Automation",
   description:
     "From launching a turnkey business in Cyprus & the EU to automating the one you already have, Onspec makes the complicated simple. Ready-to-launch businesses, AI & automation systems, custom idea execution, and Cyprus legal network.",
   keywords: [
@@ -50,13 +51,34 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`has-js is-loaded is-ready is-first-loaded ${manrope.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col bg-[#F7F8FA] text-[#101D35] antialiased selection:bg-[#27B58A] selection:text-[#101D35]">
+      <head>
+        <link
+          rel="preload"
+          href="/assets/fonts/F37Bolton-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/assets/fonts/F37Bolton-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/lightship.css" media="all" />
+      </head>
+      <body className="font-sans antialiased bg-white text-[#101D35] selection:bg-[#27B58A] selection:text-[#101D35]">
         <SmoothScrollProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <div id="swup" className="transition-default">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </div>
         </SmoothScrollProvider>
       </body>
     </html>

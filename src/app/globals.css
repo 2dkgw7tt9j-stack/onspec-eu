@@ -1,114 +1,151 @@
 @import "tailwindcss";
 
+@font-face {
+  font-display: swap;
+  font-family: "F37Bolton";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/F37Bolton-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "F37Bolton";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/F37Bolton-Bold.woff2") format("woff2");
+}
+
 :root {
+  /* Viewport unit defaults used by Lightship CSS formulas */
+  --vw: 1vw;
+  --vh: 1vh;
+  --svh: 1svh;
+  --dvh: 1dvh;
+
+  /* ONSPEC Brand Palette Variables */
   --bg-clean-white: #F7F8FA;
   --deep-navy: #101D35;
   --steel-blue: #253B5B;
   --emerald-green: #27B58A;
   --emerald-dark: #1F9470;
   --silver-grey: #A8B1BE;
-  --border-hairline: rgba(168, 177, 190, 0.35);
+  --border-hairline: rgba(168, 177, 190, 0.45);
   --border-navy-hairline: rgba(16, 29, 53, 0.12);
+
+  /* Lightship 1:1 Theme Overrides -> ONSPEC Brand Palette */
+  --font-sans: "F37Bolton", var(--font-manrope), var(--font-inter), sans-serif;
+  --default-font-family: var(--font-sans);
+  --color-black: #101D35;
+  --color-white: #ffffff;
+  --color-grey: #D5DBE3;
+  --color-grey-dark: #A8B1BE;
+  --color-grey-light: #F7F8FA;
+  --color-grey-lighter: #F7F8FA;
+  --color-red: #27B58A;
+  --color-blue: #253B5B;
+  --color-beige: #EFF2F6;
+  --color-sand: #E9EEF4;
+  --color-green: #27B58A;
+  --color-accent: #27B58A;
+  --color-placeholder: var(--color-grey-lighter);
+  --color-image-placeholder: var(--color-beige);
+  --color-border: rgba(168, 177, 190, 0.45);
+  --color-link: #27B58A;
+  --color-link-focus: #27B58A;
+  --selection-text-color: #101D35;
+  --selection-background-color: #27B58A;
+
+  /* Preserve Lightship 1:1 Radii, Typography & Spacing against Tailwind v4 defaults */
+  --spacing: 0.25rem;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --text-xs: clamp(0.625rem, 0.5893rem + 0.1786vw, 0.75rem);
+  --text-xs--line-height: 1.25;
+  --text-xs--letter-spacing: 0;
+  --text-sm: clamp(0.75rem, 0.7143rem + 0.1786vw, 0.875rem);
+  --text-sm--line-height: 1.25;
+  --text-sm--letter-spacing: 0;
+  --text-md: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
+  --text-md--line-height: 1.25;
+  --text-md--letter-spacing: 0;
+  --text-lg: clamp(1.125rem, 1.0536rem + 0.3571vw, 1.375rem);
+  --text-lg--line-height: 1.25;
+  --text-lg--letter-spacing: 0;
+  --text-xl: clamp(1.375rem, 1.2321rem + 0.7143vw, 1.875rem);
+  --text-xl--line-height: 1;
+  --text-xl--letter-spacing: 0;
+
+  --text-heading-4xl: clamp(5.5rem, 3.1786rem + 11.6071vw, 13.625rem);
+  --text-heading-4xl--letter-spacing: -0.05em;
+  --text-heading-4xl--line-height: 1;
+  --text-heading-3xl: clamp(4rem, 2.5rem + 7.5vw, 9.25rem);
+  --text-heading-3xl--letter-spacing: -0.05em;
+  --text-heading-3xl--line-height: 1;
+  --text-heading-2xl: clamp(2.0625rem, 1.2946rem + 3.8393vw, 4.75rem);
+  --text-heading-2xl--letter-spacing: -0.05em;
+  --text-heading-2xl--line-height: 1;
+  --text-heading-xl: clamp(2.375rem, 1.7679rem + 3.0357vw, 4.5rem);
+  --text-heading-xl--letter-spacing: -0.05em;
+  --text-heading-xl--line-height: 1;
+  --text-heading-lg: clamp(2.125rem, 1.5893rem + 2.6786vw, 4rem);
+  --text-heading-lg--letter-spacing: -0.05em;
+  --text-heading-lg--line-height: 1;
+  --text-heading-md: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem);
+  --text-heading-md--letter-spacing: -0.05em;
+  --text-heading-md--line-height: 1;
+  --text-heading-sm: clamp(1.5rem, 1.3214rem + 0.8929vw, 2.125rem);
+  --text-heading-sm--letter-spacing: -0.05em;
+  --text-heading-sm--line-height: 1.2;
+  --text-heading-xs: clamp(1.375rem, 1.3393rem + 0.1786vw, 1.5rem);
+  --text-heading-xs--letter-spacing: -0.03em;
+  --text-heading-xs--line-height: 1.25;
+  --text-heading-2xs: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
+  --text-heading-2xs--letter-spacing: 0;
+  --text-heading-2xs--line-height: 1.25;
+
+  --spacing-unit-sm: 16px;
+  --spacing-unit-md: 24px;
+  --spacing-fluid-xs: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.875rem);
+  --spacing-fluid-sm: clamp(1.875rem, 1.6964rem + 0.8929vw, 2.5rem);
+  --spacing-fluid-md: clamp(2.5rem, 2.2857rem + 1.0714vw, 3.25rem);
+  --spacing-fluid-lg: clamp(3.25rem, 2.75rem + 2.5vw, 5rem);
+  --spacing-fluid-xl: clamp(5rem, 4.6429rem + 1.7857vw, 6.25rem);
+  --spacing-fluid-2xl: clamp(6.25rem, 5.3571rem + 4.4643vw, 9.375rem);
+  --spacing-fluid-3xl: clamp(9.375rem, 8.4821rem + 4.4643vw, 12.5rem);
+  --spacing-fluid-4xl: clamp(12.5rem, 11.6071rem + 4.4643vw, 15.625rem);
 }
 
-@layer base {
-  html {
-    background-color: var(--bg-clean-white);
-    color: var(--deep-navy);
-    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-    scroll-behavior: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    background-color: #F7F8FA;
-    color: #101D35;
-    overflow-x: hidden;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
-    letter-spacing: -0.025em;
-  }
-
-  code, pre, .font-mono {
-    font-family: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
-  }
+html {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+body {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-sans);
+  overflow-x: clip;
 }
 
-::-webkit-scrollbar-track {
-  background: #F7F8FA;
+/* Ensure split-text and slide animations render visible even prior to scroll observer */
+[data-anim-text] [data-char] {
+  opacity: 1 !important;
+  transform: translate(0) !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #A8B1BE;
-  border-radius: 4px;
+[data-anim-slide] {
+  opacity: 1 !important;
+  transform: translate(0) !important;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #253B5B;
-}
-
-/* Technical Lightship Hairline Grids & Architectural Surfaces */
-.tech-grid-bg {
-  background-size: 48px 48px;
-  background-image: 
-    linear-gradient(to right, rgba(168, 177, 190, 0.14) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(168, 177, 190, 0.14) 1px, transparent 1px);
-}
-
-.tech-grid-dark {
-  background-size: 48px 48px;
-  background-image: 
-    linear-gradient(to right, rgba(168, 177, 190, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(168, 177, 190, 0.08) 1px, transparent 1px);
-}
-
-.stripe-mesh-light {
-  background: 
-    radial-gradient(at 15% 15%, rgba(39, 181, 138, 0.07) 0px, transparent 50%),
-    radial-gradient(at 85% 20%, rgba(37, 59, 91, 0.06) 0px, transparent 50%),
-    #F7F8FA;
-}
-
-.linear-navy-surface {
-  background: 
-    radial-gradient(circle at 80% 10%, rgba(39, 181, 138, 0.14), transparent 45%),
-    radial-gradient(circle at 15% 85%, rgba(37, 59, 91, 0.45), transparent 55%),
-    #101D35;
-}
-
-.hairline-border {
-  border-color: rgba(168, 177, 190, 0.35);
-}
-
-.hairline-border-dark {
-  border-color: rgba(168, 177, 190, 0.16);
-}
-
-/* Marquee Fallback Keyframes */
-@keyframes marquee-scroll {
-  0% {
-    transform: translate3d(0%, 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.animate-marquee-css {
-  display: flex;
-  width: max-content;
-  animation: marquee-scroll 38s linear infinite;
-}
-
-.animate-marquee-css:hover {
-  animation-play-state: paused;
+.c-fadein-text_line_inner {
+  opacity: 1 !important;
+  transform: translate(0) !important;
 }

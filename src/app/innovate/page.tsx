@@ -1,1005 +1,857 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  Sparkles,
-  ArrowRight,
-  CheckCircle2,
-  FileText,
-  Layers,
-  ShieldCheck,
-  Compass,
-  Cpu,
-  Wallet,
-  Send,
-  Copy,
-  Check,
-  ArrowUpRight,
-  MessageSquare,
-} from "lucide-react";
-import { BRAND_INFO, PILLARS, MARQUEE_TICKER_ITEMS } from "@/data/onspec-data";
-import {
-  submitOnspecEnquiry,
-  type SubmissionResult,
-} from "@/lib/integrations-placeholder";
-import { InfiniteMarquee } from "@/components/InfiniteMarquee";
+import { BRAND_INFO, CUSTOMER_JOURNEY_STEPS } from "@/data/onspec-data";
+import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 
-const BUDGET_OPTIONS = [
-  "< €10k",
-  "€10k – €25k",
-  "€25k – €50k",
-  "€50k – €100k+",
-  "Flexible / Need Quotation",
+const IDEA_ARCHETYPES = [
+  {
+    id: "physical-automated",
+    code: "ARCH-01 // AUTOMATED RETAIL & PODS",
+    title: "Physical Automated Business or Kiosk Concept",
+    examples: "Custom vending concept, unmanned retail store, automated locker pod, smart wash or self-service station",
+  },
+  {
+    id: "digital-ai-platform",
+    code: "ARCH-02 // AI & DIGITAL PLATFORM",
+    title: "Digital Platform, SaaS, or AI-Powered Venture",
+    examples: "Vertical AI service, automated marketplace, booking platform, or B2B software-enabled business",
+  },
+  {
+    id: "hybrid-commercial",
+    code: "ARCH-03 // HYBRID COMMERCIAL VENTURE",
+    title: "Brick-and-Mortar + Automated Operations",
+    examples: "Specialty hospitality, studio/court rental, logistics hub, or physical service with automated booking & CRM",
+  },
+  {
+    id: "existing-expansion",
+    code: "ARCH-04 // NEW PRODUCT OR EXPANSION",
+    title: "New Concept for an Existing Business",
+    examples: "Launching a new automated revenue stream, Cyprus/EU market expansion, or custom hardware/software rollout",
+  },
+];
+
+const BUDGET_TIERS = [
+  "Need Onspec Cost Estimation (Open)",
+  "€10,000 – €25,000",
+  "€25,000 – €50,000",
+  "€50,000 – €100,000",
+  "€100,000+",
 ];
 
 const TIMEFRAME_OPTIONS = [
-  "Immediate / < 30 days",
+  "Immediate (Start within 30 days)",
   "1 – 3 Months",
   "3 – 6 Months",
-  "Exploratory",
+  "Exploratory / Feasibility Assessment First",
 ];
 
-const CONCEPT_ARCHETYPES = [
+const FOUNDRY_SPECS = [
   {
-    id: "physical-automated",
-    code: "ARCH-01 // PHYSICAL ASSET",
-    title: "Custom Vending, Kiosk or Unmanned Retail Concept",
-    summary:
-      "Bespoke automated hardware, specialty dispensing, smart lockers, or unattended micro-retail pods tailored to a specific niche in Cyprus or the EU.",
-    deliverables: [
-      "Custom hardware manufacturer sourcing & telemetry pairing",
-      "Site footprint & concession feasibility in Cyprus",
-      "Unit economics & landed equipment quotation",
+    groupTitle: "01 // Feasibility & Commercial Blueprinting",
+    rows: [
+      {
+        label: "Preliminary Proposal Cost",
+        value: "€0 — Free Preliminary Proposal & Quotation",
+      },
+      {
+        label: "Turnaround Window",
+        value: "48 – 72 Hours from Concept Submission",
+      },
+      {
+        label: "Confidentiality Standard",
+        value: "Strict Non-Disclosure & Protected Intake Handling",
+      },
+      {
+        label: "Unit Economics Modeling",
+        value: "CAPEX, OPEX, Supplier Margins & Break-Even Horizon",
+      },
+      {
+        label: "Location & Market Vetting",
+        value: "Cyprus (Limassol, Nicosia, Larnaca, Paphos) & EU Markets",
+      },
     ],
   },
   {
-    id: "digital-ai-venture",
-    code: "ARCH-02 // DIGITAL & AI SYSTEM",
-    title: "Proprietary Software, Marketplace or AI Service Platform",
-    summary:
-      "A new web platform, automated service business, or AI-powered B2B/B2C application engineered from zero to commercial readiness.",
-    deliverables: [
-      "Full-stack architecture & AI integration specification",
-      "Payment gateway, billing & user onboarding flows",
-      "Phased MVP-to-Scale development & cost roadmap",
+    groupTitle: "02 // Hardware, Software & Operational Execution",
+    rows: [
+      {
+        label: "Commercial Hardware Sourcing",
+        value: "Direct Manufacturer & European Distributor Procurement",
+      },
+      {
+        label: "Payment & Telemetry Stack",
+        value: "EMV Contactless, Apple/Google Pay, Stripe & Live Cloud HUD",
+      },
+      {
+        label: "Embedded AI & Automation",
+        value: "24/7 AI Customer Support, WhatsApp API, CRM & Booking Engine",
+      },
+      {
+        label: "Corporate & Legal Structuring",
+        value: "Coordinated via Independent Licensed Legal Professionals in Cyprus",
+      },
+      {
+        label: "Commissioning & Handover",
+        value: "Turnkey Launch Readiness, SOP Playbooks & Ongoing Scaling Support",
+      },
     ],
-  },
-  {
-    id: "brick-and-mortar-modern",
-    code: "ARCH-03 // COMMERCIAL INFRASTRUCTURE",
-    title: "Modern Brick-and-Mortar or Service Facility",
-    summary:
-      "Launching a physical service venue, automated studio, specialty hospitality concept, or commercial facility with modern operational automation baked in.",
-    deliverables: [
-      "Location scouting, commercial lease & fit-out coordination",
-      "Equipment procurement, supplier chain & IoT access setup",
-      "Cyprus corporate formation & licensing via independent counsel",
-    ],
-  },
-  {
-    id: "hybrid-expansion",
-    code: "ARCH-04 // HYBRID & CUSTOM",
-    title: "Unconventional or First-to-Market Business Concept",
-    summary:
-      "Have an idea that doesn't fit a standard template? We deconstruct the concept into practical engineering, legal, operational, and financial blocks.",
-    deliverables: [
-      "First-principles feasibility & risk matrix",
-      "Vendor, hardware & software stack identification",
-      "Actionable step-by-step execution quotation",
-    ],
-  },
-];
-
-const EVALUATION_PROTOCOL = [
-  {
-    step: "01",
-    code: "PHASE 01 // INTAKE",
-    title: "Concept Intake & Scope Definition",
-    description:
-      "You share what you are thinking—whether it is a rough sketch or a detailed commercial vision—along with your goals, target timeframe, and budget comfort zone.",
-    metric: "100% Confidential Review",
-  },
-  {
-    step: "02",
-    code: "PHASE 02 // ARCHITECTURE",
-    title: "Technical, Operational & Market Assessment",
-    description:
-      "Our team evaluates what is required to make the concept work in the real world: equipment, software, suppliers, location criteria, and Cyprus/EU corporate prerequisites.",
-    metric: "Multi-Disciplinary Audit",
-  },
-  {
-    step: "03",
-    code: "PHASE 03 // FREE PROPOSAL",
-    title: "Free Preliminary Proposal or Quotation",
-    description:
-      "We prepare a structured preliminary proposal outlining potential solutions, recommended architecture, estimated setup costs, and concrete next steps—at zero cost or obligation.",
-    metric: "€0 Preliminary Dossier",
-  },
-  {
-    step: "04",
-    code: "PHASE 04 // EXECUTION",
-    title: "Turnkey Build, Procurement & Launch",
-    description:
-      "Once you approve the roadmap, Onspec transitions into your execution partner—coordinating suppliers, technology, independent legal professionals, and launch handover.",
-    metric: "End-to-End Delivery",
   },
 ];
 
 export default function InnovatePage() {
-  const pillar = PILLARS.find((p) => p.id === "innovate") || PILLARS[2];
-
-  // Form state for all 7 required fields
+  const [archetype, setArchetype] = useState(IDEA_ARCHETYPES[0].id);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [ideaDescription, setIdeaDescription] = useState("");
-  const [budget, setBudget] = useState<string>("Flexible / Need Quotation");
+  const [budget, setBudget] = useState(BUDGET_TIERS[0]);
   const [goals, setGoals] = useState("");
-  const [timeframe, setTimeframe] = useState<string>("1 – 3 Months");
-  const [selectedArchetype, setSelectedArchetype] = useState<string>(
-    CONCEPT_ARCHETYPES[0].id
-  );
+  const [timeframe, setTimeframe] = useState(TIMEFRAME_OPTIONS[1]);
+  const [submitting, setSubmitting] = useState(false);
+  const [referenceId, setReferenceId] = useState<string | null>(null);
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionResult, setSubmissionResult] =
-    useState<SubmissionResult | null>(null);
-  const [copiedRef, setCopiedRef] = useState(false);
+  useEffect(() => {
+    document.documentElement.classList.add("is-ready", "is-loaded");
+  }, []);
 
-  const handleApplyArchetype = (archetypeTitle: string) => {
-    if (!ideaDescription.trim()) {
-      setIdeaDescription(`Concept Category: ${archetypeTitle}\n\nMy Idea: `);
-    }
-    const formEl = document.getElementById("submit-idea-engine");
-    if (formEl) {
-      formEl.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const selectedArchetype =
+    IDEA_ARCHETYPES.find((a) => a.id === archetype) || IDEA_ARCHETYPES[0];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !email.trim() || !ideaDescription.trim()) return;
-
-    setIsSubmitting(true);
-    try {
-      const result = await submitOnspecEnquiry({
-        pillar: "03_INNOVATE",
-        name: name.trim(),
-        email: email.trim(),
-        whatsapp: whatsapp.trim(),
-        ideaDescription: ideaDescription.trim(),
-        budget,
-        goals: goals.trim(),
-        timeframe,
-        metadata: {
-          archetype: selectedArchetype,
-          proposalType: "Free Preliminary Proposal & Quotation",
-          sourceRoute: "/innovate",
-        },
-      });
-      setSubmissionResult(result);
-    } finally {
-      setIsSubmitting(false);
+    setSubmitting(true);
+    const res = await submitOnspecEnquiry({
+      pillar: "03_INNOVATE",
+      name,
+      email,
+      whatsapp,
+      ideaDescription: `[Archetype: ${selectedArchetype.title}] ${ideaDescription}`,
+      budget,
+      goals,
+      timeframe,
+    });
+    setSubmitting(false);
+    if (res.ok) {
+      setReferenceId(res.referenceId);
     }
   };
 
-  const handleCopyRef = () => {
-    if (!submissionResult) return;
-    navigator.clipboard.writeText(submissionResult.referenceId);
-    setCopiedRef(true);
-    setTimeout(() => setCopiedRef(false), 2500);
-  };
-
-  const handleReset = () => {
-    setSubmissionResult(null);
-    setName("");
-    setEmail("");
-    setWhatsapp("");
-    setIdeaDescription("");
-    setGoals("");
-    setBudget("Flexible / Need Quotation");
-    setTimeframe("1 – 3 Months");
-  };
-
   return (
-    <div className="min-h-screen bg-[#F7F8FA] text-[#101D35]">
-      {/* SECTION 01: ARCHITECTURAL HERO */}
-      <section className="relative overflow-hidden border-b border-[#A8B1BE]/35 stripe-mesh-light tech-grid-bg pt-12 pb-20 lg:pt-20 lg:pb-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          {/* Top Specification Telemetry Pill */}
-          <div className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-[#A8B1BE]/35 pb-5">
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-[#101D35]/15 bg-white px-3.5 py-1.5 shadow-2xs">
-              <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
-              <span className="font-mono text-xs font-semibold tracking-wider text-[#101D35]">
-                {pillar.code} // SUBMIT YOUR IDEA
+    <main className="bg-[#F7F8FA] text-[#101D35]">
+      {/* Section 1: Lightship specs.html Centered Split-Text Hero Header */}
+      <section className="container mt-fluid-4xl mb-fluid-md">
+        <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-4xl">
+          <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+            PILLAR 03 // INNOVATE — SUBMIT YOUR IDEA
+          </p>
+          <h1 className="sr-only">
+            Your Idea. Our Execution. Have an idea? Let&apos;s build it.
+          </h1>
+          <div
+            aria-hidden="true"
+            className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+          >
+            Your Idea. Our Execution.
+          </div>
+          <p className="text-lg text-[#253B5B] max-w-2xl">
+            Your idea doesn&apos;t have to stay an idea. Tell us what you&apos;re thinking — we evaluate feasibility, engineer the operational blueprint, and provide a{" "}
+            <strong className="text-[#101D35]">
+              free preliminary proposal or quotation
+            </strong>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* Section 2: Lightship specs.html 9:5 Visual + 4 Pattern-Background Telemetry Boxes */}
+      <section className="container mt-fluid-lg mb-fluid-2xl flex flex-col gap-y-2">
+        <div className="c-image aspect-ratio-[9/5] -rounded-md -lazy-load is-loaded relative overflow-hidden max-h-[520px]">
+          <picture className="c-image_inner h-full w-full block">
+            <img
+              alt="ONSPEC Custom Venture Foundry & Proposal Engine"
+              className="c-image_img is-loaded h-full w-full object-cover"
+              height={1000}
+              width={1800}
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=85"
+            />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/85 via-[#101D35]/30 to-transparent flex items-end p-6 md:p-12">
+            <div className="max-w-2xl text-white">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                CUSTOM CONCEPT EVALUATION &amp; BUILD ENGINE
               </span>
-            </div>
-            <div className="flex items-center gap-6 font-mono text-xs text-[#253B5B]">
-              <span>EVALUATION FEE: €0.00 (FREE PRELIMINARY PROPOSAL)</span>
-              <span className="hidden sm:inline text-[#A8B1BE]">|</span>
-              <span className="hidden sm:inline">
-                JURISDICTION: CYPRUS &amp; EU
-              </span>
+              <h2 className="heading-sm mt-2 text-white">
+                Have an idea? Let&apos;s build it.
+              </h2>
+              <p className="text-sm text-[#A8B1BE] mt-2">
+                Whether you have a rough concept on a napkin or a detailed commercial vision, Onspec bridges the gap between idea and functioning business.
+              </p>
             </div>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
-            {/* Left Column: Core Statement */}
-            <div className="lg:col-span-7">
-              <p className="font-mono text-xs font-semibold uppercase tracking-widest text-[#27B58A]">
-                YOUR IDEA. OUR EXECUTION.
-              </p>
-              <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-[#101D35] sm:text-5xl lg:text-6xl leading-[1.06]">
-                Your idea doesn’t have to stay an idea.
-              </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#253B5B] sm:text-xl">
-                Have an idea? Let’s build it. Tell us what you’re thinking.
-                We’ll help you figure out how to bring it to life—with a{" "}
-                <span className="font-semibold text-[#101D35]">
-                  free preliminary proposal or quotation
-                </span>{" "}
-                outlining potential solutions, estimated costs, and recommended
-                next steps.
-              </p>
+        <ul className="grid xs:grid-cols-2 md:grid-cols-4 gap-2">
+          <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
+            <span className="heading-2xs text-[#101D35]">Free Proposal</span>
+            <span className="text-md text-[#253B5B]">
+              01 // Preliminary Feasibility &amp; Cost Quotation
+            </span>
+          </li>
+          <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
+            <span className="heading-2xs text-[#101D35]">48 – 72 hrs</span>
+            <span className="text-md text-[#253B5B]">
+              02 // Executive Assessment &amp; Architecture Review
+            </span>
+          </li>
+          <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
+            <span className="heading-2xs text-[#101D35]">Turnkey Build</span>
+            <span className="text-md text-[#253B5B]">
+              03 // Hardware, Suppliers, AI Systems &amp; Launch
+            </span>
+          </li>
+          <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
+            <span className="heading-2xs text-[#27B58A]">Cyprus &amp; EU</span>
+            <span className="text-md text-[#253B5B]">
+              04 // Independent Legal &amp; Corporate Network Ready
+            </span>
+          </li>
+        </ul>
+      </section>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href="#submit-idea-engine"
-                  className="inline-flex items-center gap-2.5 rounded-lg bg-[#27B58A] px-6 py-3.5 text-sm font-bold text-[#101D35] shadow-sm transition-all hover:bg-[#1F9470] hover:text-white"
-                >
-                  <Sparkles className="h-4 w-4" />
-                  <span>SUBMIT YOUR IDEA NOW</span>
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-                <a
-                  href="#evaluation-protocol"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#101D35]/20 bg-white px-5 py-3.5 text-sm font-semibold text-[#101D35] transition-colors hover:border-[#101D35]"
-                >
-                  <span>How We Evaluate Concepts</span>
-                </a>
+      {/* Section 3: Lightship Two-Column Sticky Specification & Custom Proposal Configurator */}
+      <section
+        id="proposal-configurator"
+        className="container my-fluid-2xl grid lg:grid-cols-12 gap-8 items-start"
+      >
+        {/* Left Sticky Visual Card with Live Spec Summary & Free Preliminary Proposal Guarantee */}
+        <div className="lg:col-span-5 lg:sticky lg:top-[calc(var(--header-area)+1.5rem)] space-y-4">
+          <div className="rounded-[20px] bg-[#101D35] text-[#F7F8FA] p-7 md:p-8 border border-[#253B5B] shadow-xl space-y-6">
+            <div className="flex items-center justify-between border-b border-[#A8B1BE]/20 pb-4">
+              <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
+                LIVE PROPOSAL SPECIFICATION
+              </span>
+              <span className="font-mono text-xs text-[#A8B1BE]">
+                OSP-INNOVATE-26
+              </span>
+            </div>
+
+            <div>
+              <p className="text-eyebrow text-[#A8B1BE] uppercase tracking-widest">
+                SELECTED CONCEPT ARCHETYPE
+              </p>
+              <h2 className="heading-xs text-white mt-1">
+                {selectedArchetype.title}
+              </h2>
+              <p className="text-xs text-[#A8B1BE] mt-2 leading-relaxed">
+                {selectedArchetype.examples}
+              </p>
+            </div>
+
+            {/* Live Configurator Telemetry Readout */}
+            <div className="rounded-xl bg-[#253B5B]/45 border border-[#A8B1BE]/20 divide-y divide-[#A8B1BE]/15">
+              <div className="flex items-center justify-between px-4 py-3 text-xs">
+                <span className="font-mono uppercase text-[#A8B1BE]">
+                  TARGET BUDGET
+                </span>
+                <span className="font-semibold text-white">{budget}</span>
               </div>
-
-              {/* Trust Micro-Grid */}
-              <div className="mt-12 grid grid-cols-3 gap-4 border-t border-[#A8B1BE]/35 pt-6">
-                <div>
-                  <div className="font-mono text-xs text-[#253B5B]/75">
-                    01 // DELIVERABLE
-                  </div>
-                  <div className="mt-1 text-sm font-bold text-[#101D35]">
-                    Free Preliminary Proposal
-                  </div>
-                </div>
-                <div>
-                  <div className="font-mono text-xs text-[#253B5B]/75">
-                    02 // TRANSPARENCY
-                  </div>
-                  <div className="mt-1 text-sm font-bold text-[#101D35]">
-                    Estimated Costs &amp; Roadmap
-                  </div>
-                </div>
-                <div>
-                  <div className="font-mono text-xs text-[#253B5B]/75">
-                    03 // EXECUTION
-                  </div>
-                  <div className="mt-1 text-sm font-bold text-[#101D35]">
-                    Hardware, AI &amp; Cyprus Setup
-                  </div>
-                </div>
+              <div className="flex items-center justify-between px-4 py-3 text-xs">
+                <span className="font-mono uppercase text-[#A8B1BE]">
+                  DESIRED TIMEFRAME
+                </span>
+                <span className="font-semibold text-white">{timeframe}</span>
+              </div>
+              <div className="flex items-center justify-between px-4 py-3 text-xs">
+                <span className="font-mono uppercase text-[#A8B1BE]">
+                  PRELIMINARY PROPOSAL
+                </span>
+                <span className="font-mono font-semibold text-[#27B58A]">
+                  FREE QUOTATION
+                </span>
               </div>
             </div>
 
-            {/* Right Column: Sample Preliminary Proposal Preview Card */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-2xl border border-[#A8B1BE]/45 bg-white p-6 shadow-xl sm:p-8">
-                <div className="flex items-center justify-between border-b border-[#A8B1BE]/30 pb-4">
-                  <div>
-                    <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-[#27B58A]">
-                      SPECIFICATION PREVIEW // DOSSIER
-                    </span>
-                    <h2 className="mt-0.5 text-lg font-bold text-[#101D35]">
-                      What Your Free Proposal Includes
-                    </h2>
-                  </div>
-                  <span className="rounded bg-[#101D35] px-2.5 py-1 font-mono text-[11px] font-semibold text-[#27B58A]">
-                    OSP-PROP-V1
-                  </span>
-                </div>
+            {/* Free Preliminary Proposal Guarantee Box */}
+            <div className="rounded-xl bg-[#F7F8FA]/5 border border-[#27B58A]/40 p-5 space-y-2">
+              <p className="font-mono text-xs uppercase tracking-wider text-[#27B58A]">
+                THE ONSPEC PROPOSAL GUARANTEE
+              </p>
+              <p className="text-xs text-[#F7F8FA]/90 leading-relaxed">
+                Every idea submitted receives a structured review by our venture &amp; automation architects. We outline recommended hardware/software, operational steps, estimated costs, and realistic launch timelines before you commit capital.
+              </p>
+            </div>
 
-                <p className="mt-4 text-xs leading-relaxed text-[#253B5B]">
-                  Every idea submitted through Pillar 03 is reviewed by our
-                  solutions architects to produce a structured preliminary
-                  brief:
-                </p>
-
-                <div className="mt-5 space-y-3.5">
-                  <div className="flex items-start gap-3 rounded-xl border border-[#A8B1BE]/30 bg-[#F7F8FA] p-3.5">
-                    <Compass className="mt-0.5 h-4 w-4 shrink-0 text-[#27B58A]" />
-                    <div>
-                      <div className="text-xs font-bold text-[#101D35]">
-                        1. Potential Solutions &amp; Architecture
-                      </div>
-                      <p className="mt-0.5 text-xs text-[#253B5B]">
-                        Practical breakdown of the hardware, software, suppliers,
-                        and operational model required to execute your concept.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 rounded-xl border border-[#A8B1BE]/30 bg-[#F7F8FA] p-3.5">
-                    <Wallet className="mt-0.5 h-4 w-4 shrink-0 text-[#27B58A]" />
-                    <div>
-                      <div className="text-xs font-bold text-[#101D35]">
-                        2. Estimated Costs &amp; Budget Brackets
-                      </div>
-                      <p className="mt-0.5 text-xs text-[#253B5B]">
-                        Transparent preliminary quotation covering equipment/tech
-                        procurement, setup coordination, and phased options.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 rounded-xl border border-[#A8B1BE]/30 bg-[#F7F8FA] p-3.5">
-                    <Layers className="mt-0.5 h-4 w-4 shrink-0 text-[#27B58A]" />
-                    <div>
-                      <div className="text-xs font-bold text-[#101D35]">
-                        3. Recommended Next Steps &amp; Timeline
-                      </div>
-                      <p className="mt-0.5 text-xs text-[#253B5B]">
-                        Clear milestone schedule from feasibility validation and
-                        Cyprus company setup (via vetted professionals) to launch.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex items-center justify-between rounded-xl bg-[#101D35] px-4 py-3 text-xs text-[#F7F8FA]">
-                  <span className="font-mono text-[11px] text-[#A8B1BE]">
-                    NO OBLIGATION • CONFIDENTIAL ASSESSMENT
-                  </span>
+            {/* Lightship .c-product-widget twin action cards inside sticky left column */}
+            <div
+              className="c-product-widget !grid-cols-1 sm:!grid-cols-2 !max-w-none"
+              style={{ "--mask-progress": 1 } as React.CSSProperties}
+            >
+              <div className="c-product-widget_card -secondary">
+                <p className="text-eyebrow">Prefer to talk live?</p>
+                <div className="c-product-widget_content">
+                  <p className="text-sm max-w-[12rem]">
+                    Discuss your idea on WhatsApp
+                  </p>
                   <a
-                    href="#submit-idea-engine"
-                    className="font-semibold text-[#27B58A] hover:underline"
+                    aria-label="Talk with an expert"
+                    className="c-button -icon -blur-light absolute-link c-product-widget_button"
+                    href={BRAND_INFO.whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Start Intake →
+                    <span className="c-button_inner">
+                      <span className="c-icon c-button_icon">
+                        <svg
+                          aria-hidden="true"
+                          className="svg-arrow-right"
+                          focusable="false"
+                        >
+                          <use href="/assets/svgs/sprite.svg#arrow-right" />
+                        </svg>
+                      </span>
+                    </span>
                   </a>
                 </div>
               </div>
+
+              <div className="c-product-widget_card -primary">
+                <p className="text-eyebrow">Want a proven model?</p>
+                <div className="c-product-widget_content">
+                  <p className="text-sm max-w-[12rem]">
+                    Browse 7 turnkey businesses
+                  </p>
+                  <Link
+                    aria-label="Browse turnkey models"
+                    className="c-button -icon -blur-dark absolute-link"
+                    href="/launch"
+                  >
+                    <span className="c-button_inner">
+                      <span className="c-icon c-button_icon">
+                        <svg
+                          aria-hidden="true"
+                          className="svg-arrow-right"
+                          focusable="false"
+                        >
+                          <use href="/assets/svgs/sprite.svg#arrow-right" />
+                        </svg>
+                      </span>
+                    </span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* TELEMETRY MARQUEE */}
-      <InfiniteMarquee items={MARQUEE_TICKER_ITEMS} speed={35} />
+        {/* Right Column: Hairline-Divided Interactive Intake & Specification Configurator (1:1 specs.html) */}
+        <div className="lg:col-span-7">
+          {referenceId ? (
+            <div className="bg-sand p-unit-md rounded-md border border-[#27B58A] space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#27B58A]/15 px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
+                CONCEPT LOGGED FOR PRELIMINARY PROPOSAL
+              </div>
+              <h2 className="heading-md text-[#101D35]">
+                Proposal Reference: {referenceId}
+              </h2>
+              <p className="text-md text-[#253B5B]">
+                Thank you, <strong>{name}</strong>. Your concept under{" "}
+                <strong>{selectedArchetype.title}</strong> has been transmitted to the Onspec Execution Desk. We are preparing your free preliminary proposal and feasibility breakdown and will deliver it to{" "}
+                <strong>{email}</strong> and WhatsApp (
+                <strong>{whatsapp}</strong>).
+              </p>
 
-      {/* SECTION 02: EXECUTIVE EXPLANATION — HOW ONSPEC EVALUATES & EXECUTES */}
-      <section
-        id="evaluation-protocol"
-        className="border-b border-[#A8B1BE]/35 bg-white py-20 lg:py-28"
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#253B5B]">
-              01 // CONCEPT EVALUATION METHODOLOGY
-            </span>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#101D35] sm:text-4xl">
-              Most good ideas stall at the execution gap. We bridge it.
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#253B5B]">
-              Many people have strong commercial ideas—a new automated service,
-              a niche retail pod, a digital platform, or a local facility—but do
-              not know how to source the equipment, integrate the software,
-              coordinate suppliers, or structure the entity in Cyprus. Onspec
-              turns abstract concepts into structured, buildable projects.
-            </p>
-          </div>
-
-          {/* 4-Stage Protocol Grid */}
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {EVALUATION_PROTOCOL.map((phase) => (
-              <div
-                key={phase.step}
-                className="group relative flex flex-col justify-between rounded-2xl border border-[#A8B1BE]/40 bg-[#F7F8FA] p-6 transition-all hover:border-[#101D35] hover:bg-white hover:shadow-md"
-              >
-                <div>
-                  <div className="flex items-center justify-between border-b border-[#A8B1BE]/30 pb-3">
-                    <span className="font-mono text-xs font-bold text-[#253B5B]">
-                      {phase.code}
-                    </span>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#101D35] font-mono text-xs font-bold text-[#27B58A]">
-                      {phase.step}
-                    </span>
+              <div className="rounded-xl bg-white p-6 border border-[#A8B1BE]/40 space-y-3">
+                <p className="font-mono text-xs uppercase tracking-wider text-[#253B5B]">
+                  SUBMITTED SPECIFICATION SUMMARY
+                </p>
+                <div className="grid sm:grid-cols-2 gap-4 text-xs">
+                  <div>
+                    <span className="text-[#253B5B]/70 block">ARCHETYPE</span>
+                    <strong className="text-[#101D35]">
+                      {selectedArchetype.title}
+                    </strong>
                   </div>
-                  <h3 className="mt-5 text-lg font-bold text-[#101D35]">
-                    {phase.title}
-                  </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-[#253B5B]">
-                    {phase.description}
-                  </p>
+                  <div>
+                    <span className="text-[#253B5B]/70 block">BUDGET</span>
+                    <strong className="text-[#101D35]">{budget}</strong>
+                  </div>
+                  <div>
+                    <span className="text-[#253B5B]/70 block">TIMEFRAME</span>
+                    <strong className="text-[#101D35]">{timeframe}</strong>
+                  </div>
+                  <div>
+                    <span className="text-[#253B5B]/70 block">STATUS</span>
+                    <strong className="text-[#27B58A]">
+                      Stage 03 Assessment Queued
+                    </strong>
+                  </div>
                 </div>
+              </div>
 
-                <div className="mt-6 border-t border-[#A8B1BE]/30 pt-3">
-                  <span className="inline-flex items-center gap-1.5 font-mono text-[11px] font-semibold text-[#101D35]">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#27B58A]" />
-                    {phase.metric}
+              <div className="flex flex-wrap gap-3">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setReferenceId(null);
+                    setIdeaDescription("");
+                    setGoals("");
+                  }}
+                  className="c-button -color-black cursor-pointer"
+                >
+                  <span className="c-button_inner">
+                    <span
+                      className="c-button_label-container"
+                      data-label="Submit Another Concept"
+                    >
+                      <span className="c-button_label">
+                        Submit Another Concept
+                      </span>
+                    </span>
+                  </span>
+                </button>
+                <Link href="/launch" className="c-button -color-grey">
+                  <span className="c-button_inner">
+                    <span
+                      className="c-button_label-container"
+                      data-label="Explore Ready-to-Launch Models"
+                    >
+                      <span className="c-button_label">
+                        Explore Ready-to-Launch Models
+                      </span>
+                    </span>
+                  </span>
+                </Link>
+              </div>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-y-4">
+              {/* Step Block 1: Concept Archetype Selector */}
+              <div className="bg-sand p-unit-md rounded-md flex flex-col gap-y-4 border border-[#A8B1BE]/30">
+                <div className="flex items-center justify-between">
+                  <h2 className="heading-xs text-[#101D35]">
+                    01 // Concept Direction
+                  </h2>
+                  <span className="font-mono text-xs text-[#253B5B]">
+                    STEP 1 OF 3
                   </span>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Concept Archetypes Selector */}
-          <div className="mt-16 rounded-2xl border border-[#A8B1BE]/40 bg-[#F7F8FA] p-6 sm:p-10">
-            <div className="flex flex-col justify-between gap-4 border-b border-[#A8B1BE]/35 pb-6 lg:flex-row lg:items-end">
-              <div>
-                <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#27B58A]">
-                  02 // WHAT WE CAN BUILD TOGETHER
-                </span>
-                <h3 className="mt-2 text-2xl font-extrabold text-[#101D35]">
-                  Select a Concept Archetype to Pre-Configure Your Intake
-                </h3>
-              </div>
-              <p className="max-w-md text-xs text-[#253B5B]">
-                Click any category below to load its context directly into the
-                Submit Your Idea intake form.
-              </p>
-            </div>
-
-            <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-              {CONCEPT_ARCHETYPES.map((arch) => {
-                const isSelected = selectedArchetype === arch.id;
-                return (
-                  <div
-                    key={arch.id}
-                    onClick={() => setSelectedArchetype(arch.id)}
-                    className={`cursor-pointer rounded-xl border p-6 transition-all ${
-                      isSelected
-                        ? "border-[#101D35] bg-white shadow-md ring-1 ring-[#101D35]"
-                        : "border-[#A8B1BE]/35 bg-white/70 hover:border-[#253B5B]"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-mono text-xs font-semibold text-[#253B5B]">
-                        {arch.code}
-                      </span>
-                      <span
-                        className={`rounded-full px-2.5 py-0.5 font-mono text-[10px] font-bold ${
-                          isSelected
-                            ? "bg-[#27B58A] text-[#101D35]"
-                            : "bg-[#F7F8FA] text-[#253B5B]"
+                <div className="grid sm:grid-cols-2 gap-3 pt-2">
+                  {IDEA_ARCHETYPES.map((item) => {
+                    const active = item.id === archetype;
+                    return (
+                      <button
+                        key={item.id}
+                        type="button"
+                        onClick={() => setArchetype(item.id)}
+                        className={`text-left rounded-xl p-4 border transition-all cursor-pointer flex flex-col justify-between gap-2 ${
+                          active
+                            ? "bg-[#101D35] text-white border-[#27B58A] shadow-md"
+                            : "bg-white text-[#101D35] border-[#A8B1BE]/45 hover:border-[#253B5B]"
                         }`}
                       >
-                        {isSelected ? "ACTIVE ARCHETYPE" : "SELECT"}
-                      </span>
-                    </div>
-                    <h4 className="mt-3 text-lg font-bold text-[#101D35]">
-                      {arch.title}
-                    </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-[#253B5B]">
-                      {arch.summary}
-                    </p>
-                    <ul className="mt-4 space-y-1.5 border-t border-[#A8B1BE]/25 pt-3">
-                      {arch.deliverables.map((item) => (
-                        <li
-                          key={item}
-                          className="flex items-center gap-2 text-xs text-[#101D35]"
+                        <span
+                          className={`font-mono text-[10px] uppercase tracking-widest ${
+                            active ? "text-[#27B58A]" : "text-[#253B5B]"
+                          }`}
                         >
-                          <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-[#27B58A]" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-5">
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setSelectedArchetype(arch.id);
-                          handleApplyArchetype(arch.title);
-                        }}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#101D35] hover:text-[#27B58A] cursor-pointer"
-                      >
-                        <span>Use this archetype in my submission</span>
-                        <ArrowRight className="h-3.5 w-3.5" />
+                          {item.code}
+                        </span>
+                        <span className="text-sm font-bold">{item.title}</span>
+                        <span
+                          className={`text-xs ${
+                            active ? "text-[#A8B1BE]" : "text-[#253B5B]/80"
+                          }`}
+                        >
+                          {item.examples}
+                        </span>
                       </button>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 03: FULL INTERACTIVE "SUBMIT YOUR IDEA" INTAKE ENGINE */}
-      <section
-        id="submit-idea-engine"
-        className="border-b border-[#A8B1BE]/35 py-20 lg:py-28 stripe-mesh-light"
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-            {/* Left Sidebar: Why Submit & What Happens Next */}
-            <div className="lg:col-span-5">
-              <div className="sticky top-28 space-y-6">
-                <div>
-                  <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#27B58A]">
-                    03 // IDEA INTAKE ENGINE
-                  </span>
-                  <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#101D35] sm:text-4xl">
-                    Tell us what you’re thinking.
-                  </h2>
-                  <p className="mt-4 text-sm leading-relaxed text-[#253B5B]">
-                    Fill out the concept brief with as much detail as you have
-                    today. You don’t need a finished business plan—our role is
-                    to evaluate the concept and return a{" "}
-                    <strong className="text-[#101D35]">
-                      free preliminary proposal or quotation
-                    </strong>{" "}
-                    outlining potential solutions, estimated costs, and
-                    recommended next steps.
-                  </p>
-                </div>
-
-                {/* Spec Assurance Box */}
-                <div className="rounded-2xl border border-[#A8B1BE]/45 bg-white p-6 shadow-xs">
-                  <div className="font-mono text-xs font-bold uppercase text-[#101D35]">
-                    ONSPEC PROPOSAL GUARANTEE
-                  </div>
-                  <div className="mt-4 space-y-4">
-                    <div className="flex items-start gap-3">
-                      <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#27B58A]" />
-                      <div>
-                        <div className="text-xs font-bold text-[#101D35]">
-                          Strict Client Confidentiality
-                        </div>
-                        <p className="mt-0.5 text-xs text-[#253B5B]">
-                          Your business concept, location thoughts, and contact
-                          details are strictly protected and used solely to
-                          prepare your preliminary proposal.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <FileText className="mt-0.5 h-5 w-5 shrink-0 text-[#27B58A]" />
-                      <div>
-                        <div className="text-xs font-bold text-[#101D35]">
-                          Written Preliminary Proposal &amp; Costing
-                        </div>
-                        <p className="mt-0.5 text-xs text-[#253B5B]">
-                          We respond with concrete architectural direction,
-                          estimated budget requirements, and execution steps.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Cpu className="mt-0.5 h-5 w-5 shrink-0 text-[#27B58A]" />
-                      <div>
-                        <div className="text-xs font-bold text-[#101D35]">
-                          Hardware + AI + Cyprus Legal Ecosystem
-                        </div>
-                        <p className="mt-0.5 text-xs text-[#253B5B]">
-                          Unlike standard agencies, we combine physical equipment
-                          sourcing, AI automation, and Cyprus corporate referrals
-                          under one roof.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Direct Contact Alternative */}
-                <div className="rounded-2xl bg-[#101D35] p-6 text-[#F7F8FA]">
-                  <div className="font-mono text-[11px] uppercase tracking-wider text-[#27B58A]">
-                    PREFER A VOICE OR WHATSAPP BRIEFING?
-                  </div>
-                  <p className="mt-2 text-xs leading-relaxed text-[#A8B1BE]">
-                    If you prefer to discuss your concept directly with our
-                    Cyprus &amp; EU operations desk before submitting a written
-                    brief:
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    <a
-                      href={BRAND_INFO.whatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#27B58A] px-3.5 py-2 text-xs font-bold text-[#101D35] hover:bg-[#1F9470] hover:text-white transition-colors"
-                    >
-                      <MessageSquare className="h-3.5 w-3.5" />
-                      <span>WhatsApp Desk</span>
-                    </a>
-                    <a
-                      href={`mailto:${BRAND_INFO.emailPrimary}?subject=Custom%20Idea%20Submission%20—%20ONSPEC`}
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-[#A8B1BE]/30 px-3.5 py-2 text-xs font-semibold text-[#F7F8FA] hover:border-white transition-colors"
-                    >
-                      <span>{BRAND_INFO.emailPrimary}</span>
-                    </a>
-                  </div>
+                    );
+                  })}
                 </div>
               </div>
-            </div>
 
-            {/* Right Column: Interactive 7-Field Intake Form or Confirmation State */}
-            <div className="lg:col-span-7">
-              <div className="rounded-2xl border border-[#A8B1BE]/45 bg-white p-6 shadow-lg sm:p-10">
-                {submissionResult ? (
-                  /* INTERACTIVE SUBMISSION CONFIRMATION STATE */
-                  <div className="py-6">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-[#27B58A]/15 px-3.5 py-1.5 text-xs font-bold text-[#101D35]">
-                      <CheckCircle2 className="h-4 w-4 text-[#27B58A]" />
-                      <span>CONCEPT DOSSIER LOGGED // PHASE 1 VERIFIED</span>
-                    </div>
+              {/* Step Block 2: Hairline-Divided Idea Specification Fields (1:1 specs.html rows) */}
+              <div className="bg-sand p-unit-md rounded-md flex flex-col gap-y-4 border border-[#A8B1BE]/30">
+                <div className="flex items-center justify-between">
+                  <h2 className="heading-xs text-[#101D35]">
+                    02 // Idea, Goals, Budget &amp; Timeframe
+                  </h2>
+                  <span className="font-mono text-xs text-[#253B5B]">
+                    STEP 2 OF 3
+                  </span>
+                </div>
 
-                    <h3 className="mt-4 text-2xl font-extrabold text-[#101D35] sm:text-3xl">
-                      Your idea submission has been registered.
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-[#253B5B]">
-                      Thank you, <strong className="text-[#101D35]">{name}</strong>.
-                      Our solutions engineering team has logged your concept for
-                      feasibility evaluation and preliminary proposal preparation.
-                    </p>
-
-                    {/* Reference Code Telemetry Card */}
-                    <div className="mt-6 rounded-xl border border-[#101D35]/15 bg-[#F7F8FA] p-5">
-                      <div className="flex flex-wrap items-center justify-between gap-4">
-                        <div>
-                          <div className="font-mono text-[11px] uppercase text-[#253B5B]">
-                            PROPOSAL REFERENCE ID
-                          </div>
-                          <div className="mt-1 font-mono text-xl font-extrabold text-[#101D35]">
-                            {submissionResult.referenceId}
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          onClick={handleCopyRef}
-                          className="inline-flex items-center gap-1.5 rounded-lg border border-[#A8B1BE]/50 bg-white px-3.5 py-2 text-xs font-semibold text-[#101D35] hover:border-[#101D35] cursor-pointer"
-                        >
-                          {copiedRef ? (
-                            <>
-                              <Check className="h-3.5 w-3.5 text-[#27B58A]" />
-                              <span>Copied</span>
-                            </>
-                          ) : (
-                            <>
-                              <Copy className="h-3.5 w-3.5" />
-                              <span>Copy Reference ID</span>
-                            </>
-                          )}
-                        </button>
-                      </div>
-
-                      <div className="mt-4 grid grid-cols-1 gap-3 border-t border-[#A8B1BE]/30 pt-4 text-xs sm:grid-cols-3">
-                        <div>
-                          <span className="font-mono text-[10px] text-[#253B5B]">
-                            BUDGET BRACKET
-                          </span>
-                          <div className="font-semibold text-[#101D35]">
-                            {budget}
-                          </div>
-                        </div>
-                        <div>
-                          <span className="font-mono text-[10px] text-[#253B5B]">
-                            TARGET TIMEFRAME
-                          </span>
-                          <div className="font-semibold text-[#101D35]">
-                            {timeframe}
-                          </div>
-                        </div>
-                        <div>
-                          <span className="font-mono text-[10px] text-[#253B5B]">
-                            DELIVERABLE
-                          </span>
-                          <div className="font-semibold text-[#27B58A]">
-                            Free Preliminary Proposal
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Summary of submitted idea */}
-                    <div className="mt-6 rounded-xl border border-[#A8B1BE]/35 p-4 text-xs">
-                      <div className="font-mono text-[11px] font-bold text-[#101D35]">
-                        SUBMITTED BRIEF SUMMARY
-                      </div>
-                      <p className="mt-1.5 line-clamp-3 text-[#253B5B]">
-                        {ideaDescription}
-                      </p>
-                      {goals && (
-                        <p className="mt-2 border-t border-[#A8B1BE]/25 pt-2 text-[#253B5B]">
-                          <strong className="text-[#101D35]">Goals:</strong>{" "}
-                          {goals}
-                        </p>
-                      )}
-                    </div>
-
-                    <div className="mt-8 flex flex-wrap items-center gap-4">
-                      <a
-                        href={`${BRAND_INFO.whatsappLink}?text=${encodeURIComponent(
-                          `Hello Onspec, I just submitted my business idea (Ref: ${submissionResult.referenceId}) and would like to discuss my free preliminary proposal.`
-                        )}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-lg bg-[#27B58A] px-5 py-3 text-xs font-bold text-[#101D35] hover:bg-[#1F9470] hover:text-white transition-colors"
-                      >
-                        <MessageSquare className="h-4 w-4" />
-                        <span>Fast-Track on WhatsApp with Ref ID</span>
-                      </a>
-                      <button
-                        type="button"
-                        onClick={handleReset}
-                        className="rounded-lg border border-[#101D35]/20 px-4 py-3 text-xs font-semibold text-[#101D35] hover:border-[#101D35] cursor-pointer"
-                      >
-                        Submit Another Idea
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  /* 7-FIELD INTERACTIVE INTAKE FORM */
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#A8B1BE]/30 pb-4">
-                      <div>
-                        <span className="font-mono text-xs font-bold text-[#253B5B]">
-                          SPECIFICATION INTAKE // PILLAR 03
-                        </span>
-                        <h3 className="text-xl font-extrabold text-[#101D35]">
-                          Submit Your Idea for a Free Preliminary Proposal
-                        </h3>
-                      </div>
-                      <span className="rounded-md bg-[#F7F8FA] px-2.5 py-1 font-mono text-[11px] text-[#253B5B] border border-[#A8B1BE]/35">
-                        7 REQUIRED / OPTIONAL FIELDS
+                <ul className="flex flex-col">
+                  {/* Description of the idea */}
+                  <li className="grid sm:grid-cols-12 gap-x-gutter gap-y-3 border-t border-grey py-6">
+                    <div className="sm:col-span-4">
+                      <span className="text-eyebrow text-[#101D35] block">
+                        Description of the Idea *
+                      </span>
+                      <span className="text-xs text-[#253B5B] mt-1 block">
+                        What is the business, product, or automated system you want to build?
                       </span>
                     </div>
-
-                    {/* Field 1 & 2: Name + Email */}
-                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                      <div>
-                        <label
-                          htmlFor="innovate-name"
-                          className="block font-mono text-xs font-bold uppercase text-[#101D35]"
-                        >
-                          1. Full Name <span className="text-[#27B58A]">*</span>
-                        </label>
-                        <input
-                          id="innovate-name"
-                          type="text"
-                          required
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          placeholder="e.g. Andreas Georgiou"
-                          className="mt-2 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-4 py-3 text-sm text-[#101D35] placeholder:text-[#A8B1BE] focus:border-[#101D35] focus:bg-white focus:outline-none"
-                        />
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="innovate-email"
-                          className="block font-mono text-xs font-bold uppercase text-[#101D35]"
-                        >
-                          2. Email Address{" "}
-                          <span className="text-[#27B58A]">*</span>
-                        </label>
-                        <input
-                          id="innovate-email"
-                          type="email"
-                          required
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="name@company.eu"
-                          className="mt-2 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-4 py-3 text-sm text-[#101D35] placeholder:text-[#A8B1BE] focus:border-[#101D35] focus:bg-white focus:outline-none"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Field 3: WhatsApp Number */}
-                    <div>
-                      <label
-                        htmlFor="innovate-whatsapp"
-                        className="block font-mono text-xs font-bold uppercase text-[#101D35]"
-                      >
-                        3. WhatsApp Number{" "}
-                        <span className="text-[#27B58A]">*</span>
-                      </label>
-                      <input
-                        id="innovate-whatsapp"
-                        type="tel"
-                        required
-                        value={whatsapp}
-                        onChange={(e) => setWhatsapp(e.target.value)}
-                        placeholder="+357 99 000 000 (for rapid proposal updates & direct consultation)"
-                        className="mt-2 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-4 py-3 text-sm text-[#101D35] placeholder:text-[#A8B1BE] focus:border-[#101D35] focus:bg-white focus:outline-none"
-                      />
-                    </div>
-
-                    {/* Field 4: Description of the Idea */}
-                    <div>
-                      <label
-                        htmlFor="innovate-description"
-                        className="block font-mono text-xs font-bold uppercase text-[#101D35]"
-                      >
-                        4. Description of Your Idea{" "}
-                        <span className="text-[#27B58A]">*</span>
-                      </label>
-                      <p className="mt-0.5 text-xs text-[#253B5B]">
-                        Describe the business, product, automated system, or
-                        service you have in mind, target customers, and location
-                        (e.g. Limassol, Nicosia, Cyprus-wide, or EU).
-                      </p>
+                    <div className="sm:col-span-8">
                       <textarea
-                        id="innovate-description"
-                        required
                         rows={4}
+                        required
                         value={ideaDescription}
                         onChange={(e) => setIdeaDescription(e.target.value)}
-                        placeholder="Tell us what you are thinking..."
-                        className="mt-2 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-4 py-3 text-sm text-[#101D35] placeholder:text-[#A8B1BE] focus:border-[#101D35] focus:bg-white focus:outline-none"
+                        placeholder="Describe your concept, target customers, preferred location in Cyprus or EU, and any equipment or software you envision..."
+                        className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
                       />
                     </div>
+                  </li>
 
-                    {/* Field 5: Budget (Optional Selector) */}
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <label className="block font-mono text-xs font-bold uppercase text-[#101D35]">
-                          5. Estimated Budget Range{" "}
-                          <span className="font-normal text-[#253B5B]">
-                            (Optional Selector)
-                          </span>
-                        </label>
-                        <span className="font-mono text-[11px] text-[#27B58A]">
-                          Selected: {budget}
-                        </span>
-                      </div>
-                      <div className="mt-2.5 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-                        {BUDGET_OPTIONS.map((option) => {
-                          const active = budget === option;
-                          return (
-                            <button
-                              key={option}
-                              type="button"
-                              onClick={() => setBudget(option)}
-                              className={`rounded-lg border px-3 py-2.5 text-left text-xs font-semibold transition-all cursor-pointer ${
-                                active
-                                  ? "border-[#101D35] bg-[#101D35] text-[#F7F8FA]"
-                                  : "border-[#A8B1BE]/50 bg-[#F7F8FA] text-[#101D35] hover:border-[#253B5B]"
-                              }`}
-                            >
-                              <div className="flex items-center justify-between">
-                                <span>{option}</span>
-                                {active && (
-                                  <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
-                                )}
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
+                  {/* Goals and expectations */}
+                  <li className="grid sm:grid-cols-12 gap-x-gutter gap-y-3 border-t border-grey py-6">
+                    <div className="sm:col-span-4">
+                      <span className="text-eyebrow text-[#101D35] block">
+                        Goals &amp; Expectations *
+                      </span>
+                      <span className="text-xs text-[#253B5B] mt-1 block">
+                        What does a successful launch look like for you?
+                      </span>
                     </div>
-
-                    {/* Field 6: Goals and Expectations */}
-                    <div>
-                      <label
-                        htmlFor="innovate-goals"
-                        className="block font-mono text-xs font-bold uppercase text-[#101D35]"
-                      >
-                        6. Goals and Expectations{" "}
-                        <span className="text-[#27B58A]">*</span>
-                      </label>
-                      <p className="mt-0.5 text-xs text-[#253B5B]">
-                        What does success look like for you? (e.g., passive
-                        side-income, full turnkey launch, custom prototype,
-                        automating operations, or scaling across Cyprus).
-                      </p>
+                    <div className="sm:col-span-8">
                       <textarea
-                        id="innovate-goals"
-                        required
                         rows={3}
+                        required
                         value={goals}
                         onChange={(e) => setGoals(e.target.value)}
-                        placeholder="Share your main goals, desired level of involvement, and what support you need from Onspec..."
-                        className="mt-2 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-4 py-3 text-sm text-[#101D35] placeholder:text-[#A8B1BE] focus:border-[#101D35] focus:bg-white focus:outline-none"
+                        placeholder="e.g. Passive/semi-automated monthly cashflow, turnkey location + hardware setup in Limassol, or full MVP + AI customer pipeline..."
+                        className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
                       />
                     </div>
+                  </li>
 
-                    {/* Field 7: Desired Timeframe */}
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <label className="block font-mono text-xs font-bold uppercase text-[#101D35]">
-                          7. Desired Timeframe{" "}
-                          <span className="text-[#27B58A]">*</span>
-                        </label>
-                        <span className="font-mono text-[11px] text-[#253B5B]">
-                          Target: {timeframe}
-                        </span>
-                      </div>
-                      <div className="mt-2.5 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-                        {TIMEFRAME_OPTIONS.map((option) => {
-                          const active = timeframe === option;
-                          return (
-                            <button
-                              key={option}
-                              type="button"
-                              onClick={() => setTimeframe(option)}
-                              className={`rounded-lg border px-3 py-2.5 text-left text-xs font-semibold transition-all cursor-pointer ${
-                                active
-                                  ? "border-[#101D35] bg-[#101D35] text-[#F7F8FA]"
-                                  : "border-[#A8B1BE]/50 bg-[#F7F8FA] text-[#101D35] hover:border-[#253B5B]"
-                              }`}
-                            >
-                              <div className="flex items-center justify-between gap-1">
-                                <span>{option}</span>
-                                {active && (
-                                  <span className="h-2 w-2 shrink-0 rounded-full bg-[#27B58A]" />
-                                )}
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
+                  {/* Budget (optional) */}
+                  <li className="grid sm:grid-cols-12 gap-x-gutter gap-y-3 border-t border-grey py-6">
+                    <div className="sm:col-span-4">
+                      <span className="text-eyebrow text-[#101D35] block">
+                        Estimated Budget (Optional)
+                      </span>
+                      <span className="text-xs text-[#253B5B] mt-1 block">
+                        Helps us tailor hardware &amp; scale options.
+                      </span>
                     </div>
+                    <div className="sm:col-span-8 flex flex-wrap gap-2">
+                      {BUDGET_TIERS.map((tier) => {
+                        const active = budget === tier;
+                        return (
+                          <button
+                            key={tier}
+                            type="button"
+                            onClick={() => setBudget(tier)}
+                            className={`rounded-full px-4 py-2 text-xs font-mono transition-colors cursor-pointer border ${
+                              active
+                                ? "bg-[#101D35] text-[#27B58A] border-[#101D35]"
+                                : "bg-white text-[#101D35] border-[#A8B1BE]/50 hover:border-[#101D35]"
+                            }`}
+                          >
+                            {tier}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </li>
 
-                    {/* Submit CTA */}
-                    <div className="pt-2">
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#27B58A] px-6 py-4 text-sm font-extrabold text-[#101D35] shadow-md transition-all hover:bg-[#1F9470] hover:text-white disabled:opacity-60 cursor-pointer"
+                  {/* Desired timeframe */}
+                  <li className="grid sm:grid-cols-12 gap-x-gutter gap-y-3 border-t border-grey py-6">
+                    <div className="sm:col-span-4">
+                      <span className="text-eyebrow text-[#101D35] block">
+                        Desired Timeframe *
+                      </span>
+                      <span className="text-xs text-[#253B5B] mt-1 block">
+                        When would you like to deploy?
+                      </span>
+                    </div>
+                    <div className="sm:col-span-8 flex flex-wrap gap-2">
+                      {TIMEFRAME_OPTIONS.map((tf) => {
+                        const active = timeframe === tf;
+                        return (
+                          <button
+                            key={tf}
+                            type="button"
+                            onClick={() => setTimeframe(tf)}
+                            className={`rounded-full px-4 py-2 text-xs font-mono transition-colors cursor-pointer border ${
+                              active
+                                ? "bg-[#27B58A] text-[#101D35] border-[#27B58A] font-semibold"
+                                : "bg-white text-[#101D35] border-[#A8B1BE]/50 hover:border-[#101D35]"
+                            }`}
+                          >
+                            {tf}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Step Block 3: Founder Contact Coordinates */}
+              <div className="bg-sand p-unit-md rounded-md flex flex-col gap-y-4 border border-[#A8B1BE]/30">
+                <div className="flex items-center justify-between">
+                  <h2 className="heading-xs text-[#101D35]">
+                    03 // Where Should We Send Your Free Proposal?
+                  </h2>
+                  <span className="font-mono text-xs text-[#253B5B]">
+                    STEP 3 OF 3
+                  </span>
+                </div>
+
+                <ul className="flex flex-col">
+                  <li className="grid sm:grid-cols-2 gap-x-gutter gap-y-4 border-t border-grey py-6 items-center">
+                    <label className="text-eyebrow text-[#101D35]">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Your full name"
+                      className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-5 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                    />
+                  </li>
+                  <li className="grid sm:grid-cols-2 gap-x-gutter gap-y-4 border-t border-grey py-6 items-center">
+                    <label className="text-eyebrow text-[#101D35]">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="name@company.eu"
+                      className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-5 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                    />
+                  </li>
+                  <li className="grid sm:grid-cols-2 gap-x-gutter gap-y-4 border-t border-grey py-6 items-center">
+                    <label className="text-eyebrow text-[#101D35]">
+                      WhatsApp Number *
+                    </label>
+                    <input
+                      type="tel"
+                      required
+                      value={whatsapp}
+                      onChange={(e) => setWhatsapp(e.target.value)}
+                      placeholder="+357 99 000 000"
+                      className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-5 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                    />
+                  </li>
+                </ul>
+
+                <div className="border-t border-grey pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <span className="text-xs text-[#253B5B]">
+                    Includes free preliminary proposal, architecture roadmap &amp; budgetary quotation.
+                  </span>
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="c-button primary cursor-pointer w-full sm:w-auto"
+                    style={{
+                      backgroundColor: "#27B58A",
+                      color: "#101D35",
+                    }}
+                  >
+                    <span className="c-button_inner">
+                      <span
+                        className="c-button_label-container"
+                        data-label={
+                          submitting
+                            ? "Generating Proposal Request..."
+                            : "Request Free Preliminary Proposal"
+                        }
                       >
-                        <Send className="h-4 w-4" />
-                        <span>
-                          {isSubmitting
-                            ? "GENERATING PROPOSAL REFERENCE ID..."
-                            : "SUBMIT YOUR IDEA FOR FREE PRELIMINARY PROPOSAL"}
+                        <span className="c-button_label font-semibold">
+                          {submitting
+                            ? "Generating Proposal Request..."
+                            : "Request Free Preliminary Proposal"}
                         </span>
-                      </button>
-                      <p className="mt-3 text-center font-mono text-[11px] text-[#253B5B]">
-                        FREE PRELIMINARY PROPOSAL OR QUOTATION • ZERO OBLIGATION
-                        • PHASE 2 SUPABASE READY
-                      </p>
-                    </div>
-                  </form>
-                )}
+                      </span>
+                      <span className="c-icon c-button_icon">
+                        <svg
+                          aria-hidden="true"
+                          className="svg-arrow-right"
+                          focusable="false"
+                        >
+                          <use href="/assets/svgs/sprite.svg#arrow-right" />
+                        </svg>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          )}
+        </div>
+      </section>
+
+      {/* Section 4: Lightship specs.html Main Specs Hairline Tables */}
+      <section className="container my-fluid-2xl flex flex-col gap-y-8">
+        <h2 className="heading-md text-[#101D35]">
+          Execution &amp; Proposal Specifications
+        </h2>
+        <div className="flex flex-col gap-y-2">
+          {FOUNDRY_SPECS.map((group) => (
+            <div
+              key={group.groupTitle}
+              className="bg-sand p-unit-md rounded-md flex flex-col gap-y-4 border border-[#A8B1BE]/25"
+            >
+              <h3 className="heading-xs text-[#101D35]">{group.groupTitle}</h3>
+              <ul className="flex flex-col">
+                {group.rows.map((row) => (
+                  <li
+                    key={row.label}
+                    className="grid sm:grid-cols-2 gap-x-gutter gap-y-4 border-t border-grey py-6"
+                  >
+                    <span className="text-eyebrow text-[#253B5B]">
+                      {row.label}
+                    </span>
+                    <span className="text-md text-[#101D35] font-medium">
+                      {row.value}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Section 5: Lightship specs.html 2-Column Upgrade Options Grid (6-Step Customer Journey) */}
+      <section className="container my-fluid-2xl flex flex-col gap-y-8">
+        <h2 className="heading-md text-[#101D35]">
+          How Your Idea Becomes a Business (6-Stage Protocol)
+        </h2>
+        <div className="grid md:grid-cols-2 gap-gutter">
+          {CUSTOMER_JOURNEY_STEPS.map((step) => (
+            <div
+              key={step.number}
+              className="bg-sand p-unit-md rounded-md flex flex-col gap-y-4 border border-[#A8B1BE]/25"
+            >
+              <div className="flex items-center justify-between">
+                <h3 className="heading-2xs text-[#101D35]">
+                  {step.number}. {step.title}
+                </h3>
+                <span className="font-mono text-xs text-[#27B58A]">
+                  {step.code}
+                </span>
+              </div>
+              <ul className="flex flex-col">
+                <li className="grid sm:grid-cols-2 gap-x-gutter gap-y-4 border-t border-grey py-5">
+                  <span className="text-eyebrow text-[#253B5B]">What Happens</span>
+                  <span className="text-md text-[#101D35]">
+                    {step.description}
+                  </span>
+                </li>
+                <li className="grid sm:grid-cols-2 gap-x-gutter gap-y-4 border-t border-grey py-5">
+                  <span className="text-eyebrow text-[#253B5B]">Deliverable</span>
+                  <span className="text-md text-[#27B58A] font-semibold">
+                    {step.deliverable}
+                  </span>
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Section 6: Lightship specs.html Bottom Abstract Mask with .c-product-widget */}
+      <div
+        className="c-abstract-mask"
+        style={{ "--mask-progress": 1 } as React.CSSProperties}
+      >
+        <div className="c-abstract-mask_inner">
+          <div className="c-abstract-mask_background">
+            <div className="c-image -cover -overlay -lazy-load is-loaded h-full w-full">
+              <picture className="c-image_inner h-full w-full block">
+                <img
+                  alt="Build your venture with ONSPEC"
+                  className="c-image_img is-loaded h-full w-full object-cover"
+                  height={1333}
+                  width={2000}
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85"
+                />
+              </picture>
+            </div>
+          </div>
+          <div className="c-abstract-mask_content">
+            <div className="flex flex-col items-center justify-end h-full p-(--grid-margin-xl)">
+              <h2 className="sr-only">Make it yours</h2>
+              <div className="absolute inset-0 pt-fluid-2xl flex-1 z-below flex items-start justify-center">
+                <div
+                  aria-hidden="true"
+                  className="heading-3xl md:heading-4xl text-center text-white"
+                >
+                  Build it yours
+                </div>
+              </div>
+              <div
+                className="c-product-widget"
+                style={{ "--mask-progress": 1 } as React.CSSProperties}
+              >
+                <div className="c-product-widget_card -secondary">
+                  <p className="text-eyebrow">Talk with an expert</p>
+                  <div className="c-product-widget_content">
+                    <p className="text-lg max-w-[15rem]">
+                      Get your concept questions answered
+                    </p>
+                    <Link
+                      aria-label="Talk with an expert"
+                      className="c-button -icon -blur-light absolute-link c-product-widget_button"
+                      href="/contact"
+                    >
+                      <span className="c-button_inner">
+                        <span className="c-icon c-button_icon">
+                          <svg
+                            aria-hidden="true"
+                            className="svg-arrow-right"
+                            focusable="false"
+                          >
+                            <use href="/assets/svgs/sprite.svg#arrow-right" />
+                          </svg>
+                        </span>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+                <div className="c-product-widget_card -primary">
+                  <p className="text-eyebrow">Ready-to-Launch</p>
+                  <div className="c-product-widget_content">
+                    <p className="text-lg max-w-[15rem]">
+                      Explore 7 proven turnkey business models
+                    </p>
+                    <Link
+                      aria-label="Explore turnkey models"
+                      className="c-button -icon -blur-dark absolute-link"
+                      href="/launch"
+                    >
+                      <span className="c-button_inner">
+                        <span className="c-icon c-button_icon">
+                          <svg
+                            aria-hidden="true"
+                            className="svg-arrow-right"
+                            focusable="false"
+                          >
+                            <use href="/assets/svgs/sprite.svg#arrow-right" />
+                          </svg>
+                        </span>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* SECTION 04: CROSS-PILLAR NAVIGATION BANNER */}
-      <section className="linear-navy-surface tech-grid-dark py-16 text-[#F7F8FA]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-            <div>
-              <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#27B58A]">
-                PREFER A PROVEN TURNKEY MODEL?
-              </span>
-              <h2 className="mt-2 text-2xl font-extrabold sm:text-3xl">
-                Explore our Ready-to-Launch Prefabricated Businesses
-              </h2>
-              <p className="mt-2 max-w-2xl text-sm text-[#A8B1BE]">
-                If you want a pre-engineered business specification with known
-                equipment costs and timelines, browse Pillar 01 (Smart Vending,
-                Automated Coffee Stations, Self-Service Kiosks, Laundromats &amp;
-                Car Wash systems).
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/launch"
-                className="inline-flex items-center gap-2 rounded-lg bg-[#27B58A] px-5 py-3 text-xs font-bold text-[#101D35] hover:bg-[#1F9470] hover:text-white transition-colors"
-              >
-                <span>01 // Explore Ready-to-Launch</span>
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href="/connect"
-                className="inline-flex items-center gap-2 rounded-lg border border-[#A8B1BE]/35 px-5 py-3 text-xs font-semibold text-[#F7F8FA] hover:border-white transition-colors"
-              >
-                <span>04 // Cyprus Legal Network</span>
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </main>
   );
 }

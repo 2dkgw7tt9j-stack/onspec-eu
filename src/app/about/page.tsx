@@ -1,580 +1,873 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import {
-  Compass,
-  Cpu,
-  Layers,
-  Target,
-  Sparkles,
-  ArrowRight,
-  ArrowUpRight,
-  CheckCircle2,
-  RefreshCw,
-  ShieldCheck,
-} from "lucide-react";
-import {
   BRAND_INFO,
-  PILLARS,
   CUSTOMER_JOURNEY_STEPS,
   ECOSYSTEM_STAGES,
+  PILLARS,
+  PillarSpec,
   SCRATCH_VS_ONSPEC_COMPARISON,
-  MARQUEE_TICKER_ITEMS,
 } from "@/data/onspec-data";
-import { InfiniteMarquee } from "@/components/InfiniteMarquee";
+import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 
-const CORE_PILLARS_OF_THOUGHT = [
-  {
-    code: "01 // THE MISSION",
-    title: "To simplify business creation, automation, and execution.",
-    body: "Starting or modernizing a business often feels overwhelming because everything is fragmented—finding locations, vetting hardware suppliers, registering a company, configuring software, and hiring staff. Onspec exists to unify those moving parts into clear, actionable execution.",
-    icon: Target,
-  },
-  {
-    code: "02 // THE PHILOSOPHY",
-    title: "Execution is the multiplier of every great vision.",
-    body: "Ideas are valuable only when translated into reliable systems. Whether through a prefabricated turnkey business model, an AI automation pipeline, or a custom-built concept, we prioritize practical, durable operations over theoretical complexity.",
-    icon: Compass,
-  },
-  {
-    code: "03 // THE APPROACH",
-    title: "Structured specifications, intelligent systems, vetted partners.",
-    body: "We approach business building like engineering: clear specifications, predictable investment requirements, automated customer and back-office workflows, and direct introductions to independent legal professionals in Cyprus.",
-    icon: Layers,
-  },
-  {
-    code: "04 // WHY ONSPEC EXISTS",
-    title: "Bridging the gap between ambition and a running operation.",
-    body: "Too many capable entrepreneurs never launch because they don't want to start from scratch, and too many existing businesses burn out doing repetitive manual tasks. Onspec solves both challenges under one integrated roof.",
-    icon: Cpu,
-  },
-];
+const PILLAR_IMAGES: Record<string, string> = {
+  launch:
+    "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=900&q=85",
+  automate:
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
+  innovate:
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=85",
+  connect:
+    "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=85",
+};
 
 export default function AboutPage() {
-  const [activeJourneyStep, setActiveJourneyStep] = useState<number>(0);
-  const [activeEcosystemStage, setActiveEcosystemStage] = useState<number>(0);
+  const [activeJourneyIdx, setActiveJourneyIdx] = useState(0);
+  const [selectedPillarModal, setSelectedPillarModal] =
+    useState<PillarSpec | null>(null);
+  const [whatsapp, setWhatsapp] = useState("");
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [referenceId, setReferenceId] = useState<string | null>(null);
 
-  const selectedStep =
-    CUSTOMER_JOURNEY_STEPS[activeJourneyStep] || CUSTOMER_JOURNEY_STEPS[0];
-  const selectedEco =
-    ECOSYSTEM_STAGES[activeEcosystemStage] || ECOSYSTEM_STAGES[0];
+  useEffect(() => {
+    document.documentElement.classList.add("is-ready", "is-loaded");
+  }, []);
+
+  const activeStep =
+    CUSTOMER_JOURNEY_STEPS[activeJourneyIdx] || CUSTOMER_JOURNEY_STEPS[0];
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    const res = await submitOnspecEnquiry({
+      pillar: "GENERAL",
+      name: "About Page Executive Dossier Request",
+      email,
+      whatsapp,
+      message: "Requested ONSPEC Corporate Profile & 4-Pillar Ecosystem Dossier",
+    });
+    setSubmitting(false);
+    if (res.ok) {
+      setReferenceId(res.referenceId);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-[#F7F8FA] text-[#101D35]">
-      {/* SECTION 01: BRAND OVERVIEW & POSITIONING HERO */}
-      <section className="relative overflow-hidden border-b border-[#A8B1BE]/35 stripe-mesh-light tech-grid-bg pt-12 pb-20 lg:pt-20 lg:pb-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-[#A8B1BE]/35 pb-5">
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-[#101D35]/15 bg-white px-3.5 py-1.5">
-              <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
-              <span className="font-mono text-xs font-semibold tracking-wider text-[#101D35]">
-                ABOUT ONSPEC // CORPORATE ARCHITECTURE &amp; VISION
+    <main className="bg-[#F7F8FA] text-[#101D35]">
+      <h1 className="sr-only">
+        About ONSPEC ({BRAND_INFO.domain}) — {BRAND_INFO.slogan}
+      </h1>
+
+      {/* Section 1: Giant Editorial .c-fadein-text Statement + .c-symbol Twin-Star (1:1 company.html) */}
+      <section
+        className="container pt-[26svh] md:pt-[34svh] mb-fluid-2xl"
+        id="page-heading"
+      >
+        <div className="max-w-[740px] m-auto text-center">
+          <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest mb-6">
+            ABOUT ONSPEC // {BRAND_INFO.domain.toUpperCase()}
+          </p>
+          <div className="c-fadein-text text-heading-md">
+            <div className="c-fadein-text_line is-active">
+              <span
+                className="c-fadein-text_line_inner"
+                style={{ opacity: 1, transform: "translate(0)" }}
+              >
+                Your vision. Our execution.
               </span>
             </div>
-            <div className="font-mono text-xs text-[#253B5B]">
-              {BRAND_INFO.descriptor}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-end">
-            <div className="lg:col-span-8">
-              <p className="font-mono text-xs font-semibold uppercase tracking-widest text-[#27B58A]">
-                ONSPEC.EU — CYPRUS &amp; EUROPEAN UNION
-              </p>
-              <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-[#101D35] sm:text-6xl leading-[1.05]">
-                Your vision. Our execution.
-              </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[#253B5B] sm:text-xl">
-                Onspec is a modern business solutions and technology company
-                helping individuals and organizations launch ready-to-run
-                businesses, implement AI and automation systems, turn custom
-                ideas into reality, and connect with vetted independent legal
-                professionals in Cyprus.
-              </p>
-            </div>
-
-            <div className="lg:col-span-4">
-              <div className="rounded-2xl border border-[#A8B1BE]/45 bg-white p-6 shadow-md">
-                <div className="font-mono text-[11px] font-bold uppercase text-[#27B58A]">
-                  THE ONSPEC VISION STATEMENT
-                </div>
-                <blockquote className="mt-3 text-base font-bold leading-snug text-[#101D35]">
-                  “The real product isn’t just starting a business. It’s making
-                  business ownership easier, more accessible and more
-                  efficient.”
-                </blockquote>
-                <div className="mt-4 flex items-center justify-between border-t border-[#A8B1BE]/30 pt-3 font-mono text-[11px] text-[#253B5B]">
-                  <span>ONSPEC EXECUTIVE DOSSIER</span>
-                  <span>CYPRUS // EU</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 4 Pillar Metrics Strip */}
-          <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {PILLARS.map((pillar) => (
-              <Link
-                key={pillar.id}
-                href={pillar.href}
-                className="group rounded-xl border border-[#A8B1BE]/40 bg-white p-5 transition-all hover:border-[#101D35] hover:shadow-md"
+            <div className="c-fadein-text_line is-active mt-2">
+              <span
+                className="c-fadein-text_line_inner"
+                style={{ opacity: 1, transform: "translate(0)" }}
               >
-                <div className="flex items-center justify-between font-mono text-xs">
-                  <span className="font-bold text-[#27B58A]">
-                    {pillar.code}
-                  </span>
-                  <ArrowUpRight className="h-4 w-4 text-[#253B5B] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </div>
-                <div className="mt-2 text-base font-extrabold text-[#101D35]">
-                  {pillar.shortTitle}
-                </div>
-                <p className="mt-1 text-xs text-[#253B5B]">
-                  {pillar.coreMessage}
-                </p>
-              </Link>
-            ))}
+                We believe you shouldn&apos;t have to start from scratch to build or modernize a business.
+              </span>
+            </div>
+            <div className="c-fadein-text_line is-active mt-4">
+              <span
+                className="c-fadein-text_line_inner text-[#253B5B]"
+                style={{ opacity: 1, transform: "translate(0)" }}
+              >
+                Onspec bridges the gap between having an idea and turning it into a functioning, automated commercial operation across Cyprus and the European Union.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="my-fluid-2xl">
+          <div
+            className="c-symbol"
+            style={{ "--smooth-progress": 1 } as React.CSSProperties}
+          >
+            <span className="c-icon c-symbol_icon text-[#101D35]">
+              <svg aria-hidden="true" className="svg-symbol" focusable="false">
+                <use href="/assets/svgs/sprite.svg#symbol" />
+              </svg>
+            </span>
+            <span className="c-icon c-symbol_icon text-[#27B58A]">
+              <svg aria-hidden="true" className="svg-symbol" focusable="false">
+                <use href="/assets/svgs/sprite.svg#symbol" />
+              </svg>
+            </span>
           </div>
         </div>
       </section>
 
-      <InfiniteMarquee items={MARQUEE_TICKER_ITEMS} speed={38} />
+      {/* Section 2: Lightship .c-company-intro-images Staggered Photo Grid (1:1 company.html) */}
+      <section className="mt-fluid-2xl">
+        <section className="c-company-intro-images mt-fluid-2xl">
+          <div className="c-company-intro-images_container">
+            <div className="c-company-intro-images_block">
+              <div className="c-company-intro-images_image1">
+                <div className="c-image -cover -rounded-md rounded-[10px] h-full -lazy-load is-loaded">
+                  <picture className="c-image_inner h-full w-full block">
+                    <img
+                      alt="Turnkey Automated Retail Infrastructure"
+                      className="c-image_img is-loaded h-full w-full object-cover"
+                      height={600}
+                      width={900}
+                      src="https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=900&q=85"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div className="c-company-intro-images_image2">
+                <div className="c-image -cover -rounded-md rounded-[10px] h-full -lazy-load is-loaded">
+                  <picture className="c-image_inner h-full w-full block">
+                    <img
+                      alt="AI & Business Process Automation Systems"
+                      className="c-image_img is-loaded h-full w-full object-cover"
+                      height={467}
+                      width={700}
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=85"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div className="c-company-intro-images_block2">
+              <div className="c-company-intro-images_image3">
+                <div className="c-image -cover -rounded-md rounded-[10px] h-full -lazy-load is-loaded">
+                  <picture className="c-image_inner h-full w-full block">
+                    <img
+                      alt="ONSPEC Cyprus & EU Venture Execution Desk"
+                      className="c-image_img is-loaded h-full w-full object-cover"
+                      height={1500}
+                      width={2000}
+                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
 
-      {/* SECTION 02: MISSION, PHILOSOPHY, APPROACH & WHY ONSPEC EXISTS */}
-      <section className="border-b border-[#A8B1BE]/35 bg-white py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#253B5B]">
-              01 // MISSION, PHILOSOPHY &amp; APPROACH
-            </span>
-            <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#101D35] sm:text-4xl">
-              Business shouldn’t be complicated.
+      {/* Section 3: Lightship company.html 4-Column Portrait Cards for the 4 Pillars */}
+      <section className="mt-fluid-2xl">
+        <div className="container flex flex-col gap-y-fluid-2xl">
+          <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
+            <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+              FOUR PILLARS. ONE EXECUTION PARTNER.
+            </p>
+            <h2 className="sr-only">The Four Pillars of ONSPEC</h2>
+            <div
+              aria-hidden="true"
+              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+            >
+              The Four Pillars of ONSPEC
+            </div>
+          </div>
+
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-gutter gap-y-fluid-md">
+            {PILLARS.map((pillar) => (
+              <li key={pillar.id}>
+                <div className="relative flex flex-col gap-y-5 group">
+                  <div className="c-image -rounded-md aspect-4/5 -cover -lazy-load is-loaded overflow-hidden relative">
+                    <picture className="c-image_inner h-full w-full block">
+                      <img
+                        alt={pillar.fullTitle}
+                        className="c-image_img is-loaded h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        height={750}
+                        width={600}
+                        src={PILLAR_IMAGES[pillar.id]}
+                      />
+                    </picture>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/85 via-transparent to-transparent flex flex-col justify-between p-5 text-white">
+                      <span className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                        {pillar.code}
+                      </span>
+                      <div>
+                        <p className="font-mono text-[10px] uppercase tracking-wider text-[#A8B1BE]">
+                          {pillar.telemetryMetric}
+                        </p>
+                        <p className="text-sm font-bold text-white">
+                          {pillar.telemetryValue}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-y-2">
+                    <p className="body-sm font-bold text-[#101D35]">
+                      {pillar.index} // {pillar.shortTitle}
+                    </p>
+                    <p className="body-sm text-[#253B5B]">
+                      {pillar.coreMessage}
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedPillarModal(pillar)}
+                    className="absolute-link cursor-pointer"
+                  >
+                    <span className="sr-only">
+                      Inspect {pillar.shortTitle}
+                    </span>
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Section 4: Lightship company.html .c-bento-box 4-Pillar & Color Philosophy Showcase */}
+      <section className="mt-fluid-2xl">
+        <div className="container flex flex-col gap-y-fluid-xl">
+          <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
+            <h2 className="sr-only">
+              We set out to simplify business creation... And built a complete operational ecosystem.
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#253B5B]">
-              We built Onspec around a foundational truth: entrepreneurs and
-              business owners achieve far more when they don’t have to reinvent
-              operational infrastructure from zero.
+            <div
+              aria-hidden="true"
+              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+            >
+              We set out to simplify business creation... And built a complete operational ecosystem.
+            </div>
+          </div>
+
+          <div className="c-bento-box">
+            {/* Quote Cell */}
+            <div
+              className="c-bento-box_quote c-bento-box_item"
+              style={{ backgroundColor: "#101D35" }}
+            >
+              <div className="c-bento-box_quote_inner">
+                <div className="c-bento-box_quote_header">
+                  <span className="c-icon text-[#27B58A]">
+                    <svg
+                      aria-hidden="true"
+                      className="svg-symbol-double"
+                      focusable="false"
+                    >
+                      <use href="/assets/svgs/sprite.svg#symbol-double" />
+                    </svg>
+                  </span>
+                  <p className="heading-xs text-white">
+                    From launching your own turnkey business to automating the one you already have, we make the complicated simple.
+                  </p>
+                </div>
+                <div className="c-bento-box_quote_footer">
+                  <p className="text-md text-[#27B58A]">{BRAND_INFO.name}</p>
+                  <p className="text-xs text-[#A8B1BE]">
+                    {BRAND_INFO.descriptor}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Cell */}
+            <div className="c-bento-box_image c-bento-box_item">
+              <div className="c-image -cover -parallax -lazy-load is-loaded h-full w-full">
+                <div className="c-image_parallax h-full w-full">
+                  <picture className="c-image_inner h-full w-full block">
+                    <img
+                      alt="ONSPEC Architectural Execution"
+                      className="c-image_img is-loaded h-full w-full object-cover"
+                      height={500}
+                      width={780}
+                      src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            {/* Rail Cell */}
+            <div className="c-bento-box_rail c-bento-box_item relative">
+              <div className="c-bento-box_rail_image h-full w-full">
+                <div className="c-image -cover -parallax -lazy-load is-loaded h-full w-full">
+                  <div className="c-image_parallax h-full w-full">
+                    <picture className="c-image_inner h-full w-full block">
+                      <img
+                        alt="Launch, Automate, Innovate, Connect"
+                        className="c-image_img is-loaded h-full w-full object-cover"
+                        height={1290}
+                        width={1580}
+                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1580&q=85"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/90 via-[#101D35]/35 to-transparent flex flex-col justify-end p-8">
+                <div className="flex items-center gap-3 text-white heading-sm">
+                  <span className="c-icon text-[#27B58A]">
+                    <svg
+                      aria-hidden="true"
+                      className="svg-symbol"
+                      focusable="false"
+                    >
+                      <use href="/assets/svgs/sprite.svg#symbol" />
+                    </svg>
+                  </span>
+                  <span>01 Launch • 02 Automate • 03 Innovate • 04 Connect</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Stats & Brand Identity Cell */}
+            <div className="c-bento-box_stats c-bento-box_item">
+              <div className="c-bento-box_stats_image">
+                <div className="c-image -cover -parallax -lazy-load is-loaded h-full w-full">
+                  <div className="c-image_parallax h-full w-full">
+                    <picture className="c-image_inner h-full w-full block">
+                      <img
+                        alt="ONSPEC Architectural Precision"
+                        className="c-image_img is-loaded h-full w-full object-cover"
+                        height={800}
+                        width={1200}
+                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div className="c-bento-box_stats_inner bg-[#101D35]/85 backdrop-blur-md">
+                <p className="text-heading-sm max-w-[440px] text-white">
+                  Engineered for modern entrepreneurs, investors, and established operators in Cyprus &amp; Europe.
+                </p>
+                <div className="c-bento-box_stats_bottom">
+                  <p className="text-md max-w-[340px] text-[#F7F8FA]/85">
+                    Our visual &amp; operational architecture balances Clean White clarity (#F7F8FA), Deep Navy authority (#101D35), Steel Blue depth (#253B5B), Emerald Green action (#27B58A), and Silver Grey precision (#A8B1BE).
+                  </p>
+                  <ul className="c-bento-box_stats_list">
+                    <li className="c-bento-box_stats_item">
+                      <p className="text-heading-xl text-[#27B58A]">7</p>
+                      <p className="text-xs max-w-[100px] opacity-75">
+                        Turnkey Prefab Business Models
+                      </p>
+                    </li>
+                    <li className="c-bento-box_stats_item">
+                      <p className="text-heading-xl text-white">10</p>
+                      <p className="text-xs max-w-[100px] opacity-75">
+                        AI &amp; Workflow Automation Modules
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5: Interactive 6-Step Customer Journey (Discovery -> Enquiry -> Assessment -> Proposal -> Execution -> Ongoing Support) */}
+      <section id="customer-journey" className="mt-fluid-2xl">
+        <div className="container flex flex-col gap-y-fluid-xl">
+          <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
+            <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+              THE 6-STEP CUSTOMER JOURNEY
+            </p>
+            <h2 className="sr-only">From Discovery to Ongoing Support</h2>
+            <div
+              aria-hidden="true"
+              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+            >
+              From Discovery to Ongoing Support
+            </div>
+            <p className="text-md text-[#253B5B]">
+              Select any stage in the 6-step protocol below to inspect how Onspec guides your project from first contact to long-term operation.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {CORE_PILLARS_OF_THOUGHT.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.code}
-                  className="rounded-2xl border border-[#A8B1BE]/40 bg-[#F7F8FA] p-7 transition-all hover:border-[#101D35] hover:bg-white"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-[#27B58A]">
-                      {item.code}
-                    </span>
-                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#101D35] text-[#F7F8FA]">
-                      <Icon className="h-4 w-4 text-[#27B58A]" />
-                    </span>
-                  </div>
-                  <h3 className="mt-4 text-xl font-extrabold text-[#101D35]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#253B5B]">
-                    {item.body}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Monumental Vision Callout Banner */}
-          <div className="mt-12 rounded-2xl linear-navy-surface tech-grid-dark p-8 text-[#F7F8FA] sm:p-12">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
-              <div className="lg:col-span-8">
-                <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#27B58A]">
-                  OUR LONG-TERM VISION
-                </span>
-                <h3 className="mt-3 text-2xl font-extrabold leading-tight text-white sm:text-4xl">
-                  “The real product isn’t just starting a business. It’s making
-                  business ownership easier, more accessible and more
-                  efficient.”
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed text-[#A8B1BE] sm:text-base">
-                  Whether you are launching your very first automated vending
-                  unit in Cyprus, deploying AI agents to reclaim 20 hours a week
-                  in an established company, or building an entirely new
-                  venture, Onspec is engineered to be your long-term execution
-                  backbone.
-                </p>
-              </div>
-              <div className="lg:col-span-4 lg:text-right">
-                <Link
-                  href="/launch"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#27B58A] px-6 py-4 text-sm font-extrabold text-[#101D35] hover:bg-[#1F9470] hover:text-white transition-colors"
-                >
-                  <span>Explore Turnkey Ventures</span>
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 03: INTERACTIVE VISUAL DIAGRAM OF THE 6-STEP CUSTOMER JOURNEY */}
-      <section className="border-b border-[#A8B1BE]/35 py-20 lg:py-28 stripe-mesh-light">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-            <div className="max-w-3xl">
-              <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#27B58A]">
-                02 // INTERACTIVE ARCHITECTURE DIAGRAM
-              </span>
-              <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#101D35] sm:text-4xl">
-                The 6-Step Customer Journey
-              </h2>
-              <p className="mt-3 text-base text-[#253B5B]">
-                From first discovery to long-term operational scaling, every
-                client engagement follows a transparent six-stage execution
-                protocol. Click any stage below to inspect the process.
-              </p>
-            </div>
-            <div className="font-mono text-xs text-[#253B5B]">
-              DISCOVERY → ENQUIRY → ASSESSMENT → PROPOSAL → EXECUTION → SUPPORT
-            </div>
-          </div>
-
-          {/* Interactive 6-Node Flowchart Diagram */}
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {CUSTOMER_JOURNEY_STEPS.map((step, index) => {
-              const isActive = activeJourneyStep === index;
-              return (
-                <button
-                  key={step.number}
-                  type="button"
-                  onClick={() => setActiveJourneyStep(index)}
-                  className={`group relative flex flex-col justify-between rounded-xl border p-4 text-left transition-all cursor-pointer ${
-                    isActive
-                      ? "border-[#101D35] bg-[#101D35] text-[#F7F8FA] shadow-lg"
-                      : "border-[#A8B1BE]/45 bg-white text-[#101D35] hover:border-[#253B5B]"
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span
-                      className={`font-mono text-xs font-bold ${
-                        isActive ? "text-[#27B58A]" : "text-[#253B5B]"
-                      }`}
-                    >
-                      STEP {step.number}
-                    </span>
-                    <span
-                      className={`h-2 w-2 rounded-full ${
-                        isActive ? "bg-[#27B58A]" : "bg-[#A8B1BE]/50"
-                      }`}
-                    />
-                  </div>
-                  <div className="mt-4">
-                    <div className="text-base font-extrabold">{step.title}</div>
-                    <div
-                      className={`mt-1 text-xs ${
-                        isActive ? "text-[#A8B1BE]" : "text-[#253B5B]"
-                      }`}
-                    >
-                      {step.subtitle}
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Active Step Deep-Dive Panel */}
-          <div className="mt-6 rounded-2xl border border-[#A8B1BE]/45 bg-white p-6 shadow-md sm:p-10">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
-              <div className="lg:col-span-7">
-                <div className="inline-flex items-center gap-2 rounded-md bg-[#F7F8FA] px-3 py-1 font-mono text-xs font-bold text-[#101D35] border border-[#A8B1BE]/35">
-                  <span>{selectedStep.code}</span>
-                </div>
-                <h3 className="mt-3 text-2xl font-extrabold text-[#101D35] sm:text-3xl">
-                  {selectedStep.number}. {selectedStep.title} —{" "}
-                  <span className="text-[#253B5B]">
-                    {selectedStep.subtitle}
-                  </span>
-                </h3>
-                <p className="mt-4 text-base leading-relaxed text-[#253B5B]">
-                  {selectedStep.description}
-                </p>
-
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setActiveJourneyStep(
-                        (prev) => (prev + 1) % CUSTOMER_JOURNEY_STEPS.length
-                      )
-                    }
-                    className="inline-flex items-center gap-2 rounded-lg bg-[#101D35] px-4 py-2.5 text-xs font-bold text-[#F7F8FA] hover:bg-[#253B5B] cursor-pointer"
-                  >
-                    <span>
-                      Next Stage: Step{" "}
-                      {
-                        CUSTOMER_JOURNEY_STEPS[
-                          (activeJourneyStep + 1) %
-                            CUSTOMER_JOURNEY_STEPS.length
-                        ].number
-                      }
-                    </span>
-                    <ArrowRight className="h-3.5 w-3.5 text-[#27B58A]" />
-                  </button>
-                </div>
-              </div>
-
-              <div className="lg:col-span-5">
-                <div className="rounded-xl border border-[#A8B1BE]/35 bg-[#F7F8FA] p-6">
-                  <div className="font-mono text-xs font-bold uppercase text-[#253B5B]">
-                    STAGE OUTPUT &amp; CLIENT DELIVERABLE
-                  </div>
-                  <div className="mt-2 flex items-start gap-2.5 text-base font-bold text-[#101D35]">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#27B58A]" />
-                    <span>{selectedStep.deliverable}</span>
-                  </div>
-                  <div className="mt-4 border-t border-[#A8B1BE]/30 pt-4">
-                    <div className="font-mono text-[11px] text-[#253B5B]">
-                      PROGRESSION TRACKER: STEP {selectedStep.number} OF 06
-                    </div>
-                    <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-[#A8B1BE]/30">
-                      <div
-                        className="h-full bg-[#27B58A] transition-all duration-300"
-                        style={{
-                          width: `${
-                            ((activeJourneyStep + 1) /
-                              CUSTOMER_JOURNEY_STEPS.length) *
-                            100
-                          }%`,
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 04: INTERACTIVE 7-STAGE LONG-TERM BUSINESS ECOSYSTEM */}
-      <section className="border-b border-[#A8B1BE]/35 linear-navy-surface tech-grid-dark py-20 text-[#F7F8FA] lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex flex-col justify-between gap-6 border-b border-[#A8B1BE]/20 pb-10 lg:flex-row lg:items-end">
-            <div className="max-w-3xl">
-              <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#27B58A]">
-                03 // THE 7-STAGE LONG-TERM BUSINESS ECOSYSTEM
-              </span>
-              <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                Designed for the Entire Lifecycle of Business Ownership
-              </h2>
-              <p className="mt-3 text-base text-[#A8B1BE]">
-                Onspec is not a one-off vendor. Our four pillars form a
-                continuous 7-stage growth loop—from launching your first turnkey
-                unit and structuring your Cyprus company to automating daily
-                operations and expanding across multiple locations.
-              </p>
-            </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#27B58A]/40 bg-[#27B58A]/10 px-4 py-2 font-mono text-xs text-[#27B58A]">
-              <RefreshCw className="h-3.5 w-3.5" />
-              <span>CONTINUOUS ECOSYSTEM LOOP</span>
-            </div>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-12">
-            {/* Left 7-Stage Interactive Architecture List */}
-            <div className="space-y-3 lg:col-span-7">
-              {ECOSYSTEM_STAGES.map((stage, idx) => {
-                const isSelected = activeEcosystemStage === idx;
+          {/* Interactive 6-Step Switcher Bar + Active Detail Card */}
+          <div className="rounded-[20px] bg-white border border-[#A8B1BE]/45 p-6 md:p-10 space-y-8 shadow-sm">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+              {CUSTOMER_JOURNEY_STEPS.map((step, idx) => {
+                const active = idx === activeJourneyIdx;
                 return (
-                  <div
-                    key={stage.step}
-                    onClick={() => setActiveEcosystemStage(idx)}
-                    className={`cursor-pointer rounded-xl border p-5 transition-all ${
-                      isSelected
-                        ? "border-[#27B58A] bg-[#253B5B]/70 shadow-lg"
-                        : "border-[#A8B1BE]/20 bg-[#101D35]/70 hover:border-[#A8B1BE]/50"
+                  <button
+                    key={step.number}
+                    type="button"
+                    onClick={() => setActiveJourneyIdx(idx)}
+                    className={`rounded-xl p-4 text-left border transition-all cursor-pointer flex flex-col justify-between gap-2 ${
+                      active
+                        ? "bg-[#101D35] text-white border-[#27B58A] shadow-md"
+                        : "bg-[#F7F8FA] text-[#101D35] border-[#A8B1BE]/40 hover:border-[#253B5B]"
                     }`}
                   >
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <div className="flex items-center gap-3">
-                        <span
-                          className={`flex h-8 w-8 items-center justify-center rounded-lg font-mono text-xs font-bold ${
-                            isSelected
-                              ? "bg-[#27B58A] text-[#101D35]"
-                              : "bg-[#253B5B] text-[#F7F8FA]"
-                          }`}
-                        >
-                          {stage.step}
-                        </span>
-                        <h3 className="text-base font-bold text-white">
-                          {stage.title}
-                        </h3>
-                      </div>
-                      <span className="rounded bg-[#101D35] px-2.5 py-1 font-mono text-[11px] font-semibold text-[#27B58A] border border-[#A8B1BE]/20">
-                        {stage.pillarRef}
-                      </span>
+                    <span
+                      className={`font-mono text-xs font-bold ${
+                        active ? "text-[#27B58A]" : "text-[#253B5B]"
+                      }`}
+                    >
+                      {step.number}
+                    </span>
+                    <div>
+                      <p className="text-sm font-bold">{step.title}</p>
+                      <p
+                        className={`text-[11px] mt-0.5 ${
+                          active ? "text-[#A8B1BE]" : "text-[#253B5B]/75"
+                        }`}
+                      >
+                        {step.subtitle}
+                      </p>
                     </div>
-                    <p className="mt-2.5 pl-11 text-xs leading-relaxed text-[#A8B1BE] sm:text-sm">
-                      {stage.description}
-                    </p>
-                  </div>
+                  </button>
                 );
               })}
             </div>
 
-            {/* Right Column: Visual Ecosystem Loop Diagram Card */}
-            <div className="lg:col-span-5">
-              <div className="sticky top-28 rounded-2xl border border-[#A8B1BE]/30 bg-[#101D35]/90 p-6 shadow-2xl sm:p-8">
-                <div className="flex items-center justify-between border-b border-[#A8B1BE]/20 pb-4">
-                  <span className="font-mono text-xs font-bold text-[#27B58A]">
-                    ACTIVE STAGE // {selectedEco.step} OF 07
-                  </span>
-                  <span className="font-mono text-xs text-[#A8B1BE]">
-                    {selectedEco.pillarRef}
-                  </span>
-                </div>
-
-                <h3 className="mt-5 text-2xl font-extrabold text-white">
-                  {selectedEco.title}
+            <div className="rounded-2xl bg-[#101D35] text-[#F7F8FA] p-6 md:p-10 grid md:grid-cols-12 gap-6 items-center">
+              <div className="md:col-span-8 space-y-3">
+                <span className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                  {activeStep.code}
+                </span>
+                <h3 className="heading-sm text-white">
+                  {activeStep.number}. {activeStep.title} —{" "}
+                  <span className="text-[#A8B1BE]">{activeStep.subtitle}</span>
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#A8B1BE]">
-                  {selectedEco.description}
+                <p className="text-md text-[#F7F8FA]/85 max-w-2xl">
+                  {activeStep.description}
                 </p>
-
-                {/* Visual Circular / Connected Node Map */}
-                <div className="mt-6 rounded-xl border border-[#A8B1BE]/20 bg-[#253B5B]/30 p-5">
-                  <div className="font-mono text-[11px] font-bold uppercase text-[#F7F8FA]">
-                    ECOSYSTEM INTERCONNECTION
-                  </div>
-                  <div className="mt-4 grid grid-cols-2 gap-3 text-xs">
-                    <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#101D35] p-3">
-                      <div className="font-mono text-[10px] text-[#27B58A]">
-                        01 LAUNCH
-                      </div>
-                      <div className="mt-1 font-semibold text-white">
-                        Turnkey Hardware &amp; Sites
-                      </div>
-                    </div>
-                    <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#101D35] p-3">
-                      <div className="font-mono text-[10px] text-[#27B58A]">
-                        02 AUTOMATE
-                      </div>
-                      <div className="mt-1 font-semibold text-white">
-                        AI Agents &amp; Workflows
-                      </div>
-                    </div>
-                    <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#101D35] p-3">
-                      <div className="font-mono text-[10px] text-[#27B58A]">
-                        03 INNOVATE
-                      </div>
-                      <div className="mt-1 font-semibold text-white">
-                        Custom Idea Execution
-                      </div>
-                    </div>
-                    <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#101D35] p-3">
-                      <div className="font-mono text-[10px] text-[#27B58A]">
-                        04 CONNECT
-                      </div>
-                      <div className="mt-1 font-semibold text-white">
-                        Cyprus Legal Referrals
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <Link
-                    href="/contact"
-                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#27B58A] px-4 py-3 text-xs font-bold text-[#101D35] hover:bg-[#1F9470] hover:text-white transition-colors"
+              </div>
+              <div className="md:col-span-4 rounded-xl bg-[#253B5B]/55 border border-[#A8B1BE]/25 p-5 space-y-2">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-[#27B58A]">
+                  STAGE DELIVERABLE
+                </span>
+                <p className="text-base font-bold text-white">
+                  {activeStep.deliverable}
+                </p>
+                <div className="pt-2 flex items-center justify-between text-xs text-[#A8B1BE]">
+                  <span>Step {activeJourneyIdx + 1} of 6</span>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActiveJourneyIdx(
+                        (activeJourneyIdx + 1) % CUSTOMER_JOURNEY_STEPS.length
+                      )
+                    }
+                    className="text-[#27B58A] font-mono uppercase tracking-wider hover:underline cursor-pointer"
                   >
-                    <span>Start Your Journey With Onspec</span>
-                    <ArrowRight className="h-4 w-4" />
+                    Next Step →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: 7-Stage Long-Term Business Ecosystem .c-accordion (1:1 company.html Values Accordion) */}
+      <section className="mt-fluid-2xl">
+        <div className="container flex flex-col gap-y-fluid-xl">
+          <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
+            <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+              LONG-TERM BUSINESS ECOSYSTEM
+            </p>
+            <h2 className="sr-only">7-Stage Business Ecosystem</h2>
+            <div
+              aria-hidden="true"
+              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+            >
+              7-Stage Business Ecosystem
+            </div>
+            <p className="text-md text-[#253B5B]">
+              A customer can start with a single ready-to-launch business or AI workflow and expand through every layer of the Onspec ecosystem.
+            </p>
+          </div>
+
+          <div className="md:grid md:grid-cols-12 gap-x-gutter">
+            <div className="md:col-start-2 md:col-end-12 lg:col-start-3 lg:col-end-11">
+              {ECOSYSTEM_STAGES.map((stage, idx) => (
+                <div key={stage.step} className="c-accordion">
+                  <details className="c-accordion_details" open={idx === 0}>
+                    <summary className="c-accordion_summary text-md">
+                      <span className="c-accordion_index text-lg font-mono text-[#27B58A]">
+                        {stage.step}
+                      </span>
+                      <p className="text-lg font-semibold text-[#101D35] flex-1">
+                        {stage.title}
+                      </p>
+                      <span className="font-mono text-xs uppercase tracking-wider text-[#253B5B] hidden sm:inline">
+                        {stage.pillarRef}
+                      </span>
+                      <span className="c-icon c-accordion_icon">
+                        <svg
+                          aria-hidden="true"
+                          className="svg-plus"
+                          focusable="false"
+                        >
+                          <use href="/assets/svgs/sprite.svg#plus" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <div>
+                      <div className="pt-6 pb-6">
+                        <div className="c-wysiwyg text-[#253B5B]">
+                          <p>{stage.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7: Lightship .c-push-image Split Block + Starting from Scratch vs ONSPEC */}
+      <section className="mt-fluid-2xl">
+        <div className="c-push-image container">
+          <div className="c-push-image_content">
+            <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+              WHY FOUNDERS CHOOSE ONSPEC
+            </p>
+            <h3 className="sr-only">Starting From Scratch vs. ONSPEC</h3>
+            <div
+              aria-hidden="true"
+              className="c-split-text heading-sm text-[#101D35]"
+            >
+              Starting From Scratch vs. ONSPEC
+            </div>
+            <div className="space-y-4 pt-2">
+              {SCRATCH_VS_ONSPEC_COMPARISON.map((item) => (
+                <div
+                  key={item.dimension}
+                  className="border-t border-[#A8B1BE]/45 pt-3"
+                >
+                  <p className="font-mono text-xs uppercase tracking-wider text-[#101D35] font-bold">
+                    {item.dimension}
+                  </p>
+                  <p className="text-xs text-[#253B5B]/75 line-through mt-0.5">
+                    Scratch: {item.scratch}
+                  </p>
+                  <p className="text-xs text-[#101D35] font-medium mt-0.5">
+                    <span className="text-[#27B58A] font-bold">ONSPEC:</span>{" "}
+                    {item.onspec}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="c-push-image_visual">
+            <div className="c-image -rounded-md -cover -parallax -lazy-load is-loaded h-full w-full">
+              <div className="c-image_parallax h-full w-full">
+                <picture className="c-image_inner h-full w-full block">
+                  <img
+                    alt="ONSPEC Turnkey Operations"
+                    className="c-image_img is-loaded h-full w-full object-cover"
+                    height={1200}
+                    width={1600}
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=85"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 8: Lightship company.html .c-tile-page Cross-Navigation Cards */}
+      <section className="mt-fluid-2xl">
+        <section className="container grid md:grid-cols-2 gap-x-gutter md:gap-y-fluid-2xl max-md:gap-y-gutter my-fluid-2xl">
+          <article className="c-tile-page">
+            <div className="c-image c-tile-page_image -cover -overlay -parallax -lazy-load is-loaded h-full w-full">
+              <div className="c-image_parallax h-full w-full">
+                <picture className="c-image_inner h-full w-full block">
+                  <img
+                    alt="Explore Ready-to-Launch Businesses"
+                    className="c-image_img is-loaded h-full w-full object-cover"
+                    height={750}
+                    width={1200}
+                    src="https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1200&q=85"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div className="c-tile-page_inner">
+              <span className="c-icon">
+                <svg
+                  aria-hidden="true"
+                  className="svg-symbol-double"
+                  focusable="false"
+                >
+                  <use href="/assets/svgs/sprite.svg#symbol-double" />
+                </svg>
+              </span>
+              <div className="c-tile-page_content">
+                <h2 className="text-xl">
+                  Explore 7 Ready-to-Launch Business Models
+                </h2>
+                <Link className="absolute-link text-xl opacity-75" href="/launch">
+                  Explore Launch →
+                </Link>
+              </div>
+            </div>
+          </article>
+
+          <article className="c-tile-page">
+            <div className="c-image c-tile-page_image -cover -overlay -parallax -lazy-load is-loaded h-full w-full">
+              <div className="c-image_parallax h-full w-full">
+                <picture className="c-image_inner h-full w-full block">
+                  <img
+                    alt="Submit Your Custom Idea"
+                    className="c-image_img is-loaded h-full w-full object-cover"
+                    height={750}
+                    width={1200}
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div className="c-tile-page_inner">
+              <span className="c-icon">
+                <svg
+                  aria-hidden="true"
+                  className="svg-symbol-double"
+                  focusable="false"
+                >
+                  <use href="/assets/svgs/sprite.svg#symbol-double" />
+                </svg>
+              </span>
+              <div className="c-tile-page_content">
+                <h2 className="text-xl">
+                  Have Your Own Idea? Get a Free Preliminary Proposal
+                </h2>
+                <Link
+                  className="absolute-link text-xl opacity-75"
+                  href="/innovate"
+                >
+                  Submit Your Idea →
+                </Link>
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      {/* Section 9: Lightship company.html .c-push-newsletter Lead Capture Card */}
+      <section className="mt-fluid-2xl">
+        <section className="c-push-newsletter pattern-background background-clip container">
+          <div className="c-push-newsletter_content">
+            <div className="c-push-newsletter_heading">
+              <p className="text-eyebrow text-[#253B5B]">
+                Want the complete ONSPEC 2026 Opportunity &amp; Automation Dossier?
+              </p>
+              <h2 className="heading-sm text-[#101D35]">
+                Turnkey Cyprus business specifications, AI workflow benchmarks, and execution timelines — delivered directly to your inbox.
+              </h2>
+            </div>
+
+            {referenceId ? (
+              <div className="rounded-2xl bg-white border border-[#27B58A] p-5 space-y-2">
+                <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                  DOSSIER DISPATCH REGISTERED // {referenceId}
+                </p>
+                <p className="text-xs text-[#253B5B]">
+                  Our Cyprus operations desk has logged your request for{" "}
+                  <strong>{email}</strong>.
+                </p>
+              </div>
+            ) : (
+              <div className="c-newsletter">
+                <form
+                  onSubmit={handleNewsletterSubmit}
+                  className="c-newsletter_form"
+                >
+                  <div className="c-input-text-container c-newsletter_zip-code -placeholder">
+                    <label
+                      className="text-sm mb-3 sr-only"
+                      htmlFor="aboutWhatsapp"
+                    >
+                      WhatsApp / Phone *
+                    </label>
+                    <div className="c-input-text">
+                      <input
+                        className="c-input-text_input text-sm"
+                        id="aboutWhatsapp"
+                        name="whatsapp"
+                        value={whatsapp}
+                        onChange={(e) => setWhatsapp(e.target.value)}
+                        placeholder="WhatsApp (+357...)"
+                        required
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div className="c-newsletter_inner">
+                    <input
+                      className="c-newsletter_input text-sm"
+                      placeholder="name@email.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      type="email"
+                    />
+                    <button
+                      className="c-button primary -color-black cursor-pointer"
+                      type="submit"
+                      disabled={submitting}
+                    >
+                      <span className="c-button_inner">
+                        <span
+                          className="c-button_label-container"
+                          data-label={submitting ? "Sending..." : "Request Dossier"}
+                        >
+                          <span className="c-button_label">
+                            {submitting ? "Sending..." : "Request Dossier"}
+                          </span>
+                        </span>
+                        <span className="c-icon c-button_icon">
+                          <svg
+                            aria-hidden="true"
+                            className="svg-arrow-right"
+                            focusable="false"
+                          >
+                            <use href="/assets/svgs/sprite.svg#arrow-right" />
+                          </svg>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            )}
+          </div>
+          <div className="c-push-newsletter_image_container">
+            <div className="c-image c-push-newsletter_image -rounded-md -cover -parallax -lazy-load is-loaded h-full w-full">
+              <div className="c-image_parallax h-full w-full">
+                <picture className="c-image_inner h-full w-full block">
+                  <img
+                    alt="ONSPEC Dossier Preview"
+                    className="c-image_img is-loaded h-full w-full object-cover"
+                    height={1700}
+                    width={1320}
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1320&q=85"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      {/* Lightship .c-modal-member Pillar Specification Modal (1:1 company.html) */}
+      <div
+        className={`c-modal-member modal ${
+          selectedPillarModal ? "is-active" : ""
+        }`}
+        aria-hidden={!selectedPillarModal}
+      >
+        {selectedPillarModal && (
+          <div className="c-modal-member_container modal_container">
+            <button
+              type="button"
+              aria-label="Close"
+              onClick={() => setSelectedPillarModal(null)}
+              className="c-button -icon -color-black modal_close cursor-pointer"
+            >
+              <span className="c-button_inner">
+                <span className="c-icon c-button_icon">
+                  <svg
+                    aria-hidden="true"
+                    className="svg-close"
+                    focusable="false"
+                  >
+                    <use href="/assets/svgs/sprite.svg#close" />
+                  </svg>
+                </span>
+              </span>
+            </button>
+            <div className="c-modal-member_inner modal_inner">
+              <div className="flex flex-col gap-y-fluid-sm pt-2">
+                <span className="c-icon text-[#27B58A]">
+                  <svg
+                    aria-hidden="true"
+                    className="svg-symbol-double"
+                    focusable="false"
+                  >
+                    <use href="/assets/svgs/sprite.svg#symbol-double" />
+                  </svg>
+                </span>
+                <div className="max-w-[32rem]">
+                  <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                    {selectedPillarModal.code}
+                  </p>
+                  <h2 className="heading-md mt-1">
+                    {selectedPillarModal.fullTitle}
+                  </h2>
+                  <p className="heading-xs opacity-50 mt-1">
+                    {selectedPillarModal.coreMessage}
+                  </p>
+                </div>
+              </div>
+              <div className="c-modal-member_body">
+                <div className="c-image c-modal-member_image -rounded-md -lazy-load is-loaded overflow-hidden">
+                  <picture className="c-image_inner h-full w-full block">
+                    <img
+                      alt={selectedPillarModal.fullTitle}
+                      className="c-image_img is-loaded h-full w-full object-cover"
+                      height={750}
+                      width={600}
+                      src={PILLAR_IMAGES[selectedPillarModal.id]}
+                    />
+                  </picture>
+                </div>
+                <div className="c-modal-member_content space-y-5">
+                  <p className="text-md opacity-80 max-w-[26rem]">
+                    {selectedPillarModal.description}
+                  </p>
+                  <div className="space-y-2">
+                    <p className="font-mono text-xs uppercase tracking-wider text-[#101D35] font-semibold">
+                      KEY DELIVERABLES:
+                    </p>
+                    <ul className="space-y-1.5">
+                      {selectedPillarModal.deliverables.map((d) => (
+                        <li key={d} className="text-xs text-[#253B5B]">
+                          • {d}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Link
+                    href={selectedPillarModal.href}
+                    className="c-button -color-black"
+                  >
+                    <span className="c-button_inner">
+                      <span
+                        className="c-button_label-container"
+                        data-label={selectedPillarModal.ctaLabel}
+                      >
+                        <span className="c-button_label">
+                          {selectedPillarModal.ctaLabel}
+                        </span>
+                      </span>
+                    </span>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* SECTION 05: STARTING FROM SCRATCH VS. ENGINEERED ONSPEC */}
-      <section className="bg-white py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#253B5B]">
-              04 // THE ONSPEC DIFFERENCE
-            </span>
-            <h2 className="mt-2 text-3xl font-extrabold text-[#101D35]">
-              Starting From Scratch vs. Engineered With Onspec
-            </h2>
-          </div>
-
-          <div className="mt-10 overflow-hidden rounded-2xl border border-[#A8B1BE]/45">
-            <div className="grid grid-cols-1 bg-[#101D35] p-4 font-mono text-xs font-bold text-[#F7F8FA] md:grid-cols-12">
-              <div className="md:col-span-3">OPERATIONAL DIMENSION</div>
-              <div className="hidden md:col-span-4 md:block text-[#A8B1BE]">
-                STARTING FROM SCRATCH
-              </div>
-              <div className="hidden md:col-span-5 md:block text-[#27B58A]">
-                ENGINEERED WITH ONSPEC
-              </div>
-            </div>
-            <div className="divide-y divide-[#A8B1BE]/30 bg-white">
-              {SCRATCH_VS_ONSPEC_COMPARISON.map((row) => (
-                <div
-                  key={row.dimension}
-                  className="grid grid-cols-1 gap-4 p-5 md:grid-cols-12 md:items-center"
-                >
-                  <div className="font-bold text-[#101D35] md:col-span-3">
-                    {row.dimension}
-                  </div>
-                  <div className="text-xs text-[#253B5B] md:col-span-4">
-                    <span className="font-mono text-[10px] font-bold uppercase text-[#253B5B]/70 md:hidden">
-                      From Scratch:{" "}
-                    </span>
-                    {row.scratch}
-                  </div>
-                  <div className="flex items-start gap-2 text-xs font-semibold text-[#101D35] md:col-span-5">
-                    <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-[#27B58A]" />
-                    <span>{row.onspec}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Final CTA Box */}
-          <div className="mt-14 flex flex-col items-start justify-between gap-6 rounded-2xl border border-[#A8B1BE]/45 bg-[#F7F8FA] p-8 sm:flex-row sm:items-center">
-            <div>
-              <h3 className="text-2xl font-extrabold text-[#101D35]">
-                Ready to take the next step?
-              </h3>
-              <p className="mt-1 text-sm text-[#253B5B]">
-                Let’s turn your plans into something real—whether launching a
-                business, automating operations, or building your custom idea.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/innovate"
-                className="inline-flex items-center gap-2 rounded-lg bg-[#27B58A] px-5 py-3 text-xs font-bold text-[#101D35] hover:bg-[#1F9470] hover:text-white transition-colors"
-              >
-                <Sparkles className="h-4 w-4" />
-                <span>Submit Your Idea</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-[#101D35] px-5 py-3 text-xs font-bold text-[#F7F8FA] hover:bg-[#253B5B] transition-colors"
-              >
-                <span>Contact Onspec</span>
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+        )}
+      </div>
+    </main>
   );
 }
