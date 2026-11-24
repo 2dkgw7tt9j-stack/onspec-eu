@@ -215,31 +215,13 @@ export function Navbar() {
                 <span className="sr-only">ONSPEC Homepage</span>
                 <div
                   className="c-header_logo_lottie flex items-center justify-center transition-all duration-300"
-                  style={{ gap: collapseWordmark ? "0px" : "0.625rem" }}
                   data-header-logo
                 >
-                  <span className="c-icon inline-flex items-center justify-center shrink-0">
-                    <svg
-                      className="svg-symbol-double"
-                      viewBox="0 0 28 13"
-                      focusable="false"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="m7.1.4.7 2.3c.4 1.2 1.3 2.2 2.5 2.5l2.3.9c.4.1.4.7 0 .8l-2.3.9c-1.1.4-2.1 1.3-2.5 2.5l-.7 2.3c-.1.4-.7.4-.8 0l-.8-2.3c-.3-1.2-1.3-2.1-2.4-2.5L.8 7c-.4-.1-.4-.7 0-.8l2.3-.8C4.2 4.9 5.2 4 5.5 2.7L6.2.4c.2-.4.8-.4.9 0zm14.6 0c-.1-.4-.7-.4-.8 0l-.7 2.3c-.4 1.2-1.3 2.2-2.5 2.5l-2.3.9c-.4.1-.4.7 0 .8l2.2.8c1.2.4 2.1 1.3 2.5 2.5l.7 2.3c.1.4.7.4.8 0l.7-2.3c.4-1.2 1.3-2.2 2.5-2.5l2.3-.7c.5-.1.5-.7.1-.8l-2.3-.8c-1.2-.4-2.1-1.3-2.5-2.5L21.7.4z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    className="font-bold tracking-[0.18em] text-sm uppercase transition-all duration-300 overflow-hidden whitespace-nowrap"
-                    style={{
-                      maxWidth: collapseWordmark ? "0px" : "110px",
-                      opacity: collapseWordmark ? 0 : 1,
-                    }}
-                  >
-                    ONSPEC
-                  </span>
+                  <img 
+                    src="/onspec_logo_transparent.png" 
+                    alt="OnSpec - Engineered to Operate" 
+                    className="h-8 md:h-9 w-auto object-contain brightness-0 dark:invert transition-all duration-300" 
+                  />
                 </div>
               </Link>
             </div>

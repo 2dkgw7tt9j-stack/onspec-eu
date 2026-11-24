@@ -76,38 +76,15 @@ export function Footer() {
 
   return (
     <footer className="c-footer container">
-      {/* Scroll-linked rotating twin-star symbol (.c-symbol) */}
-      <div
-        ref={symbolRef}
-        className="c-symbol"
-        style={{ "--smooth-progress": smoothProgress } as React.CSSProperties}
-      >
-        <span className="c-icon c-symbol_icon">
-          <svg
-            className="svg-symbol"
-            viewBox="0 0 23 23"
-            focusable="false"
-            aria-hidden="true"
-          >
-            <path
-              fill="currentColor"
-              d="M12.1 1.4c-.2-.7-1.2-.7-1.5 0L9.3 5.3c-.6 2-2.2 3.6-4.3 4.2l-4 1.3c-.7.2-.7 1.2 0 1.4l4 1.3c2 .7 3.7 2.2 4.4 4.3l1.4 3.9c.2.7 1.2.7 1.5 0l1.4-3.9c.7-2 2.3-3.6 4.4-4.3l4-1.3c.7-.2.7-1.2 0-1.4l-4-1.3c-2-.7-3.7-2.2-4.4-4.3l-1.6-3.8z"
-            />
-          </svg>
-        </span>
-        <span className="c-icon c-symbol_icon">
-          <svg
-            className="svg-symbol"
-            viewBox="0 0 23 23"
-            focusable="false"
-            aria-hidden="true"
-          >
-            <path
-              fill="currentColor"
-              d="M12.1 1.4c-.2-.7-1.2-.7-1.5 0L9.3 5.3c-.6 2-2.2 3.6-4.3 4.2l-4 1.3c-.7.2-.7 1.2 0 1.4l4 1.3c2 .7 3.7 2.2 4.4 4.3l1.4 3.9c.2.7 1.2.7 1.5 0l1.4-3.9c.7-2 2.3-3.6 4.4-4.3l4-1.3c.7-.2.7-1.2 0-1.4l-4-1.3c-2-.7-3.7-2.2-4.4-4.3l-1.6-3.8z"
-            />
-          </svg>
-        </span>
+      {/* OnSpec Brand Signature Mark */}
+      <div className="py-8">
+        <Link href="/" aria-label="OnSpec Home" className="inline-block">
+          <img 
+            src="/onspec_logo_transparent.png" 
+            alt="OnSpec - Engineered to Operate" 
+            className="h-16 w-auto object-contain dark:invert transition-all"
+          />
+        </Link>
       </div>
 
       {/* Top row: Left slogan + summary, Right 4 hairline-divided oversized primary links */}
@@ -139,80 +116,18 @@ export function Footer() {
 
       {/* Middle row: Lightship stacked pill inputs + 2-column secondary links + social icons */}
       <div className="c-footer_actions">
-        <div className="c-footer_newsletter flex flex-col gap-y-2">
-          <p className="text-md">Request Onspec Briefing</p>
-
-          <div className="c-newsletter">
-            <form onSubmit={handleSubmit} className="c-newsletter_form">
-              <div className="c-input-text-container c-newsletter_zip-code -placeholder">
-                <label className="text-sm mb-3 sr-only" htmlFor="footerWhatsapp">
-                  WhatsApp / Phone *
-                </label>
-                <div className="c-input-text">
-                  <input
-                    id="footerWhatsapp"
-                    name="whatsapp"
-                    type="text"
-                    value={whatsapp}
-                    onChange={(e) => setWhatsapp(e.target.value)}
-                    placeholder="WhatsApp / Phone"
-                    className="c-input-text_input text-sm"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="c-newsletter_inner">
-                <input
-                  className="c-newsletter_input text-sm"
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="name@email.com"
-                  required
-                />
-                <button
-                  className="c-button primary -color-black cursor-pointer"
-                  type="submit"
-                  disabled={submitting}
-                >
-                  <span className="c-button_inner">
-                    <span
-                      className="c-button_label-container"
-                      data-label={submitting ? "Sending..." : "Submit"}
-                    >
-                      <span className="c-button_label">
-                        {submitting ? "Sending..." : "Submit"}
-                      </span>
-                    </span>
-                    <span className="c-icon c-button_icon">
-                      <svg
-                        className="svg-arrow-right"
-                        viewBox="0 0 16 16"
-                        focusable="false"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M13.8 8.4c.1-.1.2-.3.2-.4 0-.2-.1-.3-.2-.4l-4-4-.4.4-.4.4 3 3H2v1.1h10l-3 3 .4.5.4.4 4-4z"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                </button>
-              </div>
-            </form>
-
-            {referenceId && (
-              <p className="text-xs mt-2 text-[#27B58A]" data-feedback>
-                Dossier request registered — Ref: {referenceId}
-              </p>
-            )}
-          </div>
-        </div>
-
-        <div className="c-footer_links">
+        <div className="c-footer_newsletter flex flex-col gap-y-3 max-w-sm">
+          <Link href="/" aria-label="OnSpec Home">
+            <img 
+              src="/onspec_logo_transparent.png" 
+              alt="OnSpec - Engineered to Operate" 
+              className="h-14 w-auto object-contain dark:invert"
+            />
+          </Link>
+          <p className="text-xs text-black/50 tracking-wider font-mono uppercase">
+            ESTD. 2027 // POWERED BY: VISION CRAFT - RAGI GROUP
+          </p>
+        </div><div className="c-footer_links">
           <ul className="c-footer_subnav">
             {FOOTER_SUBNAV.map((link) => (
               <li key={link.label} className="c-footer_subnav_item text-md">
