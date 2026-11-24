@@ -17,6 +17,11 @@
 }
 
 :root {
+  /* Font Family Variables */
+  --font-manrope: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", ui-monospace, monospace;
+
   /* Viewport unit defaults used by Lightship CSS formulas */
   --vw: 1vw;
   --vh: 1vh;
