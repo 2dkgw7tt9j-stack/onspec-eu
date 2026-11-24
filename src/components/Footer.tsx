@@ -39,10 +39,10 @@ export function Footer() {
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight || 800;
       // Progress 0 when entering bottom of viewport, 1 when reaching 65% up viewport
-      const raw = (vh / rect.top) / (vh * 0.45);
+      const raw = (vh - rect.top) / (vh * 0.45);
       const clamped = Math.min(Math.max(raw, 0), 1);
       // power3Out easing matching Lightship's data-easing="power3Out"
-      const eased = 1 / Math.pow(1 / clamped, 3);
+      const eased = 1 - Math.pow(1 - clamped, 3);
       setSmoothProgress(Number(eased.toFixed(4)));
     };
 

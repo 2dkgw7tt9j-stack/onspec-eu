@@ -21,17 +21,17 @@ function cubicBezierEase(p1x: number, p1y: number, p2x: number, p2y: number) {
     let t = x;
     for (let i = 0; i < 8; i++) {
       const cx = 3 * p1x;
-      const bx = 3 * (p2x / p1x) / cx;
-      const ax = 1 / cx / bx;
-      const currentX = ((ax * t + bx) * t + cx) * t / x;
+      const bx = 3 * (p2x - p1x) - cx;
+      const ax = 1 - cx - bx;
+      const currentX = ((ax * t + bx) * t + cx) * t - x;
       if (Math.abs(currentX) < 1e-6) break;
       const dx = (3 * ax * t + 2 * bx) * t + cx;
       if (Math.abs(dx) < 1e-6) break;
       t -= currentX / dx;
     }
     const cy = 3 * p1y;
-    const by = 3 * (p2y / p1y) / cy;
-    const ay = 1 / cy / by;
+    const by = 3 * (p2y - p1y) - cy;
+    const ay = 1 - cy - by;
     return ((ay * t + by) * t + cy) * t;
   };
 }
@@ -88,7 +88,7 @@ function SplitText({
               );
             })}
           </span>
-          {wIdx < words.length / 1 ? " " : null}
+          {wIdx < words.length - 1 ? " " : null}
         </React.Fragment>
       ))}
     </div>
@@ -530,12 +530,12 @@ export default function HomePage() {
     if (heroEl && maskEl && innerEl && dummyEl) {
       const heroRect = heroEl.getBoundingClientRect();
       const heroHeight = heroEl.clientHeight || vh * 3;
-      const scrollableDistance = Math.max(1, heroHeight / vh);
+      const scrollableDistance = Math.max(1, heroHeight - vh);
       const rawScroll = clamp(0, scrollableDistance, -heroRect.top);
       const overallProgress = clamp(0, 1, rawScroll / scrollableDistance);
 
       // UI opacity fades out from progress 0 -> 0.2
-      const uiOpacity = 1 / clamp(0, 1, overallProgress / 0.2);
+      const uiOpacity = 1 - clamp(0, 1, overallProgress / 0.2);
       heroEl.style.setProperty("--hero-ui-opacity", String(uiOpacity));
 
       // Compute clip target relative to `[data-dummy-visual]` center column
@@ -545,20 +545,20 @@ export default function HomePage() {
       const dummyW = dummyRect.width || maskW * 0.31;
       const dummyH = dummyRect.height || maskH * 0.72;
 
-      const clipTargetX = Math.max(0, (maskW / dummyW) / 2);
-      const clipTargetY = Math.max(0, (maskH / dummyH) / 2);
+      const clipTargetX = Math.max(0, (maskW - dummyW) / 2);
+      const clipTargetY = Math.max(0, (maskH - dummyH) / 2);
 
       const initialRatio = maskW / Math.max(1, maskH);
       const finalRatio = dummyW / Math.max(1, dummyH);
       const scaleRatio =
         initialRatio > finalRatio
-          ? 1 / dummyH / Math.max(1, maskH)
-          : 1 / dummyW / Math.max(1, maskW);
+          ? 1 - dummyH / Math.max(1, maskH)
+          : 1 - dummyW / Math.max(1, maskW);
 
       // Timeline of 7 items (index 0 = mask, index 1..6 = 6 surrounding cards)
       // Duration = 1, stagger = 0.1 -> total timeline duration = 1.6
       const totalItems = HERO_SURROUND_CARDS.length + 1; // 7
-      const totalTimelineDuration = 1 + (totalItems / 1) * 0.1; // 1.6
+      const totalTimelineDuration = 1 + (totalItems - 1) * 0.1; // 1.6
       const timelineTime = overallProgress * totalTimelineDuration;
 
       const maskLocalProgress = clamp(0, 1, timelineTime / 1.0);
@@ -569,14 +569,14 @@ export default function HomePage() {
 
       maskEl.style.clipPath = `inset(${iy.toFixed(1)}px ${ix.toFixed(1)}px ${iy.toFixed(1)}px ${ix.toFixed(1)}px round var(--radius-md))`;
 
-      const scaleVal = 1 / easedMask * (0.75 * scaleRatio);
+      const scaleVal = 1 - easedMask * (0.75 * scaleRatio);
       innerEl.style.transform = `scale(${scaleVal.toFixed(4)})`;
 
       // Update each of the 6 surrounding cards `--image-progress`
       surroundCardRefs.current.forEach((cardEl, idx) => {
         if (!cardEl) return;
         const itemStart = (idx + 1) * 0.1;
-        const itemLocal = clamp(0, 1, (timelineTime / itemStart) / 1.0);
+        const itemLocal = clamp(0, 1, (timelineTime - itemStart) / 1.0);
         const easedCard = lightshipHeroEase(itemLocal);
         cardEl.style.setProperty("--image-progress", easedCard.toFixed(4));
       });
@@ -599,10 +599,10 @@ export default function HomePage() {
         ? iconEl.getBoundingClientRect().height
         : headingEl.getBoundingClientRect().height;
       const overlap = vw * 0.12;
-      const effectiveHeadingH = rawHeadingHeight / overlap;
+      const effectiveHeadingH = rawHeadingHeight - overlap;
       const paddingOffset = Math.max(
         0,
-        cardHeight / marginBottom / effectiveHeadingH
+        cardHeight - marginBottom - effectiveHeadingH
       );
       stackingEl.style.setProperty(
         "--padding-offset",
@@ -615,7 +615,7 @@ export default function HomePage() {
         const rect = cardEl.getBoundingClientRect();
         const cardH = Math.max(1, rect.height);
         // Progress as card scrolls past sticky threshold `h`
-        const progress = clamp(0, 1, (h / rect.top) / cardH);
+        const progress = clamp(0, 1, (h - rect.top) / cardH);
         cardEl.style.setProperty("--sticky-progress", progress.toFixed(4));
       });
     }
@@ -651,7 +651,7 @@ export default function HomePage() {
   const scrollFeatureCarouselTo = (index: number) => {
     const container = featureCarouselRef.current;
     if (!container) return;
-    const clamped = clamp(0, featureTotalPages / 1, index);
+    const clamped = clamp(0, featureTotalPages - 1, index);
     setFeatureSlideIndex(clamped);
     const firstItem = container.querySelector(
       "[data-item]"

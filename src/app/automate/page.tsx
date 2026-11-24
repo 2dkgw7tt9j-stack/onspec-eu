@@ -408,7 +408,7 @@ export default function AutomatePage() {
                   type="button"
                   onClick={() =>
                     setCarouselIdx(
-                      (carouselIdx / 1 + carouselModules.length) %
+                      (carouselIdx - 1 + carouselModules.length) %
                         carouselModules.length
                     )
                   }

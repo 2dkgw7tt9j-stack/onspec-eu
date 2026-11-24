@@ -66,7 +66,7 @@ export function Navbar() {
       const el = headerRef.current;
       if (!el) return;
 
-      const headerWidth = el.clientWidth || window.innerWidth / 16;
+      const headerWidth = el.clientWidth || window.innerWidth - 16;
       const computedCompact =
         parseInt(
           window
@@ -77,11 +77,11 @@ export function Navbar() {
 
       const isDesktop = window.innerWidth >= 1000;
       const maxClipX = isDesktop
-        ? Math.max((headerWidth / computedCompact) / 2, 0)
+        ? Math.max((headerWidth - computedCompact) / 2, 0)
         : 0;
 
       // Ease clip X with scroll progress when menu is closed; 0 when menu is open
-      const easedClip = 1 / Math.pow(1 / progress, 3);
+      const easedClip = 1 - Math.pow(1 - progress, 3);
       const clipX = open ? 0 : Math.round(easedClip * maxClipX);
 
       // Vertical clip: 50px bar when closed, full header height when menu is open
@@ -256,7 +256,7 @@ export function Navbar() {
               className="c-menu_inner"
               style={{
                 overflowY: "auto",
-                maxHeight: "calc(100vh / 80px)",
+                maxHeight: "calc(100vh - 80px)",
               }}
             >
               {/* Right side on desktop: 4 oversized primary links + 2-column secondary link list */}

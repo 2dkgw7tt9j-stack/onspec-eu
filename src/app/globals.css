@@ -238,32 +238,17 @@ body {
 }
 
 
-/* Stacking Cards: Tight, clean, proportional spacing without excess gap */
+/* Stacking Cards: Butter-smooth 1:1 Lightship scroll choreography with clean clearance below 'This is ONSPEC' */
+.c-stacking-cards {
+  --heading-sticky-top: clamp(4.5rem, 8vh, 6rem) !important;
+  --card-overlap: clamp(120px, 15vw, 190px) !important;
+  --card-sticky-top: calc(var(--heading-sticky-top) + var(--card-overlap)) !important;
+}
+
 .c-stacking-cards_heading {
-  position: relative !important;
-  top: 0 !important;
-  margin-bottom: 1.25rem !important;
-  padding-bottom: 0 !important;
-  z-index: 5 !important;
+  z-index: 10 !important;
 }
 
 .c-stacking-cards_inner {
-  position: relative !important;
-  margin-top: 0.5rem !important;
   z-index: 2 !important;
-}
-
-.c-stacking-cards_item {
-  position: sticky !important;
-  top: 80px !important;
-  margin-bottom: 1.5rem !important;
-}
-
-@media (min-width: 1024px) {
-  .c-stacking-cards_heading {
-    margin-bottom: 1.75rem !important;
-  }
-  .c-stacking-cards_item {
-    top: 85px !important;
-  }
 }

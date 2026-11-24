@@ -38,7 +38,7 @@ export function InfiniteMarquee({
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      const delta = Math.abs(currentY / lastScrollYRef.current);
+      const delta = Math.abs(currentY - lastScrollYRef.current);
       lastScrollYRef.current = currentY;
       velocityBoostRef.current = Math.min(delta * 1.6, 140);
     };
@@ -52,7 +52,7 @@ export function InfiniteMarquee({
     let lastTime = performance.now();
 
     const animate = (now: number) => {
-      const dt = Math.min((now / lastTime) / 1000, 0.1);
+      const dt = Math.min((now - lastTime) / 1000, 0.1);
       lastTime = now;
 
       // Decay scroll velocity boost smoothly
