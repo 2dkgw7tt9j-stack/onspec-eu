@@ -185,8 +185,8 @@ const STACKING_PILLAR_CARDS = [
     metric: "4 to 10 WEEKS TO LIVE",
     image:
       "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1400&q=85",
-    href: "/launch",
-    cta: "Explore Launch Models",
+    href: "/businesses",
+    cta: "Explore Ready Businesses",
   },
   {
     index: 1,
@@ -197,8 +197,8 @@ const STACKING_PILLAR_CARDS = [
     metric: "UP TO 78% LESS MANUAL WORK",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
-    href: "/automate",
-    cta: "Explore AI Systems",
+    href: "/ai-web",
+    cta: "Explore AI & Websites",
   },
   {
     index: 2,
@@ -209,8 +209,8 @@ const STACKING_PILLAR_CARDS = [
     metric: "FREE PRELIMINARY PROPOSAL",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85",
-    href: "/innovate",
-    cta: "Submit Your Idea",
+    href: "/services",
+    cta: "Explore All Services",
   },
   {
     index: 3,
@@ -221,8 +221,8 @@ const STACKING_PILLAR_CARDS = [
     metric: "CYPRUS & EU COUNSEL",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85",
-    href: "/launch",
-    cta: "Explore Ready-to-Launch Specs",
+    href: "/contact",
+    cta: "Contact Our Team",
     isFinalCard: true,
   },
 ];
@@ -978,7 +978,7 @@ export default function HomePage() {
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/launch"
+              href="/businesses"
               className="c-button"
               style={
                 {
@@ -1000,7 +1000,7 @@ export default function HomePage() {
             </Link>
 
             <Link
-              href="/automate"
+              href="/ai-web"
               className="c-button -blur-dark"
               style={
                 {

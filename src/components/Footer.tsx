@@ -5,22 +5,20 @@ import Link from "next/link";
 import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 
 const FOOTER_PRIMARY_NAV = [
-  { label: "Launch", href: "/launch" },
-  { label: "Automate", href: "/automate" },
-  { label: "Innovate", href: "/innovate" },
-  { label: "Connect", href: "/connect" },
+  { label: "Ready Businesses", href: "/businesses" },
+  { label: "AI & Websites", href: "/ai-web" },
+  { label: "Services", href: "/services" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
-// 2-column grid in .c-footer_subnav (Col 1: About, Launch Specs, Contact, Legal Network | Col 2: AI Systems, Vending Blueprint, Cyprus Setup, FAQ)
 const FOOTER_SUBNAV = [
-  { label: "About", href: "/about" },
-  { label: "AI Systems", href: "/automate" },
-  { label: "Launch Specs", href: "/launch" },
-  { label: "Vending Blueprint", href: "/launch#vending-blueprint" },
-  { label: "Contact", href: "/contact" },
-  { label: "Cyprus Setup", href: "/connect" },
-  { label: "Legal Network", href: "/connect" },
-  { label: "FAQ", href: "/about#faq" },
+  { label: "About OnSpec", href: "/about" },
+  { label: "Ready Businesses", href: "/businesses" },
+  { label: "Services Portfolio", href: "/services" },
+  { label: "AI & Websites", href: "/ai-web" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Customer Journey", href: "/about#customer-journey" },
 ];
 
 export function Footer() {

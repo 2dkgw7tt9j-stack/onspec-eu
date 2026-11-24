@@ -10,6 +10,30 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/launch",
+        destination: "/businesses",
+        permanent: false,
+      },
+      {
+        source: "/automate",
+        destination: "/ai-web",
+        permanent: false,
+      },
+      {
+        source: "/connect",
+        destination: "/services",
+        permanent: false,
+      },
+      {
+        source: "/innovate",
+        destination: "/services",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

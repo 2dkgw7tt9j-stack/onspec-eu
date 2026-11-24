@@ -7,45 +7,46 @@ import { usePathname } from "next/navigation";
 const MENU_CARDS = [
   {
     index: 0,
-    title: "01 Launch Ventures",
+    title: "01 Ready Businesses",
     subtitle: "Turnkey commercial business models in Cyprus & EU",
-    href: "/launch",
+    href: "/businesses",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85",
   },
   {
     index: 1,
-    title: "02 AI & Automation",
-    subtitle: "Autonomous AI agents, WhatsApp & CRM architecture",
-    href: "/automate",
+    title: "02 AI & Websites",
+    subtitle: "Autonomous AI agents, WhatsApp & web platforms",
+    href: "/ai-web",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85",
   },
   {
     index: 2,
-    title: "03 Custom Execution",
-    subtitle: "Submit your idea for a free preliminary proposal",
-    href: "/innovate",
+    title: "03 Services We Offer",
+    subtitle: "End to end venture engineering & legal network",
+    href: "/services",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85",
   },
 ];
 
 const PRIMARY_LINKS = [
-  { label: "Launch a Business", href: "/launch" },
-  { label: "AI & Automation", href: "/automate" },
-  { label: "Legal & Connect", href: "/connect" },
-  { label: "Submit Your Idea", href: "/innovate" },
+  { label: "Ready Businesses", href: "/businesses" },
+  { label: "AI & Websites", href: "/ai-web" },
+  { label: "Services", href: "/services" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
-// 2-column grid in .c-menu_secondary_list (Col 1: About Onspec, Customer Journey, Cyprus Network | Col 2: Vending Specs, Contact, Proposal Engine)
+// 2-column grid in .c-menu_secondary_list
 const SECONDARY_LINKS = [
   { label: "About Onspec", href: "/about" },
-  { label: "Vending Specs", href: "/launch#vending-blueprint" },
+  { label: "Ready Businesses", href: "/businesses" },
+  { label: "Services Portfolio", href: "/services" },
+  { label: "AI & Automation", href: "/ai-web" },
   { label: "Customer Journey", href: "/about#customer-journey" },
-  { label: "Contact", href: "/contact" },
-  { label: "Cyprus Network", href: "/connect" },
-  { label: "Proposal Engine", href: "/innovate" },
+  { label: "Direct Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -59,7 +60,7 @@ export function Navbar() {
 
   // Pages that start with a dark full-bleed hero where header is transparent at scrollY=0
   const hasDarkHero =
-    pathname === "/" || pathname === "/launch" || pathname === "/automate";
+    pathname === "/" || pathname === "/businesses" || pathname === "/ai-web" || pathname === "/launch" || pathname === "/automate";
 
   const updateHeaderClipping = useCallback(
     (open: boolean, progress: number) => {
@@ -188,24 +189,24 @@ export function Navbar() {
 
               <ul className="c-header_nav">
                 <li className="c-header_item">
-                  <Link href="/launch" className="c-header_link hover-parent">
-                    <span className="text-sm hover-underline">Launch</span>
+                  <Link href="/businesses" className="c-header_link hover-parent">
+                    <span className="text-sm hover-underline">Businesses</span>
                   </Link>
                 </li>
                 <li className="c-header_item max-sm:hidden">
-                  <Link href="/automate" className="c-header_link hover-parent">
-                    <span className="text-sm hover-underline">Automate</span>
+                  <Link href="/ai-web" className="c-header_link hover-parent">
+                    <span className="text-sm hover-underline">AI &amp; Web</span>
                   </Link>
                 </li>
                 <li className="c-header_item max-sm:hidden">
-                  <Link href="/innovate" className="c-header_link hover-parent">
-                    <span className="text-sm hover-underline">Specs</span>
+                  <Link href="/services" className="c-header_link hover-parent">
+                    <span className="text-sm hover-underline">Services</span>
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Center Logo: Single twin four-point star SVG emblem + ONSPEC wordmark (collapsing cleanly to 1 twin-star pair on scroll) */}
+            {/* Center Logo: ONSPEC wordmark & emblem */}
             <div className="c-header_logo">
               <Link
                 href="/"
@@ -226,18 +227,18 @@ export function Navbar() {
               </Link>
             </div>
 
-            {/* Right nav links: Connect + Build yours */}
+            {/* Right nav links: About + Contact */}
             <div className="c-header_right">
               <ul className="c-header_nav">
                 <li className="c-header_item max-sm:hidden">
-                  <Link href="/connect" className="c-header_link hover-parent">
-                    <span className="text-sm hover-underline">Connect</span>
+                  <Link href="/about" className="c-header_link hover-parent">
+                    <span className="text-sm hover-underline">About</span>
                   </Link>
                 </li>
                 <li className="c-header_item">
-                  <Link href="/innovate" className="c-header_link hover-parent">
+                  <Link href="/contact" className="c-header_link hover-parent">
                     <span className="text-sm underline underline-offset-4 decoration-current/70 hover:decoration-[#27B58A]">
-                      Build yours
+                      Contact
                     </span>
                   </Link>
                 </li>
