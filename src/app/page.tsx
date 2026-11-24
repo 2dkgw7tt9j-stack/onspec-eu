@@ -582,40 +582,34 @@ export default function HomePage() {
       });
     }
 
-    // 2. STACKING CARDS (`Nc` exact math from Lightship `app.js`)
+    // 2. STACKING CARDS (`Nc` exact math tuned so 'This is ONSPEC' remains uncovered)
     const stackingEl = stackingContainerRef.current;
     const headingEl = stackingHeadingRef.current;
     const firstCard = stackingCardRefs.current[0];
 
     if (stackingEl && headingEl && firstCard) {
-      const cardHeight = firstCard.getBoundingClientRect().height || 0;
-      const headingStyle = window.getComputedStyle(headingEl);
-      const marginBottom =
-        parseFloat(headingStyle.getPropertyValue("margin-bottom")) || 0;
       const iconEl = headingEl.querySelector(
         ".c-stacking-cards_heading_icon"
       ) as HTMLElement | null;
       const rawHeadingHeight = iconEl
         ? iconEl.getBoundingClientRect().height
         : headingEl.getBoundingClientRect().height;
-      const overlap = vw * 0.12;
-      const effectiveHeadingH = rawHeadingHeight - overlap;
-      const paddingOffset = Math.max(
-        0,
-        cardHeight - marginBottom - effectiveHeadingH
-      );
-      stackingEl.style.setProperty(
-        "--padding-offset",
-        `${paddingOffset.toFixed(1)}px`
-      );
 
-      const h = vw * 0.1 + vh * 0.1;
+      stackingEl.style.setProperty(
+        "--heading-height",
+        `${rawHeadingHeight.toFixed(1)}px`
+      );
+      stackingEl.style.setProperty("--padding-offset", "0px");
+
+      const headingRect = headingEl.getBoundingClientRect();
+      const cardStickyThreshold = headingRect.bottom + 20;
+
       stackingCardRefs.current.forEach((cardEl) => {
         if (!cardEl) return;
         const rect = cardEl.getBoundingClientRect();
         const cardH = Math.max(1, rect.height);
-        // Progress as card scrolls past sticky threshold `h`
-        const progress = clamp(0, 1, (h - rect.top) / cardH);
+        // Progress as card reaches sticky threshold and subsequent cards stack
+        const progress = clamp(0, 1, (cardStickyThreshold - rect.top) / cardH);
         cardEl.style.setProperty("--sticky-progress", progress.toFixed(4));
       });
     }

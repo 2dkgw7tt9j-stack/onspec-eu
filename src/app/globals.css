@@ -243,5 +243,31 @@ body {
   flex-shrink: 0 !important;
 }
 
+/* Stacking Cards: Keep 'This is ONSPEC' completely uncovered while preserving smooth stacking */
+.c-stacking-cards {
+  --heading-sticky-top: clamp(4.25rem, 6vh, 5.25rem) !important;
+  --card-sticky-top: calc(var(--heading-sticky-top) + var(--heading-height, 180px) + 1.25rem) !important;
+}
+
+.c-stacking-cards_heading {
+  position: sticky !important;
+  top: var(--heading-sticky-top) !important;
+  z-index: 10 !important;
+  background-color: #ffffff !important;
+  padding-block: 0.5rem !important;
+}
+
+.c-stacking-cards_inner {
+  margin-top: 1.25rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.c-stacking-cards_item {
+  position: sticky !important;
+  top: var(--card-sticky-top) !important;
+  transform-origin: top !important;
+}
+
 
 
