@@ -84,9 +84,9 @@ export function Navbar() {
       const easedClip = 1 - Math.pow(1 - progress, 3);
       const clipX = open ? 0 : Math.round(easedClip * maxClipX);
 
-      // Vertical clip: 70px bar when closed, full header height when menu is open
+      // Vertical clip: 64px bar when closed, full header height when menu is open
       const menuHeight = menuRef.current?.scrollHeight || window.innerHeight;
-      const clipY = open ? Math.max(el.clientHeight, menuHeight + 50) : 70;
+      const clipY = open ? Math.max(el.clientHeight, menuHeight + 50) : 64;
 
       el.style.setProperty("--clip-x", `${clipX}px`);
       el.style.setProperty("--clip-y", `${clipY}px`);
@@ -220,7 +220,7 @@ export function Navbar() {
                   <img 
                     src="/onspec_logo_transparent.png" 
                     alt="OnSpec / Engineered to Operate" 
-                    className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300 drop-shadow-sm py-1" 
+                    className="h-10 sm:h-11 md:h-12 w-auto object-contain transition-all duration-300 drop-shadow-sm" 
                   />
                 </div>
               </Link>

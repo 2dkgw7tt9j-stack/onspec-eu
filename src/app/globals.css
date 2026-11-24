@@ -158,29 +158,35 @@ body {
   padding-bottom: 1.5rem !important;
 }
 
-/* Ensure logo renders prominently inside .c-header_logo across all viewports */
+/* Ensure header bar accommodates logo without cropping on scroll */
+.c-header {
+  --header-height: 4rem !important;
+}
+
+.c-header_bar {
+  min-height: 4rem !important;
+  align-items: center !important;
+}
+
 .c-header_logo {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  overflow: visible !important;
-  height: auto !important;
+  height: 100% !important;
 }
 
 .c-header_logo_link {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  height: auto !important;
-  overflow: visible !important;
+  height: 100% !important;
 }
 
 .c-header_logo_lottie {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  overflow: visible !important;
-  height: auto !important;
+  height: 100% !important;
 }
 
 .c-header_logo_icon {
@@ -238,19 +244,4 @@ body {
 }
 
 
-/* Stacking Cards: Butter-smooth 1:1 Lightship scroll choreography with clean clearance below 'This is ONSPEC' */
-.c-stacking-cards {
-  --heading-sticky-top: clamp(4.5rem, 8vh, 6rem) !important;
-  --card-overlap: clamp(120px, 15vw, 190px) !important;
-  --card-sticky-top: calc(var(--heading-sticky-top) + var(--card-overlap)) !important;
-}
 
-.c-stacking-cards_heading {
-  z-index: 10 !important;
-  background-color: #ffffff !important;
-  padding-block: 0.5rem !important;
-}
-
-.c-stacking-cards_inner {
-  z-index: 2 !important;
-}
