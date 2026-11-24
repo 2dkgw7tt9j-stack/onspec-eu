@@ -247,6 +247,8 @@ body {
 
 .c-stacking-cards_heading {
   z-index: 10 !important;
+  background-color: #ffffff !important;
+  padding-block: 0.5rem !important;
 }
 
 .c-stacking-cards_inner {

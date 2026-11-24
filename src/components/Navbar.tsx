@@ -84,9 +84,9 @@ export function Navbar() {
       const easedClip = 1 - Math.pow(1 - progress, 3);
       const clipX = open ? 0 : Math.round(easedClip * maxClipX);
 
-      // Vertical clip: 50px bar when closed, full header height when menu is open
+      // Vertical clip: 70px bar when closed, full header height when menu is open
       const menuHeight = menuRef.current?.scrollHeight || window.innerHeight;
-      const clipY = open ? Math.max(el.clientHeight, menuHeight + 50) : 50;
+      const clipY = open ? Math.max(el.clientHeight, menuHeight + 50) : 70;
 
       el.style.setProperty("--clip-x", `${clipX}px`);
       el.style.setProperty("--clip-y", `${clipY}px`);
