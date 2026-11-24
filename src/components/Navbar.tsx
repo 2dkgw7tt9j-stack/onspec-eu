@@ -58,9 +58,8 @@ export function Navbar() {
   const headerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Pages that start with a dark full-bleed hero where header is transparent at scrollY=0
-  const hasDarkHero =
-    pathname === "/" || pathname === "/businesses" || pathname === "/ai-web" || pathname === "/launch" || pathname === "/automate";
+  // Only the home page has a dark full-bleed image hero where the header is transparent at scrollY=0
+  const hasDarkHero = pathname === "/";
 
   const updateHeaderClipping = useCallback(
     (open: boolean, progress: number) => {

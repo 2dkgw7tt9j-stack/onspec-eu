@@ -61,16 +61,16 @@ export default function AboutPage() {
         About ONSPEC ({BRAND_INFO.domain}) : {BRAND_INFO.slogan}
       </h1>
 
-      {/* Section 1: Giant Editorial .c-fadein-text Statement + .c-symbol Twin-Star (1:1 company.html) */}
+      {/* Section 1: Giant Editorial Statement */}
       <section
-        className="container pt-[26svh] md:pt-[34svh] mb-fluid-2xl"
+        className="container pt-[20svh] md:pt-[24svh] mb-fluid-2xl"
         id="page-heading"
       >
         <div className="max-w-[740px] m-auto text-center">
-          <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest mb-6">
+          <p className="font-mono text-xs text-[#27B58A] uppercase tracking-widest mb-6 font-semibold">
             ABOUT ONSPEC // {BRAND_INFO.domain.toUpperCase()}
           </p>
-          <div className="c-fadein-text text-heading-md">
+          <div className="c-fadein-text text-heading-md" style={{ marginTop: "1rem" }}>
             <div className="c-fadein-text_line is-active">
               <span
                 className="c-fadein-text_line_inner"

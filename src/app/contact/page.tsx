@@ -440,8 +440,8 @@ export default function ContactPage() {
                         <option value="Ayia Napa / Protaras, Cyprus">
                           Ayia Napa / Protaras, Cyprus
                         </option>
-                        <option value="All Cyprus / Multi-Location">
-                          All Cyprus / Multi-Location
+                        <option value="All Cyprus / Multi Location">
+                          All Cyprus / Multi Location
                         </option>
                         <option value="European Union / International">
                           European Union / International
@@ -581,13 +581,13 @@ export default function ContactPage() {
           <div className="modal_inner p-8 md:p-12">
             <div className="max-w-xl mx-auto space-y-6 text-[#101D35]">
               <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
-                ONSPEC EXECUTIVE BRIEFING // 15-MINUTE CALL
+                ONSPEC EXECUTIVE BRIEFING // 15 MINUTE CALL
               </p>
               <h2 className="heading-md">
                 Book a Direct Discovery Call with Our Cyprus Desk
               </h2>
               <p className="text-md text-[#253B5B]">
-                Choose your preferred communication channel for an immediate 15-minute consultation on turnkey business launches, AI automation systems, custom venture buildouts, or Cyprus legal introductions.
+                Choose your preferred communication channel for an immediate 15 minute consultation on turnkey business launches, AI automation systems, custom venture buildouts, or Cyprus legal introductions.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <a
@@ -612,7 +612,7 @@ export default function ContactPage() {
                   </span>
                 </a>
                 <a
-                  href={`mailto:${BRAND_INFO.emailPrimary}?subject=Discovery%20Call%20Request%20-%20ONSPEC`}
+                  href={`mailto:${BRAND_INFO.emailPrimary}?subject=Discovery%20Call%20Request%20ONSPEC`}
                   className="rounded-2xl bg-[#F7F8FA] border border-[#A8B1BE]/50 text-[#101D35] p-6 hover:border-[#27B58A] transition-colors flex flex-col justify-between gap-4"
                 >
                   <div>

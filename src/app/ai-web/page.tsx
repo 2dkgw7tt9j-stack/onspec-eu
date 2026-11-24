@@ -7,16 +7,16 @@ import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 const AI_WEB_CAPABILITIES = [
   {
     code: "MODULE 01",
-    tagline: "HIGH-PERFORMANCE WEB",
+    tagline: "HIGH PERFORMANCE WEB",
     title: "Custom Websites & Client Portals",
     description:
-      "Modern Next.js web applications, responsive customer-facing platforms, and client portals built for maximum speed, SEO visibility, and conversion.",
+      "Modern Next.js web applications, responsive customer facing platforms, and client portals built for maximum speed, SEO visibility, and conversion.",
     bullets: [
-      "Sub-second page speeds using server-side rendering and edge networks",
+      "Subsecond page speeds using server side rendering and edge networks",
       "Tailored UI engineered to your brand specifications",
       "Integrated booking engines, calendars, and live form intake",
       "Stripe, Revolut Business, and European payment gateway integration",
-      "SEO architecture with structured schemas and lightning-fast Core Web Vitals",
+      "SEO architecture with structured schemas and lightning fast Core Web Vitals",
     ],
     timeline: "2 to 4 Weeks to Live Deployment",
     investment: "From €2,500 turnkey",
@@ -61,16 +61,16 @@ const AI_WEB_CAPABILITIES = [
   },
   {
     code: "MODULE 04",
-    tagline: "BACK-OFFICE AUTOMATION",
+    tagline: "BACK OFFICE AUTOMATION",
     title: "CRM, Invoicing & Operations Pipelines",
     description:
       "Connect your disparate software tools into one automated pipeline. Inbound leads, customer databases, contracts, invoices, and accounting synchronize seamlessly.",
     bullets: [
-      "Automated two-way synchronization with HubSpot, Pipedrive, and Airtable",
+      "Automated two way synchronization with HubSpot, Pipedrive, and Airtable",
       "OCR receipt and invoice data extraction routed to Xero or QuickBooks",
       "Automated contract generation and digital signature reminders",
       "Weekly automated executive performance reports delivered via Telegram or WhatsApp",
-      "Eliminates manual double-entry across sales, admin, and bookkeeping",
+      "Eliminates manual double entry across sales, admin, and bookkeeping",
     ],
     timeline: "2 to 3 Weeks to Integration",
     investment: "From €2,800 turnkey",
@@ -120,7 +120,7 @@ export default function AiWebPage() {
           AI &amp; Websites.
         </h1>
         <p className="text-lg md:text-xl text-[#253B5B] max-w-2xl mx-auto leading-relaxed">
-          High-performance custom web applications, autonomous 24/7 AI customer agents, and official WhatsApp Business automation designed to eliminate manual overhead.
+          High performance custom web applications, autonomous 24/7 AI customer agents, and official WhatsApp Business automation designed to eliminate manual overhead.
         </p>
       </section>
 

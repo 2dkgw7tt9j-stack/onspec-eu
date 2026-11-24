@@ -8,8 +8,8 @@ const SERVICES_LIST = [
   {
     code: "SERVICE 01",
     pillar: "TURNKEY VENTURES",
-    title: "Ready-to-Launch Business Units",
-    subtitle: "Complete pre-engineered businesses ready to operate on Day 1 in Cyprus and the EU.",
+    title: "Ready Business Units",
+    subtitle: "Complete turnkey engineered businesses ready to operate on Day 1 in Cyprus and the EU.",
     description:
       "We source prime physical locations, negotiate commercial placement agreements, procure commercial hardware, install contactless payment telemetry, and coordinate Cyprus legal registration. You receive a fully operational venture ready to generate revenue in 4 to 10 weeks.",
     features: [
@@ -30,15 +30,15 @@ const SERVICES_LIST = [
     code: "SERVICE 02",
     pillar: "DIGITAL & WEB",
     title: "Custom Websites & Software Platforms",
-    subtitle: "High-performance web applications, customer portals, and conversion-engineered sites.",
+    subtitle: "High performance web applications, customer portals, and conversion engineered sites.",
     description:
-      "Every modern business needs digital infrastructure that matches its physical operation. We design and build ultra-fast Next.js websites, online booking systems, client management portals, and e-commerce solutions built for speed, SEO authority, and customer conversion.",
+      "Every modern business needs digital infrastructure that matches its physical operation. We design and build ultra-fast Next.js websites, online booking systems, client management portals, and ecommerce solutions built for speed, SEO authority, and customer conversion.",
     features: [
-      "Next.js and React architecture with sub-second page loads",
+      "Next.js and React architecture with subsecond page loads",
       "Automated online booking and reservation engines",
       "Secure client dashboards and account portals",
       "Stripe and European payment gateway integration",
-      "Fully responsive mobile-first UI tailored to your brand",
+      "Fully responsive mobile first UI tailored to your brand",
     ],
     timeline: "2 to 4 Weeks to Deployment",
     investment: "From €2,500 tailored",
@@ -51,7 +51,7 @@ const SERVICES_LIST = [
     code: "SERVICE 03",
     pillar: "AUTOMATION",
     title: "AI Systems & Workflow Automation",
-    subtitle: "Intelligent AI support agents, WhatsApp Business API, and automated back-office pipelines.",
+    subtitle: "Intelligent AI support agents, WhatsApp Business API, and automated back office pipelines.",
     description:
       "Eliminate repetitive manual administration. We engineer autonomous multilingual AI customer support agents, automated WhatsApp communication funnels, smart booking triage, CRM synchronization, and OCR invoice processing that save 15 to 35 hours of manual work every week.",
     features: [
@@ -74,7 +74,7 @@ const SERVICES_LIST = [
     title: "Custom Business Idea Execution",
     subtitle: "Submit any business concept to receive a free feasibility study, transparent quotation, and roadmap.",
     description:
-      "If you have an idea for a physical, digital, or hybrid venture in Cyprus or across Europe, Onspec acts as your full-cycle execution partner. You pitch the concept, our engineers evaluate technical and commercial viability, deliver a transparent proposal, and build it end-to-end.",
+      "If you have an idea for a physical, digital, or hybrid venture in Cyprus or across Europe, Onspec acts as your full cycle execution partner. You pitch the concept, our engineers evaluate technical and commercial viability, deliver a transparent proposal, and build it end to end.",
     features: [
       "Free initial feasibility assessment within 48 to 72 hours",
       "Comprehensive transparent quotation and itemized budget",

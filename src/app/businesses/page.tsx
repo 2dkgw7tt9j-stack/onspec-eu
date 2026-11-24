@@ -21,10 +21,10 @@ export default function BusinessesPage() {
           [ PREFABRICATED COMMERCIAL VENTURES ]
         </p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#101D35] mb-6 leading-tight">
-          Ready-to-Launch Businesses.
+          Ready Businesses.
         </h1>
         <p className="text-lg md:text-xl text-[#253B5B] max-w-2xl mx-auto leading-relaxed">
-          Pre-engineered turnkey business models ready to deploy across Cyprus and Europe in 4 to 10 weeks. Location, equipment, telemetry, and corporate structure coordinated end to end.
+          Engineered turnkey business models ready to deploy across Cyprus and Europe in 4 to 10 weeks. Location, equipment, telemetry, and corporate structure coordinated end to end.
         </p>
       </section>
 

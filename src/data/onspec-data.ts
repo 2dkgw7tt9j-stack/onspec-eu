@@ -18,7 +18,7 @@ export interface PillarSpec {
 export type OpportunityCategory =
   | "Automated Retail"
   | "Physical Infrastructure"
-  | "Digital & E-Commerce"
+  | "Digital & Ecommerce"
   | "Semi-Automated";
 
 export interface ExecutionStage {
@@ -113,7 +113,7 @@ export const HERO_TELEMETRY_ITEMS = [
   {
     index: "01",
     code: "LAUNCH // TURNKEY VENTURES",
-    title: "Ready-to-Launch Prefab Businesses",
+    title: "Ready to Launch Prefab Businesses",
     metric: "7 Proven Models",
     href: "/launch",
   },
@@ -160,13 +160,13 @@ export const PILLARS: PillarSpec[] = [
     code: "PILLAR 01 // LAUNCH",
     name: "LAUNCH",
     shortTitle: "Launch a Business",
-    fullTitle: "Ready-to-Launch Prefabricated Business Models",
+    fullTitle: "Ready to Launch Prefabricated Business Models",
     coreMessage: "You don’t have to start from scratch.",
     headline: "Turnkey commercial ventures engineered for rapid deployment.",
     description:
-      "We take proven, high-demand physical and digital business models and coordinate every operational layer, from location scouting and hardware sourcing to supplier contracts, Cyprus company formation via independent professionals, and launch readiness.",
+      "We take proven, high demand physical and digital business models and coordinate every operational layer, from location scouting and hardware sourcing to supplier contracts, Cyprus company formation via independent professionals, and launch readiness.",
     href: "/launch",
-    ctaLabel: "Explore Ready-to-Launch Businesses",
+    ctaLabel: "Explore Ready to Launch Businesses",
     deliverables: [
       "Opportunity Feasibility & Location Scouting",
       "Commercial Hardware & Equipment Sourcing",
@@ -185,7 +185,7 @@ export const PILLARS: PillarSpec[] = [
     shortTitle: "AI & Automation",
     fullTitle: "Intelligent Systems & Business Process Automation",
     coreMessage: "Your business doesn’t need more manual work. It needs smarter systems.",
-    headline: "Eliminate repetitive bottlenecks with production-grade AI.",
+    headline: "Eliminate repetitive bottlenecks with production grade AI.",
     description:
       "We architect and integrate intelligent AI agents, WhatsApp automation, autonomous booking engines, CRM pipelines, and invoice workflows directly into your existing operations so your team focuses on growth.",
     href: "/automate",
@@ -206,7 +206,7 @@ export const PILLARS: PillarSpec[] = [
     code: "PILLAR 03 // INNOVATE",
     name: "INNOVATE",
     shortTitle: "Submit Your Idea",
-    fullTitle: "Custom Concept Evaluation & End-to-End Execution",
+    fullTitle: "Custom Concept Evaluation & End to End Execution",
     coreMessage: "Your idea doesn’t have to stay an idea.",
     headline: "Have an idea? Let’s build it with a structured execution roadmap.",
     description:
@@ -252,12 +252,12 @@ export const SCRATCH_VS_ONSPEC_COMPARISON = [
   {
     dimension: "Location & Commercial Lease",
     scratch: "Months of cold-calling landlords, uncertain footfall data, and unvetted site terms.",
-    onspec: "Pre-vetted high-footfall locations in Cyprus & EU with structured lease negotiation support.",
+    onspec: "Pre vetted high footfall locations in Cyprus & EU with structured lease negotiation support.",
   },
   {
     dimension: "Equipment & Supplier Sourcing",
     scratch: "Fragmented overseas vendors, retail markups, incompatible payment telemetry.",
-    onspec: "Commercial-grade hardware, EMV/contactless telemetry, and vetted wholesale product suppliers.",
+    onspec: "Commercial grade hardware, EMV/contactless telemetry, and vetted wholesale product suppliers.",
   },
   {
     dimension: "Corporate & Regulatory Setup",
@@ -279,7 +279,7 @@ export const SCRATCH_VS_ONSPEC_COMPARISON = [
 export const VENDING_FLAGSHIP_BLUEPRINT: ExecutionStage[] = [
   {
     step: "STAGE 01",
-    title: "Identifying High-Yield Opportunities",
+    title: "Identifying High Yield Opportunities",
     detail:
       "Demographic and commercial analysis across Cyprus business districts, universities, marinas, gyms, healthcare hubs, and transit corridors to match the exact machine specification to daily demand.",
   },
@@ -293,19 +293,19 @@ export const VENDING_FLAGSHIP_BLUEPRINT: ExecutionStage[] = [
     step: "STAGE 03",
     title: "Sourcing Commercial Equipment",
     detail:
-      "Procurement of smart touchscreen, refrigerated, or specialty vending units equipped with Nayax/EMV contactless payment terminals, Apple Pay/Google Pay, and real-time cloud inventory telemetry.",
+      "Procurement of smart touchscreen, refrigerated, or specialty vending units equipped with Nayax/EMV contactless payment terminals, Apple Pay/Google Pay, and real time cloud inventory telemetry.",
   },
   {
     step: "STAGE 04",
     title: "Coordinating Wholesale Suppliers",
     detail:
-      "Establishing direct supply lines with local Cyprus and EU FMCG distributors for beverages, healthy snacks, specialty items, or high-margin convenience goods.",
+      "Establishing direct supply lines with local Cyprus and EU FMCG distributors for beverages, healthy snacks, specialty items, or high margin convenience goods.",
   },
   {
     step: "STAGE 05",
     title: "Structured Business Planning",
     detail:
-      "Unit economics modeling, SKU planogram optimization, pricing strategy, restocking route scheduling, and break-even cashflow projections.",
+      "Unit economics modeling, SKU planogram optimization, pricing strategy, restocking route scheduling, and break even cashflow projections.",
   },
   {
     step: "STAGE 06",
@@ -323,7 +323,7 @@ export const VENDING_FLAGSHIP_BLUEPRINT: ExecutionStage[] = [
     step: "STAGE 08",
     title: "Launch Preparation & Handover",
     detail:
-      "Initial product stocking, live payment stress-testing, owner dashboard training, and ongoing operational scaling support.",
+      "Initial product stocking, live payment stress testing, owner dashboard training, and ongoing operational scaling support.",
   },
 ];
 
@@ -339,8 +339,8 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     shortDescription:
       "Complete turnkey vending business including location scouting, smart contactless machines, wholesale supplier setup, Cyprus corporate coordination, and cloud inventory telemetry.",
     fullDescription:
-      "Our flagship ready-to-launch business model. Designed for investors, professionals, and first-time entrepreneurs seeking a low-overhead, scalable physical asset business in Cyprus. Onspec coordinates every stage from securing high-traffic locations to installing cloud-connected smart vending hardware and connecting wholesale FMCG suppliers.",
-    investmentTier: "Tier 1 : Accessible Entry & Multi-Unit Scalable",
+      "Our flagship ready to launch business model. Designed for investors, professionals, and first time entrepreneurs seeking a low overhead, scalable physical asset business in Cyprus. Onspec coordinates every stage from securing high traffic locations to installing cloud connected smart vending hardware and connecting wholesale FMCG suppliers.",
+    investmentTier: "Tier 1 : Accessible Entry & Multi Unit Scalable",
     estimatedCapital: "€12,500 to €45,000 (1 to 4 Smart Units Turnkey)",
     timeline: "4 to 6 Weeks to Live Operation",
     locationStrategy: "Offices, Gyms, Universities, Hospitals, Marinas & Aparthotels in Cyprus",
@@ -374,12 +374,12 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     title: "Automated Specialty Coffee Stations",
     category: "Automated Retail",
     featured: true,
-    tagline: "Fresh-bean Swiss-engineered espresso kiosks operating 24/7 without barista payroll.",
+    tagline: "Fresh-bean Swiss engineered espresso kiosks operating 24/7 without barista payroll.",
     shortDescription:
-      "Self-contained commercial barista corners delivering specialty espresso, iced coffee, and matcha with cashless ordering and automated CIP cleaning cycles.",
+      "Self contained commercial barista corners delivering specialty espresso, iced coffee, and matcha with cashless ordering and automated CIP cleaning cycles.",
     fullDescription:
       "Coffee consumption in Cyprus and southern Europe is among the highest per capita in the region. Automated Specialty Coffee Stations capture daily commuter, corporate, and campus traffic with zero barista staffing costs, consistent extraction quality, and automated telemetry notifications.",
-    investmentTier: "Tier 2 : High-Margin Daily Frequency",
+    investmentTier: "Tier 2 : High Margin Daily Frequency",
     estimatedCapital: "€18,000 to €38,000 per Station",
     timeline: "5 to 7 Weeks to Live Operation",
     locationStrategy: "Corporate Plazas, Co-Working Hubs, Transit Terminals, Medical Centers",
@@ -406,23 +406,23 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       { label: "CAPACITY", value: "250+ Cups Before Refill" },
       { label: "EXTRACTION", value: "Whole Bean Commercial Swiss Group" },
       { label: "FOOTPRINT", value: "1.5m² to 2.2m² Architectural Unit" },
-      { label: "TELEMETRY", value: "Real-Time Bean, Milk & Cup Sensors" },
+      { label: "TELEMETRY", value: "Real Time Bean, Milk & Cup Sensors" },
       { label: "OPERATING HOURS", value: "24/7 Unattended" },
     ],
     cyprusSetupNotes:
       "Engineered for both hot espresso and signature Cyprus iced coffee formats (Freddo Espresso / Iced Latte modules available).",
   },
   {
-    id: "self-service-kiosks",
+    id: "self service-kiosks",
     specCode: "SPEC-L03 // KIOSK-OS",
-    title: "Self-Service Micro-Retail & Service Kiosks",
+    title: "Self Service Micro-Retail & Service Kiosks",
     category: "Automated Retail",
     featured: true,
     tagline: "Compact unmanned retail pods for electronics accessories, travel essentials, and pharmacy items.",
     shortDescription:
       "High-margin unattended micro-stores positioned in tourist zones, hotels, malls, and coastal promenades with automated security and inventory tracking.",
     fullDescription:
-      "Self-Service Kiosks unlock high-value retail square footage without full shop lease commitments or retail shift wages. Ideal for sun-care, travel electronics, power banks, gourmet grab-and-go, or automated key/locker services across Cyprus hospitality hubs.",
+      "Self Service Kiosks unlock high value retail square footage without full shop lease commitments or retail shift wages. Ideal for sun-care, travel electronics, power banks, gourmet grab-and-go, or automated key/locker services across Cyprus hospitality hubs.",
     investmentTier: "Tier 2 : Hospitality & Tourism Retail",
     estimatedCapital: "€16,000 to €42,000",
     timeline: "5 to 8 Weeks to Live Operation",
@@ -433,9 +433,9 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
       "Weather-rated or indoor interactive touchscreen kiosk unit",
-      "Robotic elevator product delivery for fragile high-ticket items",
+      "Robotic elevator product delivery for fragile high ticket items",
       "Multi-language UI (English, Greek, Russian, German, French)",
-      "Curated high-margin SKU supplier onboarding",
+      "Curated high margin SKU supplier onboarding",
       "Location concession agreement & insurance coordination",
       "Cloud sales analytics & dynamic pricing software",
     ],
@@ -448,21 +448,21 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     technicalSpecs: [
       { label: "SPEC ID", value: "OSP-KSK-310" },
       { label: "INTERFACE", value: "32\" 4K Capacitive Touchscreen" },
-      { label: "SECURITY", value: "Anti-Vandal Steel + Cloud CCTV" },
-      { label: "PAYMENT", value: "Multi-Currency Card & Mobile Wallet" },
+      { label: "SECURITY", value: "Anti Vandal Steel + Cloud CCTV" },
+      { label: "PAYMENT", value: "Multi Currency Card & Mobile Wallet" },
       { label: "FOOTPRINT", value: "1.8m² Modular Pod" },
       { label: "UPTIME SLA", value: "99.4% Remote Monitored" },
     ],
     cyprusSetupNotes:
-      "High seasonal and year-round yield potential in Limassol, Ayia Napa, Protaras, Paphos, and Larnaca hospitality corridors.",
+      "High seasonal and year round yield potential in Limassol, Ayia Napa, Protaras, Paphos, and Larnaca hospitality corridors.",
   },
   {
     id: "automated-laundromats",
     specCode: "SPEC-L04 // INFRA-LAUNDRY",
-    title: "24/7 Self-Service Smart Laundromat",
+    title: "24/7 Self Service Smart Laundromat",
     category: "Physical Infrastructure",
     featured: true,
-    tagline: "Recession-resilient neighborhood utility infrastructure with cashless central payment and auto-dosing.",
+    tagline: "Recession resilient neighborhood utility infrastructure with cashless central payment and auto dosing.",
     shortDescription:
       "Staffless commercial laundry hubs featuring industrial washer-extractors, high-efficiency dryers, automatic detergent dosing, and remote door/payment control.",
     fullDescription:
@@ -486,7 +486,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     executionStages: [
       { step: "STAGE 01", title: "Catchment & Shopfront Sourcing", detail: "Identifying 35m² to 60m² ground-floor units with high residential density." },
       { step: "STAGE 02", title: "MEP & Commercial Fit-Out", detail: "Water drainage, 3-phase power, ventilation, and durable architectural interior." },
-      { step: "STAGE 03", title: "Industrial Equipment Installation", detail: "Mounting commercial drums, auto-dosing reservoirs, and central kiosk." },
+      { step: "STAGE 03", title: "Industrial Equipment Installation", detail: "Mounting commercial drums, auto dosing reservoirs, and central kiosk." },
       { step: "STAGE 04", title: "Automation & Launch Marketing", detail: "Google Maps local SEO, automated door locks, and grand opening." },
     ],
     technicalSpecs: [
@@ -503,14 +503,14 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
   {
     id: "express-car-wash",
     specCode: "SPEC-L05 // INFRA-WASH",
-    title: "Express Self-Service & Touchless Car Wash Bays",
+    title: "Express Self Service & Touchless Car Wash Bays",
     category: "Physical Infrastructure",
     featured: true,
-    tagline: "High-throughput 24/7 cashless vehicle wash bays engineered for Cyprus’s year-round sun & dust climate.",
+    tagline: "High-throughput 24/7 cashless vehicle wash bays engineered for Cyprus’s year round sun & dust climate.",
     shortDescription:
-      "Multi-bay self-service jet wash or automated touchless laser wash systems with water recycling, contactless fleet cards, and remote chemical telemetry.",
+      "Multi-bay self service jet wash or automated touchless laser wash systems with water recycling, contactless fleet cards, and remote chemical telemetry.",
     fullDescription:
-      "With high vehicle ownership per capita and frequent Saharan dust events in Cyprus, automated car wash stations generate consistent year-round transaction volume. Onspec coordinates site feasibility, European wash bay engineering, water filtration, and cashless payment terminals.",
+      "With high vehicle ownership per capita and frequent Saharan dust events in Cyprus, automated car wash stations generate consistent year round transaction volume. Onspec coordinates site feasibility, European wash bay engineering, water filtration, and cashless payment terminals.",
     investmentTier: "Tier 3 : Commercial Roadside Asset",
     estimatedCapital: "€65,000 to €160,000",
     timeline: "10 to 16 Weeks to Live Operation",
@@ -520,7 +520,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     image:
       "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
-      "Modular stainless-steel self-service bays or touchless rollover portal",
+      "Modular stainless-steel self service bays or touchless rollover portal",
       "Osmosis spot-free rinse & water reclamation filtration system",
       "Contactless pay-per-minute terminals + prepaid fleet subscription cards",
       "High-suction commercial vacuum & mat-cleaner island",
@@ -547,8 +547,8 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
   {
     id: "turnkey-ecommerce-systems",
     specCode: "SPEC-L06 // DIGITAL-COM",
-    title: "Turnkey Automated E-Commerce & Fulfillment Venture",
-    category: "Digital & E-Commerce",
+    title: "Turnkey Automated Ecommerce & Fulfillment Venture",
+    category: "Digital & Ecommerce",
     featured: true,
     tagline: "Fully architected digital commerce brand with AI customer operations, supplier sync, and EU logistics.",
     shortDescription:
@@ -642,7 +642,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
     category: "Customer Facing",
     tagline: "24/7 multilingual resolution trained on your exact business policies, catalog, and pricing.",
     description:
-      "Deploy intelligent conversational agents across your website, social channels, and messaging apps that resolve inquiries instantly in English, Greek, and 20+ languages, escalating to human staff only when high-value judgment is required.",
+      "Deploy intelligent conversational agents across your website, social channels, and messaging apps that resolve inquiries instantly in English, Greek, and 20+ languages, escalating to human staff only when high value judgment is required.",
     capabilities: [
       "Trained on your company docs, services, pricing & SOPs",
       "Instant accurate answers with zero hallucination guardrails",
@@ -702,7 +702,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
     category: "Customer Facing",
     tagline: "Zero back-and-forth calendar coordination across clinics, consultancies, hospitality, and services.",
     description:
-      "Your AI Booking Assistant negotiates times directly in natural chat or voice, checks real-time staff/resource availability, collects deposits if required, handles rescheduling, and eliminates no-shows with smart WhatsApp/SMS reminders.",
+      "Your AI Booking Assistant negotiates times directly in natural chat or voice, checks real time staff/resource availability, collects deposits if required, handles rescheduling, and eliminates no-shows with smart WhatsApp/SMS reminders.",
     capabilities: [
       "Real-time multi-staff & multi-location calendar synchronization",
       "Natural-language booking via WhatsApp, Web Chat, or Social DM",
@@ -724,7 +724,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
     description:
       "Most businesses lose leads simply because nobody responded within the first 15 minutes. Onspec builds unified intake funnels that capture web forms, calls, and messages, enrich the prospect profile, and deliver an immediate tailored response.",
     capabilities: [
-      "Sub-minute omni-channel lead acknowledgement",
+      "Sub-minute omni channel lead acknowledgement",
       "Automated budget, timeline & service-need scoring",
       "Instant preliminary estimate or info-pack dispatch",
       "Round-robin or specialist routing to your sales team",
@@ -740,14 +740,14 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
     code: "MOD-06 // CRM-SYNC",
     title: "CRM Pipeline & Lifecycle Automation",
     category: "Operations & CRM",
-    tagline: "A self-updating CRM where deals advance, tasks trigger, and follow-ups never slip through the cracks.",
+    tagline: "A self updating CRM where deals advance, tasks trigger, and follow-ups never slip through the cracks.",
     description:
-      "Sales teams should sell, not manually type notes into CRM fields. We automate contact creation, meeting summary logging, pipeline stage progression, contract generation, and dormant-lead reactivation sequences.",
+      "Sales teams should sell, not manually type notes into CRM fields. We automate contact creation, meeting summary logging, pipeline stage progression, contract generation, and dormant lead reactivation sequences.",
     capabilities: [
-      "Zero-manual-entry contact & deal capture from Email and WhatsApp",
+      "Zero manual entry contact & deal capture from Email and WhatsApp",
       "Automated proposal & contract generation from CRM deal data",
-      "Stale-deal alerts and automated multi-touch follow-up sequences",
-      "Executive real-time revenue and conversion dashboards",
+      "Stale deal alerts and automated multi touch follow-up sequences",
+      "Executive real time revenue and conversion dashboards",
     ],
     connectedPlatforms: ["HubSpot", "Pipedrive", "Salesforce", "Notion / Airtable", "DocuSign"],
     timeSavedHoursPerWeek: 11,
@@ -758,7 +758,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
   {
     id: "administrative-workflows",
     code: "MOD-07 // ADMIN-FLOW",
-    title: "Administrative & Back-Office Workflows",
+    title: "Administrative & Back Office Workflows",
     category: "Finance & Admin",
     tagline: "Automate client onboarding, document collection, compliance checklists, and internal reporting.",
     description:
@@ -780,9 +780,9 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
     code: "MOD-08 // FIN-OPS",
     title: "Invoice & Bookkeeping Workflow Assistance",
     category: "Finance & Admin",
-    tagline: "Automated invoice generation, OCR receipt extraction, payment reconciliation, and accountant-ready exports.",
+    tagline: "Automated invoice generation, OCR receipt extraction, payment reconciliation, and accountant ready exports.",
     description:
-      "Eliminate end-of-month accounting stress. Our financial workflow automations generate invoices upon milestone completion, extract data from supplier bills via AI OCR, match bank payments, and prepare structured packages for your Cyprus/EU auditors.",
+      "Eliminate end of month accounting stress. Our financial workflow automations generate invoices upon milestone completion, extract data from supplier bills via AI OCR, match bank payments, and prepare structured packages for your Cyprus/EU auditors.",
     capabilities: [
       "Automated invoice issuance & polite overdue payment chasers",
       "AI OCR extraction of supplier bills, receipts & VAT numbers",
@@ -791,23 +791,23 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
     ],
     connectedPlatforms: ["Xero", "QuickBooks", "Stripe", "Revolut Business / SEPA", "Google Drive"],
     timeSavedHoursPerWeek: 8,
-    efficiencyMetric: "90% Less Month-End Admin",
+    efficiencyMetric: "90% Less Month End Admin",
     sampleTrigger: "Supplier sends PDF invoice to accounts@onspec-client.eu",
     sampleAction: "Extracts line items & VAT, logs draft bill in Xero & archives receipt",
   },
   {
     id: "business-process-automation",
     code: "MOD-09 // BPA-CORE",
-    title: "End-to-End Business Process Automation",
+    title: "End to End Business Process Automation",
     category: "Infrastructure",
-    tagline: "Custom multi-step operational pipelines tailored to your industry’s exact operational rules.",
+    tagline: "Custom multi step operational pipelines tailored to your industry’s exact operational rules.",
     description:
       "Every established business has unique operational glue, dispatching technicians, coordinating inventory restocks, updating property listings, or managing partner referrals. We map your process and encode it into reliable automated infrastructure.",
     capabilities: [
       "Custom webhook & API orchestration across legacy and modern tools",
       "Automated inventory restock & supplier purchase order triggers",
       "Field-team dispatch & status notification workflows",
-      "Error-monitored execution with audit logs and fallback alerts",
+      "Error monitored execution with audit logs and fallback alerts",
     ],
     connectedPlatforms: ["n8n / Make Enterprise", "Custom REST/GraphQL APIs", "ERP Systems", "Supabase"],
     timeSavedHoursPerWeek: 16,
@@ -818,15 +818,15 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
   {
     id: "platform-integrations",
     code: "MOD-10 // INTEGRATION-BUS",
-    title: "Cross-Platform System Integrations",
+    title: "Cross Platform System Integrations",
     category: "Infrastructure",
     tagline: "Unify WhatsApp, Email, Websites, CRM, Booking Platforms, and ERPs into one synchronized nervous system.",
     description:
-      "Disconnected software creates data silos and double entry. Onspec bridges all your platforms with secure bi-directional data sync so a change in one system reflects everywhere immediately.",
+      "Disconnected software creates data silos and double entry. Onspec bridges all your platforms with secure bi directional data sync so a change in one system reflects everywhere immediately.",
     capabilities: [
-      "Bi-directional sync between Website, CRM, Booking, and Accounting",
+      "Bi directional sync between Website, CRM, Booking, and Accounting",
       "Unified customer profile across WhatsApp, Email, and Purchases",
-      "Cloudflare-protected webhook endpoints & encrypted data transit",
+      "Cloudflare protected webhook endpoints & encrypted data transit",
       "Real-time executive telemetry dashboard across all connected tools",
     ],
     connectedPlatforms: ["WhatsApp", "Email", "Websites", "CRM Platforms", "Booking Platforms", "ERP / BMS"],
@@ -889,7 +889,7 @@ export const CUSTOMER_JOURNEY_STEPS: CustomerJourneyStep[] = [
     title: "Discovery",
     subtitle: "Explore what is possible",
     description:
-      "A visitor explores Onspec’s ready-to-launch business models, AI & automation systems, custom idea intake, or Cyprus legal referral network.",
+      "A visitor explores Onspec’s ready to launch business models, AI & automation systems, custom idea intake, or Cyprus legal referral network.",
     deliverable: "Clarity on the right pillar for your goals",
   },
   {
@@ -942,8 +942,8 @@ export const CUSTOMER_JOURNEY_STEPS: CustomerJourneyStep[] = [
 export const ECOSYSTEM_STAGES: EcosystemStage[] = [
   {
     step: "01",
-    title: "Launch a Ready-to-Run Business",
-    description: "Start with a structured turnkey model (e.g., Smart Vending, Coffee Station, Kiosk, or E-Commerce).",
+    title: "Launch a Ready to Run Business",
+    description: "Start with a structured turnkey model (e.g., Smart Vending, Coffee Station, Kiosk, or Ecommerce).",
     pillarRef: "01 LAUNCH",
   },
   {
@@ -960,13 +960,13 @@ export const ECOSYSTEM_STAGES: EcosystemStage[] = [
   },
   {
     step: "04",
-    title: "Automate Bookings, CRM & Back-Office",
+    title: "Automate Bookings, CRM & Back Office",
     description: "Connect scheduling, CRM pipelines, and automated invoice/bookkeeping workflows to minimize admin.",
     pillarRef: "02 AUTOMATE",
   },
   {
     step: "05",
-    title: "Monitor Real-Time Telemetry & Cashflow",
+    title: "Monitor Real Time Telemetry & Cashflow",
     description: "Manage operations remotely through unified inventory, sales, and performance dashboards.",
     pillarRef: "01 + 02",
   },
@@ -978,7 +978,7 @@ export const ECOSYSTEM_STAGES: EcosystemStage[] = [
   },
   {
     step: "07",
-    title: "Multi-Unit Expansion & Portfolio Scaling",
+    title: "Multi Unit Expansion & Portfolio Scaling",
     description: "Replicate proven units across new Cyprus and EU locations with an established execution partner.",
     pillarRef: "ECOSYSTEM LOOP",
   },
@@ -995,7 +995,7 @@ export const LEGAL_NETWORK_CATEGORIES: LegalServiceCategory[] = [
     typicalMatters: [
       "Business & Entrepreneur Relocation Permits",
       "Foreign Interest Company Staff Employment Visas",
-      "EU & Third-Country National Registration (MEU1 / MEU3)",
+      "EU & Third Country National Registration (MEU1 / MEU3)",
       "Digital Nomad Visa & Temporary Entry Authorizations",
       "Family Reunification & Dependent Visas",
     ],
@@ -1007,19 +1007,19 @@ export const LEGAL_NETWORK_CATEGORIES: LegalServiceCategory[] = [
     title: "Residency Matters",
     subtitle: "Permanent Residency, Investment Residency & Tax Domicile Coordination",
     description:
-      "Navigate Cyprus residency pathways with clarity. Our network of independent legal professionals advises on Category 6(2) fast-track permanent residency, long-term residency applications, and property-linked residency compliance.",
+      "Navigate Cyprus residency pathways with clarity. Our network of independent legal professionals advises on Category 6(2) fast track permanent residency, long term residency applications, and property linked residency compliance.",
     typicalMatters: [
-      "Cyprus Permanent Residency (Regulation 6(2) Fast-Track & Category F)",
-      "Temporary & Long-Term Residency Renewals",
+      "Cyprus Permanent Residency (Regulation 6(2) Fast Track & Category F)",
+      "Temporary & Long Term Residency Renewals",
       "Real Estate Acquisition Legal Due Diligence for Residency",
-      "Non-Domicile Status & Tax Residency Coordination (via qualified advisors)",
+      "Non Domicile Status & Tax Residency Coordination (via qualified advisors)",
     ],
     referralProcess: "Confidential intake -> Direct consultation with specialist residency lawyer in Cyprus.",
   },
   {
     id: "business-legal-matters",
     code: "LEG-03 // CORPORATE & COMMERCIAL",
-    title: "Business-Related Legal Matters",
+    title: "Business Related Legal Matters",
     subtitle: "Cyprus Company Formation, Commercial Contracts & Corporate Governance",
     description:
       "Whether launching an Onspec turnkey business or structuring a holding/operating entity in Cyprus, we connect you with independent corporate lawyers who draft shareholders’ agreements, commercial leases, and regulatory filings.",
@@ -1051,14 +1051,14 @@ export const LEGAL_NETWORK_CATEGORIES: LegalServiceCategory[] = [
     id: "legal-consultations",
     code: "LEG-05 // ADVISORY CONSULTATIONS",
     title: "Legal Consultations & Professional Guidance",
-    subtitle: "Structured Legal Opinions, Pre-Contract Reviews & Dispute Assessment",
+    subtitle: "Structured Legal Opinions, Pre Contract Reviews & Dispute Assessment",
     description:
       "Not sure which legal pathway applies to your situation? Request a structured consultation referral to speak directly with an independent lawyer in Cyprus suited to your specific personal or commercial matter.",
     typicalMatters: [
-      "Pre-Investment & Business Feasibility Legal Consultations",
+      "Pre Investment & Business Feasibility Legal Consultations",
       "Contract & Commercial Agreement Review Sessions",
-      "Property, Landlord-Tenant & Commercial Dispute Assessments",
-      "Cross-Border EU & Cyprus Regulatory Orientation",
+      "Property, Landlord Tenant & Commercial Dispute Assessments",
+      "Cross Border EU & Cyprus Regulatory Orientation",
     ],
     referralProcess: "Tell us your topic -> We connect you with the appropriate independent legal professional.",
   },
@@ -1068,7 +1068,7 @@ export const LAUNCH_FAQS = [
   {
     question: "Do I need prior experience in vending, kiosks, or automated retail to launch?",
     answer:
-      "No. Onspec’s ready-to-launch models are specifically engineered so you do not start from scratch. We coordinate the location, equipment procurement, wholesale suppliers, payment telemetry, and operational training so you receive a structured, functioning business.",
+      "No. Onspec’s ready to launch models are specifically engineered so you do not start from scratch. We coordinate the location, equipment procurement, wholesale suppliers, payment telemetry, and operational training so you receive a structured, functioning business.",
   },
   {
     question: "How is company registration in Cyprus handled?",
@@ -1078,7 +1078,7 @@ export const LAUNCH_FAQS = [
   {
     question: "Can I start with a single machine or kiosk and scale later?",
     answer:
-      "Yes. Many clients start with 1 to 2 smart vending units or a single automated coffee station to validate cashflow and remote telemetry before expanding into a multi-unit route across Limassol, Nicosia, Larnaca, or Paphos.",
+      "Yes. Many clients start with 1 to 2 smart vending units or a single automated coffee station to validate cashflow and remote telemetry before expanding into a multi unit route across Limassol, Nicosia, Larnaca, or Paphos.",
   },
   {
     question: "What happens if I have my own custom business idea that isn't listed in the catalog?",

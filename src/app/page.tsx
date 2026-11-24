@@ -255,7 +255,7 @@ const FEATURE_CAROUSEL_SPECS: {
       id: "ai-whatsapp-automation-suite",
       specCode: "SPEC-A02 // AI-SYSTEMS",
       title: "AI Customer Support & WhatsApp Business Automation Suite",
-      category: "Digital & E-Commerce",
+      category: "Digital & Ecommerce",
       featured: true,
       tagline:
         "24/7 multilingual AI agents, official WhatsApp pipelines, autonomous booking, and CRM synchronization.",

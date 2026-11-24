@@ -150,6 +150,10 @@ body {
   transform: translate(0) !important;
 }
 
+.c-fadein-text {
+  margin-top: 0 !important;
+}
+
 .c-fadein-text_line_inner {
   opacity: 1 !important;
   transform: translate(0) !important;
