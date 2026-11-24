@@ -115,7 +115,7 @@ export function SpecDrawerModal({
           <div className="modal_inner c-wysiwyg w-full" data-modal-feature-inner>
             {/* Category micro-label */}
             <span className="text-eyebrow block text-black/50 mb-2">
-              {opportunity.category} — {opportunity.specCode}
+              {opportunity.category} : {opportunity.specCode}
             </span>
 
             {/* Giant h2 heading */}
@@ -202,7 +202,7 @@ export function SpecDrawerModal({
                           className="p-4 rounded-[12px] bg-[#F7F8FA] border border-black/10"
                         >
                           <div className="text-xs font-bold text-[#27B58A] uppercase">
-                            {stage.step} — {stage.title}
+                            {stage.step} : {stage.title}
                           </div>
                           <div className="text-sm text-black/75 mt-1">
                             {stage.detail}
@@ -288,7 +288,7 @@ export function SpecDrawerModal({
                         </h3>
                       </div>
                       <span className="text-xs text-black/50">
-                        Free Preliminary Quotation • 24–48h Turnaround
+                        Free Preliminary Quotation • 24 to 48h Turnaround
                       </span>
                     </div>
 

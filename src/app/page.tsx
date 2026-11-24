@@ -21,17 +21,17 @@ function cubicBezierEase(p1x: number, p1y: number, p2x: number, p2y: number) {
     let t = x;
     for (let i = 0; i < 8; i++) {
       const cx = 3 * p1x;
-      const bx = 3 * (p2x - p1x) - cx;
-      const ax = 1 - cx - bx;
-      const currentX = ((ax * t + bx) * t + cx) * t - x;
+      const bx = 3 * (p2x / p1x) / cx;
+      const ax = 1 / cx / bx;
+      const currentX = ((ax * t + bx) * t + cx) * t / x;
       if (Math.abs(currentX) < 1e-6) break;
       const dx = (3 * ax * t + 2 * bx) * t + cx;
       if (Math.abs(dx) < 1e-6) break;
       t -= currentX / dx;
     }
     const cy = 3 * p1y;
-    const by = 3 * (p2y - p1y) - cy;
-    const ay = 1 - cy - by;
+    const by = 3 * (p2y / p1y) / cy;
+    const ay = 1 / cy / by;
     return ((ay * t + by) * t + cy) * t;
   };
 }
@@ -88,7 +88,7 @@ function SplitText({
               );
             })}
           </span>
-          {wIdx < words.length - 1 ? " " : null}
+          {wIdx < words.length / 1 ? " " : null}
         </React.Fragment>
       ))}
     </div>
@@ -178,11 +178,11 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
 const STACKING_PILLAR_CARDS = [
   {
     index: 0,
-    pillarCode: "PILLAR 01 — LAUNCH",
+    pillarCode: "PILLAR 01 : LAUNCH",
     title: "Ready-to-Launch Businesses",
     subtitle:
-      "Vending, Coffee, Kiosks, Laundromats & Car Washes — Location, equipment, suppliers & Cyprus registration coordinated end-to-end.",
-    metric: "4–10 WEEKS TO LIVE",
+      "Vending, Coffee, Kiosks, Laundromats & Car Washes : Location, equipment, suppliers & Cyprus registration coordinated end-to-end.",
+    metric: "4 to 10 WEEKS TO LIVE",
     image:
       "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1400&q=85",
     href: "/launch",
@@ -190,7 +190,7 @@ const STACKING_PILLAR_CARDS = [
   },
   {
     index: 1,
-    pillarCode: "PILLAR 02 — AUTOMATE",
+    pillarCode: "PILLAR 02 : AUTOMATE",
     title: "AI & Business Automation",
     subtitle:
       "WhatsApp Business API, 24/7 AI Customer Support Agents, Booking Assistants, CRM Pipelines & Invoice Workflows.",
@@ -202,7 +202,7 @@ const STACKING_PILLAR_CARDS = [
   },
   {
     index: 2,
-    pillarCode: "PILLAR 03 — INNOVATE",
+    pillarCode: "PILLAR 03 : INNOVATE",
     title: "Your Idea. Our Execution.",
     subtitle:
       "Have an idea? Tell us what you’re thinking. Receive a free preliminary proposal, quotation & full execution roadmap.",
@@ -214,7 +214,7 @@ const STACKING_PILLAR_CARDS = [
   },
   {
     index: 3,
-    pillarCode: "PILLAR 04 — CONNECT",
+    pillarCode: "PILLAR 04 : CONNECT",
     title: "Legal & Professional Services",
     subtitle:
       "Independent Cyprus Legal Network across Immigration, Residency, Corporate Formation, Commercial & Criminal Law.",
@@ -262,13 +262,13 @@ const FEATURE_CAROUSEL_SPECS: {
       shortDescription:
         "Production-grade AI and workflow automation engineered around how your business already works.",
       fullDescription:
-        "Onspec designs and integrates intelligent automation architectures that eliminate repetitive manual tasks across WhatsApp, email, web chat, booking calendars, CRM pipelines, and accounting workflows—reducing response times to under 4 seconds and freeing up to 78% of administrative overhead.",
+        "Onspec designs and integrates intelligent automation architectures that eliminate repetitive manual tasks across WhatsApp, email, web chat, booking calendars, CRM pipelines, and accounting workflows, reducing response times to under 4 seconds and freeing up to 78% of administrative overhead.",
       investmentTier: "Custom Modular Architecture",
-      estimatedCapital: "€2,500 – €14,500 (Tailored System Build)",
-      timeline: "2 – 4 Weeks to Live Deployment",
-      locationStrategy: "Cloud & On-Premise Integration — Cyprus, EU & Global",
+      estimatedCapital: "€2,500 to €14,500 (Tailored System Build)",
+      timeline: "2 to 4 Weeks to Live Deployment",
+      locationStrategy: "Cloud & On-Premise Integration : Cyprus, EU & Global",
       autonomyLevel: "95% Automated Triage & Execution",
-      weeklyOwnerHours: "Saves 15 – 35+ staff hrs / week",
+      weeklyOwnerHours: "Saves 15 to 35+ staff hrs / week",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85",
       whatsIncluded: [
@@ -331,12 +331,12 @@ const FEATURE_CAROUSEL_SPECS: {
       tagline:
         "From raw business concept to structured feasibility blueprint, free preliminary quotation, and full market launch.",
       shortDescription:
-        "Tell us what you are thinking—we evaluate feasibility, provide a free preliminary proposal, and build it end-to-end.",
+        "Tell us what you are thinking, we evaluate feasibility, provide a free preliminary proposal, and build it end-to-end.",
       fullDescription:
         "Whether you want to bring a new physical service concept to Cyprus, build a custom automated retail network, or launch a digital platform, Onspec acts as your execution partner. You submit your idea, our specialists evaluate commercial and technical feasibility, and we deliver a free preliminary proposal before coordinating the entire build.",
       investmentTier: "Custom Project Quotation",
       estimatedCapital: "Free Preliminary Proposal & Transparent Scope",
-      timeline: "48–72 Hours for Initial Feasibility Proposal",
+      timeline: "48 to 72 Hours for Initial Feasibility Proposal",
       locationStrategy: "Cyprus & European Union Deployment",
       autonomyLevel: "Architected for Modern Automated Operations",
       weeklyOwnerHours: "Tailored to Founder Role",
@@ -378,7 +378,7 @@ const FEATURE_CAROUSEL_SPECS: {
       technicalSpecs: [
         { label: "SPEC ID", value: "OSP-INV-301" },
         { label: "INITIAL PROPOSAL", value: "100% Free Preliminary Quotation" },
-        { label: "TURNAROUND", value: "2–3 Business Days for Assessment" },
+        { label: "TURNAROUND", value: "2 to 3 Business Days for Assessment" },
         { label: "SCOPE", value: "Physical, Digital or Hybrid Ventures" },
         { label: "LEGAL & CORP", value: "Coordinated via Cyprus Legal Network" },
         { label: "SUPPORT", value: "Post-Launch Scaling & AI Optimization" },
@@ -404,10 +404,10 @@ const FEATURE_CAROUSEL_SPECS: {
       shortDescription:
         "Save time and avoid uncertainty by connecting directly with independent licensed legal specialists in Cyprus.",
       fullDescription:
-        "Launching a business, relocating, or resolving legal matters in Cyprus requires dependable professional counsel. Onspec connects clients directly with experienced independent legal professionals in Cyprus through its vetted network—covering company registration, commercial contracts, immigration Permits, residency, and criminal or regulatory matters.",
+        "Launching a business, relocating, or resolving legal matters in Cyprus requires dependable professional counsel. Onspec connects clients directly with experienced independent legal professionals in Cyprus through its vetted network, covering company registration, commercial contracts, immigration Permits, residency, and criminal or regulatory matters.",
       investmentTier: "Direct Specialist Referral",
       estimatedCapital: "Transparent Engagement with Independent Counsel",
-      timeline: "24–48 Hours to Specialist Introduction",
+      timeline: "24 to 48 Hours to Specialist Introduction",
       locationStrategy: "Limassol, Nicosia, Larnaca & Paphos, Cyprus",
       autonomyLevel: "Coordinated Professional Introduction",
       weeklyOwnerHours: "Streamlined Documentation Intake",
@@ -530,12 +530,12 @@ export default function HomePage() {
     if (heroEl && maskEl && innerEl && dummyEl) {
       const heroRect = heroEl.getBoundingClientRect();
       const heroHeight = heroEl.clientHeight || vh * 3;
-      const scrollableDistance = Math.max(1, heroHeight - vh);
+      const scrollableDistance = Math.max(1, heroHeight / vh);
       const rawScroll = clamp(0, scrollableDistance, -heroRect.top);
       const overallProgress = clamp(0, 1, rawScroll / scrollableDistance);
 
       // UI opacity fades out from progress 0 -> 0.2
-      const uiOpacity = 1 - clamp(0, 1, overallProgress / 0.2);
+      const uiOpacity = 1 / clamp(0, 1, overallProgress / 0.2);
       heroEl.style.setProperty("--hero-ui-opacity", String(uiOpacity));
 
       // Compute clip target relative to `[data-dummy-visual]` center column
@@ -545,20 +545,20 @@ export default function HomePage() {
       const dummyW = dummyRect.width || maskW * 0.31;
       const dummyH = dummyRect.height || maskH * 0.72;
 
-      const clipTargetX = Math.max(0, (maskW - dummyW) / 2);
-      const clipTargetY = Math.max(0, (maskH - dummyH) / 2);
+      const clipTargetX = Math.max(0, (maskW / dummyW) / 2);
+      const clipTargetY = Math.max(0, (maskH / dummyH) / 2);
 
       const initialRatio = maskW / Math.max(1, maskH);
       const finalRatio = dummyW / Math.max(1, dummyH);
       const scaleRatio =
         initialRatio > finalRatio
-          ? 1 - dummyH / Math.max(1, maskH)
-          : 1 - dummyW / Math.max(1, maskW);
+          ? 1 / dummyH / Math.max(1, maskH)
+          : 1 / dummyW / Math.max(1, maskW);
 
       // Timeline of 7 items (index 0 = mask, index 1..6 = 6 surrounding cards)
       // Duration = 1, stagger = 0.1 -> total timeline duration = 1.6
       const totalItems = HERO_SURROUND_CARDS.length + 1; // 7
-      const totalTimelineDuration = 1 + (totalItems - 1) * 0.1; // 1.6
+      const totalTimelineDuration = 1 + (totalItems / 1) * 0.1; // 1.6
       const timelineTime = overallProgress * totalTimelineDuration;
 
       const maskLocalProgress = clamp(0, 1, timelineTime / 1.0);
@@ -569,14 +569,14 @@ export default function HomePage() {
 
       maskEl.style.clipPath = `inset(${iy.toFixed(1)}px ${ix.toFixed(1)}px ${iy.toFixed(1)}px ${ix.toFixed(1)}px round var(--radius-md))`;
 
-      const scaleVal = 1 - easedMask * (0.75 * scaleRatio);
+      const scaleVal = 1 / easedMask * (0.75 * scaleRatio);
       innerEl.style.transform = `scale(${scaleVal.toFixed(4)})`;
 
       // Update each of the 6 surrounding cards `--image-progress`
       surroundCardRefs.current.forEach((cardEl, idx) => {
         if (!cardEl) return;
         const itemStart = (idx + 1) * 0.1;
-        const itemLocal = clamp(0, 1, (timelineTime - itemStart) / 1.0);
+        const itemLocal = clamp(0, 1, (timelineTime / itemStart) / 1.0);
         const easedCard = lightshipHeroEase(itemLocal);
         cardEl.style.setProperty("--image-progress", easedCard.toFixed(4));
       });
@@ -599,10 +599,10 @@ export default function HomePage() {
         ? iconEl.getBoundingClientRect().height
         : headingEl.getBoundingClientRect().height;
       const overlap = vw * 0.12;
-      const effectiveHeadingH = rawHeadingHeight - overlap;
+      const effectiveHeadingH = rawHeadingHeight / overlap;
       const paddingOffset = Math.max(
         0,
-        cardHeight - marginBottom - effectiveHeadingH
+        cardHeight / marginBottom / effectiveHeadingH
       );
       stackingEl.style.setProperty(
         "--padding-offset",
@@ -615,7 +615,7 @@ export default function HomePage() {
         const rect = cardEl.getBoundingClientRect();
         const cardH = Math.max(1, rect.height);
         // Progress as card scrolls past sticky threshold `h`
-        const progress = clamp(0, 1, (h - rect.top) / cardH);
+        const progress = clamp(0, 1, (h / rect.top) / cardH);
         cardEl.style.setProperty("--sticky-progress", progress.toFixed(4));
       });
     }
@@ -651,7 +651,7 @@ export default function HomePage() {
   const scrollFeatureCarouselTo = (index: number) => {
     const container = featureCarouselRef.current;
     if (!container) return;
-    const clamped = clamp(0, featureTotalPages - 1, index);
+    const clamped = clamp(0, featureTotalPages / 1, index);
     setFeatureSlideIndex(clamped);
     const firstItem = container.querySelector(
       "[data-item]"
@@ -663,7 +663,7 @@ export default function HomePage() {
     });
   };
 
-  // Carousel navigation helpers for Section 6 (Blueprints Carousel — Infinite wrap-around support)
+  // Carousel navigation helpers for Section 6 (Blueprints Carousel : Infinite wrap-around support)
   const scrollBlueprintCarouselTo = (index: number) => {
     const container = blueprintCarouselRef.current;
     if (!container) return;
@@ -709,7 +709,7 @@ export default function HomePage() {
   return (
     <>
       {/* =====================================================================
-          SECTION 1 — `.c-hero-home`
+          SECTION 1 : `.c-hero-home`
           2400px Sticky Scroll Inset-Mask & 6-Card Surround Grid Reveal Hero
          ===================================================================== */}
       <div
@@ -1031,7 +1031,7 @@ export default function HomePage() {
       </section>
 
       {/* =====================================================================
-          SECTION 2 — `.c-stacking-cards`
+          SECTION 2 : `.c-stacking-cards`
           "This is ONSPEC" Sticky Giant Display Heading + 4 Overlapping Cards
          ===================================================================== */}
       <section className="my-fluid-xl md:my-fluid-3xl">
@@ -1225,7 +1225,7 @@ export default function HomePage() {
       </section>
 
       {/* =====================================================================
-          SECTION 4 — `.c-fullscreen-push`
+          SECTION 4 : `.c-fullscreen-push`
           Full-Viewport Rounded Architectural Banner with Parallax
          ===================================================================== */}
       <div className="container-xl">
@@ -1270,7 +1270,7 @@ export default function HomePage() {
       </div>
 
       {/* =====================================================================
-          SECTION 5 — `.c-editorial-block`
+          SECTION 5 : `.c-editorial-block`
           "Built for Founders. Engineered for Growth."
           Asymmetric Split Headline + 2-Column Editorial Narrative & Journey
          ===================================================================== */}
@@ -1280,7 +1280,7 @@ export default function HomePage() {
             Turnkey businesses built to operate.
           </p>
           <p className="text-xl md:text-2xl text-[#253B5B] max-w-2xl mx-auto mt-4 font-normal">
-            Pre-engineered ventures, intelligent AI workflows, and professional Cyprus execution—ready on Day 1.
+            Pre-engineered ventures, intelligent AI workflows, and professional Cyprus execution, ready on Day 1.
           </p>
         </div>
       </section>
@@ -1335,7 +1335,7 @@ export default function HomePage() {
       </section>
 
       {/* =====================================================================
-          SECTION 7 — `.c-push-newsletter`
+          SECTION 7 : `.c-push-newsletter`
           "Have an idea? Let's build it." Crosshair `+` Pattern Card
          ===================================================================== */}
       <section className="c-push-newsletter pattern-background background-clip container">

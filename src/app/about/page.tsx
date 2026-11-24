@@ -58,7 +58,7 @@ export default function AboutPage() {
   return (
     <main className="bg-[#F7F8FA] text-[#101D35]">
       <h1 className="sr-only">
-        About ONSPEC ({BRAND_INFO.domain}) — {BRAND_INFO.slogan}
+        About ONSPEC ({BRAND_INFO.domain}) : {BRAND_INFO.slogan}
       </h1>
 
       {/* Section 1: Giant Editorial .c-fadein-text Statement + .c-symbol Twin-Star (1:1 company.html) */}
@@ -420,7 +420,7 @@ export default function AboutPage() {
                   {activeStep.code}
                 </span>
                 <h3 className="heading-sm text-white">
-                  {activeStep.number}. {activeStep.title} —{" "}
+                  {activeStep.number}. {activeStep.title} , {" "}
                   <span className="text-[#A8B1BE]">{activeStep.subtitle}</span>
                 </h3>
                 <p className="text-md text-[#F7F8FA]/85 max-w-2xl">
@@ -640,7 +640,7 @@ export default function AboutPage() {
                 Want the complete ONSPEC 2026 Opportunity &amp; Automation Dossier?
               </p>
               <h2 className="heading-sm text-[#101D35]">
-                Turnkey Cyprus business specifications, AI workflow benchmarks, and execution timelines — delivered directly to your inbox.
+                Turnkey Cyprus business specifications, AI workflow benchmarks, and execution timelines : delivered directly to your inbox.
               </h2>
             </div>
 

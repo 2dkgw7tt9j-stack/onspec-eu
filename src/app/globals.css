@@ -220,28 +220,32 @@ body {
 }
 
 
-/* Stacking Cards: Heading stays cleanly at the top, cards stack strictly below it without touching */
+/* Stacking Cards: Tight, clean, proportional spacing without excess gap */
 .c-stacking-cards_heading {
   position: relative !important;
   top: 0 !important;
-  margin-bottom: clamp(3rem, 6vw, 6rem) !important;
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 0 !important;
   z-index: 5 !important;
 }
 
 .c-stacking-cards_inner {
   position: relative !important;
-  margin-top: 0 !important;
+  margin-top: 0.5rem !important;
   z-index: 2 !important;
 }
 
 .c-stacking-cards_item {
   position: sticky !important;
-  top: 100px !important;
-  margin-bottom: 2rem !important;
+  top: 80px !important;
+  margin-bottom: 1.5rem !important;
 }
 
 @media (min-width: 1024px) {
+  .c-stacking-cards_heading {
+    margin-bottom: 1.75rem !important;
+  }
   .c-stacking-cards_item {
-    top: 110px !important;
+    top: 85px !important;
   }
 }

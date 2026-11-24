@@ -34,16 +34,16 @@ const IDEA_ARCHETYPES = [
 
 const BUDGET_TIERS = [
   "Need Onspec Cost Estimation (Open)",
-  "€10,000 – €25,000",
-  "€25,000 – €50,000",
-  "€50,000 – €100,000",
+  "€10,000 to €25,000",
+  "€25,000 to €50,000",
+  "€50,000 to €100,000",
   "€100,000+",
 ];
 
 const TIMEFRAME_OPTIONS = [
   "Immediate (Start within 30 days)",
-  "1 – 3 Months",
-  "3 – 6 Months",
+  "1 to 3 Months",
+  "3 to 6 Months",
   "Exploratory / Feasibility Assessment First",
 ];
 
@@ -53,11 +53,11 @@ const FOUNDRY_SPECS = [
     rows: [
       {
         label: "Preliminary Proposal Cost",
-        value: "€0 — Free Preliminary Proposal & Quotation",
+        value: "€0 : Free Preliminary Proposal & Quotation",
       },
       {
         label: "Turnaround Window",
-        value: "48 – 72 Hours from Concept Submission",
+        value: "48 to 72 Hours from Concept Submission",
       },
       {
         label: "Confidentiality Standard",
@@ -144,7 +144,7 @@ export default function InnovatePage() {
       <section className="container mt-fluid-4xl mb-fluid-md">
         <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-4xl">
           <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
-            PILLAR 03 // INNOVATE — SUBMIT YOUR IDEA
+            PILLAR 03 // INNOVATE : SUBMIT YOUR IDEA
           </p>
           <h1 className="sr-only">
             Your Idea. Our Execution. Have an idea? Let&apos;s build it.
@@ -156,7 +156,7 @@ export default function InnovatePage() {
             Your Idea. Our Execution.
           </div>
           <p className="text-lg text-[#253B5B] max-w-2xl">
-            Your idea doesn&apos;t have to stay an idea. Tell us what you&apos;re thinking — we evaluate feasibility, engineer the operational blueprint, and provide a{" "}
+            Your idea doesn&apos;t have to stay an idea. Tell us what you&apos;re thinking : we evaluate feasibility, engineer the operational blueprint, and provide a{" "}
             <strong className="text-[#101D35]">
               free preliminary proposal or quotation
             </strong>
@@ -200,7 +200,7 @@ export default function InnovatePage() {
             </span>
           </li>
           <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
-            <span className="heading-2xs text-[#101D35]">48 – 72 hrs</span>
+            <span className="heading-2xs text-[#101D35]">48 to 72 hrs</span>
             <span className="text-md text-[#253B5B]">
               02 // Executive Assessment &amp; Architecture Review
             </span>

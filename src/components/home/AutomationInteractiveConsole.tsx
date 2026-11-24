@@ -106,7 +106,7 @@ export function AutomationInteractiveConsole() {
             <div className="inline-flex items-center gap-2.5 rounded-full border border-[#A8B1BE]/25 bg-[#253B5B]/60 px-3.5 py-1.5">
               <span className="h-2 w-2 rounded-full bg-[#27B58A] animate-pulse" />
               <span className="font-mono text-xs uppercase tracking-widest text-[#F7F8FA]/90">
-                SECTION 05 // PILLAR 02 — AI & BUSINESS AUTOMATION
+                SECTION 05 // PILLAR 02 : AI & BUSINESS AUTOMATION
               </span>
             </div>
             <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-[#F7F8FA] sm:text-5xl">

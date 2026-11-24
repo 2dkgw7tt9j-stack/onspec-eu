@@ -150,7 +150,7 @@ export default function ContactPage() {
 
                 <div className="border-t border-[#A8B1BE]/25 pt-4 flex items-center justify-between text-xs text-[#A8B1BE]">
                   <span>{BRAND_INFO.headquarters}</span>
-                  <span>Mon – Sat • 08:30 – 19:30 EET</span>
+                  <span>Mon to Sat • 08:30 to 19:30 EET</span>
                 </div>
               </div>
             </div>

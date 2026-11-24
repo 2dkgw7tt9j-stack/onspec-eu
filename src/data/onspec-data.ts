@@ -104,7 +104,7 @@ export const BRAND_INFO = {
   emailSecondary: "hello@onspec.eu",
   whatsappDisplay: "+357 99 000 000",
   whatsappLink: "https://wa.me/35799000000",
-  headquarters: "Limassol & Nicosia, Cyprus — EU Operations Desk",
+  headquarters: "Limassol & Nicosia, Cyprus : EU Operations Desk",
   legalDisclaimer:
     "Onspec connects clients with experienced independent legal professionals in Cyprus through its professional network. Onspec is a business solutions company and does not itself practice law or operate as a law firm.",
 };
@@ -127,7 +127,7 @@ export const HERO_TELEMETRY_ITEMS = [
   {
     index: "03",
     code: "INNOVATE // CUSTOM EXECUTION",
-    title: "Submit Your Idea — Free Proposal",
+    title: "Submit Your Idea : Free Proposal",
     metric: "Concept to Reality",
     href: "/innovate",
   },
@@ -141,8 +141,8 @@ export const HERO_TELEMETRY_ITEMS = [
 ];
 
 export const MARQUEE_TICKER_ITEMS = [
-  "01 // SMART VENDING NETWORKS — CYPRUS & EU",
-  "02 // AI CUSTOMER SUPPORT AGENTS — 24/7 MULTILINGUAL",
+  "01 // SMART VENDING NETWORKS : CYPRUS & EU",
+  "02 // AI CUSTOMER SUPPORT AGENTS : 24/7 MULTILINGUAL",
   "03 // AUTOMATED BARISTA COFFEE STATIONS",
   "04 // WHATSAPP & OMNI-CHANNEL CRM AUTOMATION",
   "05 // SELF-SERVICE RETAIL & TICKETING KIOSKS",
@@ -164,7 +164,7 @@ export const PILLARS: PillarSpec[] = [
     coreMessage: "You don’t have to start from scratch.",
     headline: "Turnkey commercial ventures engineered for rapid deployment.",
     description:
-      "We take proven, high-demand physical and digital business models and coordinate every operational layer—from location scouting and hardware sourcing to supplier contracts, Cyprus company formation via independent professionals, and launch readiness.",
+      "We take proven, high-demand physical and digital business models and coordinate every operational layer, from location scouting and hardware sourcing to supplier contracts, Cyprus company formation via independent professionals, and launch readiness.",
     href: "/launch",
     ctaLabel: "Explore Ready-to-Launch Businesses",
     deliverables: [
@@ -175,7 +175,7 @@ export const PILLARS: PillarSpec[] = [
       "Turnkey Operational Setup & Handover",
     ],
     telemetryMetric: "DEPLOYMENT READINESS",
-    telemetryValue: "4–10 WEEKS",
+    telemetryValue: "4 to 10 WEEKS",
   },
   {
     id: "automate",
@@ -210,7 +210,7 @@ export const PILLARS: PillarSpec[] = [
     coreMessage: "Your idea doesn’t have to stay an idea.",
     headline: "Have an idea? Let’s build it with a structured execution roadmap.",
     description:
-      "Tell us what you are thinking—whether it is a new physical venture, a digital platform, or a hybrid concept. Onspec evaluates feasibility, structures the operational plan, and delivers a free preliminary proposal or quotation.",
+      "Tell us what you are thinking, whether it is a new physical venture, a digital platform, or a hybrid concept. Onspec evaluates feasibility, structures the operational plan, and delivers a free preliminary proposal or quotation.",
     href: "/innovate",
     ctaLabel: "Submit Your Idea for Free Proposal",
     deliverables: [
@@ -271,8 +271,8 @@ export const SCRATCH_VS_ONSPEC_COMPARISON = [
   },
   {
     dimension: "Time to Revenue",
-    scratch: "6–14 months of costly trial and error.",
-    onspec: "Structured 4–10 week turnkey deployment specification.",
+    scratch: "6 to 14 months of costly trial and error.",
+    onspec: "Structured 4 to 10 week turnkey deployment specification.",
   },
 ];
 
@@ -340,12 +340,12 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "Complete turnkey vending business including location scouting, smart contactless machines, wholesale supplier setup, Cyprus corporate coordination, and cloud inventory telemetry.",
     fullDescription:
       "Our flagship ready-to-launch business model. Designed for investors, professionals, and first-time entrepreneurs seeking a low-overhead, scalable physical asset business in Cyprus. Onspec coordinates every stage from securing high-traffic locations to installing cloud-connected smart vending hardware and connecting wholesale FMCG suppliers.",
-    investmentTier: "Tier 1 — Accessible Entry & Multi-Unit Scalable",
-    estimatedCapital: "€12,500 – €45,000 (1 to 4 Smart Units Turnkey)",
-    timeline: "4 – 6 Weeks to Live Operation",
+    investmentTier: "Tier 1 : Accessible Entry & Multi-Unit Scalable",
+    estimatedCapital: "€12,500 to €45,000 (1 to 4 Smart Units Turnkey)",
+    timeline: "4 to 6 Weeks to Live Operation",
     locationStrategy: "Offices, Gyms, Universities, Hospitals, Marinas & Aparthotels in Cyprus",
     autonomyLevel: "92% Autonomous (Cloud Telemetry + Scheduled Restock)",
-    weeklyOwnerHours: "3 – 6 hrs / week",
+    weeklyOwnerHours: "3 to 6 hrs / week",
     image:
       "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
@@ -362,7 +362,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       { label: "PAYMENT SYSTEM", value: "EMV Contactless / NFC / QR" },
       { label: "TELEMETRY", value: "4G Cloud Inventory & Live Alerts" },
       { label: "POWER / FOOTPRINT", value: "230V Standard / 1.2m² per unit" },
-      { label: "TARGET ROI WINDOW", value: "12 – 18 Months (Location Dependent)" },
+      { label: "TARGET ROI WINDOW", value: "12 to 18 Months (Location Dependent)" },
       { label: "JURISDICTION", value: "Cyprus & EU Ready" },
     ],
     cyprusSetupNotes:
@@ -379,12 +379,12 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "Self-contained commercial barista corners delivering specialty espresso, iced coffee, and matcha with cashless ordering and automated CIP cleaning cycles.",
     fullDescription:
       "Coffee consumption in Cyprus and southern Europe is among the highest per capita in the region. Automated Specialty Coffee Stations capture daily commuter, corporate, and campus traffic with zero barista staffing costs, consistent extraction quality, and automated telemetry notifications.",
-    investmentTier: "Tier 2 — High-Margin Daily Frequency",
-    estimatedCapital: "€18,000 – €38,000 per Station",
-    timeline: "5 – 7 Weeks to Live Operation",
+    investmentTier: "Tier 2 : High-Margin Daily Frequency",
+    estimatedCapital: "€18,000 to €38,000 per Station",
+    timeline: "5 to 7 Weeks to Live Operation",
     locationStrategy: "Corporate Plazas, Co-Working Hubs, Transit Terminals, Medical Centers",
     autonomyLevel: "90% Autonomous (Automated Rinsing + Telemetry Alerts)",
-    weeklyOwnerHours: "4 – 7 hrs / week",
+    weeklyOwnerHours: "4 to 7 hrs / week",
     image:
       "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
@@ -405,7 +405,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       { label: "SPEC ID", value: "OSP-COF-204" },
       { label: "CAPACITY", value: "250+ Cups Before Refill" },
       { label: "EXTRACTION", value: "Whole Bean Commercial Swiss Group" },
-      { label: "FOOTPRINT", value: "1.5m² – 2.2m² Architectural Unit" },
+      { label: "FOOTPRINT", value: "1.5m² to 2.2m² Architectural Unit" },
       { label: "TELEMETRY", value: "Real-Time Bean, Milk & Cup Sensors" },
       { label: "OPERATING HOURS", value: "24/7 Unattended" },
     ],
@@ -423,12 +423,12 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "High-margin unattended micro-stores positioned in tourist zones, hotels, malls, and coastal promenades with automated security and inventory tracking.",
     fullDescription:
       "Self-Service Kiosks unlock high-value retail square footage without full shop lease commitments or retail shift wages. Ideal for sun-care, travel electronics, power banks, gourmet grab-and-go, or automated key/locker services across Cyprus hospitality hubs.",
-    investmentTier: "Tier 2 — Hospitality & Tourism Retail",
-    estimatedCapital: "€16,000 – €42,000",
-    timeline: "5 – 8 Weeks to Live Operation",
+    investmentTier: "Tier 2 : Hospitality & Tourism Retail",
+    estimatedCapital: "€16,000 to €42,000",
+    timeline: "5 to 8 Weeks to Live Operation",
     locationStrategy: "Hotel Lobbies, Beachfront Promenades, Shopping Malls, Tourist Districts",
     autonomyLevel: "94% Autonomous",
-    weeklyOwnerHours: "3 – 5 hrs / week",
+    weeklyOwnerHours: "3 to 5 hrs / week",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
@@ -467,12 +467,12 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "Staffless commercial laundry hubs featuring industrial washer-extractors, high-efficiency dryers, automatic detergent dosing, and remote door/payment control.",
     fullDescription:
       "Self-service smart laundromats are one of the highest-retention physical asset businesses worldwide. By eliminating on-site cash handling and manual detergent sales through automatic dosing pumps and central touchscreen payment terminals, owners operate a clean, predictable utility business.",
-    investmentTier: "Tier 3 — Anchor Physical Infrastructure",
-    estimatedCapital: "€48,000 – €95,000",
-    timeline: "8 – 12 Weeks to Live Operation",
+    investmentTier: "Tier 3 : Anchor Physical Infrastructure",
+    estimatedCapital: "€48,000 to €95,000",
+    timeline: "8 to 12 Weeks to Live Operation",
     locationStrategy: "High-Density Residential Zones, Student Districts, Expat & Aparthotel Hubs",
     autonomyLevel: "88% Autonomous (Remote Lock, CCTV & Telemetry)",
-    weeklyOwnerHours: "4 – 8 hrs / week",
+    weeklyOwnerHours: "4 to 8 hrs / week",
     image:
       "https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
@@ -484,18 +484,18 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "Full Cyprus corporate & municipal licensing coordination via professionals",
     ],
     executionStages: [
-      { step: "STAGE 01", title: "Catchment & Shopfront Sourcing", detail: "Identifying 35m²–60m² ground-floor units with high residential density." },
+      { step: "STAGE 01", title: "Catchment & Shopfront Sourcing", detail: "Identifying 35m² to 60m² ground-floor units with high residential density." },
       { step: "STAGE 02", title: "MEP & Commercial Fit-Out", detail: "Water drainage, 3-phase power, ventilation, and durable architectural interior." },
       { step: "STAGE 03", title: "Industrial Equipment Installation", detail: "Mounting commercial drums, auto-dosing reservoirs, and central kiosk." },
       { step: "STAGE 04", title: "Automation & Launch Marketing", detail: "Google Maps local SEO, automated door locks, and grand opening." },
     ],
     technicalSpecs: [
       { label: "SPEC ID", value: "OSP-LND-402" },
-      { label: "FLEET", value: "4–8 Industrial Washers + 4–6 Dryers" },
+      { label: "FLEET", value: "4 to 8 Industrial Washers + 4 to 6 Dryers" },
       { label: "DOSING", value: "Integrated Peristaltic Auto-Dosing" },
-      { label: "SPACE REQ", value: "35m² – 65m² Commercial Unit" },
+      { label: "SPACE REQ", value: "35m² to 65m² Commercial Unit" },
       { label: "MANAGEMENT", value: "Remote Cycle Trigger & Refund Console" },
-      { label: "ASSET LIFESPAN", value: "10 – 15+ Years Industrial Rating" },
+      { label: "ASSET LIFESPAN", value: "10 to 15+ Years Industrial Rating" },
     ],
     cyprusSetupNotes:
       "Strong underserved demand in university neighborhoods (Nicosia/Limassol) and dense coastal tourist/expat apartments.",
@@ -511,12 +511,12 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "Multi-bay self-service jet wash or automated touchless laser wash systems with water recycling, contactless fleet cards, and remote chemical telemetry.",
     fullDescription:
       "With high vehicle ownership per capita and frequent Saharan dust events in Cyprus, automated car wash stations generate consistent year-round transaction volume. Onspec coordinates site feasibility, European wash bay engineering, water filtration, and cashless payment terminals.",
-    investmentTier: "Tier 3 — Commercial Roadside Asset",
-    estimatedCapital: "€65,000 – €160,000",
-    timeline: "10 – 16 Weeks to Live Operation",
+    investmentTier: "Tier 3 : Commercial Roadside Asset",
+    estimatedCapital: "€65,000 to €160,000",
+    timeline: "10 to 16 Weeks to Live Operation",
     locationStrategy: "Arterial Roads, Petrol Station Adjacencies, Retail Parks & Industrial Entrances",
     autonomyLevel: "85% Autonomous",
-    weeklyOwnerHours: "5 – 8 hrs / week",
+    weeklyOwnerHours: "5 to 8 hrs / week",
     image:
       "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
@@ -538,7 +538,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       { label: "CONFIGURATION", value: "2 to 4 Self-Serve Bays + Touchless Option" },
       { label: "WATER TECH", value: "Reverse Osmosis Spot-Free Finish" },
       { label: "PAYMENT", value: "NFC Card, Apple Pay & Fleet RFID" },
-      { label: "PLOT SIZE", value: "250m² – 600m²" },
+      { label: "PLOT SIZE", value: "250m² to 600m²" },
       { label: "TELEMETRY", value: "Chemical Level & Pump Pressure Cloud HUD" },
     ],
     cyprusSetupNotes:
@@ -555,12 +555,12 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "Launch a production-ready online retail business complete with conversion architecture, supplier inventory feeds, automated order routing, and AI customer support.",
     fullDescription:
       "For entrepreneurs who prefer a location-independent digital asset over physical hardware. Onspec builds the complete commercial infrastructure: brand identity, high-conversion storefront, wholesale or 3PL supplier integration, automated invoicing, and 24/7 AI customer service.",
-    investmentTier: "Tier 1 — Digital & Location-Independent",
-    estimatedCapital: "€8,500 – €24,000",
-    timeline: "3 – 5 Weeks to Live Operation",
+    investmentTier: "Tier 1 : Digital & Location-Independent",
+    estimatedCapital: "€8,500 to €24,000",
+    timeline: "3 to 5 Weeks to Live Operation",
     locationStrategy: "Cyprus Corporate Base Serving Local & Pan-European Markets",
     autonomyLevel: "90% Autonomous (AI Support + Automated Order Routing)",
-    weeklyOwnerHours: "5 – 10 hrs / week",
+    weeklyOwnerHours: "5 to 10 hrs / week",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
@@ -599,12 +599,12 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "Hybrid physical-digital businesses where booking, smart-lock access, payment, and customer support are 100% automated while maintenance is lightly managed.",
     fullDescription:
       "Combine physical assets with software automation. From unmanned luggage storage lockers for tourists having late flights, to automated sports/studio booking access and smart equipment rentals, Onspec structures the hardware, access-control software, and AI customer assistant.",
-    investmentTier: "Tier 1–2 — Smart Access & Rental Yield",
-    estimatedCapital: "€15,000 – €55,000",
-    timeline: "4 – 8 Weeks to Live Operation",
+    investmentTier: "Tier 1 to 2 : Smart Access & Rental Yield",
+    estimatedCapital: "€15,000 to €55,000",
+    timeline: "4 to 8 Weeks to Live Operation",
     locationStrategy: "Old Town Centers, Transit Hubs, Coastal Resorts & Commercial Districts",
     autonomyLevel: "88% Autonomous (PIN/QR Smart Locks + AI WhatsApp Support)",
-    weeklyOwnerHours: "4 – 7 hrs / week",
+    weeklyOwnerHours: "4 to 7 hrs / week",
     image:
       "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
@@ -642,7 +642,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
     category: "Customer Facing",
     tagline: "24/7 multilingual resolution trained on your exact business policies, catalog, and pricing.",
     description:
-      "Deploy intelligent conversational agents across your website, social channels, and messaging apps that resolve inquiries instantly in English, Greek, and 20+ languages—escalating to human staff only when high-value judgment is required.",
+      "Deploy intelligent conversational agents across your website, social channels, and messaging apps that resolve inquiries instantly in English, Greek, and 20+ languages, escalating to human staff only when high-value judgment is required.",
     capabilities: [
       "Trained on your company docs, services, pricing & SOPs",
       "Instant accurate answers with zero hallucination guardrails",
@@ -802,7 +802,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
     category: "Infrastructure",
     tagline: "Custom multi-step operational pipelines tailored to your industry’s exact operational rules.",
     description:
-      "Every established business has unique operational glue—dispatching technicians, coordinating inventory restocks, updating property listings, or managing partner referrals. We map your process and encode it into reliable automated infrastructure.",
+      "Every established business has unique operational glue, dispatching technicians, coordinating inventory restocks, updating property listings, or managing partner referrals. We map your process and encode it into reliable automated infrastructure.",
     capabilities: [
       "Custom webhook & API orchestration across legacy and modern tools",
       "Automated inventory restock & supplier purchase order triggers",
@@ -1078,7 +1078,7 @@ export const LAUNCH_FAQS = [
   {
     question: "Can I start with a single machine or kiosk and scale later?",
     answer:
-      "Yes. Many clients start with 1–2 smart vending units or a single automated coffee station to validate cashflow and remote telemetry before expanding into a multi-unit route across Limassol, Nicosia, Larnaca, or Paphos.",
+      "Yes. Many clients start with 1 to 2 smart vending units or a single automated coffee station to validate cashflow and remote telemetry before expanding into a multi-unit route across Limassol, Nicosia, Larnaca, or Paphos.",
   },
   {
     question: "What happens if I have my own custom business idea that isn't listed in the catalog?",

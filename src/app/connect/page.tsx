@@ -18,7 +18,7 @@ export default function ConnectPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
-  const [urgency, setUrgency] = useState("Standard Consultation (24–48h)");
+  const [urgency, setUrgency] = useState("Standard Consultation (24 to 48h)");
   const [matterSummary, setMatterSummary] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [referenceId, setReferenceId] = useState<string | null>(null);
@@ -47,14 +47,14 @@ export default function ConnectPage() {
   return (
     <main className="bg-[#F7F8FA] text-[#101D35]">
       <h1 className="sr-only">
-        PILLAR 04 — CONNECT: Cyprus Legal &amp; Professional Services Network
+        PILLAR 04 : CONNECT: Cyprus Legal &amp; Professional Services Network
       </h1>
 
       {/* Section 1: Lightship company.html Fade-In Editorial Lead + Rotating Twin-Star .c-symbol */}
       <section className="container pt-[24svh] md:pt-[32svh] mb-fluid-2xl" id="page-heading">
         <div className="max-w-[760px] m-auto text-center">
           <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest mb-6">
-            PILLAR 04 // CONNECT — CYPRUS LEGAL &amp; PROFESSIONAL NETWORK
+            PILLAR 04 // CONNECT : CYPRUS LEGAL &amp; PROFESSIONAL NETWORK
           </p>
           <div className="c-fadein-text text-heading-md">
             <div className="c-fadein-text_line is-active">
@@ -394,7 +394,7 @@ export default function ConnectPage() {
               1. Share your requirement confidentially via our referral desk or WhatsApp.
               <br />
               <br />
-              2. Onspec identifies the independent licensed legal professional in Cyprus whose practice focuses specifically on your matter — whether corporate formation for a new turnkey business, residency permits, immigration, or criminal defense.
+              2. Onspec identifies the independent licensed legal professional in Cyprus whose practice focuses specifically on your matter : whether corporate formation for a new turnkey business, residency permits, immigration, or criminal defense.
               <br />
               <br />
               3. You engage directly with the independent lawyer for formal legal advice and representation, with zero friction or wasted search time.
@@ -487,8 +487,8 @@ export default function ConnectPage() {
                     onChange={(e) => setUrgency(e.target.value)}
                     className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#27B58A] focus:outline-none"
                   >
-                    <option value="Standard Consultation (24–48h)">
-                      Standard Consultation (24–48h)
+                    <option value="Standard Consultation (24 to 48h)">
+                      Standard Consultation (24 to 48h)
                     </option>
                     <option value="Priority / Urgent Matter (Same Day)">
                       Priority / Urgent Matter (Same Day)

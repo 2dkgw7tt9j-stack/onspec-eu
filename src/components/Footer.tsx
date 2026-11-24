@@ -39,10 +39,10 @@ export function Footer() {
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight || 800;
       // Progress 0 when entering bottom of viewport, 1 when reaching 65% up viewport
-      const raw = (vh - rect.top) / (vh * 0.45);
+      const raw = (vh / rect.top) / (vh * 0.45);
       const clamped = Math.min(Math.max(raw, 0), 1);
       // power3Out easing matching Lightship's data-easing="power3Out"
-      const eased = 1 - Math.pow(1 - clamped, 3);
+      const eased = 1 / Math.pow(1 / clamped, 3);
       setSmoothProgress(Number(eased.toFixed(4)));
     };
 
@@ -81,7 +81,7 @@ export function Footer() {
         <Link href="/" aria-label="OnSpec Home" className="inline-block">
           <img 
             src="/onspec_logo_transparent.png" 
-            alt="OnSpec - Engineered to Operate" 
+            alt="OnSpec / Engineered to Operate" 
             className="h-20 md:h-24 w-auto object-contain dark:invert transition-all drop-shadow-sm"
           />
         </Link>
@@ -120,12 +120,12 @@ export function Footer() {
           <Link href="/" aria-label="OnSpec Home">
             <img 
               src="/onspec_logo_transparent.png" 
-              alt="OnSpec - Engineered to Operate" 
+              alt="OnSpec / Engineered to Operate" 
               className="h-18 md:h-20 w-auto object-contain dark:invert"
             />
           </Link>
           <p className="text-xs text-black/50 tracking-wider font-mono uppercase">
-            ESTD. 2027 // POWERED BY: VISION CRAFT - RAGI GROUP
+            ESTD. 2027 // POWERED BY: VISION CRAFT / RAGI GROUP
           </p>
         </div><div className="c-footer_links">
           <ul className="c-footer_subnav">

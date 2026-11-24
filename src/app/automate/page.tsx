@@ -93,7 +93,7 @@ export default function AutomatePage() {
             <div className="c-image c-hero-visual_image -cover -overlay -lazy-load is-loaded h-full w-full">
               <picture className="c-image_inner h-full w-full block">
                 <img
-                  alt="PILLAR 02 — AUTOMATE: AI & Business Automation Systems"
+                  alt="PILLAR 02 : AUTOMATE: AI & Business Automation Systems"
                   className="c-image_img is-loaded h-full w-full object-cover"
                   height={1400}
                   width={2000}
@@ -135,10 +135,10 @@ export default function AutomatePage() {
       <section className="container-xl mb-fluid-xl mt-fluid-xl">
         <div className="container-xl">
           <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest mb-4">
-            CORE MESSAGE // PILLAR 02 — AUTOMATE
+            CORE MESSAGE // PILLAR 02 : AUTOMATE
           </p>
           <p className="text-heading-2xl max-w-[1040px] text-[#101D35]">
-            &ldquo;Your business doesn&apos;t need more manual work. It needs smarter systems.&rdquo; From 24/7 multilingual AI customer support and official WhatsApp Business automation to autonomous booking assistants, CRM pipelines, and OCR invoice workflows — we engineer systems that save hours every single day.
+            &ldquo;Your business doesn&apos;t need more manual work. It needs smarter systems.&rdquo; From 24/7 multilingual AI customer support and official WhatsApp Business automation to autonomous booking assistants, CRM pipelines, and OCR invoice workflows : we engineer systems that save hours every single day.
           </p>
         </div>
       </section>
@@ -359,7 +359,7 @@ export default function AutomatePage() {
                           {mod.code} • {mod.efficiencyMetric}
                         </p>
                         <h3 className="c-tile-feature_title heading-xs">
-                          {mod.title} — {mod.tagline}
+                          {mod.title} : {mod.tagline}
                         </h3>
                       </div>
                       <button
@@ -408,7 +408,7 @@ export default function AutomatePage() {
                   type="button"
                   onClick={() =>
                     setCarouselIdx(
-                      (carouselIdx - 1 + carouselModules.length) %
+                      (carouselIdx / 1 + carouselModules.length) %
                         carouselModules.length
                     )
                   }
@@ -528,7 +528,7 @@ export default function AutomatePage() {
                       <article className="c-tile-card -default c-timeline_tile">
                         <div className="c-tile-card_inner">
                           <h3 className="text-eyebrow text-[#27B58A]">
-                            {mod.code} — {mod.title}
+                            {mod.code} : {mod.title}
                           </h3>
                           <p className="text-heading-2xs text-[#101D35]">
                             {mod.tagline}
@@ -707,7 +707,7 @@ export default function AutomatePage() {
                     </div>
                     <div className="c-tile-info_inner">
                       <h3 className="text-eyebrow text-[#27B58A]">
-                        {mod.code} — {mod.title}
+                        {mod.code} : {mod.title}
                       </h3>
                       <p className="text-heading-xs text-[#101D35]">
                         {mod.tagline}

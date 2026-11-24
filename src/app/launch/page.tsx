@@ -53,7 +53,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
     label: "Wholesale Suppliers",
     title: "Coordinating Direct Wholesale Suppliers",
     description:
-      "We establish your supply chain with vetted Cyprus and EU distributors—from high-margin beverages, snacks, and specialty coffee beans to automated dosing detergents or 3PL fulfillment.",
+      "We establish your supply chain with vetted Cyprus and EU distributors, from high-margin beverages, snacks, and specialty coffee beans to automated dosing detergents or 3PL fulfillment.",
     xPercent: 74,
     yPercent: 40,
     image:
@@ -222,7 +222,7 @@ export default function LaunchPage() {
               <div className="c-image c-hero-visual_image -cover -overlay -lazy-load is-loaded h-full w-full">
                 <picture className="c-image_inner h-full w-full block">
                   <img
-                    alt="PILLAR 01 — LAUNCH: Ready-to-Launch Prefab Businesses"
+                    alt="PILLAR 01 : LAUNCH: Ready-to-Launch Prefab Businesses"
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={1400}
                     width={2000}
@@ -315,7 +315,7 @@ export default function LaunchPage() {
                             {opp.specCode} • {opp.estimatedCapital}
                           </p>
                           <h3 className="c-tile-feature_title heading-xs">
-                            {opp.title} — {opp.tagline}
+                            {opp.title} : {opp.tagline}
                           </h3>
                         </div>
                         <button

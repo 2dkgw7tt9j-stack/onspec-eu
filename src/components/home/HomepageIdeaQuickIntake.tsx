@@ -17,15 +17,15 @@ import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 const BUDGET_TIERS = [
   "Flexible / Need Quotation",
   "< €10,000",
-  "€10,000 – €25,000",
-  "€25,000 – €50,000",
-  "€50,000 – €100,000+",
+  "€10,000 to €25,000",
+  "€25,000 to €50,000",
+  "€50,000 to €100,000+",
 ];
 
 const TIMEFRAME_OPTIONS = [
   "Immediate / < 30 Days",
-  "1 – 3 Months",
-  "3 – 6 Months",
+  "1 to 3 Months",
+  "3 to 6 Months",
   "Exploratory / Feasibility Stage",
 ];
 
@@ -52,7 +52,7 @@ export function HomepageIdeaQuickIntake() {
       budget,
       goals,
       timeframe,
-      message: `Homepage Idea Intake — Timeframe: ${timeframe}, Budget: ${budget}`,
+      message: `Homepage Idea Intake : Timeframe: ${timeframe}, Budget: ${budget}`,
     });
     setSubmitting(false);
     if (res.ok) {
@@ -72,7 +72,7 @@ export function HomepageIdeaQuickIntake() {
             <div className="inline-flex items-center gap-2 rounded-full border border-[#A8B1BE]/50 bg-white px-3.5 py-1.5">
               <Sparkles className="h-3.5 w-3.5 text-[#27B58A]" />
               <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
-                SECTION 07 // PILLAR 03 — SUBMIT YOUR IDEA
+                SECTION 07 // PILLAR 03 : SUBMIT YOUR IDEA
               </span>
             </div>
 
@@ -86,7 +86,7 @@ export function HomepageIdeaQuickIntake() {
 
             <p className="text-base leading-relaxed text-[#253B5B]">
               Many people have strong business ideas, software concepts, or
-              physical venture plans—but don&rsquo;t know how to source the
+              physical venture plans, but don&rsquo;t know how to source the
               hardware, build the digital systems, structure the company in
               Cyprus, or bring everything together. Tell us what you are
               thinking, and Onspec will evaluate it and prepare a{" "}
