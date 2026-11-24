@@ -82,7 +82,7 @@ export function Footer() {
           <img 
             src="/onspec_logo_transparent.png" 
             alt="OnSpec - Engineered to Operate" 
-            className="h-16 w-auto object-contain dark:invert transition-all"
+            className="h-20 md:h-24 w-auto object-contain dark:invert transition-all drop-shadow-sm"
           />
         </Link>
       </div>
@@ -121,7 +121,7 @@ export function Footer() {
             <img 
               src="/onspec_logo_transparent.png" 
               alt="OnSpec - Engineered to Operate" 
-              className="h-14 w-auto object-contain dark:invert"
+              className="h-18 md:h-20 w-auto object-contain dark:invert"
             />
           </Link>
           <p className="text-xs text-black/50 tracking-wider font-mono uppercase">

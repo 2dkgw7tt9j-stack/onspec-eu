@@ -103,16 +103,8 @@ export default function AboutPage() {
             className="c-symbol"
             style={{ "--smooth-progress": 1 } as React.CSSProperties}
           >
-            <span className="c-icon c-symbol_icon text-[#101D35]">
-              <svg aria-hidden="true" className="svg-symbol" focusable="false">
-                <use href="/assets/svgs/sprite.svg#symbol" />
-              </svg>
-            </span>
-            <span className="c-icon c-symbol_icon text-[#27B58A]">
-              <svg aria-hidden="true" className="svg-symbol" focusable="false">
-                <use href="/assets/svgs/sprite.svg#symbol" />
-              </svg>
-            </span>
+            
+            
           </div>
         </div>
       </section>
@@ -260,13 +252,7 @@ export default function AboutPage() {
               <div className="c-bento-box_quote_inner">
                 <div className="c-bento-box_quote_header">
                   <span className="c-icon text-[#27B58A]">
-                    <svg
-                      aria-hidden="true"
-                      className="svg-symbol-double"
-                      focusable="false"
-                    >
-                      <use href="/assets/svgs/sprite.svg#symbol-double" />
-                    </svg>
+                    
                   </span>
                   <p className="heading-xs text-white">
                     From launching your own turnkey business to automating the one you already have, we make the complicated simple.
@@ -318,13 +304,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/90 via-[#101D35]/35 to-transparent flex flex-col justify-end p-8">
                 <div className="flex items-center gap-3 text-white heading-sm">
                   <span className="c-icon text-[#27B58A]">
-                    <svg
-                      aria-hidden="true"
-                      className="svg-symbol"
-                      focusable="false"
-                    >
-                      <use href="/assets/svgs/sprite.svg#symbol" />
-                    </svg>
+                    
                   </span>
                   <span>01 Launch • 02 Automate • 03 Innovate • 04 Connect</span>
                 </div>
@@ -604,13 +584,7 @@ export default function AboutPage() {
             </div>
             <div className="c-tile-page_inner">
               <span className="c-icon">
-                <svg
-                  aria-hidden="true"
-                  className="svg-symbol-double"
-                  focusable="false"
-                >
-                  <use href="/assets/svgs/sprite.svg#symbol-double" />
-                </svg>
+                
               </span>
               <div className="c-tile-page_content">
                 <h2 className="text-xl">
@@ -639,13 +613,7 @@ export default function AboutPage() {
             </div>
             <div className="c-tile-page_inner">
               <span className="c-icon">
-                <svg
-                  aria-hidden="true"
-                  className="svg-symbol-double"
-                  focusable="false"
-                >
-                  <use href="/assets/svgs/sprite.svg#symbol-double" />
-                </svg>
+                
               </span>
               <div className="c-tile-page_content">
                 <h2 className="text-xl">
@@ -799,13 +767,7 @@ export default function AboutPage() {
             <div className="c-modal-member_inner modal_inner">
               <div className="flex flex-col gap-y-fluid-sm pt-2">
                 <span className="c-icon text-[#27B58A]">
-                  <svg
-                    aria-hidden="true"
-                    className="svg-symbol-double"
-                    focusable="false"
-                  >
-                    <use href="/assets/svgs/sprite.svg#symbol-double" />
-                  </svg>
+                  
                 </span>
                 <div className="max-w-[32rem]">
                   <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">

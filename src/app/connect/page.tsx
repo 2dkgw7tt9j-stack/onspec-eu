@@ -90,16 +90,8 @@ export default function ConnectPage() {
             className="c-symbol"
             style={{ "--smooth-progress": 1 } as React.CSSProperties}
           >
-            <span className="c-icon c-symbol_icon text-[#101D35]">
-              <svg aria-hidden="true" className="svg-symbol" focusable="false">
-                <use href="/assets/svgs/sprite.svg#symbol" />
-              </svg>
-            </span>
-            <span className="c-icon c-symbol_icon text-[#27B58A]">
-              <svg aria-hidden="true" className="svg-symbol" focusable="false">
-                <use href="/assets/svgs/sprite.svg#symbol" />
-              </svg>
-            </span>
+            
+            
           </div>
         </div>
 
@@ -156,13 +148,7 @@ export default function ConnectPage() {
               <div className="c-bento-box_quote_inner">
                 <div className="c-bento-box_quote_header">
                   <span className="c-icon text-[#27B58A]">
-                    <svg
-                      aria-hidden="true"
-                      className="svg-symbol-double"
-                      focusable="false"
-                    >
-                      <use href="/assets/svgs/sprite.svg#symbol-double" />
-                    </svg>
+                    
                   </span>
                   <p className="heading-xs text-white">
                     Whether you are relocating to Cyprus, incorporating a new turnkey venture, or requiring urgent legal representation, we connect you directly with vetted independent specialists.
@@ -216,13 +202,7 @@ export default function ConnectPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/90 via-[#101D35]/30 to-transparent flex flex-col justify-end p-8">
                 <div className="flex items-center gap-3 text-white heading-sm">
                   <span className="c-icon text-[#27B58A]">
-                    <svg
-                      aria-hidden="true"
-                      className="svg-symbol"
-                      focusable="false"
-                    >
-                      <use href="/assets/svgs/sprite.svg#symbol" />
-                    </svg>
+                    
                   </span>
                   <span>Immigration • Residency • Corporate • Criminal Law</span>
                 </div>
@@ -631,13 +611,7 @@ export default function ConnectPage() {
             </div>
             <div className="c-tile-page_inner">
               <span className="c-icon">
-                <svg
-                  aria-hidden="true"
-                  className="svg-symbol-double"
-                  focusable="false"
-                >
-                  <use href="/assets/svgs/sprite.svg#symbol-double" />
-                </svg>
+                
               </span>
               <div className="c-tile-page_content">
                 <h2 className="text-xl">
@@ -669,13 +643,7 @@ export default function ConnectPage() {
             </div>
             <div className="c-tile-page_inner">
               <span className="c-icon">
-                <svg
-                  aria-hidden="true"
-                  className="svg-symbol-double"
-                  focusable="false"
-                >
-                  <use href="/assets/svgs/sprite.svg#symbol-double" />
-                </svg>
+                
               </span>
               <div className="c-tile-page_content">
                 <h2 className="text-xl">
@@ -723,13 +691,7 @@ export default function ConnectPage() {
             <div className="c-modal-member_inner modal_inner">
               <div className="flex flex-col gap-y-fluid-sm pt-2">
                 <span className="c-icon text-[#27B58A]">
-                  <svg
-                    aria-hidden="true"
-                    className="svg-symbol-double"
-                    focusable="false"
-                  >
-                    <use href="/assets/svgs/sprite.svg#symbol-double" />
-                  </svg>
+                  
                 </span>
                 <div className="max-w-[36rem]">
                   <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">

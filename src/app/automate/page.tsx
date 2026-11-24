@@ -149,16 +149,8 @@ export default function AutomatePage() {
           className="c-symbol"
           style={{ "--smooth-progress": 1 } as React.CSSProperties}
         >
-          <span className="c-icon c-symbol_icon text-[#101D35]">
-            <svg aria-hidden="true" className="svg-symbol" focusable="false">
-              <use href="/assets/svgs/sprite.svg#symbol" />
-            </svg>
-          </span>
-          <span className="c-icon c-symbol_icon text-[#27B58A]">
-            <svg aria-hidden="true" className="svg-symbol" focusable="false">
-              <use href="/assets/svgs/sprite.svg#symbol" />
-            </svg>
-          </span>
+          
+          
         </div>
       </div>
 

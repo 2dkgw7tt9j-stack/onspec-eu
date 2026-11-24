@@ -220,24 +220,28 @@ body {
 }
 
 
-/* Stacking Cards: Keep "This is ONSPEC" sticky heading visible above cards at all times */
+/* Stacking Cards: Heading stays cleanly at the top, cards stack strictly below it without touching */
 .c-stacking-cards_heading {
-  position: sticky !important;
-  top: 70px !important;
-  z-index: 10 !important;
-  pointer-events: none !important;
+  position: relative !important;
+  top: 0 !important;
+  margin-bottom: clamp(3rem, 6vw, 6rem) !important;
+  z-index: 5 !important;
 }
 
 .c-stacking-cards_inner {
+  position: relative !important;
+  margin-top: 0 !important;
   z-index: 2 !important;
 }
 
 .c-stacking-cards_item {
-  top: calc(70px + 12vw) !important;
+  position: sticky !important;
+  top: 100px !important;
+  margin-bottom: 2rem !important;
 }
 
 @media (min-width: 1024px) {
   .c-stacking-cards_item {
-    top: calc(70px + 9vw) !important;
+    top: 110px !important;
   }
 }

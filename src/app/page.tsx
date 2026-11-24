@@ -1046,19 +1046,8 @@ export default function HomePage() {
               <div className="c-stacking-cards_heading_icon text-[#101D35]">
                 <h2 className="sr-only">This is ONSPEC</h2>
                 <div className="flex items-center justify-between mb-2 px-1">
-                  <span className="c-icon text-[#27B58A]">
-                    <svg
-                      className="svg-symbol-double"
-                      viewBox="0 0 28 13"
-                      focusable="false"
-                      aria-hidden="true"
-                      style={{ width: "2rem", height: "0.95rem" }}
-                    >
-                      <path
-                        fill="currentColor"
-                        d="m7.1.4.7 2.3c.4 1.2 1.3 2.2 2.5 2.5l2.3.9c.4.1.4.7 0 .8l-2.3.9c-1.1.4-2.1 1.3-2.5 2.5l-.7 2.3c-.1.4-.7.4-.8 0l-.8-2.3c-.3-1.2-1.3-2.1-2.4-2.5L.8 7c-.4-.1-.4-.7 0-.8l2.3-.8C4.2 4.9 5.2 4 5.5 2.7L6.2.4c.2-.4.8-.4.9 0zm14.6 0c-.1-.4-.7-.4-.8 0l-.7 2.3c-.4 1.2-1.3 2.2-2.5 2.5l-2.3.9c-.4.1-.4.7 0 .8l2.2.8c1.2.4 2.1 1.3 2.5 2.5l.7 2.3c.1.4.7.4.8 0l.7-2.3c.4-1.2 1.3-2.2 2.5-2.5l2.3-.7c.5-.1.5-.7.1-.8l-2.3-.8c-1.2-.4-2.1-1.3-2.5-2.5L21.7.4z"
-                      />
-                    </svg>
+                  <span className="font-mono text-xs uppercase tracking-widest text-[#101D35] font-semibold">
+                    [ 04 PILLARS ]
                   </span>
                   <span className="font-mono text-xs uppercase tracking-widest text-[#253B5B]">
                     ONSPEC.EU // 4 EXECUTION PILLARS
@@ -1242,20 +1231,7 @@ export default function HomePage() {
       <div className="container-xl">
         <div className="c-fullscreen-push">
           <div className="c-fullscreen-push_content">
-            <span className="c-icon c-fullscreen-push_icon text-[#27B58A]">
-              <svg
-                className="svg-symbol-double"
-                viewBox="0 0 28 13"
-                focusable="false"
-                aria-hidden="true"
-                style={{ width: "1.75rem", height: "0.85rem" }}
-              >
-                <path
-                  fill="currentColor"
-                  d="m7.1.4.7 2.3c.4 1.2 1.3 2.2 2.5 2.5l2.3.9c.4.1.4.7 0 .8l-2.3.9c-1.1.4-2.1 1.3-2.5 2.5l-.7 2.3c-.1.4-.7.4-.8 0l-.8-2.3c-.3-1.2-1.3-2.1-2.4-2.5L.8 7c-.4-.1-.4-.7 0-.8l2.3-.8C4.2 4.9 5.2 4 5.5 2.7L6.2.4c.2-.4.8-.4.9 0zm14.6 0c-.1-.4-.7-.4-.8 0l-.7 2.3c-.4 1.2-1.3 2.2-2.5 2.5l-2.3.9c-.4.1-.4.7 0 .8l2.2.8c1.2.4 2.1 1.3 2.5 2.5l.7 2.3c.1.4.7.4.8 0l.7-2.3c.4-1.2 1.3-2.2 2.5-2.5l2.3-.7c.5-.1.5-.7.1-.8l-2.3-.8c-1.2-.4-2.1-1.3-2.5-2.5L21.7.4z"
-                />
-              </svg>
-            </span>
+            
 
             <h2 className="sr-only">You don’t have to start from scratch.</h2>
             <SplitText
@@ -1298,12 +1274,13 @@ export default function HomePage() {
           "Built for Founders. Engineered for Growth."
           Asymmetric Split Headline + 2-Column Editorial Narrative & Journey
          ===================================================================== */}
-      <section className="mb-fluid-2xl mt-4">
-        <div className="container-xl">
-          <p className="text-heading-2xl max-w-[1000px] text-[#101D35]">
-            Discover a simpler way to launch, automate and scale—where turnkey
-            businesses deploy in weeks, intelligent AI handles daily operations,
-            and vetted Cyprus professionals support every milestone.
+      <section className="my-fluid-2xl">
+        <div className="container-xl text-center flex flex-col items-center">
+          <p className="text-heading-2xl max-w-3xl text-[#101D35] font-semibold tracking-tight mx-auto">
+            Turnkey businesses built to operate.
+          </p>
+          <p className="text-xl md:text-2xl text-[#253B5B] max-w-2xl mx-auto mt-4 font-normal">
+            Pre-engineered ventures, intelligent AI workflows, and professional Cyprus execution—ready on Day 1.
           </p>
         </div>
       </section>
