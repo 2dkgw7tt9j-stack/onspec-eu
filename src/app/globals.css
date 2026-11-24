@@ -158,11 +158,29 @@ body {
   padding-bottom: 1.5rem !important;
 }
 
-/* Ensure only 1 twin-star emblem renders inside .c-header_logo across all viewports */
+/* Ensure logo renders prominently inside .c-header_logo across all viewports */
+.c-header_logo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+
+.c-header_logo_link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
 .c-header_logo_lottie {
   display: flex !important;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+  height: auto !important;
 }
 
 .c-header_logo_icon {
