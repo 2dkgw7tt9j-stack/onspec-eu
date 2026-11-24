@@ -220,7 +220,7 @@ export function Navbar() {
                   <img 
                     src="/onspec_logo_transparent.png" 
                     alt="OnSpec / Engineered to Operate" 
-                    className="h-11 md:h-14 w-auto object-contain brightness-0 dark:invert transition-all duration-300 drop-shadow-sm" 
+                    className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300 drop-shadow-sm py-1" 
                   />
                 </div>
               </Link>
