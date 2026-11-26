@@ -145,10 +145,81 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Ensure sticky hero container stays pinned at top:0 during scroll */
-.c-hero-home_sticky {
-  overflow: hidden !important;
-  max-width: 100vw !important;
+/* Ensure sticky hero container stays pinned at top:0 during desktop scroll */
+@media (min-width: 1024px) {
+  .c-hero-home_sticky {
+    position: sticky !important;
+    top: 0 !important;
+    overflow: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  /* Complete Mobile Hero Fix: Zero long scroll, zero thin-box deformation */
+  .c-hero-home {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    max-height: 100svh !important;
+  }
+
+  .c-hero-home_sticky {
+    position: relative !important;
+    height: 100svh !important;
+    top: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .c-hero-home_mask {
+    clip-path: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    inset: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .c-hero-home_inner {
+    transform: none !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .c-hero-home_background {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .c-hero-home_grid-container {
+    display: none !important;
+  }
+
+  /* Minimise heavy animations on mobile for instant, smooth rendering */
+  [data-anim-text] [data-char],
+  [data-anim-slide],
+  .c-fadein-text_line_inner {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Mobile Section 2 Cards: Clean vertical natural flow without endless sticky stack */
+  .c-stacking-cards_heading {
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .c-stacking-cards_item {
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .c-stacking-cards_item.-animated {
+    transform: none !important;
+  }
 }
 
 @media (max-width: 768px) {

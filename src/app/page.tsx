@@ -531,59 +531,68 @@ export default function HomePage() {
     const innerEl = innerRef.current;
     const dummyEl = dummyVisualRef.current;
 
+    const isMobile = vw < 1024;
+
     if (heroEl && maskEl && innerEl && dummyEl) {
-      const heroRect = heroEl.getBoundingClientRect();
-      const heroHeight = heroEl.clientHeight || vh * 3;
-      const scrollableDistance = Math.max(1, heroHeight - vh);
-      const rawScroll = clamp(0, scrollableDistance, -heroRect.top);
-      const overallProgress = clamp(0, 1, rawScroll / scrollableDistance);
+      if (isMobile) {
+        // On mobile: Keep hero full-bleed 100svh with zero long-scroll trap or thin-box deformation
+        maskEl.style.clipPath = "none";
+        innerEl.style.transform = "none";
+        heroEl.style.setProperty("--hero-ui-opacity", "1");
+      } else {
+        const heroRect = heroEl.getBoundingClientRect();
+        const heroHeight = heroEl.clientHeight || vh * 3;
+        const scrollableDistance = Math.max(1, heroHeight - vh);
+        const rawScroll = clamp(0, scrollableDistance, -heroRect.top);
+        const overallProgress = clamp(0, 1, rawScroll / scrollableDistance);
 
-      // UI opacity fades out from progress 0 -> 0.2
-      const uiOpacity = 1 - clamp(0, 1, overallProgress / 0.2);
-      heroEl.style.setProperty("--hero-ui-opacity", String(uiOpacity));
+        // UI opacity fades out from progress 0 -> 0.2
+        const uiOpacity = 1 - clamp(0, 1, overallProgress / 0.2);
+        heroEl.style.setProperty("--hero-ui-opacity", String(uiOpacity));
 
-      // Compute clip target relative to `[data-dummy-visual]` center column
-      const maskW = maskEl.clientWidth || vw;
-      const maskH = maskEl.clientHeight || vh;
-      const dummyRect = dummyEl.getBoundingClientRect();
-      const dummyW = dummyRect.width || maskW * 0.31;
-      const dummyH = dummyRect.height || maskH * 0.72;
+        // Compute clip target relative to `[data-dummy-visual]` center column
+        const maskW = maskEl.clientWidth || vw;
+        const maskH = maskEl.clientHeight || vh;
+        const dummyRect = dummyEl.getBoundingClientRect();
+        const dummyW = dummyRect.width || maskW * 0.31;
+        const dummyH = dummyRect.height || maskH * 0.72;
 
-      const clipTargetX = Math.max(0, (maskW - dummyW) / 2);
-      const clipTargetY = Math.max(0, (maskH - dummyH) / 2);
+        const clipTargetX = Math.max(0, (maskW - dummyW) / 2);
+        const clipTargetY = Math.max(0, (maskH - dummyH) / 2);
 
-      const initialRatio = maskW / Math.max(1, maskH);
-      const finalRatio = dummyW / Math.max(1, dummyH);
-      const scaleRatio =
-        initialRatio > finalRatio
-          ? 1 - dummyH / Math.max(1, maskH)
-          : 1 - dummyW / Math.max(1, maskW);
+        const initialRatio = maskW / Math.max(1, maskH);
+        const finalRatio = dummyW / Math.max(1, dummyH);
+        const scaleRatio =
+          initialRatio > finalRatio
+            ? 1 - dummyH / Math.max(1, maskH)
+            : 1 - dummyW / Math.max(1, maskW);
 
-      // Timeline of 7 items (index 0 = mask, index 1..6 = 6 surrounding cards)
-      // Duration = 1, stagger = 0.1 -> total timeline duration = 1.6
-      const totalItems = HERO_SURROUND_CARDS.length + 1; // 7
-      const totalTimelineDuration = 1 + (totalItems - 1) * 0.1; // 1.6
-      const timelineTime = overallProgress * totalTimelineDuration;
+        // Timeline of 7 items (index 0 = mask, index 1..6 = 6 surrounding cards)
+        // Duration = 1, stagger = 0.1 -> total timeline duration = 1.6
+        const totalItems = HERO_SURROUND_CARDS.length + 1; // 7
+        const totalTimelineDuration = 1 + (totalItems - 1) * 0.1; // 1.6
+        const timelineTime = overallProgress * totalTimelineDuration;
 
-      const maskLocalProgress = clamp(0, 1, timelineTime / 1.0);
-      const easedMask = lightshipHeroEase(maskLocalProgress);
+        const maskLocalProgress = clamp(0, 1, timelineTime / 1.0);
+        const easedMask = lightshipHeroEase(maskLocalProgress);
 
-      const ix = easedMask * clipTargetX;
-      const iy = easedMask * clipTargetY;
+        const ix = easedMask * clipTargetX;
+        const iy = easedMask * clipTargetY;
 
-      maskEl.style.clipPath = `inset(${iy.toFixed(1)}px ${ix.toFixed(1)}px ${iy.toFixed(1)}px ${ix.toFixed(1)}px round var(--radius-md))`;
+        maskEl.style.clipPath = `inset(${iy.toFixed(1)}px ${ix.toFixed(1)}px ${iy.toFixed(1)}px ${ix.toFixed(1)}px round var(--radius-md))`;
 
-      const scaleVal = 1 - easedMask * (0.75 * scaleRatio);
-      innerEl.style.transform = `scale(${scaleVal.toFixed(4)})`;
+        const scaleVal = 1 - easedMask * (0.75 * scaleRatio);
+        innerEl.style.transform = `scale(${scaleVal.toFixed(4)})`;
 
-      // Update each of the 6 surrounding cards `--image-progress`
-      surroundCardRefs.current.forEach((cardEl, idx) => {
-        if (!cardEl) return;
-        const itemStart = (idx + 1) * 0.1;
-        const itemLocal = clamp(0, 1, (timelineTime - itemStart) / 1.0);
-        const easedCard = lightshipHeroEase(itemLocal);
-        cardEl.style.setProperty("--image-progress", easedCard.toFixed(4));
-      });
+        // Update each of the 6 surrounding cards `--image-progress`
+        surroundCardRefs.current.forEach((cardEl, idx) => {
+          if (!cardEl) return;
+          const itemStart = (idx + 1) * 0.1;
+          const itemLocal = clamp(0, 1, (timelineTime - itemStart) / 1.0);
+          const easedCard = lightshipHeroEase(itemLocal);
+          cardEl.style.setProperty("--image-progress", easedCard.toFixed(4));
+        });
+      }
     }
 
     // 2. STACKING CARDS (`Nc` exact math tuned so 'This is ONSPEC' remains uncovered)
@@ -712,8 +721,7 @@ export default function HomePage() {
          ===================================================================== */}
       <div
         ref={heroRef}
-        className="c-hero-home"
-        style={{ minHeight: "2400px" }}
+        className="c-hero-home min-h-[100svh] lg:min-h-[2400px]"
       >
         <div data-focus-area="" />
         <div className="c-hero-home_sticky">

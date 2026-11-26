@@ -25,11 +25,24 @@ export function SmoothScrollProvider({
     updateViewportVars();
     window.addEventListener("resize", updateViewportVars);
 
+    // On mobile touch devices, disable Lenis touch hijacking to preserve buttery-smooth native momentum scrolling (60/120Hz)
+    const isTouchDevice =
+      typeof window !== "undefined" &&
+      (window.matchMedia("(pointer: coarse)").matches ||
+        "ontouchstart" in window ||
+        window.innerWidth < 1024);
+
+    if (isTouchDevice) {
+      return () => {
+        window.removeEventListener("resize", updateViewportVars);
+      };
+    }
+
     const lenis = new Lenis({
       lerp: 0.08,
       smoothWheel: true,
       wheelMultiplier: 1,
-      touchMultiplier: 1.5,
+      touchMultiplier: 1,
     });
 
     let rafId: number;
