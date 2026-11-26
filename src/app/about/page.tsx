@@ -60,16 +60,21 @@ export default function AboutPage() {
         About ONSPEC ({BRAND_INFO.domain}) : {BRAND_INFO.slogan}
       </h1>
 
-      {/* Section 1: Giant Editorial Statement (Kept exactly as original) */}
+      {/* Section 1: Hero Header - Starts directly with The Four Pillars of ONSPEC and features the statement */}
       <section
-        className="container px-4 sm:px-6 pt-[16svh] md:pt-[22svh] mb-fluid-2xl"
+        className="container px-4 sm:px-6 pt-[14svh] md:pt-[18svh] pb-8 md:pb-12 text-center"
         id="page-heading"
       >
-        <div className="max-w-[740px] m-auto text-center">
-          <p className="font-mono text-xs text-black uppercase tracking-widest mb-6 font-semibold">
+        <div className="max-w-[780px] m-auto space-y-6">
+          <p className="font-mono text-xs text-black uppercase tracking-widest font-semibold">
             ABOUT ONSPEC • {BRAND_INFO.domain.toUpperCase()}
           </p>
-          <div className="c-fadein-text text-heading-md" style={{ marginTop: "1rem" }}>
+
+          <h1 className="heading-xl text-black font-extrabold tracking-tight">
+            The Four Pillars of ONSPEC
+          </h1>
+
+          <div className="c-fadein-text text-heading-md space-y-3">
             <div className="c-fadein-text_line is-active">
               <span
                 className="c-fadein-text_line_inner"
@@ -88,7 +93,7 @@ export default function AboutPage() {
             </div>
             <div className="c-fadein-text_line is-active mt-4">
               <span
-                className="c-fadein-text_line_inner text-neutral-600"
+                className="c-fadein-text_line_inner text-neutral-600 text-lg md:text-xl font-normal"
                 style={{ opacity: 1, transform: "translate(0)" }}
               >
                 Onspec bridges the gap between having an idea and turning it into a functioning, automated commercial operation across Cyprus and the European Union.
@@ -100,16 +105,7 @@ export default function AboutPage() {
 
       {/* Section 2: The Four Pillars Grid with Interactive Scroll & Staggered Animations */}
       <section id="four-pillars" className="container px-4 sm:px-6 mb-fluid-2xl">
-        <div className="flex flex-col gap-y-8">
-          <div className="flex flex-col gap-y-3 items-center text-center mx-auto max-w-3xl mb-4">
-            <p className="text-eyebrow text-black uppercase tracking-widest">
-              FOUR PILLARS • ONE EXECUTION PARTNER
-            </p>
-            <h2 className="heading-xl text-black font-extrabold tracking-tight">
-              The Four Pillars of ONSPEC
-            </h2>
-          </div>
-
+        <div className="flex flex-col gap-y-6">
           <div className="flex items-center justify-between border-b border-black/10 pb-4">
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500">
               FOUR CORE PILLARS • 01 TO 04
