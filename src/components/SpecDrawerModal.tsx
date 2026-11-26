@@ -114,12 +114,12 @@ export function SpecDrawerModal({
         {opportunity && (
           <div className="modal_inner c-wysiwyg w-full" data-modal-feature-inner>
             {/* Category micro-label */}
-            <span className="text-eyebrow block text-black/50 mb-2">
+            <span className="text-eyebrow block text-black/50 mb-2 pr-12">
               {opportunity.category} : {opportunity.specCode}
             </span>
 
             {/* Giant h2 heading */}
-            <h2 className="text-heading-lg mb-6">{opportunity.title}</h2>
+            <h2 className="text-heading-lg mb-6 pr-12">{opportunity.title}</h2>
 
             <div className="flex flex-col gap-y-fluid-sm">
               {/* 1700x830 rounded architectural visual */}

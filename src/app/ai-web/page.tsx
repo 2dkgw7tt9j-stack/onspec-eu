@@ -251,7 +251,7 @@ export default function AiWebPage() {
             href="#project-brief"
             className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-black px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
           >
-            Submit Project Brief &rarr;
+            Submit Project Brief →
           </a>
           <a
             href="#web-development"
@@ -371,7 +371,7 @@ export default function AiWebPage() {
                 onClick={() => setProjectType(practice.title)}
                 className="inline-flex items-center gap-2 rounded-full bg-black text-white px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer"
               >
-                Request {practice.title.split(" ")[0]} Brief &rarr;
+                Request {practice.title.split(" ")[0]} Brief →
               </a>
             </div>
           </article>
@@ -532,7 +532,7 @@ export default function AiWebPage() {
                 disabled={submitting}
                 className="w-full bg-black text-white font-mono font-bold uppercase tracking-wider text-xs py-3.5 px-6 rounded-xl hover:bg-neutral-800 transition-colors cursor-pointer shadow-sm disabled:opacity-50"
               >
-                {submitting ? "Transmitting Project Brief..." : "Submit Project Brief & Receive Proposal &rarr;"}
+                {submitting ? "Transmitting Project Brief..." : "Submit Project Brief & Receive Proposal →"}
               </button>
             </form>
           )}
@@ -542,15 +542,20 @@ export default function AiWebPage() {
       {/* Powered by AuditFlow Badge — Displayed Exclusively on this Page */}
       <section className="border-t border-black/15 pt-16 pb-14 bg-white text-center">
         <div className="container px-4 sm:px-6 max-w-3xl mx-auto flex flex-col items-center">
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-black/25 bg-[#F7F8FA] shadow-xs">
+          <a
+            href="https://www.auditflow.ink"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-black/30 bg-[#F7F8FA] hover:bg-neutral-100 transition-colors shadow-xs group"
+          >
             <span className="h-2 w-2 rounded-full bg-black animate-pulse" />
             <span className="font-mono text-xs font-bold uppercase tracking-widest text-black">
               POWERED BY AUDITFLOW
             </span>
-            <span className="font-mono text-[10px] uppercase text-neutral-500 border-l border-neutral-300 pl-3 hidden sm:inline">
-              AUDITFLOW.INK
+            <span className="font-mono text-[10px] uppercase text-neutral-600 border-l border-neutral-300 pl-2.5 group-hover:text-black transition-colors font-semibold">
+              // AUDITFLOW.INK &rarr;
             </span>
-          </div>
+          </a>
           <p className="text-xs font-mono text-neutral-600 mt-4 max-w-lg mx-auto leading-relaxed">
             Full-stack Next.js web platforms, autonomous AI agent pipelines, and senior-engineer website diagnostics engineered in direct studio partnership with AuditFlow (VISION CRAFT VC CY LTD).
           </p>
