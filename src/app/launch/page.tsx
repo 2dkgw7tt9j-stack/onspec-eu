@@ -368,14 +368,14 @@ export default function LaunchPage() {
               className="c-tabs c-turntable_tabs !bg-black text-white p-6 md:p-10"
               style={{ clipPath: "inset(0 round var(--radius-md))" }}
             >
-              {/* Top Sticky Switcher Nav for all 7 Ready Businesses Business Models */}
+              {/* Top Sticky Switcher Nav for all 7 Ready Business Models */}
               <div className="flex flex-col items-center gap-4 mb-8">
                 <span className="font-mono text-xs uppercase tracking-widest text-black">
                   INTERACTIVE TURNTABLE &amp; EXECUTION HOTSPOT INSPECTOR
                 </span>
                 <nav
                   className="c-tabs_nav flex justify-center w-full overflow-x-auto pb-2"
-                  aria-label="7 Ready Businesses Business Models"
+                  aria-label="7 Ready Business Models"
                 >
                   <div className="c-switcher -background-light !pointer-events-auto">
                     <ul className="c-switcher_inner flex-wrap justify-center gap-1">
@@ -716,12 +716,12 @@ export default function LaunchPage() {
                 <p className="text-eyebrow text-black">
                   COMPLETE PREFAB VENTURE CATALOG
                 </p>
-                <h2 className="sr-only">7 Ready Businesses Business Models</h2>
+                <h2 className="sr-only">7 Ready Business Models</h2>
                 <div
                   aria-hidden="true"
                   className="c-split-text anim-text-balance heading-xl text-black"
                 >
-                  7 Ready Businesses Business Models
+                  7 Ready Business Models
                 </div>
               </div>
             </div>

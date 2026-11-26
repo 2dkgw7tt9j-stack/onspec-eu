@@ -12,7 +12,7 @@ const PILLAR_OPTIONS: { value: EnquiryPillar; label: string; code: string; desc:
   {
     value: "01_LAUNCH",
     code: "01 // LAUNCH",
-    label: "Ready Businesses Business",
+    label: "Ready Businesses",
     desc: "Smart Vending, EV Charging Stations, Kiosks, Laundromats, Car Wash, Ecommerce",
   },
   {

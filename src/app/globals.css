@@ -161,6 +161,9 @@ body {
     min-height: 100svh !important;
     height: 100svh !important;
     max-height: 100svh !important;
+    position: relative !important;
+    isolation: isolate !important;
+    z-index: 1 !important;
   }
 
   .c-hero-home_sticky {
@@ -168,6 +171,8 @@ body {
     height: 100svh !important;
     top: 0 !important;
     overflow: hidden !important;
+    isolation: isolate !important;
+    z-index: 1 !important;
   }
 
   .c-hero-home_mask {
@@ -176,17 +181,39 @@ body {
     height: 100% !important;
     inset: 0 !important;
     border-radius: 0 !important;
+    position: absolute !important;
+    isolation: isolate !important;
+    z-index: 1 !important;
   }
 
   .c-hero-home_inner {
     transform: none !important;
     width: 100% !important;
     height: 100% !important;
+    position: relative !important;
+    isolation: isolate !important;
+    z-index: 1 !important;
   }
 
   .c-hero-home_background {
     width: 100% !important;
     height: 100% !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+  }
+
+  .c-hero-home_background picture,
+  .c-hero-home_background img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .c-hero-home_title {
+    position: relative !important;
+    z-index: 2 !important;
   }
 
   .c-hero-home_grid-container {
@@ -204,21 +231,60 @@ body {
   }
 
   /* Mobile Section 2 Cards: Clean vertical natural flow without endless sticky stack */
+  .c-stacking-cards {
+    height: auto !important;
+  }
+
+  .c-stacking-cards_sticky_container {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+  }
+
   .c-stacking-cards_heading {
     position: relative !important;
     top: auto !important;
     margin-bottom: 2rem !important;
   }
 
+  .c-stacking-cards_inner {
+    margin-top: 1rem !important;
+    display: block !important;
+  }
+
+  .c-stacking-cards_list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
   .c-stacking-cards_item {
     position: relative !important;
     top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
     transform: none !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 0 !important;
+    aspect-ratio: auto !important;
+    height: auto !important;
+    min-height: 520px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
   }
 
   .c-stacking-cards_item.-animated {
     transform: none !important;
+  }
+
+  .c-stacking-cards_card_content {
+    min-height: 520px !important;
+    padding: 1.5rem !important;
+    justify-content: space-between !important;
+  }
+
+  .c-stacking-cards_column {
+    display: none !important;
   }
 }
 
@@ -378,30 +444,32 @@ body {
   flex-shrink: 0 !important;
 }
 
-/* Stacking Cards: Keep 'This is ONSPEC' completely uncovered while preserving smooth stacking */
-.c-stacking-cards {
-  --heading-sticky-top: clamp(4.25rem, 6vh, 5.25rem) !important;
-  --card-sticky-top: calc(var(--heading-sticky-top) + var(--heading-height, 180px) + 1.25rem) !important;
-}
+/* Stacking Cards: Keep 'This is ONSPEC' completely uncovered while preserving smooth stacking on Desktop */
+@media (min-width: 1024px) {
+  .c-stacking-cards {
+    --heading-sticky-top: clamp(4.25rem, 6vh, 5.25rem) !important;
+    --card-sticky-top: calc(var(--heading-sticky-top) + var(--heading-height, 180px) + 1.25rem) !important;
+  }
 
-.c-stacking-cards_heading {
-  position: sticky !important;
-  top: var(--heading-sticky-top) !important;
-  z-index: 10 !important;
-  background-color: #ffffff !important;
-  padding-block: 0.5rem !important;
-}
+  .c-stacking-cards_heading {
+    position: sticky !important;
+    top: var(--heading-sticky-top) !important;
+    z-index: 10 !important;
+    background-color: #ffffff !important;
+    padding-block: 0.5rem !important;
+  }
 
-.c-stacking-cards_inner {
-  margin-top: 1.25rem !important;
-  position: relative !important;
-  z-index: 2 !important;
-}
+  .c-stacking-cards_inner {
+    margin-top: 1.25rem !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
 
-.c-stacking-cards_item {
-  position: sticky !important;
-  top: var(--card-sticky-top) !important;
-  transform-origin: top !important;
+  .c-stacking-cards_item {
+    position: sticky !important;
+    top: var(--card-sticky-top) !important;
+    transform-origin: top !important;
+  }
 }
 
 
