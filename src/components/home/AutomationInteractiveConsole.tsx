@@ -117,7 +117,7 @@ export function AutomationInteractiveConsole() {
               smarter systems.&rdquo;
             </p>
             <p className="mt-4 text-base leading-relaxed text-[#F7F8FA]/80">
-              We design and integrate practical AI agents, WhatsApp workflows,
+              We design and integrate practical AI agents, omnichannel workflows,
               email triage, autonomous booking assistants, and CRM/accounting
               pipelines that eliminate bottlenecks, reduce costly manual overhead,
               and allow your business to respond 24/7.

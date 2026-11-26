@@ -23,8 +23,7 @@ const SERVICES_LIST = [
     investment: "Turnkey Scope on Request (Locations & Legal Ready)",
     href: "/businesses",
     cta: "Explore Ready Businesses",
-    image:
-      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/perfume-station.jpg",
   },
   {
     code: "SERVICE 02",
@@ -51,12 +50,12 @@ const SERVICES_LIST = [
     code: "SERVICE 03",
     pillar: "AUTOMATION",
     title: "AI Systems & Workflow Automation",
-    subtitle: "Intelligent AI support agents, WhatsApp Business API, and automated back office pipelines.",
+    subtitle: "Intelligent AI support agents, autonomous omnichannel workflows, and automated back office pipelines.",
     description:
-      "Eliminate repetitive manual administration. We engineer autonomous multilingual AI customer support agents, automated WhatsApp communication funnels, smart booking triage, CRM synchronization, and OCR invoice processing that save 15 to 35 hours of manual work every week.",
+      "Eliminate repetitive manual administration. We engineer autonomous multilingual AI customer support agents, smart communication funnels, booking triage, CRM synchronization, and OCR invoice processing that save 15 to 35 hours of manual work every week.",
     features: [
-      "24/7 Multilingual AI agents responding in under 4 seconds",
-      "Official Meta WhatsApp Business API integration",
+      "24/7 Multilingual AI agents responding in under 3 seconds",
+      "Omnichannel chat assistant and customer concierge integration",
       "Automated lead capture, qualification, and CRM syncing",
       "Automated calendar booking and appointment reminders",
       "OCR receipt scanning and accounting workflow routing",

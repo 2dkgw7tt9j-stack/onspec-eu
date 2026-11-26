@@ -550,7 +550,7 @@ export default function InnovatePage() {
                             onClick={() => setBudget(tier)}
                             className={`rounded-full px-4 py-2 text-xs font-mono transition-colors cursor-pointer border ${
                               active
-                                ? "bg-black text-black border-black"
+                                ? "bg-black text-white border-black font-semibold"
                                 : "bg-white text-black border-[#A8B1BE]/50 hover:border-black"
                             }`}
                           >
@@ -581,7 +581,7 @@ export default function InnovatePage() {
                             onClick={() => setTimeframe(tf)}
                             className={`rounded-full px-4 py-2 text-xs font-mono transition-colors cursor-pointer border ${
                               active
-                                ? "bg-black text-black border-black font-semibold"
+                                ? "bg-black text-white border-black font-semibold"
                                 : "bg-white text-black border-[#A8B1BE]/50 hover:border-black"
                             }`}
                           >

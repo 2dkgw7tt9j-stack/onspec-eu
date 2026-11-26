@@ -10,13 +10,12 @@ const MENU_CARDS = [
     title: "01 Ready Businesses",
     subtitle: "Turnkey commercial business models in Cyprus & EU",
     href: "/businesses",
-    image:
-      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/perfume-station.jpg",
   },
   {
     index: 1,
     title: "02 AI & Websites",
-    subtitle: "Autonomous AI agents, WhatsApp & web platforms",
+    subtitle: "Autonomous AI agents & custom web platforms",
     href: "/ai-web",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85",

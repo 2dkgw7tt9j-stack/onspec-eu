@@ -61,7 +61,7 @@ const AUDITFLOW_PRACTICES: PracticeCapability[] = [
       {
         title: "95+ Core Web Vitals & Technical SEO",
         description:
-          "Sub-second load times, automatic image optimization, Schema.org JSON-LD structured data, and semantic HTML for Google and AI search engines.",
+          "Sub-second load times, automatic image optimization, Schema.org JSON-LD structured data, and semantic HTML for search engines.",
       },
     ],
     metrics: [
@@ -90,7 +90,7 @@ const AUDITFLOW_PRACTICES: PracticeCapability[] = [
           "Instantly enrich incoming inquiries, analyze purchase intent using advanced LLM reasoning, and route qualified enterprise buyers directly to your calendar in under 60 seconds.",
       },
       {
-        title: "Intelligent WhatsApp & Telegram Concierge",
+        title: "Intelligent Conversational Concierge",
         description:
           "Custom conversational agents connected to your product catalog, real-time inventory, and scheduling APIs. Answers customer queries and closes sales 24/7 in fluent natural language.",
       },
@@ -148,45 +148,46 @@ const AUDITFLOW_PRACTICES: PracticeCapability[] = [
       {
         title: "Mobile Touch & Ergonomics Audit",
         description:
-          "Detailed viewport inspection across iOS and Android devices, ensuring 48×48px tap targets, zero horizontal overflow, and thumb-friendly checkout funnels.",
+          "Detailed inspection of responsive layout shifts, touch target sizes, keyboard avoidance on input fields, and mobile viewport ergonomics.",
       },
       {
-        title: "Senior Engineer Video Walkthrough",
+        title: "Core Web Vitals Code-Level Fixes",
         description:
-          "A 15-minute personalized Loom recording where our lead engineer steps through your live website, demonstrating bottlenecks and explaining recommended fixes.",
+          "Pinpoint diagnoses for Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), and Interaction to Next Paint (INP) with concrete remediation commits.",
       },
       {
-        title: "1-on-1 Strategy & Implementation Call",
+        title: "15-Minute Senior Engineer Loom Walkthrough",
         description:
-          "A direct 30-minute debrief call via Google Meet or WhatsApp with our senior engineer to review findings, prioritize fixes, or plan full studio execution.",
+          "A comprehensive, highly personalized video walkthrough by our lead engineer walking step-by-step through every critical finding on your live site.",
       },
       {
-        title: "Zero Backend Passwords Needed",
+        title: "30-Minute Debrief & Action Plan Call",
         description:
-          "We inspect publicly accessible HTML assets and client specifications only. Zero server logins, database keys, or repository access required.",
+          "A direct 30-minute debrief call via Google Meet with our senior engineer to review findings, prioritize fixes, or plan full studio execution.",
       },
     ],
     metrics: [
-      { label: "Delivery SLA", value: "48 Hours" },
-      { label: "Backend Access Needed", value: "Zero" },
-      { label: "Actionable Deliverable", value: "Exact Code" },
-      { label: "Strategy Call", value: "1-on-1 30m" },
+      { label: "Turnaround Time", value: "48 Hours" },
+      { label: "Code Patches", value: "Ready to Merge" },
+      { label: "Video Debrief", value: "15-Min Loom" },
+      { label: "Access Required", value: "Zero Passwords" },
     ],
-    timeline: "48-Hour Delivery Guarantee",
-    sla: "Ready-to-Merge Production Patches",
+    timeline: "48-Hour Delivery SLA",
+    sla: "Senior Engineer Delivery Guaranteed",
     image:
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85",
-    anchorId: "diagnostics",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85",
+    anchorId: "cro-diagnostics",
   },
 ];
 
 export default function AiWebPage() {
+  const [activePracticeIndex, setActivePracticeIndex] = useState(0);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [whatsapp, setWhatsapp] = useState("");
-  const [websiteUrl, setWebsiteUrl] = useState("");
-  const [projectType, setProjectType] = useState("High-Converting Web Development Sprint");
-  const [details, setDetails] = useState("");
+  const [phone, setPhone] = useState("");
+  const [website, setWebsite] = useState("");
+  const [projectType, setProjectType] = useState(AUDITFLOW_PRACTICES[0].title);
+  const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [referenceId, setReferenceId] = useState<string | null>(null);
 
@@ -196,14 +197,16 @@ export default function AiWebPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim()) return;
+    if (!name || !email) return;
     setSubmitting(true);
     const res = await submitOnspecEnquiry({
       pillar: "02_AUTOMATE",
-      name: name.trim() || "Studio Project Lead",
-      email: email.trim(),
-      whatsapp: whatsapp.trim() || undefined,
-      message: `[Studio Practice: ${projectType}] [URL: ${websiteUrl || "N/A"}] ${details}`,
+      name,
+      email,
+      whatsapp: phone.trim() || undefined,
+      companyName: website.trim() || undefined,
+      message: `[Project Type: ${projectType}] ${message}`,
+      targetUrl: website.trim() || undefined,
     });
     setSubmitting(false);
     if (res.ok) {
@@ -211,186 +214,213 @@ export default function AiWebPage() {
     }
   };
 
+  const currentPractice = AUDITFLOW_PRACTICES[activePracticeIndex];
+
   return (
-    <main className="bg-white text-black">
-      {/* Editorial Header */}
-      <section className="container px-4 sm:px-6 pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-black/20 bg-neutral-100 font-mono text-[11px] font-semibold uppercase tracking-widest text-black mb-5">
-          <span className="h-2 w-2 rounded-full bg-black animate-pulse" />
-          FULL-STACK WEB PLATFORMS, AUTONOMOUS AI &amp; DIAGNOSTICS
+    <main className="bg-white text-black min-h-screen">
+      {/* Editorial Studio Hero Header */}
+      <section className="container px-4 sm:px-6 pt-[14svh] md:pt-[18svh] pb-10 text-center max-w-4xl mx-auto">
+        <div className="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-neutral-100 px-3.5 py-1 text-[11px] font-mono uppercase tracking-widest text-black mb-4">
+          <span className="h-1.5 w-1.5 rounded-full bg-black animate-pulse" />
+          DIGITAL ENGINEERING STUDIO &bull; AUDITFLOW CAPABILITIES
         </div>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-black mb-6 leading-[1.12]">
-          We Diagnose Websites to Turn Them into High-Performing Growth Engines, Architect High-Velocity Web Platforms, and Automate Complex Workflows.
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-black mb-4 leading-tight">
+          Web Engineering &amp; Autonomous AI.
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-          Onspec is an elite digital engineering practice. We diagnose digital bottlenecks, engineer sub-second Next.js web applications, and deploy autonomous 24/7 AI pipelines to maximize conversions and operational scale.
+          We architect sub-second Next.js web applications, deploy autonomous 24/7 AI pipelines, and deliver rigorous senior-engineer website diagnostics with ready-to-merge code patches.
         </p>
 
         {/* Live Studio Telemetry Strip */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-mono text-neutral-700">
-          <span className="bg-neutral-100 border border-neutral-300 px-3 py-1.5 rounded-full font-bold text-black">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-neutral-700">
+          <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-bold text-black">
             LCP &lt;1.0s
           </span>
-          <span className="bg-neutral-100 border border-neutral-300 px-3 py-1.5 rounded-full font-semibold">
+          <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-semibold">
             95+ Core Web Vitals
           </span>
-          <span className="bg-neutral-100 border border-neutral-300 px-3 py-1.5 rounded-full font-semibold">
+          <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-semibold">
             2-Week Sprints
           </span>
-          <span className="bg-neutral-100 border border-neutral-300 px-3 py-1.5 rounded-full font-semibold">
+          <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-semibold">
             24/7 AI Concierges
           </span>
-          <span className="bg-neutral-100 border border-neutral-300 px-3 py-1.5 rounded-full font-semibold">
+          <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-semibold">
             48h Diagnostics SLA
           </span>
         </div>
 
         {/* Action Triggers */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
             href="#project-brief"
-            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-black px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
           >
             Submit Project Brief →
           </a>
           <a
-            href="#web-development"
-            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-neutral-300 bg-white px-7 py-3.5 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-neutral-100 transition-colors"
+            href="#practices-section"
+            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-neutral-300 bg-white px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-neutral-100 transition-colors"
           >
-            Explore Studio Practices
+            Explore Practices
           </a>
         </div>
       </section>
 
-      {/* 3 Dedicated Studio Practices */}
-      <section className="container px-4 sm:px-6 pb-20 md:pb-28 max-w-5xl mx-auto space-y-20 md:space-y-28">
-        {AUDITFLOW_PRACTICES.map((practice, pIdx) => (
-          <article
-            key={practice.code}
-            id={practice.anchorId}
-            className="border border-[#D5DBE3] rounded-3xl p-6 sm:p-8 md:p-12 bg-[#F7F8FA] transition-all hover:border-black/60 hover:shadow-xl scroll-mt-24"
-          >
-            {/* Header Eyebrow & Badges */}
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#D5DBE3]">
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-xs font-bold uppercase tracking-wider text-black bg-black/10 px-3 py-1 rounded-md">
-                  {practice.code}
-                </span>
-                <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 font-semibold">
-                  {practice.tagline}
-                </span>
-              </div>
-              <span className="font-mono text-xs text-neutral-600 bg-white border border-neutral-200 px-3 py-1 rounded-full">
-                {practice.sla}
+      {/* Streamlined Onspec Practice Showcase (Tabs + Compact Editorial Presentation) */}
+      <section
+        id="practices-section"
+        className="container px-4 sm:px-6 pb-16 md:pb-24 max-w-5xl mx-auto scroll-mt-24"
+      >
+        {/* Sleek Practice Tabs Switcher */}
+        <div className="flex justify-center mb-8 border-b border-neutral-200 pb-4 overflow-x-auto">
+          <div className="inline-flex p-1 rounded-full bg-neutral-100 border border-neutral-200">
+            {AUDITFLOW_PRACTICES.map((practice, idx) => {
+              const active = idx === activePracticeIndex;
+              return (
+                <button
+                  key={practice.code}
+                  type="button"
+                  onClick={() => setActivePracticeIndex(idx)}
+                  className={`rounded-full px-4 sm:px-5 py-2 text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                    active
+                      ? "bg-black text-white shadow-xs"
+                      : "text-neutral-600 hover:text-black"
+                  }`}
+                >
+                  0{idx + 1} // {practice.title.split(" ")[0]} {practice.title.split(" ")[1] || ""}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Active Practice Editorial Layout (Zero Bulky Nested Boxes) */}
+        <article
+          key={currentPractice.code}
+          data-reveal=""
+          className="border border-neutral-300 rounded-2xl p-6 sm:p-8 md:p-10 bg-white shadow-xs transition-all"
+        >
+          {/* Header Eyebrow */}
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-neutral-200">
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-black bg-neutral-100 px-3 py-1 rounded-full border border-neutral-200">
+                {currentPractice.code}
+              </span>
+              <span className="font-mono text-xs uppercase tracking-wider text-neutral-500 font-semibold">
+                {currentPractice.tagline}
               </span>
             </div>
+            <span className="font-mono text-xs text-neutral-600 bg-neutral-50 border border-neutral-200 px-3 py-1 rounded-full">
+              {currentPractice.sla}
+            </span>
+          </div>
 
-            {/* Title & Core Narrative */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10">
-              <div className="lg:col-span-7">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black mb-3 tracking-tight">
-                  {practice.title}
-                </h2>
-                <p className="text-sm font-mono uppercase text-black font-semibold mb-4">
-                  {practice.subtitle}
-                </p>
-                <p className="text-sm md:text-base text-neutral-600 leading-relaxed mb-6">
-                  {practice.description}
-                </p>
+          {/* Title & Core Narrative */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
+            <div className="lg:col-span-7">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-black mb-2 tracking-tight">
+                {currentPractice.title}
+              </h2>
+              <p className="text-xs font-mono uppercase text-black font-semibold mb-3">
+                {currentPractice.subtitle}
+              </p>
+              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-5">
+                {currentPractice.description}
+              </p>
 
-                {/* Key Metrics Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  {practice.metrics.map((m) => (
-                    <div
-                      key={m.label}
-                      className="rounded-xl border border-neutral-200 bg-white p-3 text-center"
-                    >
-                      <span className="block text-lg font-mono font-extrabold text-black">
-                        {m.value}
-                      </span>
-                      <span className="block text-[11px] font-mono uppercase text-neutral-500 mt-0.5">
-                        {m.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Practice Visual */}
-              <div className="lg:col-span-5 h-64 lg:h-80 rounded-2xl overflow-hidden border border-[#D5DBE3] relative">
-                <img
-                  src={practice.image}
-                  alt={practice.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="font-mono text-[11px] uppercase tracking-widest text-white/80 block">
-                    {practice.timeline}
-                  </span>
-                  <span className="text-xs font-semibold">
-                    Fixed-Scope Sprints &bull; Zero Retainer Lock-in
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Granular Capabilities 6-Grid */}
-            <div className="border-t border-[#D5DBE3] pt-8">
-              <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-6 font-bold">
-                CORE PRACTICE CAPABILITIES &amp; DELIVERABLES
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {practice.capabilities.map((cap, cIdx) => (
+              {/* Key Metrics Row */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                {currentPractice.metrics.map((m) => (
                   <div
-                    key={cap.title}
-                    className="rounded-2xl border border-neutral-200 bg-white p-5 space-y-2 hover:border-black/50 transition-colors"
+                    key={m.label}
+                    className="rounded-xl border border-neutral-200 bg-neutral-50/60 p-2.5 text-center"
                   >
-                    <div className="flex items-center gap-2 font-mono text-[11px] text-neutral-400 font-semibold">
-                      <span>0{cIdx + 1}</span>
-                      <span>//</span>
-                    </div>
-                    <h4 className="text-sm font-bold text-black leading-snug">
-                      {cap.title}
-                    </h4>
-                    <p className="text-xs text-neutral-600 leading-relaxed">
-                      {cap.description}
-                    </p>
+                    <span className="block text-base sm:text-lg font-mono font-extrabold text-black">
+                      {m.value}
+                    </span>
+                    <span className="block text-[10px] font-mono uppercase text-neutral-500 mt-0.5">
+                      {m.label}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Bottom Practice Action */}
-            <div className="mt-8 pt-6 border-t border-[#D5DBE3] flex flex-wrap items-center justify-between gap-4">
-              <span className="font-mono text-xs text-neutral-600">
-                Turnaround: <strong className="text-black font-bold">{practice.timeline}</strong>
-              </span>
-              <a
-                href="#project-brief"
-                onClick={() => setProjectType(practice.title)}
-                className="inline-flex items-center gap-2 rounded-full bg-black text-white px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer"
-              >
-                Request {practice.title.split(" ")[0]} Brief →
-              </a>
+            {/* Practice Media Preview */}
+            <div className="lg:col-span-5 h-52 lg:h-64 rounded-xl overflow-hidden border border-neutral-200 relative bg-neutral-900">
+              <img
+                src={currentPractice.image}
+                alt={currentPractice.title}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+              <div className="absolute bottom-3 left-3 right-3 text-white">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-white/80 block">
+                  {currentPractice.timeline}
+                </span>
+                <span className="text-xs font-semibold">
+                  Fixed-Scope Sprints &bull; Transparent Delivery
+                </span>
+              </div>
             </div>
-          </article>
-        ))}
+          </div>
+
+          {/* Granular Capabilities (Clean Hairline Grid - Zero Bulky White Boxes) */}
+          <div className="border-t border-neutral-200 pt-6">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-4 font-bold">
+              CORE PRACTICE CAPABILITIES &amp; DELIVERABLES
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {currentPractice.capabilities.map((cap, cIdx) => (
+                <div
+                  key={cap.title}
+                  className="p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/40 hover:border-black/40 hover:bg-white transition-all space-y-1.5"
+                >
+                  <div className="flex items-center gap-1.5 font-mono text-[10px] text-neutral-400 font-semibold">
+                    <span>0{cIdx + 1}</span>
+                    <span>//</span>
+                  </div>
+                  <h4 className="text-xs sm:text-sm font-bold text-black leading-snug">
+                    {cap.title}
+                  </h4>
+                  <p className="text-[11px] text-neutral-600 leading-relaxed">
+                    {cap.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom Practice Action */}
+          <div className="mt-6 pt-5 border-t border-neutral-200 flex flex-wrap items-center justify-between gap-4">
+            <span className="font-mono text-xs text-neutral-600">
+              Turnaround: <strong className="text-black font-bold">{currentPractice.timeline}</strong>
+            </span>
+            <a
+              href="#project-brief"
+              onClick={() => setProjectType(currentPractice.title)}
+              className="inline-flex items-center gap-2 rounded-full bg-black text-white px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer"
+            >
+              Request {currentPractice.title.split(" ")[0]} Brief →
+            </a>
+          </div>
+        </article>
       </section>
 
-      {/* Security & Confidentiality Standard (Exact AuditFlow Policy) */}
-      <section className="container px-4 sm:px-6 pb-16 max-w-5xl mx-auto">
-        <div className="rounded-2xl border border-neutral-300 bg-[#F7F8FA] p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      {/* Studio Confidentiality Standard */}
+      <section className="container px-4 sm:px-6 pb-12 max-w-5xl mx-auto">
+        <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="space-y-1 max-w-2xl">
             <span className="font-mono text-xs uppercase tracking-widest text-black font-bold">
               STUDIO CONFIDENTIALITY &amp; ZERO-CREDENTIAL SECURITY PROTOCOL
             </span>
-            <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+            <p className="text-xs text-neutral-600 leading-relaxed">
               Diagnostics and project briefs evaluate publicly accessible web assets and client-provided specifications only. We do not require internal credentials, server logins, or hosting passwords. All client briefs and completed deliverables are governed by our mutual non-disclosure standard.
             </p>
           </div>
-          <div className="shrink-0 flex items-center gap-3">
-            <span className="font-mono text-xs font-bold text-black bg-white border border-neutral-200 px-3 py-1.5 rounded-full">
+          <div className="shrink-0">
+            <span className="font-mono text-xs font-bold text-black bg-white border border-neutral-300 px-3.5 py-1.5 rounded-full shadow-2xs">
               100% NDA Standard
             </span>
           </div>
@@ -398,16 +428,16 @@ export default function AiWebPage() {
       </section>
 
       {/* Interactive Project Brief Consultation Form */}
-      <section id="project-brief" className="container px-4 sm:px-6 pb-20 max-w-3xl mx-auto scroll-mt-24">
-        <div className="border border-neutral-300 rounded-3xl p-6 sm:p-10 md:p-12 bg-white shadow-sm">
-          <div className="text-center mb-8 border-b border-neutral-200 pb-6">
-            <span className="font-mono text-xs uppercase tracking-widest text-black font-semibold block mb-2">
+      <section id="project-brief" className="container px-4 sm:px-6 pb-16 max-w-3xl mx-auto scroll-mt-24">
+        <div className="border border-neutral-300 rounded-2xl p-6 sm:p-8 bg-white shadow-xs">
+          <div className="text-center mb-6 border-b border-neutral-200 pb-5">
+            <span className="font-mono text-xs uppercase tracking-widest text-black font-semibold block mb-1">
               DIRECT STUDIO INTAKE DESK
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-black">
               Submit Your Project Brief
             </h2>
-            <p className="text-xs sm:text-sm text-neutral-600 mt-2 max-w-lg mx-auto">
+            <p className="text-xs sm:text-sm text-neutral-600 mt-1 max-w-lg mx-auto">
               Tell us your objectives. We review technical requirements and deliver a transparent fixed-scope sprint quote or diagnostic schedule within 4 hours.
             </p>
           </div>
@@ -418,149 +448,145 @@ export default function AiWebPage() {
               <h3 className="text-xl font-bold text-black">
                 Project Brief Received
               </h3>
-              <p className="text-xs font-mono text-neutral-600">
-                Reference ID: <strong className="text-black font-bold">{referenceId}</strong>
-              </p>
-              <p className="text-sm text-neutral-600 max-w-md mx-auto">
-                Our lead digital engineer will evaluate your requirements and reach out via WhatsApp or email with a structured scope and timeline.
+              <p className="text-xs sm:text-sm text-neutral-600 max-w-md mx-auto">
+                Reference ID: <strong className="font-mono text-black">{referenceId}</strong>.
+                Our lead digital engineer will evaluate your requirements and reach out via email or phone with a structured scope and timeline.
               </p>
               <button
                 type="button"
                 onClick={() => setReferenceId(null)}
-                className="mt-4 inline-flex items-center rounded-full bg-black px-6 py-2.5 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer"
+                className="mt-2 inline-flex items-center justify-center rounded-full bg-black text-white px-6 py-2.5 text-xs font-mono font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors"
               >
                 Submit Another Brief
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold mb-1.5">
-                  Target Studio Practice *
+                <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold mb-2">
+                  01 // Select Practice *
                 </label>
                 <select
                   value={projectType}
                   onChange={(e) => setProjectType(e.target.value)}
-                  className="w-full bg-[#F7F8FA] border border-neutral-300 rounded-xl px-4 py-3 text-sm text-black focus:outline-none focus:border-black font-medium"
+                  className="w-full rounded-full border border-neutral-300 bg-neutral-50 px-4 py-2.5 text-xs font-mono text-black focus:border-black focus:bg-white focus:outline-hidden transition-colors"
                 >
-                  <option value="High-Converting Web Development Sprint">
-                    High-Converting Web Development Sprint (2-Week Turnaround)
+                  <option value="High-Converting Web Development">
+                    High-Converting Web Development (Next.js &amp; E-Commerce)
                   </option>
-                  <option value="Autonomous AI & WhatsApp Concierge">
-                    Autonomous AI &amp; WhatsApp Concierge (24/7 Ops)
+                  <option value="Autonomous AI & Workflow Automations">
+                    Autonomous AI &amp; Workflow Automations (24/7 Ops)
                   </option>
-                  <option value="Professional Website Diagnostics & CRO (48h SLA)">
-                    Professional Website Diagnostics &amp; CRO (48h SLA)
+                  <option value="Professional Website Diagnostics & CRO">
+                    Professional Website Diagnostics &amp; CRO (Exact Code Patches)
                   </option>
-                  <option value="Full Studio Engineering Package">
-                    Full Studio Engineering Package (Web + AI + Diagnostics)
+                  <option value="Full Studio Sprint (Web + AI + CRO)">
+                    Full Studio Sprint (Web + AI + Diagnostics)
                   </option>
                 </select>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold mb-1.5">
-                    Your Name *
+                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-1">
+                    Full Name *
                   </label>
                   <input
                     type="text"
                     required
-                    placeholder="First & Last Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-[#F7F8FA] border border-neutral-300 rounded-xl px-4 py-3 text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-black"
+                    placeholder="Your name"
+                    className="w-full rounded-full border border-neutral-300 bg-neutral-50 px-4 py-2.5 text-xs text-black focus:border-black focus:bg-white focus:outline-hidden transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold mb-1.5">
+                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-1">
                     Work Email *
                   </label>
                   <input
                     type="email"
                     required
-                    placeholder="name@company.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-[#F7F8FA] border border-neutral-300 rounded-xl px-4 py-3 text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-black"
+                    placeholder="name@company.com"
+                    className="w-full rounded-full border border-neutral-300 bg-neutral-50 px-4 py-2.5 text-xs text-black focus:border-black focus:bg-white focus:outline-hidden transition-colors"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold mb-1.5">
-                    WhatsApp / Phone
+                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-1">
+                    Phone / Contact Desk
                   </label>
                   <input
                     type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     placeholder="+357..."
-                    value={whatsapp}
-                    onChange={(e) => setWhatsapp(e.target.value)}
-                    className="w-full bg-[#F7F8FA] border border-neutral-300 rounded-xl px-4 py-3 text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-black"
+                    className="w-full rounded-full border border-neutral-300 bg-neutral-50 px-4 py-2.5 text-xs text-black focus:border-black focus:bg-white focus:outline-hidden transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold mb-1.5">
-                    Live Website / Project URL
+                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-1">
+                    Website URL (If evaluating existing site)
                   </label>
                   <input
                     type="text"
-                    placeholder="https://..."
-                    value={websiteUrl}
-                    onChange={(e) => setWebsiteUrl(e.target.value)}
-                    className="w-full bg-[#F7F8FA] border border-neutral-300 rounded-xl px-4 py-3 text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-black"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                    placeholder="https://yourbrand.com"
+                    className="w-full rounded-full border border-neutral-300 bg-neutral-50 px-4 py-2.5 text-xs text-black focus:border-black focus:bg-white focus:outline-hidden transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold mb-1.5">
-                  Project Scope &amp; Conversion Objectives
+                <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-1">
+                  Project Brief &amp; Target Objectives *
                 </label>
                 <textarea
-                  rows={4}
-                  placeholder="Describe your current bottleneck, desired features, or key timeline goals..."
-                  value={details}
-                  onChange={(e) => setDetails(e.target.value)}
-                  className="w-full bg-[#F7F8FA] border border-neutral-300 rounded-xl px-4 py-3 text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-black resize-none"
+                  rows={3}
+                  required
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Outline your objectives, current conversion bottlenecks, or what you want automated..."
+                  className="w-full rounded-2xl border border-neutral-300 bg-neutral-50 p-3 text-xs text-black focus:border-black focus:bg-white focus:outline-hidden transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-black text-white font-mono font-bold uppercase tracking-wider text-xs py-3.5 px-6 rounded-xl hover:bg-neutral-800 transition-colors cursor-pointer shadow-sm disabled:opacity-50"
+                className="w-full rounded-full bg-black py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors disabled:opacity-50 cursor-pointer shadow-xs"
               >
-                {submitting ? "Transmitting Project Brief..." : "Submit Project Brief & Receive Proposal →"}
+                {submitting ? "Submitting Brief..." : "Submit Project Brief →"}
               </button>
             </form>
           )}
         </div>
       </section>
 
-      {/* Powered by AuditFlow Badge — Displayed Exclusively on this Page */}
-      <section className="border-t border-black/15 pt-16 pb-14 bg-white text-center">
-        <div className="container px-4 sm:px-6 max-w-3xl mx-auto flex flex-col items-center">
-          <a
-            href="https://www.auditflow.ink"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-black/30 bg-[#F7F8FA] hover:bg-neutral-100 transition-colors shadow-xs group"
-          >
-            <span className="h-2 w-2 rounded-full bg-black animate-pulse" />
-            <span className="font-mono text-xs font-bold uppercase tracking-widest text-black">
-              POWERED BY AUDITFLOW
-            </span>
-            <span className="font-mono text-[10px] uppercase text-neutral-600 border-l border-neutral-300 pl-2.5 group-hover:text-black transition-colors font-semibold">
-              // AUDITFLOW.INK →
-            </span>
-          </a>
-          <p className="text-xs font-mono text-neutral-600 mt-4 max-w-lg mx-auto leading-relaxed">
-            Full-stack Next.js web platforms, autonomous AI agent pipelines, and senior-engineer website diagnostics engineered in direct studio partnership with AuditFlow (VISION CRAFT VC CY LTD).
+      {/* Powered by AuditFlow Footer Attribution */}
+      <footer className="border-t border-neutral-200 py-8 bg-neutral-50 text-center">
+        <div className="container px-4 mx-auto space-y-2">
+          <p className="font-mono text-xs text-neutral-600 uppercase tracking-widest">
+            ONSPEC DIGITAL STUDIO &bull; POWERED BY{" "}
+            <a
+              href="https://www.auditflow.ink"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-black underline underline-offset-4 hover:text-neutral-700 transition-colors"
+            >
+              AUDITFLOW
+            </a>
+          </p>
+          <p className="text-[11px] text-neutral-500 font-mono">
+            Next.js Engineering &bull; Autonomous AI &bull; Conversion Diagnostics
           </p>
         </div>
-      </section>
+      </footer>
     </main>
   );
 }

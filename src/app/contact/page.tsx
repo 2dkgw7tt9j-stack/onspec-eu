@@ -19,7 +19,7 @@ const PILLAR_OPTIONS: { value: EnquiryPillar; label: string; code: string; desc:
     value: "02_AUTOMATE",
     code: "02 // AUTOMATE",
     label: "Web Platforms & AI Automations",
-    desc: "Sub-Second Next.js Platforms, 24/7 WhatsApp AI Agents & Senior Diagnostics",
+    desc: "Sub-Second Next.js Platforms, 24/7 Autonomous AI Agents & Senior Diagnostics",
   },
   {
     value: "03_INNOVATE",
@@ -185,9 +185,9 @@ export default function ContactPage() {
                   href={BRAND_INFO.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-neutral-300 bg-white px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-neutral-100 transition-colors cursor-pointer"
                 >
-                  WhatsApp Desk
+                  Instant Advisory Desk
                 </a>
 
                 <a

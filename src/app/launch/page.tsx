@@ -44,8 +44,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
       "Direct procurement of commercial-grade machines, kiosks, or wash/laundry systems equipped with EMV contactless card readers, Apple Pay, Google Pay, and remote telemetry sensors.",
     xPercent: 52,
     yPercent: 28,
-    image:
-      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=960&q=85",
+    image: "/images/perfume-station.jpg",
   },
   {
     id: "hs-suppliers",
@@ -226,7 +225,7 @@ export default function LaunchPage() {
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={1400}
                     width={2000}
-                    src="https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=2000&q=85"
+                    src="/images/perfume-station.jpg"
                   />
                 </picture>
               </div>
@@ -396,7 +395,7 @@ export default function LaunchPage() {
                               }}
                               className={`rounded-full px-4 py-2.5 text-xs font-mono transition-all cursor-pointer ${
                                 active
-                                  ? "bg-black text-black font-bold shadow-md"
+                                  ? "bg-white text-black font-bold shadow-md"
                                   : "text-white/85 hover:bg-white/10"
                               }`}
                             >
@@ -451,8 +450,8 @@ export default function LaunchPage() {
                           <span
                             className={`h-7 w-7 rounded-full flex items-center justify-center text-xs font-bold transition-transform ${
                               isSelected
-                                ? "bg-white text-black scale-125 ring-4 ring-black"
-                                : "bg-black text-black hover:scale-110"
+                                ? "bg-white text-black scale-125 ring-4 ring-white/50"
+                                : "bg-black text-white border border-white/40 hover:scale-110"
                             }`}
                           >
                             +
@@ -463,7 +462,7 @@ export default function LaunchPage() {
                               opacity: isSelected ? 1 : undefined,
                               backgroundColor: "#000000",
                               color: "#F7F8FA",
-                              border: "1px solid rgba(39,181,138,0.6)",
+                              border: "1px solid rgba(255,255,255,0.3)",
                             }}
                           >
                             {hs.label}
@@ -520,11 +519,11 @@ export default function LaunchPage() {
                 <div className="lg:col-span-5 space-y-6">
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="rounded-full bg-black/10 px-3 py-1 font-mono text-xs text-black">
+                      <span className="rounded-full bg-white/10 px-3 py-1 font-mono text-xs text-white">
                         {currentOpportunity.category}
                       </span>
                       {currentOpportunity.flagship && (
-                        <span className="rounded-full bg-black px-3 py-1 font-mono text-xs font-bold text-black">
+                        <span className="rounded-full bg-white px-3 py-1 font-mono text-xs font-bold text-black">
                           FLAGSHIP MODEL
                         </span>
                       )}
@@ -556,7 +555,7 @@ export default function LaunchPage() {
 
                   {/* Hotspot Quick-Trigger Pills */}
                   <div className="space-y-2">
-                    <p className="font-mono text-[11px] uppercase tracking-wider text-black">
+                    <p className="font-mono text-[11px] uppercase tracking-wider text-white/70">
                       6 COORDINATED TURNKEY LAYERS (CLICK TO INSPECT):
                     </p>
                     <div className="flex flex-wrap gap-1.5">
@@ -571,8 +570,8 @@ export default function LaunchPage() {
                             }
                             className={`rounded-full px-3 py-1.5 text-xs font-mono transition-colors cursor-pointer border ${
                               active
-                                ? "bg-black text-black border-black font-bold"
-                                : "bg-neutral-900/50 text-white border-[#A8B1BE]/30 hover:border-black"
+                                ? "bg-white text-black border-white font-bold"
+                                : "bg-neutral-900/50 text-white border-[#A8B1BE]/30 hover:border-white"
                             }`}
                           >
                             {hs.code}

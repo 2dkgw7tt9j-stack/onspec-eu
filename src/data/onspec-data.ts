@@ -184,12 +184,12 @@ export const PILLARS: PillarSpec[] = [
     coreMessage: "Eliminate operational friction and maximize conversion.",
     headline: "Sub-second Next.js web applications, autonomous AI agents, and senior diagnostics.",
     description:
-      "We architect sub-second Next.js web applications, deploy autonomous 24/7 AI agents and WhatsApp pipelines, and deliver professional senior-engineer website diagnostics with exact production code patches.",
+      "We architect sub-second Next.js web applications, deploy autonomous 24/7 AI agents and business automation pipelines, and deliver professional senior-engineer website diagnostics with exact production code patches.",
     href: "/ai-web",
     ctaLabel: "Explore AI & Websites",
     deliverables: [
       "Sub-second Next.js web applications with guaranteed 95+ Core Web Vitals",
-      "24/7 intelligent WhatsApp and Telegram customer concierges and booking assistants",
+      "24/7 intelligent conversational AI concierges and automated booking assistants",
       "Multi-app webhook pipelines syncing CRM (HubSpot), Airtable, and Stripe",
       "Senior-engineer website diagnostics with exact CSS & Next.js code patches in 48 hours",
       "Zero backend passwords needed • Governed by mutual non-disclosure standard",
@@ -264,7 +264,7 @@ export const SCRATCH_VS_ONSPEC_COMPARISON = [
   {
     dimension: "Operations & Customer Handling",
     scratch: "Manual customer messages, missed bookings, spreadsheet chaos, high staff overhead.",
-    onspec: "Integrated AI support agents, WhatsApp workflows, automated CRM, and remote telemetry.",
+    onspec: "Integrated AI support agents, automated workflows, connected CRM, and remote telemetry.",
   },
   {
     dimension: "Time to Revenue",
@@ -343,8 +343,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     locationStrategy: "Luxury Beach Clubs, 5-Star Hotel Lobbies, Nightclubs, Marina Plazas & Premium Malls in Limassol, Nicosia, Paphos & Ayia Napa",
     autonomyLevel: "95% Autonomous (Cloud Telemetry + Rapid Cartridge Swap)",
     weeklyOwnerHours: "2 to 3 hrs / week",
-    image:
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/perfume-station.jpg",
     whatsIncluded: [
       "Prime venue scouting & placement agreement execution in luxury Cyprus venues",
       "Commercial smart fragrance dispenser hardware with capacitive touchscreen & LED display",
@@ -395,8 +394,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     locationStrategy: "Corporate Office Restrooms & Lobbies, Universities, Gym & Wellness Complexes, Shopping Malls, Beach Promenades & High-Traffic Public Venues in Cyprus",
     autonomyLevel: "94% Autonomous (Cloud Telemetry + Scheduled Monthly Restock)",
     weeklyOwnerHours: "2 to 4 hrs / week",
-    image:
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/hygiene-station.jpg",
     whatsIncluded: [
       "Demographic site analysis & exclusive placement contracts in corporate towers, gyms, and campuses",
       "CE-certified antimicrobial powder-coated steel vending station (wall-mounted or freestanding)",
@@ -448,8 +446,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     locationStrategy: "Active Construction Sites, Industrial Logistics Hubs, Corporate Office Complexes & 24/7 Shift Work Centers in Cyprus (Limassol, Nicosia, Larnaca)",
     autonomyLevel: "94% Autonomous (Automated Food Safety Log + Scheduled Daily Restock)",
     weeklyOwnerHours: "3 to 5 hrs / week",
-    image:
-      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/hot-meal-station.jpg",
     whatsIncluded: [
       "Host venue placement agreements pre-mapped for active construction developments, business parks & industrial facilities",
       "Commercial smart hot meal dispensing station with integrated <4°C refrigeration and rapid heating chamber",
@@ -509,22 +506,22 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
   {
     id: "autonomous-ai-concierge",
     code: "PRACTICE 02 // AI-CONCIERGE",
-    title: "Autonomous WhatsApp & Telegram Concierge",
+    title: "Autonomous Conversational AI Concierge",
     category: "Customer Facing",
     tagline: "Intelligent conversational agents connected to your product catalog, inventory, and scheduling APIs.",
     description:
       "We build bespoke, self-orchestrating AI agents and automated pipelines that run silently 24/7. Answers customer queries, qualifies leads, schedules appointments, and closes sales in fluent natural language.",
     capabilities: [
-      "Official Meta WhatsApp Cloud API & Telegram Bot integration",
+      "Omnichannel conversational messaging & automated assistant integration",
       "Connected directly to product catalog, pricing & real-time inventory",
       "Instant response time under 3 seconds, 24/7/365 runtime",
       "Multi-lingual fluency in English, Greek, Russian, and 20+ languages",
       "100% deterministic guardrails with smart human escalation",
     ],
-    connectedPlatforms: ["WhatsApp Cloud API", "Telegram Bot API", "HubSpot", "Google Calendar", "Stripe"],
+    connectedPlatforms: ["Omnichannel API", "Telegram Bot API", "HubSpot", "Google Calendar", "Stripe"],
     timeSavedHoursPerWeek: 28,
     efficiencyMetric: "<3s Response & 24/7 Runtime",
-    sampleTrigger: "Prospect asks for product quote and availability at 23:45 on WhatsApp",
+    sampleTrigger: "Prospect asks for product quote and availability at 23:45",
     sampleAction: "AI validates stock, answers in customer language & delivers payment link",
   },
   {
@@ -728,7 +725,7 @@ export const ECOSYSTEM_STAGES: EcosystemStage[] = [
   {
     step: "03",
     title: "Implement AI Customer & Sales Channels",
-    description: "Deploy 24/7 AI support agents and WhatsApp Business automation to capture every customer inquiry.",
+    description: "Deploy 24/7 AI support agents and business workflow automation to capture every customer inquiry.",
     pillarRef: "02 AUTOMATE",
   },
   {

@@ -25,6 +25,36 @@ export function SmoothScrollProvider({
     updateViewportVars();
     window.addEventListener("resize", updateViewportVars);
 
+    // Global Scroll-Reveal Observer for buttery-smooth entrance animations
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed", "is-inview");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: "0px 0px -60px 0px",
+        threshold: 0.1,
+      }
+    );
+
+    const observeElements = () => {
+      const targets = document.querySelectorAll(
+        "[data-reveal], [data-scroll], .reveal-on-scroll, .c-tile-feature, .c-hero-home_image-container"
+      );
+      targets.forEach((el) => {
+        if (!el.classList.contains("is-revealed")) {
+          revealObserver.observe(el);
+        }
+      });
+    };
+
+    observeElements();
+    const observerTimer = setTimeout(observeElements, 500);
+
     // On mobile touch devices, disable Lenis touch hijacking to preserve buttery-smooth native momentum scrolling (60/120Hz)
     const isTouchDevice =
       typeof window !== "undefined" &&
@@ -34,6 +64,8 @@ export function SmoothScrollProvider({
 
     if (isTouchDevice) {
       return () => {
+        clearTimeout(observerTimer);
+        revealObserver.disconnect();
         window.removeEventListener("resize", updateViewportVars);
       };
     }
@@ -54,6 +86,8 @@ export function SmoothScrollProvider({
     rafId = requestAnimationFrame(raf);
 
     return () => {
+      clearTimeout(observerTimer);
+      revealObserver.disconnect();
       window.removeEventListener("resize", updateViewportVars);
       cancelAnimationFrame(rafId);
       lenis.destroy();

@@ -495,5 +495,29 @@ body {
   }
 }
 
+/* Smooth Scroll Entrance & Elevation Animations */
+[data-reveal],
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed,
+.reveal-on-scroll.is-revealed,
+.is-ready [data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fallback for JavaScript-disabled */
+html.has-no-js [data-reveal],
+html.has-no-js .reveal-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+
 
 

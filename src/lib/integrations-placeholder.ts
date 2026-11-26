@@ -21,6 +21,8 @@ export interface LeadSubmissionPayload {
   whatsapp?: string;
   phone?: string;
   companyName?: string;
+  websiteUrl?: string;
+  targetUrl?: string;
   opportunityId?: string;
   opportunityTitle?: string;
   ideaDescription?: string;

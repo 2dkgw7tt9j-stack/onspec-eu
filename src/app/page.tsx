@@ -114,8 +114,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     index: "01",
     title: "Luxury Perfume Stations",
     subtitle: "24/7 Cashless Fragrance Dispensers",
-    image:
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=900&q=85",
+    image: "/images/perfume-station.jpg",
     column: "left",
     small: false,
     opportunityId: "smart-perfume-dispenser",
@@ -125,8 +124,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     index: "02",
     title: "Hygiene & Period Stations",
     subtitle: "Essential Sanitary & Antiseptic Vending",
-    image:
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=900&q=85",
+    image: "/images/hygiene-station.jpg",
     column: "left",
     small: true,
     opportunityId: "hygiene-sanitary-vending",
@@ -136,8 +134,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     index: "03",
     title: "Hot Food Heating Stations",
     subtitle: "On-Demand Meals for Workplaces & Sites",
-    image:
-      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=85",
+    image: "/images/hot-meal-station.jpg",
     column: "left",
     small: false,
     opportunityId: "hot-food-meal-station",
@@ -186,8 +183,7 @@ const STACKING_PILLAR_CARDS = [
     subtitle:
       "Luxury Perfume Stations, Essential Hygiene Dispensers & On-Demand Hot Food Stations: Prime locations mapped, commercial equipment sourced, and Cyprus corporate structure ready for operation.",
     metric: "3 FLAGSHIP MODELS",
-    image:
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1400&q=85",
+    image: "/images/perfume-station.jpg",
     href: "/businesses",
     cta: "Explore Ready Businesses",
   },
@@ -243,24 +239,21 @@ const FEATURE_CAROUSEL_SPECS: {
     label: "01 // LUXURY PERFUME DISPENSERS",
     headline:
       "Automated luxury fragrance dispensers in Cyprus beach clubs, 5-star hotels & nightlife venues.",
-    image:
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/perfume-station.jpg",
     modalSpec: PREFAB_OPPORTUNITIES[0],
   },
   {
     label: "02 // HYGIENE & PERIOD WELLNESS",
     headline:
       "Autonomous period care, antiseptic first-aid and sanitization vending in high-density corridors.",
-    image:
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/hygiene-station.jpg",
     modalSpec: PREFAB_OPPORTUNITIES[1],
   },
   {
     label: "03 // HOT FOOD HEATING STATIONS",
     headline:
       "24/7 refrigerated on-demand heated chef-quality meals for construction sites & workplaces.",
-    image:
-      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/hot-meal-station.jpg",
     modalSpec: PREFAB_OPPORTUNITIES[2],
   },
   {
@@ -276,11 +269,11 @@ const FEATURE_CAROUSEL_SPECS: {
       category: "Digital & Ecommerce",
       featured: true,
       tagline:
-        "High-converting Next.js web platforms, 24/7 WhatsApp AI agents & senior website diagnostics.",
+        "High-converting Next.js web platforms, 24/7 autonomous AI agents & senior website diagnostics.",
       shortDescription:
         "Sub-second digital platforms, autonomous customer concierges, and 48h website diagnostics.",
       fullDescription:
-        "We architect sub-second Next.js web applications, deploy autonomous 24/7 AI agents and WhatsApp pipelines, and deliver professional senior-engineer website diagnostics with exact production code patches.",
+        "We architect sub-second Next.js web applications, deploy autonomous 24/7 AI agents and business workflow pipelines, and deliver professional senior-engineer website diagnostics with exact production code patches.",
       investmentTier: "Fixed-Scope Sprints & Transparent Scoping",
       estimatedCapital: "Custom Sprints on Request (Zero Retainer Lock-in)",
       timeline: "2-Week Rapid Sprint Turnaround",
@@ -291,7 +284,7 @@ const FEATURE_CAROUSEL_SPECS: {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85",
       whatsIncluded: [
         "Sub-second Next.js App Router web platform with guaranteed 95+ Core Web Vitals",
-        "Official WhatsApp Business API & Telegram conversational AI concierge",
+        "Omnichannel conversational AI concierge and automated assistant integration",
         "Automated inbound lead qualification, enrichment & CRM calendar routing",
         "Multi-app webhook pipelines syncing HubSpot, Airtable, Stripe, and Supabase",
         "Senior-engineer website diagnostics with ready-to-merge production code patches",
@@ -322,7 +315,7 @@ const FEATURE_CAROUSEL_SPECS: {
         { label: "SPEC ID", value: "OSP-ENG-2026" },
         { label: "FRONTEND STACK", value: "Next.js App Router / Tailwind CSS" },
         { label: "LATENCY", value: "<1.0s First Contentful Paint (95+ Vitals)" },
-        { label: "AI RUNTIME", value: "24/7 WhatsApp & Telegram Concierge (<3s)" },
+        { label: "AI RUNTIME", value: "24/7 Autonomous AI Concierge (<3s)" },
         { label: "DIAGNOSTICS SLA", value: "48h Delivery with Exact Code Patches" },
         { label: "SECURITY", value: "100% NDA Standard • Zero Backend Passwords" },
       ],
