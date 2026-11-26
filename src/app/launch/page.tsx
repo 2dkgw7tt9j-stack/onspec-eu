@@ -25,7 +25,7 @@ interface TurnkeyHotspot {
 const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
   {
     id: "hs-location",
-    code: "01 // LOCATION",
+    code: "01. Location",
     label: "Location Scouting & Securing",
     title: "Finding & Securing Prime Cyprus Locations",
     description:
@@ -37,7 +37,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
   },
   {
     id: "hs-equipment",
-    code: "02 // HARDWARE",
+    code: "02. Hardware",
     label: "Equipment Sourcing",
     title: "Commercial Hardware & Contactless Terminals",
     description:
@@ -48,7 +48,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
   },
   {
     id: "hs-suppliers",
-    code: "03 // SUPPLIERS",
+    code: "03. Suppliers",
     label: "Wholesale Suppliers",
     title: "Coordinating Direct Wholesale Suppliers",
     description:
@@ -60,7 +60,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
   },
   {
     id: "hs-cyprus-reg",
-    code: "04 // CYPRUS CORP",
+    code: "04. Cyprus Corp",
     label: "Cyprus Company Registration",
     title: "Company Registration via Independent Legal Professionals",
     description:
@@ -72,7 +72,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
   },
   {
     id: "hs-telemetry",
-    code: "05 // TELEMETRY",
+    code: "05. Telemetry",
     label: "Operational & Cloud Setup",
     title: "Real-Time Telemetry & Operational Setup",
     description:
@@ -84,7 +84,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
   },
   {
     id: "hs-launch",
-    code: "06 // HANDOVER",
+    code: "06. Handover",
     label: "Launch Preparation",
     title: "Commissioning, Testing & Owner Handover",
     description:
@@ -146,7 +146,7 @@ export default function LaunchPage() {
             <div className="c-widget-bar flex-wrap gap-y-2">
               <div className="c-widget-bar_content">
                 <span className="text-md font-bold text-white shrink-0">
-                  01 // {currentOpportunity.title}
+                  01. {currentOpportunity.title}
                 </span>
                 <span className="text-eyebrow text-black shrink-1">
                   {currentOpportunity.estimatedCapital} •{" "}
@@ -253,7 +253,7 @@ export default function LaunchPage() {
             </h1>
 
             <div className="c-hero-visual_bottom flex items-end justify-between text-xs font-mono uppercase tracking-widest text-white/85 z-10">
-              <span>PILLAR 01 // READY-TO-LAUNCH BUSINESSES</span>
+              <span>Pillar 01 — Turnkey Ready Businesses</span>
               <span>3 FLAGSHIP MODELS • LOCATIONS &amp; LEGAL READY</span>
             </div>
           </div>
@@ -477,7 +477,7 @@ export default function LaunchPage() {
                     <div className="absolute inset-x-4 bottom-4 z-30 rounded-2xl bg-white text-black p-5 shadow-2xl border border-black flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                       <div className="space-y-1 max-w-xl">
                         <span className="font-mono text-[10px] uppercase tracking-widest text-black font-bold">
-                          {activeHotspot.code} // TURNKEY EXECUTION LAYER
+                          {activeHotspot.code} • Turnkey Execution Layer
                         </span>
                         <h4 className="text-base font-bold text-black">
                           {activeHotspot.title}
@@ -626,7 +626,7 @@ export default function LaunchPage() {
           <div className="c-push-image container -full-width">
             <div className="c-push-image_content">
               <p className="text-eyebrow text-black uppercase tracking-widest">
-                FLAGSHIP CASE STUDY // SPEC-L01
+                Flagship Case Study • SPEC-L01
               </p>
               <h3 className="sr-only">
                 The Turnkey Smart Vending Machine Business Blueprint
@@ -803,7 +803,7 @@ export default function LaunchPage() {
                   <article className="c-tile-card -image-cover min-h-[380px]">
                     <div className="c-tile-card_inner z-10">
                       <h3 className="text-eyebrow text-black">
-                        PILLAR 03 // INNOVATE
+                        Pillar 03 — Innovate
                       </h3>
                       <p className="heading-xs text-white">
                         Have Your Own Business Idea?
@@ -980,7 +980,7 @@ export default function LaunchPage() {
             {referenceId ? (
               <div className="rounded-2xl bg-white border border-black p-5 space-y-2">
                 <p className="font-mono text-xs uppercase tracking-widest text-black">
-                  LAUNCH DOSSIER REGISTERED // {referenceId}
+                  LAUNCH DOSSIER REGISTERED • REFERENCE {referenceId}
                 </p>
                 <p className="text-xs text-neutral-600">
                   We have logged your request for{" "}

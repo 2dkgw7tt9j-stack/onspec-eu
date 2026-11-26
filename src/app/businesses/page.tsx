@@ -57,7 +57,7 @@ export default function BusinessesPage() {
                 {/* Compact Editorial Body */}
                 <div className="p-5 sm:p-6">
                   <span className="font-mono text-[10px] uppercase tracking-wider text-neutral-500 block mb-1">
-                    MODEL 0{idx + 1} // READY UNIT
+                    Model 0{idx + 1} &bull; Turnkey Unit
                   </span>
                   <h2 className="text-lg sm:text-xl font-extrabold text-black mb-1.5 leading-snug">
                     {opp.title}

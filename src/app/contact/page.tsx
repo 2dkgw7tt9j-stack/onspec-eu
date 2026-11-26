@@ -11,31 +11,31 @@ import {
 const PILLAR_OPTIONS: { value: EnquiryPillar; label: string; code: string; desc: string }[] = [
   {
     value: "01_LAUNCH",
-    code: "01 // LAUNCH",
+    code: "Pillar 01 — Launch",
     label: "Turnkey Automated Dispensers & Hot Meal Stations",
     desc: "Luxury Perfume Stations, Essential Hygiene Dispensers & On-Demand Hot Food Stations (Locations & Legal Ready)",
   },
   {
     value: "02_AUTOMATE",
-    code: "02 // AUTOMATE",
+    code: "Pillar 02 — Automate",
     label: "Web Platforms & AI Automations",
     desc: "Sub-Second Next.js Platforms, 24/7 Autonomous AI Agents & Senior Diagnostics",
   },
   {
     value: "03_INNOVATE",
-    code: "03 // INNOVATE",
+    code: "Pillar 03 — Innovate",
     label: "Submit Your Idea (Free Proposal)",
     desc: "Custom business concept feasibility & free preliminary quotation",
   },
   {
     value: "04_CONNECT",
-    code: "04 // CONNECT",
+    code: "Pillar 04 — Connect",
     label: "Cyprus Legal & Professional Network",
     desc: "Independent counsel for Immigration, Residency, Corporate & Criminal Law",
   },
   {
     value: "GENERAL",
-    code: "00 // GENERAL",
+    code: "General Inquiry",
     label: "General Partnership & Advisory",
     desc: "Executive inquiry, multi unit venture portfolio, or general consultation",
   },
@@ -228,7 +228,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <p className="text-eyebrow text-black uppercase tracking-widest">
-                  ENQUIRY REGISTERED // ONSPEC DESK
+                  ENQUIRY REGISTERED &bull; ONSPEC OPERATIONS
                 </p>
                 <h2 className="heading-sm text-black">
                   Reference ID: {referenceId}
@@ -288,7 +288,7 @@ export default function ContactPage() {
                 {/* Pillar Selector Cards (Zero Blue Box - Clean Black and White) */}
                 <div className="space-y-2.5">
                   <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold">
-                    01 // Select Execution Pillar *
+                    1. Select Execution Pillar *
                   </label>
                   <div className="grid grid-cols-1 gap-2.5">
                     {PILLAR_OPTIONS.map((opt) => {
@@ -548,7 +548,7 @@ export default function ContactPage() {
           <div className="modal_inner p-8 md:p-12">
             <div className="max-w-xl mx-auto space-y-6 text-black">
               <p className="text-eyebrow text-black uppercase tracking-widest">
-                ONSPEC EXECUTIVE BRIEFING // 15 MINUTE CALL
+                ONSPEC EXECUTIVE BRIEFING &bull; 15 MINUTE CALL
               </p>
               <h2 className="heading-md">
                 Book a Direct Discovery Call with Our Cyprus Desk

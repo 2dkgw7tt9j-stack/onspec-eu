@@ -123,7 +123,7 @@ export function Footer() {
             />
           </Link>
           <p className="text-xs text-black/50 tracking-wider font-mono uppercase">
-            ESTD. 2026 // POWERED BY: VISION CRAFT / RAGI GROUP
+            ESTD. 2026 • POWERED BY VISION CRAFT &amp; RAGI GROUP
           </p>
         </div><div className="c-footer_links">
           <ul className="c-footer_subnav">

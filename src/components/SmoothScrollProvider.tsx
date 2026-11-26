@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 export function SmoothScrollProvider({
@@ -8,6 +9,9 @@ export function SmoothScrollProvider({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
+
   useEffect(() => {
     const html = document.documentElement;
     html.classList.remove("has-no-js");
@@ -25,80 +29,76 @@ export function SmoothScrollProvider({
     updateViewportVars();
     window.addEventListener("resize", updateViewportVars);
 
-    // Global Scroll-Reveal Observer for buttery-smooth entrance animations
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-revealed", "is-inview");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        rootMargin: "0px 0px -40px 0px",
-        threshold: 0.08,
-      }
-    );
-
-    const observeElements = () => {
-      const targets = document.querySelectorAll(
-        ".scroll-reveal, [data-scroll], [data-anim-slide], .c-tile-feature, .c-hero-home_image-container, .hover-lift"
-      );
-      const viewportHeight = window.innerHeight;
-      targets.forEach((el) => {
-        if (!el.classList.contains("is-inview")) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < viewportHeight - 30) {
-            el.classList.add("is-revealed", "is-inview");
-          } else {
-            revealObserver.observe(el);
-          }
-        }
-      });
-    };
-
-    observeElements();
-    const observerTimer = setTimeout(observeElements, 400);
-
-    // On mobile touch devices, disable Lenis touch hijacking to preserve buttery-smooth native momentum scrolling (60/120Hz)
+    // On mobile touch devices, use native buttery-smooth 120Hz momentum scrolling
     const isTouchDevice =
       typeof window !== "undefined" &&
       (window.matchMedia("(pointer: coarse)").matches ||
         "ontouchstart" in window ||
         window.innerWidth < 1024);
 
-    if (isTouchDevice) {
+    if (!isTouchDevice) {
+      const lenis = new Lenis({
+        lerp: 0.1,
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 1,
+      });
+
+      lenisRef.current = lenis;
+
+      let rafId: number;
+      function raf(time: number) {
+        lenis.raf(time);
+        rafId = requestAnimationFrame(raf);
+      }
+
+      rafId = requestAnimationFrame(raf);
+
       return () => {
-        clearTimeout(observerTimer);
-        revealObserver.disconnect();
         window.removeEventListener("resize", updateViewportVars);
+        cancelAnimationFrame(rafId);
+        lenis.destroy();
+        lenisRef.current = null;
       };
     }
 
-    const lenis = new Lenis({
-      lerp: 0.08,
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1,
-    });
-
-    let rafId: number;
-    function raf(time: number) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
-
-    rafId = requestAnimationFrame(raf);
-
     return () => {
-      clearTimeout(observerTimer);
-      revealObserver.disconnect();
       window.removeEventListener("resize", updateViewportVars);
-      cancelAnimationFrame(rafId);
-      lenis.destroy();
     };
   }, []);
+
+  // On every route change: ensure instant rendering & reset scroll
+  useEffect(() => {
+    const html = document.documentElement;
+    html.classList.add("has-js", "is-loaded", "is-ready");
+
+    // Scroll to top instantly on route change
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+      lenisRef.current.resize();
+    } else {
+      window.scrollTo(0, 0);
+    }
+
+    // Guarantee all page elements are immediately revealed with zero blocking
+    const revealAll = () => {
+      const targets = document.querySelectorAll(
+        ".scroll-reveal, [data-scroll], [data-anim-slide], .c-tile-feature, .c-hero-home_image-container"
+      );
+      targets.forEach((el) => {
+        el.classList.add("is-revealed", "is-inview");
+      });
+    };
+
+    revealAll();
+    const t1 = setTimeout(revealAll, 100);
+    const t2 = setTimeout(revealAll, 300);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+  }, [pathname]);
 
   return <>{children}</>;
 }

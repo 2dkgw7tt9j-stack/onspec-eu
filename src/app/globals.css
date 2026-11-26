@@ -511,22 +511,25 @@ body {
   animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Universal Smooth Scroll Reveal */
-.scroll-reveal {
-  opacity: 0;
-  transform: translate3d(0, 24px, 0);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+/* Universal 100% Content Visibility & Smooth Elevation */
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.scroll-reveal.is-inview,
-.scroll-reveal.is-revealed {
-  opacity: 1 !important;
-  transform: translate3d(0, 0, 0) !important;
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Fallback for JavaScript-disabled */
-html.has-no-js .scroll-reveal {
+/* Guarantee all content is immediately 100% visible on every device and route */
+.scroll-reveal,
+[data-reveal] {
   opacity: 1 !important;
   transform: none !important;
 }

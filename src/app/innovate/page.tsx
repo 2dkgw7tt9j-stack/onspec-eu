@@ -8,25 +8,25 @@ import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 const IDEA_ARCHETYPES = [
   {
     id: "physical-automated",
-    code: "ARCH-01 // AUTOMATED RETAIL & PODS",
+    code: "Category 01: Automated Retail & Pods",
     title: "Physical Automated Business or Kiosk Concept",
     examples: "Custom vending concept, unmanned retail store, automated locker pod, smart wash or self service station",
   },
   {
     id: "digital-ai-platform",
-    code: "ARCH-02 // AI & DIGITAL PLATFORM",
+    code: "Category 02: AI & Digital Platform",
     title: "Digital Platform, SaaS, or AI-Powered Venture",
     examples: "Vertical AI service, automated marketplace, booking platform, or B2B software-enabled business",
   },
   {
     id: "hybrid-commercial",
-    code: "ARCH-03 // HYBRID COMMERCIAL VENTURE",
+    code: "Category 03: Hybrid Commercial Venture",
     title: "Brick-and-Mortar + Automated Operations",
     examples: "Specialty hospitality, studio/court rental, logistics hub, or physical service with automated booking & CRM",
   },
   {
     id: "existing-expansion",
-    code: "ARCH-04 // NEW PRODUCT OR EXPANSION",
+    code: "Category 04: New Product or Expansion",
     title: "New Concept for an Existing Business",
     examples: "Launching a new automated revenue stream, Cyprus/EU market expansion, or custom hardware/software rollout",
   },
@@ -49,7 +49,7 @@ const TIMEFRAME_OPTIONS = [
 
 const FOUNDRY_SPECS = [
   {
-    groupTitle: "01 // Feasibility & Commercial Blueprinting",
+    groupTitle: "Phase 01: Feasibility & Commercial Blueprinting",
     rows: [
       {
         label: "Preliminary Proposal Cost",
@@ -74,7 +74,7 @@ const FOUNDRY_SPECS = [
     ],
   },
   {
-    groupTitle: "02 // Hardware, Software & Operational Execution",
+    groupTitle: "Phase 02: Hardware, Software & Operational Execution",
     rows: [
       {
         label: "Commercial Hardware Sourcing",
@@ -144,7 +144,7 @@ export default function InnovatePage() {
       <section className="container mt-fluid-4xl mb-fluid-md">
         <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-4xl">
           <p className="text-eyebrow text-black uppercase tracking-widest">
-            PILLAR 03 // INNOVATE : SUBMIT YOUR IDEA
+            Pillar 03 — Innovate • Submit Your Idea
           </p>
           <h1 className="sr-only">
             Your Idea. Our Execution. Have an idea? Let&apos;s build it.
@@ -196,25 +196,25 @@ export default function InnovatePage() {
           <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
             <span className="heading-2xs text-black">Free Proposal</span>
             <span className="text-md text-neutral-600">
-              01 // Preliminary Feasibility &amp; Cost Quotation
+              01. Preliminary Feasibility &amp; Cost Quotation
             </span>
           </li>
           <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
             <span className="heading-2xs text-black">48 to 72 hrs</span>
             <span className="text-md text-neutral-600">
-              02 // Executive Assessment &amp; Architecture Review
+              02. Executive Assessment &amp; Architecture Review
             </span>
           </li>
           <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
             <span className="heading-2xs text-black">Turnkey Build</span>
             <span className="text-md text-neutral-600">
-              03 // Hardware, Suppliers, AI Systems &amp; Launch
+              03. Hardware, Suppliers, AI Systems &amp; Launch
             </span>
           </li>
           <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
             <span className="heading-2xs text-black">Cyprus &amp; EU</span>
             <span className="text-md text-neutral-600">
-              04 // Independent Legal &amp; Corporate Network Ready
+              04. Independent Legal &amp; Corporate Network Ready
             </span>
           </li>
         </ul>
@@ -433,7 +433,7 @@ export default function InnovatePage() {
               <div className="bg-sand p-unit-md rounded-md flex flex-col gap-y-4 border border-[#A8B1BE]/30">
                 <div className="flex items-center justify-between">
                   <h2 className="heading-xs text-black">
-                    01 // Concept Direction
+                    1. Concept Direction
                   </h2>
                   <span className="font-mono text-xs text-neutral-600">
                     STEP 1 OF 3
@@ -478,7 +478,7 @@ export default function InnovatePage() {
               <div className="bg-sand p-unit-md rounded-md flex flex-col gap-y-4 border border-[#A8B1BE]/30">
                 <div className="flex items-center justify-between">
                   <h2 className="heading-xs text-black">
-                    02 // Idea, Goals, Budget &amp; Timeframe
+                    2. Idea, Goals, Budget &amp; Timeframe
                   </h2>
                   <span className="font-mono text-xs text-neutral-600">
                     STEP 2 OF 3
@@ -598,7 +598,7 @@ export default function InnovatePage() {
               <div className="bg-sand p-unit-md rounded-md flex flex-col gap-y-4 border border-[#A8B1BE]/30">
                 <div className="flex items-center justify-between">
                   <h2 className="heading-xs text-black">
-                    03 // Where Should We Send Your Free Proposal?
+                    3. Where Should We Send Your Free Proposal?
                   </h2>
                   <span className="font-mono text-xs text-neutral-600">
                     STEP 3 OF 3

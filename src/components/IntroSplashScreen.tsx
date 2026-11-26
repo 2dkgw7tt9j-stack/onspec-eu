@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useEffect, useState, useCallback } from "react";
+import { usePathname } from "next/navigation";
 
 export function IntroSplashScreen() {
-  const [mounted, setMounted] = useState(true);
+  const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
   const [progress, setProgress] = useState(0);
 
@@ -11,11 +13,27 @@ export function IntroSplashScreen() {
     setIsExiting(true);
     setTimeout(() => {
       setMounted(false);
-    }, 650);
+    }, 450);
   }, []);
 
   useEffect(() => {
-    // Escape key listener to allow instant skip
+    // ONLY show on the homepage, and ONLY ONCE per browser session
+    if (pathname !== "/") {
+      return;
+    }
+
+    try {
+      if (sessionStorage.getItem("onspec_intro_shown")) {
+        return;
+      }
+      sessionStorage.setItem("onspec_intro_shown", "true");
+    } catch {
+      // Ignore storage errors if disabled
+    }
+
+    setMounted(true);
+
+    // Escape key or any click to allow instant skip
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         dismiss();
@@ -23,9 +41,9 @@ export function IntroSplashScreen() {
     };
     window.addEventListener("keydown", handleKeyDown);
 
-    // Progress counter animation from 0 to 100 over ~2.5 seconds
+    // Snappy progress animation from 0 to 100 over ~1.4 seconds
     const startTime = performance.now();
-    const duration = 2500; // ms
+    const duration = 1400; // ms
 
     let animId: number;
     const updateProgress = (now: number) => {
@@ -36,10 +54,9 @@ export function IntroSplashScreen() {
       if (elapsed < duration) {
         animId = requestAnimationFrame(updateProgress);
       } else {
-        // Hold at 100% briefly, then trigger elegant exit at ~2.8s total
         setTimeout(() => {
           dismiss();
-        }, 300);
+        }, 200);
       }
     };
 
@@ -49,16 +66,17 @@ export function IntroSplashScreen() {
       window.removeEventListener("keydown", handleKeyDown);
       cancelAnimationFrame(animId);
     };
-  }, [dismiss]);
+  }, [pathname, dismiss]);
 
   if (!mounted) return null;
 
   return (
     <aside
       aria-label="Welcome to Onspec"
-      className={`fixed inset-0 z-[9999999] flex flex-col justify-between bg-black text-white select-none transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${
+      onClick={dismiss}
+      className={`fixed inset-0 z-[9999999] flex flex-col justify-between bg-black text-white select-none transition-all duration-500 ease-[cubic-bezier(0.85,0,0.15,1)] cursor-pointer ${
         isExiting
-          ? "opacity-0 scale-[1.03] pointer-events-none"
+          ? "opacity-0 scale-[1.02] pointer-events-none"
           : "opacity-100 scale-100 pointer-events-auto"
       }`}
     >
@@ -75,7 +93,7 @@ export function IntroSplashScreen() {
       <header className="relative z-10 flex items-center justify-between px-4 py-4 sm:px-12 sm:py-8 font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">
         <div className="flex items-center gap-2">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-          <span>ONSPEC // CYPRUS &amp; EU</span>
+          <span>ONSPEC &bull; CYPRUS &amp; EUROPE</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-neutral-500 hidden sm:inline">INITIALIZING</span>
@@ -88,7 +106,7 @@ export function IntroSplashScreen() {
       {/* Center Cinematic Brand Composition */}
       <main className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto my-auto py-6 sm:py-12">
         {/* White Onspec Logo with Crisp Transparent Background */}
-        <div className="relative mb-6 sm:mb-8 transform transition-all duration-1000 ease-out">
+        <div className="relative mb-6 sm:mb-8 transform transition-all duration-700 ease-out">
           <img
             src="/onspec_logo_dark_bg.png"
             alt="ONSPEC Logo"
@@ -96,44 +114,40 @@ export function IntroSplashScreen() {
           />
         </div>
 
-        {/* Monospace Architectural Eyebrow */}
+        {/* Professional Human Typography (No robotic slashes) */}
         <p className="font-mono text-[11px] sm:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase text-neutral-400 font-semibold mb-2 sm:mb-3">
-          Welcome to Onspec
+          TURNKEY BUSINESS ARCHITECTURE &bull; AI SYSTEMS
         </p>
 
-        {/* Slogan */}
-        <h1 className="text-2xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight font-sans">
-          Your vision. Our execution.
+        {/* Primary Slogan */}
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4 sm:mb-6 max-w-2xl leading-tight">
+          Welcome to Onspec.
+          <br />
+          <span className="text-neutral-300 font-normal">
+            Your vision. Our execution.
+          </span>
         </h1>
 
-        {/* Status Indicator */}
-        <div className="mt-6 sm:mt-8 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-950 px-3.5 py-1.5 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-neutral-300">
-          <span className="h-1.5 w-1.5 rounded-full bg-white" />
-          <span>Engineered To Operate : Fully Prepared</span>
-        </div>
-      </main>
-
-      {/* Bottom Telemetry & Controls */}
-      <footer className="relative z-10 px-4 pb-4 sm:px-12 sm:pb-8">
-        <div className="flex items-center justify-between font-mono text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mb-2.5">
-          <span className="truncate max-w-[190px] sm:max-w-none">SPEC // READY BUSINESSES</span>
-          <button
-            type="button"
-            onClick={dismiss}
-            className="group inline-flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors cursor-pointer py-1 px-2 -mr-1 shrink-0"
-          >
-            <span>Skip</span>
-            <span className="text-[10px] text-neutral-600 sm:inline hidden group-hover:text-neutral-400">[ESC]</span>
-            <span className="transition-transform group-hover:translate-x-0.5">→</span>
-          </button>
-        </div>
-
-        {/* Precision Progress Bar */}
-        <div className="relative h-[2px] w-full bg-neutral-900 rounded-full overflow-hidden">
+        {/* Minimalist Progress Meter */}
+        <div className="w-48 sm:w-64 h-1 bg-neutral-900 rounded-full overflow-hidden mb-4 border border-neutral-800">
           <div
-            className="h-full bg-white transition-[width] duration-100 ease-out"
+            className="h-full bg-white transition-all duration-75 ease-out rounded-full"
             style={{ width: `${progress}%` }}
           />
+        </div>
+
+        <p className="text-[11px] sm:text-xs text-neutral-500 font-mono tracking-wider">
+          Click anywhere or press Esc to enter
+        </p>
+      </main>
+
+      {/* Bottom Footer Telemetry */}
+      <footer className="relative z-10 flex items-center justify-between px-4 py-4 sm:px-12 sm:py-8 font-mono text-[10px] sm:text-xs tracking-wider text-neutral-500 border-t border-neutral-900/80">
+        <div className="flex items-center gap-3">
+          <span>LIMASSOL &bull; NICOSIA &bull; ATHENS</span>
+        </div>
+        <div className="text-neutral-400">
+          <span>&copy; {new Date().getFullYear()} ONSPEC</span>
         </div>
       </footer>
     </aside>

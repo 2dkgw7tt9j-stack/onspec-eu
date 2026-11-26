@@ -106,7 +106,7 @@ export function AutomationInteractiveConsole() {
             <div className="inline-flex items-center gap-2.5 rounded-full border border-[#A8B1BE]/25 bg-neutral-900/70 px-3.5 py-1.5">
               <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
               <span className="font-mono text-xs uppercase tracking-widest text-[#F7F8FA]/90">
-                SECTION 05 // PILLAR 02 : AI & BUSINESS AUTOMATION
+                Pillar 02 — AI & Business Automation
               </span>
             </div>
             <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-[#F7F8FA] sm:text-5xl">
@@ -218,7 +218,7 @@ export function AutomationInteractiveConsole() {
                   <div className="flex items-center gap-2">
                     <span className="h-2 w-2 rounded-full bg-white" />
                     <span className="font-mono text-xs uppercase tracking-widest text-white/80">
-                      {activeModule.code} // {activeModule.category}
+                      {activeModule.code} • {activeModule.category}
                     </span>
                   </div>
                   <h3 className="mt-1.5 text-2xl font-extrabold text-[#F7F8FA]">
@@ -295,7 +295,7 @@ export function AutomationInteractiveConsole() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[10px] uppercase tracking-wider text-[#A8B1BE]">
-                        01 // INBOUND EVENT TRIGGER
+                        Step 01 • Inbound Event Trigger
                       </span>
                       <span className="h-2 w-2 rounded-full bg-white" />
                     </div>
@@ -314,7 +314,7 @@ export function AutomationInteractiveConsole() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[10px] uppercase tracking-wider text-white/90">
-                        02 // ONSPEC AUTONOMOUS ACTION
+                        Step 02 • Onspec Autonomous Action
                       </span>
                       <span className="font-mono text-[10px] text-white/90">
                         {simStep >= 3 ? "COMPLETED < 400ms" : "PROCESSING..."}
@@ -377,7 +377,7 @@ export function AutomationInteractiveConsole() {
           <div className="flex flex-col justify-between gap-4 border-b border-[#A8B1BE]/20 pb-5 sm:flex-row sm:items-center">
             <div>
               <p className="font-mono text-xs uppercase tracking-widest text-white/80">
-                UNIFIED INTEGRATION BUS // CONNECTED PLATFORMS
+                Unified Integration Bus • Connected Platforms
               </p>
               <h3 className="mt-1 text-xl font-bold text-[#F7F8FA]">
                 Every communication, booking, and management tool synchronized.

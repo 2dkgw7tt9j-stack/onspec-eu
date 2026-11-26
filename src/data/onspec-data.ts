@@ -113,28 +113,28 @@ export const BRAND_INFO = {
 export const HERO_TELEMETRY_ITEMS = [
   {
     index: "01",
-    code: "LAUNCH // AUTOMATED DISPENSERS",
+    code: "LAUNCH &bull; AUTOMATED DISPENSERS",
     title: "Turnkey Automated Dispensers & Meal Stations",
     metric: "3 Flagship Models",
     href: "/businesses",
   },
   {
     index: "02",
-    code: "AUTOMATE // WEB & AI SYSTEMS",
+    code: "AUTOMATE &bull; WEB & AI SYSTEMS",
     title: "Digital Engineering & Autonomous AI",
     metric: "Sub-1s & 24/7 Ops",
     href: "/ai-web",
   },
   {
     index: "03",
-    code: "INNOVATE // CUSTOM EXECUTION",
+    code: "INNOVATE &bull; CUSTOM EXECUTION",
     title: "Submit Your Idea : Free Proposal",
     metric: "Concept to Reality",
     href: "/innovate",
   },
   {
     index: "04",
-    code: "CONNECT // CYPRUS LEGAL NETWORK",
+    code: "CONNECT &bull; CYPRUS LEGAL NETWORK",
     title: "Vetted Legal & Corporate Referrals",
     metric: "Independent Counsel",
     href: "/connect",
@@ -142,19 +142,19 @@ export const HERO_TELEMETRY_ITEMS = [
 ];
 
 export const MARQUEE_TICKER_ITEMS = [
-  "01 // LUXURY PERFUME AUTOMATED DISPENSERS : LOCATIONS & LEGAL READY",
-  "02 // HYGIENE, PERIOD WELLNESS & ANTISEPTIC VENDING STATIONS",
-  "03 // ON-DEMAND HOT FOOD & REFRIGERATED MEAL HEATING STATIONS",
-  "04 // HIGH-CONVERTING NEXT.JS WEB PLATFORMS & PORTALS",
-  "05 // 24/7 AUTONOMOUS AI AGENTS & WORKFLOW AUTOMATIONS",
-  "06 // SENIOR WEBSITE CRO DIAGNOSTICS & CYPRUS LEGAL NETWORK",
+  "01. LUXURY PERFUME AUTOMATED DISPENSERS &bull; LOCATIONS &amp; LEGAL READY",
+  "02. HYGIENE, PERIOD WELLNESS &amp; ANTISEPTIC VENDING STATIONS",
+  "03. ON-DEMAND HOT FOOD &amp; REFRIGERATED MEAL HEATING STATIONS",
+  "04. HIGH-CONVERTING NEXT.JS WEB PLATFORMS &amp; PORTALS",
+  "05. 24/7 AUTONOMOUS AI AGENTS &amp; WORKFLOW AUTOMATIONS",
+  "06. SENIOR WEBSITE CRO DIAGNOSTICS &amp; CYPRUS LEGAL NETWORK",
 ];
 
 export const PILLARS: PillarSpec[] = [
   {
     id: "launch",
     index: "01",
-    code: "PILLAR 01 // LAUNCH",
+    code: "Pillar 01 — Launch",
     name: "Turnkey Automated Dispensers & Hot Meal Stations",
     shortTitle: "Ready Dispensers & Meal Stations",
     fullTitle: "Turnkey Automated Perfume, Hygiene & Hot Meal Stations",
@@ -177,7 +177,7 @@ export const PILLARS: PillarSpec[] = [
   {
     id: "automate",
     index: "02",
-    code: "PILLAR 02 // AUTOMATE",
+    code: "Pillar 02 — Automate",
     name: "AI & Web Platforms",
     shortTitle: "AI & Websites",
     fullTitle: "Digital Engineering Studio • Web Platforms, AI & Diagnostics",
@@ -200,7 +200,7 @@ export const PILLARS: PillarSpec[] = [
   {
     id: "innovate",
     index: "03",
-    code: "PILLAR 03 // INNOVATE",
+    code: "Pillar 03 — Innovate",
     name: "INNOVATE",
     shortTitle: "Submit Your Idea",
     fullTitle: "Custom Concept Evaluation & End to End Execution",
@@ -223,7 +223,7 @@ export const PILLARS: PillarSpec[] = [
   {
     id: "connect",
     index: "04",
-    code: "PILLAR 04 // CONNECT",
+    code: "Pillar 04 — Connect",
     name: "CONNECT",
     shortTitle: "Legal & Professional Network",
     fullTitle: "Cyprus Legal & Professional Services Network",
@@ -327,7 +327,7 @@ export const VENDING_FLAGSHIP_BLUEPRINT: ExecutionStage[] = [
 export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
   {
     id: "smart-perfume-dispenser",
-    specCode: "SPEC-L01 // PERFUME-STATION",
+    specCode: "SPEC-L01 • Perfume Station",
     title: "Automated Luxury Perfume Dispenser Station",
     category: "Automated Retail",
     featured: true,
@@ -378,7 +378,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
   },
   {
     id: "hygiene-sanitary-vending",
-    specCode: "SPEC-L02 // HYGIENE-STATION",
+    specCode: "SPEC-L02 • Hygiene Station",
     title: "Automated Essential Hygiene & Period Wellness Vending Station",
     category: "Automated Retail",
     featured: true,
@@ -430,7 +430,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
   },
   {
     id: "hot-food-meal-station",
-    specCode: "SPEC-L03 // HOT-MEAL-STATION",
+    specCode: "SPEC-L03 • Hot Meal Station",
     title: "Automated Hot Food & On-Demand Meal Heating Station",
     category: "Automated Food & Hospitality",
     featured: true,
@@ -484,7 +484,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
 export const AUTOMATION_MODULES: AutomationModule[] = [
   {
     id: "high-converting-web-development",
-    code: "PRACTICE 01 // WEB-ENGINEERING",
+    code: "Practice 01 — Web Engineering",
     title: "High-Converting Web Development",
     category: "Customer Facing",
     tagline: "Sub-second digital platforms and landing pages architected from scratch with Next.js App Router and conversion psychology.",
@@ -505,7 +505,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
   },
   {
     id: "autonomous-ai-concierge",
-    code: "PRACTICE 02 // AI-CONCIERGE",
+    code: "Practice 02 — AI Concierge",
     title: "Autonomous Conversational AI Concierge",
     category: "Customer Facing",
     tagline: "Intelligent conversational agents connected to your product catalog, inventory, and scheduling APIs.",
@@ -526,7 +526,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
   },
   {
     id: "website-diagnostics-cro",
-    code: "PRACTICE 03 // DIAGNOSTICS-CRO",
+    code: "Practice 03 — Diagnostics & CRO",
     title: "Professional Website Diagnostics & CRO Teardowns",
     category: "Infrastructure",
     tagline: "Senior-engineer manual and programmatic teardowns analyzing conversion leaks, mobile friction, and Core Web Vitals.",
@@ -547,7 +547,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
   },
   {
     id: "lead-qualification-routing",
-    code: "PRACTICE 04 // LEAD-ROUTING",
+    code: "Practice 04 — Lead Routing",
     title: "Inbound Lead Qualification & Auto-Routing",
     category: "Operations & CRM",
     tagline: "Instantly enrich incoming inquiries, analyze purchase intent using LLM reasoning, and route qualified buyers.",
@@ -567,7 +567,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
   },
   {
     id: "multi-app-orchestration",
-    code: "PRACTICE 05 // WORKFLOW-SYNC",
+    code: "Practice 05 — Workflow Sync",
     title: "Multi-App Workflow Orchestration",
     category: "Operations & CRM",
     tagline: "Resilient, event-driven serverless webhooks syncing CRM, Airtable, Stripe, Supabase, and internal REST APIs.",
@@ -587,7 +587,7 @@ export const AUTOMATION_MODULES: AutomationModule[] = [
   },
   {
     id: "document-intelligence-ocr",
-    code: "PRACTICE 06 // DOC-OCR",
+    code: "Practice 06 — Document Intelligence",
     title: "Document Intelligence & OCR Extraction",
     category: "Finance & Admin",
     tagline: "Autonomous extraction of complex PDFs, supplier invoices, legal agreements, and receipts into clean typed JSON.",
@@ -655,7 +655,7 @@ export const CONNECTED_PLATFORMS_MATRIX = [
 export const CUSTOMER_JOURNEY_STEPS: CustomerJourneyStep[] = [
   {
     number: "01",
-    code: "STEP 01 // DISCOVERY",
+    code: "Step 01 — Discovery",
     title: "Discovery",
     subtitle: "Explore what is possible",
     description:
@@ -664,7 +664,7 @@ export const CUSTOMER_JOURNEY_STEPS: CustomerJourneyStep[] = [
   },
   {
     number: "02",
-    code: "STEP 02 // ENQUIRY",
+    code: "Step 02 — Enquiry",
     title: "Enquiry",
     subtitle: "Share your objective or concept",
     description:
@@ -673,7 +673,7 @@ export const CUSTOMER_JOURNEY_STEPS: CustomerJourneyStep[] = [
   },
   {
     number: "03",
-    code: "STEP 03 // ASSESSMENT",
+    code: "Step 03 — Assessment",
     title: "Assessment",
     subtitle: "Feasibility, scope & requirements",
     description:
@@ -682,7 +682,7 @@ export const CUSTOMER_JOURNEY_STEPS: CustomerJourneyStep[] = [
   },
   {
     number: "04",
-    code: "STEP 04 // PROPOSAL",
+    code: "Step 04 — Proposal",
     title: "Proposal",
     subtitle: "Transparent roadmap & quotation",
     description:
@@ -691,7 +691,7 @@ export const CUSTOMER_JOURNEY_STEPS: CustomerJourneyStep[] = [
   },
   {
     number: "05",
-    code: "STEP 05 // EXECUTION",
+    code: "Step 05 — Execution",
     title: "Execution",
     subtitle: "End-to-end build & coordination",
     description:
@@ -700,7 +700,7 @@ export const CUSTOMER_JOURNEY_STEPS: CustomerJourneyStep[] = [
   },
   {
     number: "06",
-    code: "STEP 06 // ONGOING SUPPORT",
+    code: "Step 06 — Ongoing Support",
     title: "Ongoing Support",
     subtitle: "Scale, optimize & automate further",
     description:
@@ -757,7 +757,7 @@ export const ECOSYSTEM_STAGES: EcosystemStage[] = [
 export const LEGAL_NETWORK_CATEGORIES: LegalServiceCategory[] = [
   {
     id: "immigration-matters",
-    code: "LEG-01 // IMMIGRATION",
+    code: "Category 01 — Immigration",
     title: "Immigration Matters",
     subtitle: "Relocation, Employment Permits & International Mobility in Cyprus",
     description:
@@ -773,7 +773,7 @@ export const LEGAL_NETWORK_CATEGORIES: LegalServiceCategory[] = [
   },
   {
     id: "residency-matters",
-    code: "LEG-02 // RESIDENCY",
+    code: "Category 02 — Residency",
     title: "Residency Matters",
     subtitle: "Permanent Residency, Investment Residency & Tax Domicile Coordination",
     description:
@@ -788,7 +788,7 @@ export const LEGAL_NETWORK_CATEGORIES: LegalServiceCategory[] = [
   },
   {
     id: "business-legal-matters",
-    code: "LEG-03 // CORPORATE & COMMERCIAL",
+    code: "Category 03 — Corporate & Commercial",
     title: "Business Related Legal Matters",
     subtitle: "Cyprus Company Formation, Commercial Contracts & Corporate Governance",
     description:
@@ -804,7 +804,7 @@ export const LEGAL_NETWORK_CATEGORIES: LegalServiceCategory[] = [
   },
   {
     id: "criminal-law",
-    code: "LEG-04 // DEFENSE & REPRESENTATION",
+    code: "Category 04 — Defense & Representation",
     title: "Criminal Law",
     subtitle: "Independent Defense Counsel, Regulatory Investigations & Court Representation",
     description:
@@ -819,7 +819,7 @@ export const LEGAL_NETWORK_CATEGORIES: LegalServiceCategory[] = [
   },
   {
     id: "legal-consultations",
-    code: "LEG-05 // ADVISORY CONSULTATIONS",
+    code: "Category 05 — Advisory Consultations",
     title: "Legal Consultations & Professional Guidance",
     subtitle: "Structured Legal Opinions, Pre Contract Reviews & Dispute Assessment",
     description:

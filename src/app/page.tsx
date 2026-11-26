@@ -236,35 +236,35 @@ const FEATURE_CAROUSEL_SPECS: {
   modalSpec: PrefabOpportunity;
 }[] = [
   {
-    label: "01 // LUXURY PERFUME DISPENSERS",
+    label: "01. Luxury Perfume Dispensers",
     headline:
       "Automated luxury fragrance dispensers in Cyprus beach clubs, 5-star hotels & nightlife venues.",
     image: "/images/perfume-station.jpg",
     modalSpec: PREFAB_OPPORTUNITIES[0],
   },
   {
-    label: "02 // HYGIENE & PERIOD WELLNESS",
+    label: "02. Hygiene & Period Wellness",
     headline:
       "Autonomous period care, antiseptic first-aid and sanitization vending in high-density corridors.",
     image: "/images/hygiene-station.jpg",
     modalSpec: PREFAB_OPPORTUNITIES[1],
   },
   {
-    label: "03 // HOT FOOD HEATING STATIONS",
+    label: "03. Hot Food Heating Stations",
     headline:
       "24/7 refrigerated on-demand heated chef-quality meals for construction sites & workplaces.",
     image: "/images/hot-meal-station.jpg",
     modalSpec: PREFAB_OPPORTUNITIES[2],
   },
   {
-    label: "04 // WEB ENGINEERING & AI STUDIO",
+    label: "04. Web Engineering & AI Studio",
     headline:
       "Sub-second Next.js web applications, 24/7 autonomous AI agents, and website diagnostics.",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85",
     modalSpec: {
       id: "ai-web-studio-spec",
-      specCode: "SPEC-A02 // STUDIO",
+      specCode: "SPEC-A02 • Studio",
       title: "Digital Engineering Studio • Web Platforms & Autonomous AI",
       category: "Digital & Ecommerce",
       featured: true,
@@ -324,14 +324,14 @@ const FEATURE_CAROUSEL_SPECS: {
     },
   },
   {
-    label: "05 // CUSTOM VENTURE FOUNDRY",
+    label: "05. Custom Venture Foundry",
     headline:
       "Your idea does not have to stay an idea. Free preliminary proposal and execution.",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85",
     modalSpec: {
       id: "custom-venture-foundry-spec",
-      specCode: "SPEC-I03 // FOUNDRY",
+      specCode: "SPEC-I03 • Foundry",
       title: "Custom Business Concept Evaluation & Turnkey Execution",
       category: "Semi-Automated",
       featured: true,
@@ -395,14 +395,14 @@ const FEATURE_CAROUSEL_SPECS: {
     },
   },
   {
-    label: "04 // CYPRUS LEGAL & CORPORATE",
+    label: "06. Cyprus Legal & Corporate",
     headline:
       "The right professionals. The right guidance. Without the hassle.",
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85",
     modalSpec: {
       id: "cyprus-legal-network-spec",
-      specCode: "SPEC-C04 // LEGAL-NET",
+      specCode: "SPEC-C04 • Legal Network",
       title: "Cyprus Legal & Professional Services Network",
       category: "Physical Infrastructure",
       featured: true,
@@ -851,7 +851,7 @@ export default function HomePage() {
                         <div className="absolute bottom-3 left-3.5 right-3.5 z-10 flex items-end justify-between text-white">
                           <div>
                             <span className="font-mono text-[10px] uppercase tracking-widest text-white/90 block">
-                              {card.index} // ONSPEC
+                              {card.index} &bull; ONSPEC
                             </span>
                             <p className="text-xs md:text-sm font-semibold leading-tight group-hover:underline">
                               {card.title}
@@ -928,7 +928,7 @@ export default function HomePage() {
                         <div className="absolute bottom-3 left-3.5 right-3.5 z-10 flex items-end justify-between text-white">
                           <div>
                             <span className="font-mono text-[10px] uppercase tracking-widest text-white/90 block">
-                              {card.index} // ONSPEC
+                              {card.index} &bull; ONSPEC
                             </span>
                             <p className="text-xs md:text-sm font-semibold leading-tight group-hover:underline">
                               {card.title}
@@ -1038,7 +1038,7 @@ export default function HomePage() {
                     [ 04 PILLARS ]
                   </span>
                   <span className="font-mono text-xs uppercase tracking-widest text-neutral-600">
-                    ONSPEC.EU // 4 EXECUTION PILLARS
+                    ONSPEC.EU &bull; 4 EXECUTION PILLARS
                   </span>
                 </div>
                 <svg
@@ -1307,7 +1307,7 @@ export default function HomePage() {
             {ideaResultRef ? (
               <div className="rounded-2xl bg-white p-6 border border-black/40 shadow-sm space-y-2">
                 <p className="font-mono text-xs uppercase tracking-widest text-black">
-                  IDEA REGISTERED // REF {ideaResultRef}
+                  IDEA REGISTERED &bull; REFERENCE {ideaResultRef}
                 </p>
                 <p className="text-sm font-semibold text-black">
                   Thank you, {ideaName}. Our Venture Foundry team is preparing

@@ -72,7 +72,7 @@ export function HomepageIdeaQuickIntake() {
             <div className="inline-flex items-center gap-2 rounded-full border border-[#A8B1BE]/50 bg-white px-3.5 py-1.5">
               <Sparkles className="h-3.5 w-3.5 text-black" />
               <span className="font-mono text-xs uppercase tracking-widest text-black">
-                SECTION 07 // PILLAR 03 : SUBMIT YOUR IDEA
+                Pillar 03 — Innovate • Submit Your Idea
               </span>
             </div>
 
@@ -105,7 +105,7 @@ export function HomepageIdeaQuickIntake() {
                   </div>
                   <div>
                     <p className="font-mono text-[11px] uppercase tracking-wider text-black font-semibold">
-                      01 // CONFIDENTIAL CONCEPT REVIEW
+                      Step 01 • Confidential Concept Review
                     </p>
                     <h3 className="text-sm font-bold text-black">
                       We assess feasibility & technical requirements
@@ -125,7 +125,7 @@ export function HomepageIdeaQuickIntake() {
                   </div>
                   <div>
                     <p className="font-mono text-[11px] uppercase tracking-wider text-black font-semibold">
-                      02 // FREE PRELIMINARY PROPOSAL & QUOTATION
+                      Step 02 • Free Preliminary Proposal & Quotation
                     </p>
                     <h3 className="text-sm font-bold text-black">
                       Potential solutions, estimated costs & next steps
@@ -145,7 +145,7 @@ export function HomepageIdeaQuickIntake() {
                   </div>
                   <div>
                     <p className="font-mono text-[11px] uppercase tracking-wider text-black font-semibold">
-                      03 // TURNKEY EXECUTION & LAUNCH
+                      Step 03 • Turnkey Execution & Launch
                     </p>
                     <h3 className="text-sm font-bold text-black">
                       We source, build, automate & coordinate launch
@@ -178,7 +178,7 @@ export function HomepageIdeaQuickIntake() {
                 <div className="flex items-center gap-2.5">
                   <span className="h-2 w-2 rounded-full bg-white" />
                   <span className="font-mono text-xs uppercase tracking-widest text-[#F7F8FA]">
-                    IDEA INTAKE ENGINE // FREE PRELIMINARY PROPOSAL
+                    Idea Intake Engine • Free Preliminary Proposal
                   </span>
                 </div>
                 <span className="rounded bg-neutral-900 px-2.5 py-0.5 font-mono text-[11px] text-white">

@@ -242,7 +242,7 @@ export default function ServicesPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
                     <span className="font-mono text-xs text-white uppercase tracking-wider font-semibold">
-                      ONSPEC.EU // {srv.pillar}
+                      ONSPEC.EU • {srv.pillar}
                     </span>
                   </div>
                 </div>

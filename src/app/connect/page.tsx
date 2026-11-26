@@ -54,7 +54,7 @@ export default function ConnectPage() {
       <section className="container pt-[24svh] md:pt-[32svh] mb-fluid-2xl" id="page-heading">
         <div className="max-w-[760px] m-auto text-center">
           <p className="text-eyebrow text-black uppercase tracking-widest mb-6">
-            PILLAR 04 // CONNECT : CYPRUS LEGAL &amp; PROFESSIONAL NETWORK
+            Pillar 04 — Connect • Cyprus Legal &amp; Professional Network
           </p>
           <div className="c-fadein-text text-heading-md">
             <div className="c-fadein-text_line is-active">
@@ -424,7 +424,7 @@ export default function ConnectPage() {
           <div className="c-push-newsletter_content !max-w-xl !w-full">
             <div className="c-push-newsletter_heading">
               <p className="text-eyebrow text-black uppercase tracking-widest">
-                CONFIDENTIAL REFERRAL INTAKE // CYPRUS
+                CONFIDENTIAL REFERRAL INTAKE • CYPRUS
               </p>
               <h2 className="heading-sm text-black">
                 Request an Introduction to an Independent Cyprus Legal Professional

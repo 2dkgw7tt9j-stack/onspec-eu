@@ -26,7 +26,7 @@ interface PracticeCapability {
 
 const AUDITFLOW_PRACTICES: PracticeCapability[] = [
   {
-    code: "PRACTICE 01 // AUTONOMOUS-AI",
+    code: "Practice 01 — Autonomous AI",
     tagline: "AUTONOMOUS SYSTEMS (DEFAULT)",
     title: "Autonomous AI & Workflow Automations",
     subtitle: "Engineered to Eliminate Operational Friction",
@@ -77,7 +77,7 @@ const AUDITFLOW_PRACTICES: PracticeCapability[] = [
     anchorId: "ai-automations",
   },
   {
-    code: "PRACTICE 02 // WEB-ENGINEERING-CRO",
+    code: "Practice 02 — Web Engineering & Diagnostics",
     tagline: "FLAGSHIP WEB & CRO DIAGNOSTICS",
     title: "High-Converting Web Platforms & Website Diagnostics",
     subtitle: "Sub-Second Next.js Architecture, CRO Diagnostics & Exact Code Patches",
@@ -228,8 +228,8 @@ export default function AiWebPage() {
             {AUDITFLOW_PRACTICES.map((practice, idx) => {
               const active = idx === activePracticeIndex;
               const shortLabels = [
-                "01 // Autonomous AI & Workflows (Default)",
-                "02 // Web Engineering & Diagnostics",
+                "01. Autonomous AI & Workflows (Default)",
+                "02. Web Engineering & Diagnostics",
               ];
               return (
                 <button
@@ -331,8 +331,7 @@ export default function AiWebPage() {
                   className="p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/40 hover:border-black/40 hover:bg-white transition-all space-y-1.5 hover-lift"
                 >
                   <div className="flex items-center gap-1.5 font-mono text-[10px] text-neutral-400 font-semibold">
-                    <span>0{cIdx + 1}</span>
-                    <span>//</span>
+                    <span>0{cIdx + 1}.</span>
                   </div>
                   <h4 className="text-xs sm:text-sm font-bold text-black leading-snug">
                     {cap.title}
@@ -417,7 +416,7 @@ export default function AiWebPage() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold mb-2">
-                  01 // Select Practice *
+                  1. Select Your Practice *
                 </label>
                 <select
                   value={projectType}

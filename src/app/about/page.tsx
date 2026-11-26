@@ -68,7 +68,7 @@ export default function AboutPage() {
       >
         <div className="max-w-[740px] m-auto text-center">
           <p className="font-mono text-xs text-black uppercase tracking-widest mb-6 font-semibold">
-            ABOUT ONSPEC // {BRAND_INFO.domain.toUpperCase()}
+            About Onspec • {BRAND_INFO.domain.toUpperCase()}
           </p>
           <div className="c-fadein-text text-heading-md" style={{ marginTop: "1rem" }}>
             <div className="c-fadein-text_line is-active">
@@ -206,7 +206,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex flex-col gap-y-2">
                     <p className="body-sm font-bold text-black">
-                      {pillar.index} // {pillar.shortTitle}
+                      {pillar.index}. {pillar.shortTitle}
                     </p>
                     <p className="body-sm text-neutral-600">
                       {pillar.coreMessage}
@@ -647,7 +647,7 @@ export default function AboutPage() {
             {referenceId ? (
               <div className="rounded-2xl bg-white border border-black p-5 space-y-2">
                 <p className="font-mono text-xs uppercase tracking-widest text-black">
-                  DOSSIER DISPATCH REGISTERED // {referenceId}
+                  DOSSIER DISPATCH REGISTERED • REFERENCE {referenceId}
                 </p>
                 <p className="text-xs text-neutral-600">
                   Our Cyprus operations desk has logged your request for{" "}
