@@ -274,7 +274,7 @@ export default function AboutPage() {
                 </p>
                 <div className="c-bento-box_stats_bottom">
                   <p className="text-md max-w-[340px] text-[#F7F8FA]/85">
-                    Our visual &amp; operational architecture balances Clean White clarity (#F7F8FA), Pure Black precision (#000000), Architectural Monochrome depth, Pure Black precision (#000000), and Silver Grey precision (#A8B1BE).
+                    Our visual &amp; operational architecture balances Clean White clarity (#F7F8FA), Pure Black precision (#000000), Architectural Monochrome depth, and Silver Grey precision (#A8B1BE).
                   </p>
                   <ul className="c-bento-box_stats_list">
                     <li className="c-bento-box_stats_item">
