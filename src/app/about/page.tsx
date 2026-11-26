@@ -60,34 +60,56 @@ export default function AboutPage() {
         About ONSPEC ({BRAND_INFO.domain}) : {BRAND_INFO.slogan}
       </h1>
 
-      {/* Section 1: Hero Header leading directly into The Four Pillars */}
+      {/* Section 1: Giant Editorial Statement (Kept exactly as original) */}
       <section
-        className="container px-4 sm:px-6 pt-[14svh] md:pt-[18svh] mb-8 md:mb-12"
+        className="container px-4 sm:px-6 pt-[16svh] md:pt-[22svh] mb-fluid-2xl"
         id="page-heading"
       >
-        <div className="max-w-[780px] m-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/5 px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-black">
-            <span className="h-1.5 w-1.5 rounded-full bg-black inline-block animate-pulse" />
-            <span>About Onspec • {BRAND_INFO.domain.toUpperCase()}</span>
+        <div className="max-w-[740px] m-auto text-center">
+          <p className="font-mono text-xs text-black uppercase tracking-widest mb-6 font-semibold">
+            ABOUT ONSPEC • {BRAND_INFO.domain.toUpperCase()}
+          </p>
+          <div className="c-fadein-text text-heading-md" style={{ marginTop: "1rem" }}>
+            <div className="c-fadein-text_line is-active">
+              <span
+                className="c-fadein-text_line_inner"
+                style={{ opacity: 1, transform: "translate(0)" }}
+              >
+                Your vision. Our execution.
+              </span>
+            </div>
+            <div className="c-fadein-text_line is-active mt-2">
+              <span
+                className="c-fadein-text_line_inner"
+                style={{ opacity: 1, transform: "translate(0)" }}
+              >
+                We believe you shouldn&apos;t have to start from scratch to build or modernize a business.
+              </span>
+            </div>
+            <div className="c-fadein-text_line is-active mt-4">
+              <span
+                className="c-fadein-text_line_inner text-neutral-600"
+                style={{ opacity: 1, transform: "translate(0)" }}
+              >
+                Onspec bridges the gap between having an idea and turning it into a functioning, automated commercial operation across Cyprus and the European Union.
+              </span>
+            </div>
           </div>
-
-          <h1 className="heading-xl text-black font-extrabold tracking-tight">
-            The Four Pillars of ONSPEC
-          </h1>
-
-          <p className="font-mono text-sm uppercase tracking-wider text-black font-semibold">
-            Your vision. Our execution.
-          </p>
-
-          <p className="text-base sm:text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-            We believe you shouldn&apos;t have to start from scratch to build or modernize a business. Onspec bridges the gap between having an idea and turning it into a functioning, automated commercial operation across Cyprus and the European Union.
-          </p>
         </div>
       </section>
 
       {/* Section 2: The Four Pillars Grid with Interactive Scroll & Staggered Animations */}
       <section id="four-pillars" className="container px-4 sm:px-6 mb-fluid-2xl">
         <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-3 items-center text-center mx-auto max-w-3xl mb-4">
+            <p className="text-eyebrow text-black uppercase tracking-widest">
+              FOUR PILLARS • ONE EXECUTION PARTNER
+            </p>
+            <h2 className="heading-xl text-black font-extrabold tracking-tight">
+              The Four Pillars of ONSPEC
+            </h2>
+          </div>
+
           <div className="flex items-center justify-between border-b border-black/10 pb-4">
             <span className="font-mono text-xs uppercase tracking-widest text-neutral-500">
               FOUR CORE PILLARS • 01 TO 04
