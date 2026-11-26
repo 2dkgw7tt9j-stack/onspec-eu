@@ -12,8 +12,8 @@ const PILLAR_OPTIONS: { value: EnquiryPillar; label: string; code: string; desc:
   {
     value: "01_LAUNCH",
     code: "01 // LAUNCH",
-    label: "Ready-to-Launch Business",
-    desc: "Smart Vending, Coffee Stations, Kiosks, Laundromats, Car Wash, E-Commerce",
+    label: "Ready Businesses Business",
+    desc: "Smart Vending, Coffee Stations, Kiosks, Laundromats, Car Wash, Ecommerce",
   },
   {
     value: "02_AUTOMATE",
@@ -37,7 +37,7 @@ const PILLAR_OPTIONS: { value: EnquiryPillar; label: string; code: string; desc:
     value: "GENERAL",
     code: "00 // GENERAL",
     label: "General Partnership & Advisory",
-    desc: "Executive inquiry, multi-unit venture portfolio, or general consultation",
+    desc: "Executive inquiry, multi unit venture portfolio, or general consultation",
   },
 ];
 
@@ -523,7 +523,7 @@ export default function ContactPage() {
               </form>
             )}
 
-            {/* 4-Pillar Quick Directory Cards below Contact Form */}
+            {/* Four Pillar Quick Directory Cards below Contact Form */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
               {PILLARS.map((p) => (
                 <Link

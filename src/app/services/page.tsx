@@ -24,7 +24,7 @@ const SERVICES_LIST = [
     href: "/businesses",
     cta: "Explore Ready Businesses",
     image:
-      "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85",
   },
   {
     code: "SERVICE 02",
@@ -108,7 +108,7 @@ const SERVICES_LIST = [
     href: "/contact?service=legal",
     cta: "Request Legal Consultation",
     image:
-      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=85",
   },
 ];
 
@@ -300,7 +300,7 @@ export default function ServicesPage() {
                 onChange={(e) => setQuickService(e.target.value)}
                 className="w-full bg-[#101D35] border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#27B58A]"
               >
-                <option value="SERVICE 01 : Ready Businesses">SERVICE 01 : Ready-to-Launch Business Units</option>
+                <option value="SERVICE 01 : Ready Businesses">SERVICE 01 : Ready Businesses Business Units</option>
                 <option value="SERVICE 02 : Web & Software">SERVICE 02 : Custom Websites & Software Platforms</option>
                 <option value="SERVICE 03 : AI Automation">SERVICE 03 : AI Systems & Workflow Automation</option>
                 <option value="SERVICE 04 : Custom Idea">SERVICE 04 : Custom Business Idea Execution</option>

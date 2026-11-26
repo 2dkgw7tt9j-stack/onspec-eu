@@ -115,7 +115,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     title: "Vending Networks",
     subtitle: "24/7 Cashless Smart Retail",
     image:
-      "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=900&q=85",
     column: "left",
     small: false,
     opportunityId: "smart-vending-network",
@@ -125,7 +125,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     title: "Automated Coffee Stations",
     subtitle: "Swiss Bean-to-Cup Kiosks",
     image:
-      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=85",
     column: "left",
     small: true,
     opportunityId: "automated-coffee-stations",
@@ -142,20 +142,20 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
   },
   {
     index: "04",
-    title: "Self-Service Kiosks",
+    title: "Self Service Kiosks",
     subtitle: "Unmanned Retail & Service Pods",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=900&q=85",
     column: "right",
     small: true,
-    opportunityId: "self-service-kiosks",
+    opportunityId: "self service-kiosks",
   },
   {
     index: "05",
     title: "Cyprus Legal Network",
     subtitle: "Independent Counsel & Setup",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=900&q=85",
     column: "right",
     small: false,
     href: "/connect",
@@ -179,12 +179,12 @@ const STACKING_PILLAR_CARDS = [
   {
     index: 0,
     pillarCode: "PILLAR 01 : LAUNCH",
-    title: "Ready-to-Launch Businesses",
+    title: "Ready Businesses",
     subtitle:
-      "Vending, Coffee, Kiosks, Laundromats & Car Washes : Location, equipment, suppliers & Cyprus registration coordinated end-to-end.",
+      "Vending, Coffee, Kiosks, Laundromats and Car Washes : Location, equipment, suppliers and Cyprus registration coordinated end to end.",
     metric: "4 to 10 WEEKS TO LIVE",
     image:
-      "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1400&q=85",
     href: "/businesses",
     cta: "Explore Ready Businesses",
   },
@@ -193,7 +193,7 @@ const STACKING_PILLAR_CARDS = [
     pillarCode: "PILLAR 02 : AUTOMATE",
     title: "AI & Business Automation",
     subtitle:
-      "WhatsApp Business API, 24/7 AI Customer Support Agents, Booking Assistants, CRM Pipelines & Invoice Workflows.",
+      "WhatsApp Business API, 24/7 AI Customer Support Agents, Booking Assistants, CRM Pipelines and Invoice Workflows.",
     metric: "UP TO 78% LESS MANUAL WORK",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
@@ -205,7 +205,7 @@ const STACKING_PILLAR_CARDS = [
     pillarCode: "PILLAR 03 : INNOVATE",
     title: "Your Idea. Our Execution.",
     subtitle:
-      "Have an idea? Tell us what you’re thinking. Receive a free preliminary proposal, quotation & full execution roadmap.",
+      "Have an idea? Tell us what you are thinking. Receive a free preliminary proposal, quotation and full execution roadmap.",
     metric: "FREE PRELIMINARY PROPOSAL",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85",
@@ -217,10 +217,10 @@ const STACKING_PILLAR_CARDS = [
     pillarCode: "PILLAR 04 : CONNECT",
     title: "Legal & Professional Services",
     subtitle:
-      "Independent Cyprus Legal Network across Immigration, Residency, Corporate Formation, Commercial & Criminal Law.",
+      "Independent Cyprus Legal Network across Immigration, Residency, Corporate Formation, Commercial and Regulatory Law.",
     metric: "CYPRUS & EU COUNSEL",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1400&q=85",
     href: "/contact",
     cta: "Contact Our Team",
     isFinalCard: true,
@@ -240,15 +240,15 @@ const FEATURE_CAROUSEL_SPECS: {
   {
     label: "01 // TURNKEY VENDING & RETAIL",
     headline:
-      "Automated revenue. Locations, hardware, suppliers & Cyprus registration handled.",
+      "Automated revenue. Locations, hardware, suppliers and Cyprus registration handled.",
     image:
-      "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85",
     modalSpec: PREFAB_OPPORTUNITIES[0],
   },
   {
     label: "02 // AI & WHATSAPP AUTOMATION",
     headline:
-      "Your business doesn’t need more manual work. It needs smarter systems.",
+      "Your business does not need more manual work. It needs smarter systems.",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85",
     modalSpec: {
@@ -260,13 +260,13 @@ const FEATURE_CAROUSEL_SPECS: {
       tagline:
         "24/7 multilingual AI agents, official WhatsApp pipelines, autonomous booking, and CRM synchronization.",
       shortDescription:
-        "Production-grade AI and workflow automation engineered around how your business already works.",
+        "Production grade AI and workflow automation engineered around how your business already works.",
       fullDescription:
         "Onspec designs and integrates intelligent automation architectures that eliminate repetitive manual tasks across WhatsApp, email, web chat, booking calendars, CRM pipelines, and accounting workflows, reducing response times to under 4 seconds and freeing up to 78% of administrative overhead.",
       investmentTier: "Custom Modular Architecture",
       estimatedCapital: "€2,500 to €14,500 (Tailored System Build)",
       timeline: "2 to 4 Weeks to Live Deployment",
-      locationStrategy: "Cloud & On-Premise Integration : Cyprus, EU & Global",
+      locationStrategy: "Cloud and On Premise Integration : Cyprus, EU and Global",
       autonomyLevel: "95% Automated Triage & Execution",
       weeklyOwnerHours: "Saves 15 to 35+ staff hrs / week",
       image:
@@ -293,13 +293,13 @@ const FEATURE_CAROUSEL_SPECS: {
         },
         {
           step: "STAGE 03",
-          title: "Sandbox Stress-Testing & Team Handoff Rules",
+          title: "Sandbox Stress Testing & Team Handoff Rules",
           detail:
-            "Verifying multi-language accuracy, escalation triggers, and instant human takeover notifications.",
+            "Verifying multi language accuracy, escalation triggers, and instant human takeover notifications.",
         },
         {
           step: "STAGE 04",
-          title: "Production Go-Live & Telemetry Monitoring",
+          title: "Production Go Live & Telemetry Monitoring",
           detail:
             "Launching 24/7 autonomous operation with ongoing prompt and conversion optimization.",
         },
@@ -313,13 +313,13 @@ const FEATURE_CAROUSEL_SPECS: {
         { label: "ROI METRIC", value: "Up to 78% Manual Workload Reduction" },
       ],
       cyprusSetupNotes:
-        "Tailored for Cyprus & EU businesses where WhatsApp and instant multilingual response drive customer conversion.",
+        "Tailored for Cyprus and EU businesses where WhatsApp and instant multilingual response drive customer conversion.",
     },
   },
   {
     label: "03 // CUSTOM VENTURE FOUNDRY",
     headline:
-      "Your idea doesn’t have to stay an idea. Free preliminary proposal & execution.",
+      "Your idea does not have to stay an idea. Free preliminary proposal and execution.",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85",
     modalSpec: {
@@ -331,7 +331,7 @@ const FEATURE_CAROUSEL_SPECS: {
       tagline:
         "From raw business concept to structured feasibility blueprint, free preliminary quotation, and full market launch.",
       shortDescription:
-        "Tell us what you are thinking, we evaluate feasibility, provide a free preliminary proposal, and build it end-to-end.",
+        "Tell us what you are thinking, we evaluate feasibility, provide a free preliminary proposal, and build it end to end.",
       fullDescription:
         "Whether you want to bring a new physical service concept to Cyprus, build a custom automated retail network, or launch a digital platform, Onspec acts as your execution partner. You submit your idea, our specialists evaluate commercial and technical feasibility, and we deliver a free preliminary proposal before coordinating the entire build.",
       investmentTier: "Custom Project Quotation",
@@ -370,7 +370,7 @@ const FEATURE_CAROUSEL_SPECS: {
         },
         {
           step: "STAGE 04",
-          title: "End-to-End Build & Handover",
+          title: "End to End Build & Handover",
           detail:
             "Onspec coordinates procurement, setup, automation, and launch readiness.",
         },
@@ -381,7 +381,7 @@ const FEATURE_CAROUSEL_SPECS: {
         { label: "TURNAROUND", value: "2 to 3 Business Days for Assessment" },
         { label: "SCOPE", value: "Physical, Digital or Hybrid Ventures" },
         { label: "LEGAL & CORP", value: "Coordinated via Cyprus Legal Network" },
-        { label: "SUPPORT", value: "Post-Launch Scaling & AI Optimization" },
+        { label: "SUPPORT", value: "Post Launch Scaling & AI Optimization" },
       ],
       cyprusSetupNotes:
         "Designed for local and international founders seeking a trusted on-the-ground execution partner in Cyprus.",
@@ -392,7 +392,7 @@ const FEATURE_CAROUSEL_SPECS: {
     headline:
       "The right professionals. The right guidance. Without the hassle.",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=85",
     modalSpec: {
       id: "cyprus-legal-network-spec",
       specCode: "SPEC-C04 // LEGAL-NET",
@@ -412,13 +412,13 @@ const FEATURE_CAROUSEL_SPECS: {
       autonomyLevel: "Coordinated Professional Introduction",
       weeklyOwnerHours: "Streamlined Documentation Intake",
       image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85",
+        "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=85",
       whatsIncluded: [
         "Structured assessment of your corporate, residency, immigration, or legal need",
         "Direct referral to a vetted independent licensed lawyer in Cyprus",
         "Business-related legal matters: company incorporation, shareholder agreements, commercial leases",
         "Immigration & Cyprus residency permit legal guidance",
-        "Criminal law representation & dedicated 1-on-1 legal consultations",
+        "Criminal law representation & dedicated 1 on 1 legal consultations",
       ],
       executionStages: [
         {
@@ -1139,10 +1139,10 @@ export default function HomePage() {
                             <span className="c-button_inner">
                               <span
                                 className="c-button_label-container"
-                                data-label="Explore Ready-to-Launch Specs"
+                                data-label="Explore Ready Businesses Specs"
                               >
                                 <span className="c-button_label">
-                                  Explore Ready-to-Launch Specs
+                                  Explore Ready Businesses Specs
                                 </span>
                               </span>
                             </span>
@@ -1274,7 +1274,7 @@ export default function HomePage() {
             Turnkey businesses built to operate.
           </p>
           <p className="text-xl md:text-2xl text-[#253B5B] max-w-2xl mx-auto mt-4 font-normal">
-            Pre-engineered ventures, intelligent AI workflows, and professional Cyprus execution, ready on Day 1.
+            Turnkey engineered ventures, intelligent AI workflows, and professional Cyprus execution, ready on Day 1.
           </p>
         </div>
       </section>
@@ -1290,9 +1290,9 @@ export default function HomePage() {
                 We built Onspec around a clear conviction: launching a new
                 venture or modernizing an existing business in Cyprus and Europe
                 should not require months of fragmented vendor hunting. From our{" "}
-                <strong>6-Step Customer Journey</strong> (
+                <strong>Six Step Customer Journey</strong> (
                 {CUSTOMER_JOURNEY_STEPS.map((s) => s.title).join(" → ")}) to our{" "}
-                <strong>7-Stage Long-Term Business Ecosystem</strong> (
+                <strong>7-Stage Long Term Business Ecosystem</strong> (
                 {ECOSYSTEM_STAGES.map((e) => e.title).join(" → ")}), we act as
                 your single execution partner.
               </p>

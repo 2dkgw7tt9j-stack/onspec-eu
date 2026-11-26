@@ -14,13 +14,13 @@ import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 
 const PILLAR_IMAGES: Record<string, string> = {
   launch:
-    "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=900&q=85",
+    "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=900&q=85",
   automate:
     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
   innovate:
     "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=85",
   connect:
-    "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=85",
+    "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=900&q=85",
 };
 
 export default function AboutPage() {
@@ -47,7 +47,7 @@ export default function AboutPage() {
       name: "About Page Executive Dossier Request",
       email,
       whatsapp,
-      message: "Requested ONSPEC Corporate Profile & 4-Pillar Ecosystem Dossier",
+      message: "Requested ONSPEC Corporate Profile & Four Pillar Ecosystem Dossier",
     });
     setSubmitting(false);
     if (res.ok) {
@@ -122,7 +122,7 @@ export default function AboutPage() {
                       className="c-image_img is-loaded h-full w-full object-cover"
                       height={600}
                       width={900}
-                      src="https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=900&q=85"
+                      src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=900&q=85"
                     />
                   </picture>
                 </div>
@@ -228,7 +228,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 4: Lightship company.html .c-bento-box 4-Pillar & Color Philosophy Showcase */}
+      {/* Section 4: Lightship company.html .c-bento-box Four Pillar & Color Philosophy Showcase */}
       <section className="mt-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
@@ -357,7 +357,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 5: Interactive 6-Step Customer Journey (Discovery -> Enquiry -> Assessment -> Proposal -> Execution -> Ongoing Support) */}
+      {/* Section 5: Interactive Six Step Customer Journey (Discovery -> Enquiry -> Assessment -> Proposal -> Execution -> Ongoing Support) */}
       <section id="customer-journey" className="mt-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
@@ -372,11 +372,11 @@ export default function AboutPage() {
               From Discovery to Ongoing Support
             </div>
             <p className="text-md text-[#253B5B]">
-              Select any stage in the 6-step protocol below to inspect how Onspec guides your project from first contact to long-term operation.
+              Select any stage in the 6-step protocol below to inspect how Onspec guides your project from first contact to long term operation.
             </p>
           </div>
 
-          {/* Interactive 6-Step Switcher Bar + Active Detail Card */}
+          {/* Interactive Six Step Switcher Bar + Active Detail Card */}
           <div className="rounded-[20px] bg-white border border-[#A8B1BE]/45 p-6 md:p-10 space-y-8 shadow-sm">
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
               {CUSTOMER_JOURNEY_STEPS.map((step, idx) => {
@@ -454,7 +454,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Section 6: 7-Stage Long-Term Business Ecosystem .c-accordion (1:1 company.html Values Accordion) */}
+      {/* Section 6: 7-Stage Long Term Business Ecosystem .c-accordion (1:1 company.html Values Accordion) */}
       <section className="mt-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
@@ -469,7 +469,7 @@ export default function AboutPage() {
               7-Stage Business Ecosystem
             </div>
             <p className="text-md text-[#253B5B]">
-              A customer can start with a single ready-to-launch business or AI workflow and expand through every layer of the Onspec ecosystem.
+              A customer can start with a single ready to launch business or AI workflow and expand through every layer of the Onspec ecosystem.
             </p>
           </div>
 
@@ -556,7 +556,7 @@ export default function AboutPage() {
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={1200}
                     width={1600}
-                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=85"
+                    src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1600&q=85"
                   />
                 </picture>
               </div>
@@ -573,11 +573,11 @@ export default function AboutPage() {
               <div className="c-image_parallax h-full w-full">
                 <picture className="c-image_inner h-full w-full block">
                   <img
-                    alt="Explore Ready-to-Launch Businesses"
+                    alt="Explore Ready Businesses"
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={750}
                     width={1200}
-                    src="https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1200&q=85"
+                    src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85"
                   />
                 </picture>
               </div>
@@ -588,7 +588,7 @@ export default function AboutPage() {
               </span>
               <div className="c-tile-page_content">
                 <h2 className="text-xl">
-                  Explore 7 Ready-to-Launch Business Models
+                  Explore 7 Ready Businesses Business Models
                 </h2>
                 <Link className="absolute-link text-xl opacity-75" href="/launch">
                   Explore Launch →

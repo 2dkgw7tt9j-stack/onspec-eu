@@ -600,11 +600,11 @@ export default function ConnectPage() {
               <div className="c-image_parallax h-full w-full">
                 <picture className="c-image_inner h-full w-full block">
                   <img
-                    alt="Launch a Ready-to-Run Business in Cyprus"
+                    alt="Launch a Ready to Run Business in Cyprus"
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={750}
                     width={1200}
-                    src="https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1200&q=85"
+                    src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85"
                   />
                 </picture>
               </div>

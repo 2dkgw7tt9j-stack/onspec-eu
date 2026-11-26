@@ -347,7 +347,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     autonomyLevel: "92% Autonomous (Cloud Telemetry + Scheduled Restock)",
     weeklyOwnerHours: "3 to 6 hrs / week",
     image:
-      "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
       "Opportunity analysis & prime location scouting/securing in Cyprus",
       "Commercial smart vending hardware with touchscreen & lift/spiral delivery",
@@ -374,7 +374,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     title: "Automated Specialty Coffee Stations",
     category: "Automated Retail",
     featured: true,
-    tagline: "Fresh-bean Swiss engineered espresso kiosks operating 24/7 without barista payroll.",
+    tagline: "Fresh bean Swiss engineered espresso kiosks operating 24/7 without barista payroll.",
     shortDescription:
       "Self contained commercial barista corners delivering specialty espresso, iced coffee, and matcha with cashless ordering and automated CIP cleaning cycles.",
     fullDescription:
@@ -386,7 +386,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     autonomyLevel: "90% Autonomous (Automated Rinsing + Telemetry Alerts)",
     weeklyOwnerHours: "4 to 7 hrs / week",
     image:
-      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
       "Commercial dual-grinder fresh-bean automated espresso kiosk",
       "Integrated cup dispenser, ice-module option & architectural cabinet",
@@ -415,14 +415,14 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
   {
     id: "self service-kiosks",
     specCode: "SPEC-L03 // KIOSK-OS",
-    title: "Self Service Micro-Retail & Service Kiosks",
+    title: "Self Service Micro Retail & Service Kiosks",
     category: "Automated Retail",
     featured: true,
     tagline: "Compact unmanned retail pods for electronics accessories, travel essentials, and pharmacy items.",
     shortDescription:
-      "High-margin unattended micro-stores positioned in tourist zones, hotels, malls, and coastal promenades with automated security and inventory tracking.",
+      "High margin unattended micro stores positioned in tourist zones, hotels, malls, and coastal promenades with automated security and inventory tracking.",
     fullDescription:
-      "Self Service Kiosks unlock high value retail square footage without full shop lease commitments or retail shift wages. Ideal for sun-care, travel electronics, power banks, gourmet grab-and-go, or automated key/locker services across Cyprus hospitality hubs.",
+      "Self Service Kiosks unlock high value retail square footage without full shop lease commitments or retail shift wages. Ideal for sun care, travel electronics, power banks, gourmet grab and go, or automated key/locker services across Cyprus hospitality hubs.",
     investmentTier: "Tier 2 : Hospitality & Tourism Retail",
     estimatedCapital: "€16,000 to €42,000",
     timeline: "5 to 8 Weeks to Live Operation",
@@ -430,7 +430,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     autonomyLevel: "94% Autonomous",
     weeklyOwnerHours: "3 to 5 hrs / week",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
       "Weather-rated or indoor interactive touchscreen kiosk unit",
       "Robotic elevator product delivery for fragile high ticket items",
@@ -464,9 +464,9 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     featured: true,
     tagline: "Recession resilient neighborhood utility infrastructure with cashless central payment and auto dosing.",
     shortDescription:
-      "Staffless commercial laundry hubs featuring industrial washer-extractors, high-efficiency dryers, automatic detergent dosing, and remote door/payment control.",
+      "Staffless commercial laundry hubs featuring industrial washer-extractors, high efficiency dryers, automatic detergent dosing, and remote door/payment control.",
     fullDescription:
-      "Self-service smart laundromats are one of the highest-retention physical asset businesses worldwide. By eliminating on-site cash handling and manual detergent sales through automatic dosing pumps and central touchscreen payment terminals, owners operate a clean, predictable utility business.",
+      "Self-service smart laundromats are one of the highest retention physical asset businesses worldwide. By eliminating on-site cash handling and manual detergent sales through automatic dosing pumps and central touchscreen payment terminals, owners operate a clean, predictable utility business.",
     investmentTier: "Tier 3 : Anchor Physical Infrastructure",
     estimatedCapital: "€48,000 to €95,000",
     timeline: "8 to 12 Weeks to Live Operation",
@@ -508,7 +508,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     featured: true,
     tagline: "High-throughput 24/7 cashless vehicle wash bays engineered for Cyprus’s year round sun & dust climate.",
     shortDescription:
-      "Multi-bay self service jet wash or automated touchless laser wash systems with water recycling, contactless fleet cards, and remote chemical telemetry.",
+      "Multi bay self service jet wash or automated touchless laser wash systems with water recycling, contactless fleet cards, and remote chemical telemetry.",
     fullDescription:
       "With high vehicle ownership per capita and frequent Saharan dust events in Cyprus, automated car wash stations generate consistent year round transaction volume. Onspec coordinates site feasibility, European wash bay engineering, water filtration, and cashless payment terminals.",
     investmentTier: "Tier 3 : Commercial Roadside Asset",

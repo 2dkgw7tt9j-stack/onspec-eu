@@ -10,7 +10,7 @@ const IDEA_ARCHETYPES = [
     id: "physical-automated",
     code: "ARCH-01 // AUTOMATED RETAIL & PODS",
     title: "Physical Automated Business or Kiosk Concept",
-    examples: "Custom vending concept, unmanned retail store, automated locker pod, smart wash or self-service station",
+    examples: "Custom vending concept, unmanned retail store, automated locker pod, smart wash or self service station",
   },
   {
     id: "digital-ai-platform",
@@ -417,10 +417,10 @@ export default function InnovatePage() {
                   <span className="c-button_inner">
                     <span
                       className="c-button_label-container"
-                      data-label="Explore Ready-to-Launch Models"
+                      data-label="Explore Ready Businesses Models"
                     >
                       <span className="c-button_label">
-                        Explore Ready-to-Launch Models
+                        Explore Ready Businesses Models
                       </span>
                     </span>
                   </span>
@@ -725,7 +725,7 @@ export default function InnovatePage() {
         </div>
       </section>
 
-      {/* Section 5: Lightship specs.html 2-Column Upgrade Options Grid (6-Step Customer Journey) */}
+      {/* Section 5: Lightship specs.html 2-Column Upgrade Options Grid (Six Step Customer Journey) */}
       <section className="container my-fluid-2xl flex flex-col gap-y-8">
         <h2 className="heading-md text-[#101D35]">
           How Your Idea Becomes a Business (6-Stage Protocol)
@@ -823,7 +823,7 @@ export default function InnovatePage() {
                   </div>
                 </div>
                 <div className="c-product-widget_card -primary">
-                  <p className="text-eyebrow">Ready-to-Launch</p>
+                  <p className="text-eyebrow">Ready Businesses</p>
                   <div className="c-product-widget_content">
                     <p className="text-lg max-w-[15rem]">
                       Explore 7 proven turnkey business models

@@ -90,7 +90,7 @@ export function Footer() {
         <div className="c-footer_description">
           <p className="text-lg">Your vision. Our execution.</p>
           <p className="text-black/40 text-lg max-w-md">
-            Onspec engineers ready-to-launch turnkey businesses and production
+            Onspec engineers ready to launch turnkey businesses and production
             AI automation systems across Cyprus and the European Union. Powered
             by structured execution, we make the complicated simple.
           </p>

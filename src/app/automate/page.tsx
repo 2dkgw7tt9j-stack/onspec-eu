@@ -190,7 +190,7 @@ export default function AutomatePage() {
                 WhatsApp, Email, Websites, CRM, Booking &amp; ERP in One Loop.
               </div>
               <p className="text-md text-[#253B5B]">
-                Select any platform node to inspect how Onspec bridges your customer channels and back-office tools with sub-second bi-directional data sync.
+                Select any platform node to inspect how Onspec bridges your customer channels and back office tools with sub-second bi directional data sync.
               </p>
 
               {/* Interactive Node Pills */}
@@ -675,12 +675,12 @@ export default function AutomatePage() {
             <p className="text-eyebrow text-[#27B58A]">
               FINANCE, ADMIN &amp; INFRASTRUCTURE
             </p>
-            <h2 className="sr-only">Where AI Meets Back-Office Precision.</h2>
+            <h2 className="sr-only">Where AI Meets Back Office Precision.</h2>
             <div
               aria-hidden="true"
               className="c-split-text text-heading-sm text-[#101D35]"
             >
-              Where AI Meets Back-Office Precision.
+              Where AI Meets Back Office Precision.
             </div>
             <p className="text-md mt-2 text-[#253B5B]">
               Beyond customer chat and bookings, Onspec automates the internal backbone of your company: onboarding checklists, OCR invoice extraction, supplier purchase orders, and custom API integrations.

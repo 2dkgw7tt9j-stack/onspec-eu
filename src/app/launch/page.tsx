@@ -45,7 +45,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
     xPercent: 52,
     yPercent: 28,
     image:
-      "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=960&q=85",
+      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=960&q=85",
   },
   {
     id: "hs-suppliers",
@@ -53,11 +53,11 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
     label: "Wholesale Suppliers",
     title: "Coordinating Direct Wholesale Suppliers",
     description:
-      "We establish your supply chain with vetted Cyprus and EU distributors, from high-margin beverages, snacks, and specialty coffee beans to automated dosing detergents or 3PL fulfillment.",
+      "We establish your supply chain with vetted Cyprus and EU distributors, from high margin beverages, snacks, and specialty coffee beans to automated dosing detergents or 3PL fulfillment.",
     xPercent: 74,
     yPercent: 40,
     image:
-      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=960&q=85",
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=960&q=85",
   },
   {
     id: "hs-cyprus-reg",
@@ -93,7 +93,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
     xPercent: 78,
     yPercent: 70,
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=960&q=85",
+      "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=960&q=85",
   },
 ];
 
@@ -222,11 +222,11 @@ export default function LaunchPage() {
               <div className="c-image c-hero-visual_image -cover -overlay -lazy-load is-loaded h-full w-full">
                 <picture className="c-image_inner h-full w-full block">
                   <img
-                    alt="PILLAR 01 : LAUNCH: Ready-to-Launch Prefab Businesses"
+                    alt="PILLAR 01 : LAUNCH: Ready Businesses Prefab Businesses"
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={1400}
                     width={2000}
-                    src="https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=2000&q=85"
+                    src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=2000&q=85"
                   />
                 </picture>
               </div>
@@ -267,7 +267,7 @@ export default function LaunchPage() {
               TURNKEY PREFABRICATED BUSINESS CREATION
             </p>
             <p className="text-lg text-[#253B5B] max-w-2xl">
-              Built around proven unit economics and remote cloud telemetry, Onspec’s ready-to-launch business models remove the guesswork of starting a company. We coordinate prime location scouting, commercial hardware, wholesale suppliers, Cyprus corporate registration via independent legal professionals, and complete operational commissioning.
+              Built around proven unit economics and remote cloud telemetry, Onspec’s ready businesses business models remove the guesswork of starting a company. We coordinate prime location scouting, commercial hardware, wholesale suppliers, Cyprus corporate registration via independent legal professionals, and complete operational commissioning.
             </p>
           </div>
         </section>
@@ -368,14 +368,14 @@ export default function LaunchPage() {
               className="c-tabs c-turntable_tabs !bg-[#101D35] text-white p-6 md:p-10"
               style={{ clipPath: "inset(0 round var(--radius-md))" }}
             >
-              {/* Top Sticky Switcher Nav for all 7 Ready-to-Launch Business Models */}
+              {/* Top Sticky Switcher Nav for all 7 Ready Businesses Business Models */}
               <div className="flex flex-col items-center gap-4 mb-8">
                 <span className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
                   INTERACTIVE TURNTABLE &amp; EXECUTION HOTSPOT INSPECTOR
                 </span>
                 <nav
                   className="c-tabs_nav flex justify-center w-full overflow-x-auto pb-2"
-                  aria-label="7 Ready-to-Launch Business Models"
+                  aria-label="7 Ready Businesses Business Models"
                 >
                   <div className="c-switcher -background-light !pointer-events-auto">
                     <ul className="c-switcher_inner flex-wrap justify-center gap-1">
@@ -387,7 +387,7 @@ export default function LaunchPage() {
                           "03 Retail Kiosks",
                           "04 Laundromats",
                           "05 Express Car Wash",
-                          "06 E-Commerce",
+                          "06 Ecommerce",
                           "07 Semi-Automated",
                         ];
                         return (
@@ -643,7 +643,7 @@ export default function LaunchPage() {
                 The Turnkey Smart Vending Machine Business Blueprint
               </div>
               <p className="text-md text-[#253B5B]">
-                Our flagship entry-level and multi-unit scalable asset in Cyprus. We handle every step from demographic opportunity analysis and prime site agreements to contactless touchscreen hardware, wholesale FMCG suppliers, Cyprus company formation via independent legal professionals, and live cloud telemetry.
+                Our flagship entry-level and multi unit scalable asset in Cyprus. We handle every step from demographic opportunity analysis and prime site agreements to contactless touchscreen hardware, wholesale FMCG suppliers, Cyprus company formation via independent legal professionals, and live cloud telemetry.
               </p>
               <div className="pt-2">
                 <button
@@ -708,7 +708,7 @@ export default function LaunchPage() {
           </div>
         </section>
 
-        {/* Section 6: All 7 Ready-to-Launch Models .c-tile-card Carousel with + Modal Triggers (1:1 ae-1.html lines 1700-1945) */}
+        {/* Section 6: All 7 Ready Businesses Models .c-tile-card Carousel with + Modal Triggers (1:1 ae-1.html lines 1700-1945) */}
         <section className="my-[var(--grid-margin-xl)] pb-fluid-md pt-fluid-xl md:py-fluid-2xl pattern-background background-clip">
           <section className="flex flex-col gap-y-fluid-xl overflow-hidden">
             <div className="container">
@@ -716,12 +716,12 @@ export default function LaunchPage() {
                 <p className="text-eyebrow text-[#27B58A]">
                   COMPLETE PREFAB VENTURE CATALOG
                 </p>
-                <h2 className="sr-only">7 Ready-to-Launch Business Models</h2>
+                <h2 className="sr-only">7 Ready Businesses Business Models</h2>
                 <div
                   aria-hidden="true"
                   className="c-split-text anim-text-balance heading-xl text-[#101D35]"
                 >
-                  7 Ready-to-Launch Business Models
+                  7 Ready Businesses Business Models
                 </div>
               </div>
             </div>
