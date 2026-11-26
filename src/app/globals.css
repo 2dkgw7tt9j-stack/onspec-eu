@@ -361,11 +361,12 @@ body {
 
 /* Ensure header bar accommodates logo without cropping on scroll */
 .c-header {
-  --header-height: 4rem !important;
+  --header-height: 4.5rem !important;
 }
 
 .c-header_bar {
-  min-height: 4rem !important;
+  min-height: 4.5rem !important;
+  height: 4.5rem !important;
   align-items: center !important;
 }
 
@@ -374,6 +375,12 @@ body {
   align-items: center !important;
   justify-content: center !important;
   height: 100% !important;
+}
+
+.c-header_logo img {
+  max-height: 48px !important;
+  width: auto !important;
+  object-fit: contain !important;
 }
 
 .c-header_logo_link {

@@ -83,9 +83,9 @@ export function Navbar() {
       const easedClip = 1 - Math.pow(1 - progress, 3);
       const clipX = open ? 0 : Math.round(easedClip * maxClipX);
 
-      // Vertical clip: 64px bar when closed, full header height when menu is open
+      // Vertical clip: 72px bar when closed, full header height when menu is open
       const menuHeight = menuRef.current?.scrollHeight || window.innerHeight;
-      const clipY = open ? Math.max(el.clientHeight, menuHeight + 50) : 64;
+      const clipY = open ? Math.max(el.clientHeight, menuHeight + 50) : 72;
 
       el.style.setProperty("--clip-x", `${clipX}px`);
       el.style.setProperty("--clip-y", `${clipY}px`);
@@ -213,13 +213,13 @@ export function Navbar() {
               >
                 <span className="sr-only">ONSPEC Homepage</span>
                 <div
-                  className="c-header_logo_lottie flex items-center justify-center transition-all duration-300 py-1"
+                  className="c-header_logo_lottie flex items-center justify-center transition-all duration-300 py-0.5"
                   data-header-logo
                 >
                   <img 
                     src="/onspec_logo_transparent.png" 
                     alt="OnSpec / Engineered to Operate" 
-                    className="h-9 sm:h-11 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 drop-shadow-sm" 
+                    className="h-9 sm:h-11 md:h-12 lg:h-[48px] w-auto max-h-[48px] object-contain transition-all duration-300 drop-shadow-sm" 
                   />
                 </div>
               </Link>
