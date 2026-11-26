@@ -588,7 +588,7 @@ export default function AboutPage() {
               </span>
               <div className="c-tile-page_content">
                 <h2 className="text-xl">
-                  Explore 7 Ready Business Models
+                  Explore Ready Automated Business Models
                 </h2>
                 <Link className="absolute-link text-xl opacity-75" href="/launch">
                   Explore Launch →

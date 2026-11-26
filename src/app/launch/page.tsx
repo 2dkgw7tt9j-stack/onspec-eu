@@ -382,13 +382,8 @@ export default function LaunchPage() {
                       {PREFAB_OPPORTUNITIES.map((opp, idx) => {
                         const active = idx === activeOppIndex;
                         const shortLabels = [
-                          "01 Smart Vending",
-                          "02 EV Fast Charging",
-                          "03 Retail Kiosks",
-                          "04 Laundromats",
-                          "05 Express Car Wash",
-                          "06 Ecommerce",
-                          "07 Semi-Automated",
+                          "01 Luxury Perfume Stations",
+                          "02 Hygiene & Period Wellness",
                         ];
                         return (
                           <li key={opp.id} className="c-switcher_item">
@@ -716,18 +711,18 @@ export default function LaunchPage() {
                 <p className="text-eyebrow text-black">
                   COMPLETE PREFAB VENTURE CATALOG
                 </p>
-                <h2 className="sr-only">7 Ready Business Models</h2>
+                <h2 className="sr-only">2 Flagship Ready Business Models</h2>
                 <div
                   aria-hidden="true"
                   className="c-split-text anim-text-balance heading-xl text-black"
                 >
-                  7 Ready Business Models
+                  2 Flagship Ready Business Models
                 </div>
               </div>
             </div>
 
-            <div className="c-carousel" data-items-per-view="3">
-              <div className="c-carousel_container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 container">
+            <div className="c-carousel" data-items-per-view="2">
+              <div className="c-carousel_container grid grid-cols-1 md:grid-cols-2 gap-6 container max-w-5xl mx-auto">
                 {PREFAB_OPPORTUNITIES.map((opp) => (
                   <div key={opp.id} className="c-carousel_item @container">
                     <article className="c-tile-card -default h-full">

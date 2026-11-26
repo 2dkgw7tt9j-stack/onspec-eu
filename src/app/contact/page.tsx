@@ -12,14 +12,14 @@ const PILLAR_OPTIONS: { value: EnquiryPillar; label: string; code: string; desc:
   {
     value: "01_LAUNCH",
     code: "01 // LAUNCH",
-    label: "Ready Businesses",
-    desc: "Smart Vending, EV Charging Stations, Kiosks, Laundromats, Car Wash, Ecommerce",
+    label: "Turnkey Automated Dispensers",
+    desc: "Luxury Perfume Stations & Essential Hygiene/Period Wellness Vending",
   },
   {
     value: "02_AUTOMATE",
     code: "02 // AUTOMATE",
-    label: "AI & Business Automation",
-    desc: "AI Support Agents, WhatsApp API, Booking, CRM, Invoicing & Integrations",
+    label: "Web Platforms & AI Automations",
+    desc: "Sub-Second Next.js Platforms, 24/7 WhatsApp AI Agents & Senior Diagnostics",
   },
   {
     value: "03_INNOVATE",

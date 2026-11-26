@@ -651,9 +651,9 @@ export default function ConnectPage() {
                 </h2>
                 <Link
                   className="absolute-link text-xl opacity-75"
-                  href="/automate"
+                  href="/ai-web"
                 >
-                  Explore 10 AI Modules →
+                  Explore Studio Practices →
                 </Link>
               </div>
             </div>

@@ -301,9 +301,9 @@ export default function ServicesPage() {
                 onChange={(e) => setQuickService(e.target.value)}
                 className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-white/60"
               >
-                <option value="SERVICE 01 : Ready Businesses">SERVICE 01 : Ready Business Units</option>
-                <option value="SERVICE 02 : Web & Software">SERVICE 02 : Custom Websites & Software Platforms</option>
-                <option value="SERVICE 03 : AI Automation">SERVICE 03 : AI Systems & Workflow Automation</option>
+                <option value="SERVICE 01 : Automated Dispensers">SERVICE 01 : Automated Dispensers (Perfume & Hygiene Stations)</option>
+                <option value="SERVICE 02 : Web & AI Studio">SERVICE 02 : Web Platforms & Autonomous AI (Powered by AuditFlow)</option>
+                <option value="SERVICE 03 : CRO Diagnostics">SERVICE 03 : Professional Website Diagnostics & Code Patches</option>
                 <option value="SERVICE 04 : Custom Idea">SERVICE 04 : Custom Business Idea Execution</option>
                 <option value="SERVICE 05 : Legal & Advisory">SERVICE 05 : Cyprus Legal & Professional Advisory</option>
               </select>

@@ -24,13 +24,13 @@ export default function BusinessesPage() {
           Ready Businesses.
         </h1>
         <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-          Engineered turnkey business models ready to deploy across Cyprus and Europe in 4 to 10 weeks. Location, equipment, telemetry, and corporate structure coordinated end to end.
+          Engineered turnkey automated dispensary models ready to deploy across Cyprus and Europe in 3 to 5 weeks. Prime venues, commercial hardware, telemetry, supplier lines, and Cyprus corporate structure coordinated end to end.
         </p>
       </section>
 
-      {/* Ready Businesses Grid */}
-      <section className="container px-4 sm:px-6 pb-20 md:pb-28 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Ready Businesses Grid (2 Flagship Automated Dispensers) */}
+      <section className="container px-4 sm:px-6 pb-20 md:pb-28 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {PREFAB_OPPORTUNITIES.map((opp) => (
             <div
               key={opp.id}
@@ -38,7 +38,7 @@ export default function BusinessesPage() {
               className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl overflow-hidden flex flex-col justify-between transition-all hover:border-black hover:shadow-lg scroll-mt-28"
             >
               <div>
-                <div className="h-56 relative overflow-hidden">
+                <div className="h-64 relative overflow-hidden">
                   <img
                     src={opp.image}
                     alt={opp.title}
@@ -47,17 +47,23 @@ export default function BusinessesPage() {
                   <div className="absolute top-3 left-3 bg-black/90 text-white font-mono text-[11px] px-3 py-1 rounded-full uppercase tracking-wider font-semibold">
                     {opp.specCode}
                   </div>
+                  <div className="absolute bottom-3 right-3 bg-black/80 backdrop-blur-xs text-white font-mono text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">
+                    {opp.autonomyLevel}
+                  </div>
                 </div>
 
-                <div className="p-6">
-                  <h2 className="text-xl font-extrabold text-black mb-2">
+                <div className="p-6 md:p-8">
+                  <h2 className="text-2xl font-extrabold text-black mb-2">
                     {opp.title}
                   </h2>
-                  <p className="text-xs text-neutral-600 mb-4 leading-relaxed line-clamp-3">
+                  <p className="text-xs font-mono uppercase text-black font-semibold mb-3">
+                    {opp.tagline}
+                  </p>
+                  <p className="text-sm text-neutral-600 mb-5 leading-relaxed">
                     {opp.shortDescription}
                   </p>
 
-                  <div className="space-y-2 py-3 border-y border-[#D5DBE3] text-xs">
+                  <div className="space-y-2.5 py-4 border-y border-[#D5DBE3] text-xs">
                     <div className="flex justify-between items-center">
                       <span className="font-mono text-[#A8B1BE] uppercase">Capital:</span>
                       <span className="font-mono font-bold text-black">{opp.estimatedCapital}</span>
@@ -70,21 +76,25 @@ export default function BusinessesPage() {
                       <span className="font-mono text-[#A8B1BE] uppercase">Owner Hours:</span>
                       <span className="font-mono font-semibold text-black">{opp.weeklyOwnerHours}</span>
                     </div>
+                    <div className="flex justify-between items-start pt-1">
+                      <span className="font-mono text-[#A8B1BE] uppercase">Placement:</span>
+                      <span className="text-right text-xs text-black font-medium max-w-[65%]">{opp.locationStrategy}</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 pt-0 flex gap-3">
+              <div className="p-6 md:p-8 pt-0 flex gap-3">
                 <button
                   type="button"
                   onClick={() => setSelectedOpportunity(opp)}
-                  className="flex-1 bg-black text-white py-2.5 px-4 rounded-xl text-xs font-semibold hover:bg-neutral-900 transition-colors cursor-pointer text-center"
+                  className="flex-1 bg-black text-white py-3 px-4 rounded-xl text-xs font-semibold hover:bg-neutral-900 transition-colors cursor-pointer text-center"
                 >
                   View Specifications
                 </button>
                 <Link
                   href={`/contact?business=${encodeURIComponent(opp.title)}`}
-                  className="bg-black text-white font-bold py-2.5 px-4 rounded-xl text-xs hover:bg-neutral-900 transition-colors text-center"
+                  className="bg-black text-white font-bold py-3 px-5 rounded-xl text-xs hover:bg-neutral-900 transition-colors text-center"
                 >
                   Enquire
                 </Link>

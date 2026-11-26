@@ -112,67 +112,65 @@ interface SurroundHeroCard {
 const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
   {
     index: "01",
-    title: "Vending Networks",
-    subtitle: "24/7 Cashless Smart Retail",
+    title: "Luxury Perfume Stations",
+    subtitle: "24/7 Cashless Fragrance Dispensers",
     image:
-      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=900&q=85",
     column: "left",
     small: false,
-    opportunityId: "smart-vending-network",
-    href: "/businesses#smart-vending-network",
+    opportunityId: "smart-perfume-dispenser",
+    href: "/businesses#smart-perfume-dispenser",
   },
   {
     index: "02",
-    title: "EV Fast Charging Hubs",
-    subtitle: "24/7 Cashless Power Bays",
+    title: "Hygiene & Period Stations",
+    subtitle: "Essential Sanitary & Antiseptic Vending",
     image:
-      "https://images.unsplash.com/photo-1744973179090-73ec820176e9?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=900&q=85",
     column: "left",
     small: true,
-    opportunityId: "commercial-ev-charging",
-    href: "/businesses#commercial-ev-charging",
+    opportunityId: "hygiene-sanitary-vending",
+    href: "/businesses#hygiene-sanitary-vending",
   },
   {
     index: "03",
-    title: "AI Support Systems",
-    subtitle: "24/7 WhatsApp & CRM Agents",
+    title: "High-Converting Web Platforms",
+    subtitle: "Sub-Second Next.js & Stripe",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=85",
     column: "left",
     small: false,
-    href: "/ai-web",
+    href: "/ai-web#web-development",
   },
   {
     index: "04",
-    title: "Self Service Kiosks",
-    subtitle: "Unmanned Retail & Service Pods",
+    title: "Autonomous AI Agents",
+    subtitle: "24/7 WhatsApp & Multi-App Sync",
     image:
-      "https://images.unsplash.com/photo-1711632308710-f2e5bf722778?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
     column: "right",
     small: true,
-    opportunityId: "self-service-kiosks",
-    href: "/businesses#self-service-kiosks",
+    href: "/ai-web#ai-automations",
   },
   {
     index: "05",
-    title: "Cyprus Legal Network",
-    subtitle: "Independent Counsel & Setup",
+    title: "Website CRO Diagnostics",
+    subtitle: "Senior Engineer Code Patches",
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85",
     column: "right",
     small: false,
-    href: "/services#legal-network",
+    href: "/ai-web#diagnostics",
   },
   {
     index: "06",
-    title: "Turnkey Laundromats",
-    subtitle: "Automated Cashless Utility Hubs",
+    title: "Cyprus Legal Network",
+    subtitle: "Independent Licensed Counsel",
     image:
-      "https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85",
     column: "right",
     small: true,
-    opportunityId: "automated-laundromats",
-    href: "/businesses#automated-laundromats",
+    href: "/services#legal-network",
   },
 ];
 
@@ -183,24 +181,24 @@ const STACKING_PILLAR_CARDS = [
   {
     index: 0,
     pillarCode: "PILLAR 01 : LAUNCH",
-    title: "Ready Businesses",
+    title: "Turnkey Automated Dispensers",
     subtitle:
-      "Vending, EV Charging, Kiosks, Laundromats and Car Washes : Location, equipment, suppliers and Cyprus registration coordinated end to end.",
-    metric: "4 to 10 WEEKS TO LIVE",
+      "Luxury Perfume Automated Dispensers & Essential Hygiene/Period Wellness Vending Stations : Location, equipment, suppliers and Cyprus registration coordinated end to end.",
+    metric: "2 FLAGSHIP MODELS",
     image:
-      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1400&q=85",
     href: "/businesses",
     cta: "Explore Ready Businesses",
   },
   {
     index: 1,
     pillarCode: "PILLAR 02 : AUTOMATE",
-    title: "AI & Business Automation",
+    title: "Digital Engineering & AI Automations",
     subtitle:
-      "WhatsApp Business API, 24/7 AI Customer Support Agents, Booking Assistants, CRM Pipelines and Invoice Workflows.",
-    metric: "UP TO 78% LESS MANUAL WORK",
+      "Sub-second Next.js web applications, 24/7 WhatsApp & Telegram concierges, and senior-engineer website diagnostics with exact code patches.",
+    metric: "SUB-1s & 24/7 AI",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85",
     href: "/ai-web",
     cta: "Explore AI & Websites",
   },
@@ -242,86 +240,90 @@ const FEATURE_CAROUSEL_SPECS: {
   modalSpec: PrefabOpportunity;
 }[] = [
   {
-    label: "01 // TURNKEY VENDING & RETAIL",
+    label: "01 // LUXURY PERFUME DISPENSERS",
     headline:
-      "Automated revenue. Locations, hardware, suppliers and Cyprus registration handled.",
+      "Automated luxury fragrance dispensers in Cyprus beach clubs, 5-star hotels & nightlife venues.",
     image:
-      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=85",
     modalSpec: PREFAB_OPPORTUNITIES[0],
   },
   {
-    label: "02 // AI & WHATSAPP AUTOMATION",
+    label: "02 // HYGIENE & PERIOD WELLNESS",
     headline:
-      "Your business does not need more manual work. It needs smarter systems.",
+      "Autonomous period care, antiseptic first-aid and sanitization vending in high-density corridors.",
+    image:
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=85",
+    modalSpec: PREFAB_OPPORTUNITIES[1],
+  },
+  {
+    label: "03 // WEB ENGINEERING & AI STUDIO",
+    headline:
+      "Sub-second Next.js web applications, 24/7 autonomous AI agents, and website diagnostics.",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85",
     modalSpec: {
-      id: "ai-whatsapp-automation-suite",
-      specCode: "SPEC-A02 // AI-SYSTEMS",
-      title: "AI Customer Support & WhatsApp Business Automation Suite",
+      id: "ai-web-studio-spec",
+      specCode: "SPEC-A02 // STUDIO",
+      title: "Digital Engineering Studio • Web Platforms & Autonomous AI",
       category: "Digital & Ecommerce",
       featured: true,
       tagline:
-        "24/7 multilingual AI agents, official WhatsApp pipelines, autonomous booking, and CRM synchronization.",
+        "High-converting Next.js web platforms, 24/7 WhatsApp AI agents & senior website diagnostics.",
       shortDescription:
-        "Production grade AI and workflow automation engineered around how your business already works.",
+        "Sub-second digital platforms, autonomous customer concierges, and 48h website diagnostics.",
       fullDescription:
-        "Onspec designs and integrates intelligent automation architectures that eliminate repetitive manual tasks across WhatsApp, email, web chat, booking calendars, CRM pipelines, and accounting workflows, reducing response times to under 4 seconds and freeing up to 78% of administrative overhead.",
-      investmentTier: "Custom Modular Architecture",
-      estimatedCapital: "€2,500 to €14,500 (Tailored System Build)",
-      timeline: "2 to 4 Weeks to Live Deployment",
-      locationStrategy: "Cloud and On Premise Integration : Cyprus, EU and Global",
-      autonomyLevel: "95% Automated Triage & Execution",
-      weeklyOwnerHours: "Saves 15 to 35+ staff hrs / week",
+        "We architect sub-second Next.js web applications, deploy autonomous 24/7 AI agents and WhatsApp pipelines, and deliver professional senior-engineer website diagnostics with exact production code patches.",
+      investmentTier: "Fixed-Scope Sprints & Transparent Scoping",
+      estimatedCapital: "Custom Sprints on Request (Zero Retainer Lock-in)",
+      timeline: "2-Week Rapid Sprint Turnaround",
+      locationStrategy: "Edge Cloud Architecture : Cyprus, EU and Global",
+      autonomyLevel: "Sub-1s Page Speeds & 24/7 Autonomous AI",
+      weeklyOwnerHours: "Saves 25 to 35+ operational hrs / week",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85",
       whatsIncluded: [
-        "24/7 Multilingual AI Customer Support Agent trained on your exact business data",
-        "Official WhatsApp Business API lead qualification, catalog & booking flows",
-        "Automated Email Triage, attachment extraction & reply drafting",
-        "AI Booking Assistant synchronized with Google/Outlook calendars & deposits",
-        "CRM Pipeline synchronization (HubSpot, Pipedrive, Salesforce) & automated invoicing",
+        "Sub-second Next.js App Router web platform with guaranteed 95+ Core Web Vitals",
+        "Official WhatsApp Business API & Telegram conversational AI concierge",
+        "Automated inbound lead qualification, enrichment & CRM calendar routing",
+        "Multi-app webhook pipelines syncing HubSpot, Airtable, Stripe, and Supabase",
+        "Senior-engineer website diagnostics with ready-to-merge production code patches",
       ],
       executionStages: [
         {
           step: "STAGE 01",
-          title: "Operational Bottleneck Audit",
-          detail:
-            "Mapping your current inbound enquiries, WhatsApp messages, emails, bookings, and manual admin tasks.",
+          title: "Technical Discovery & Conversion Audit",
+          detail: "Screen-by-screen breakdown of visitor hesitation points and system bottleneck mapping.",
         },
         {
           step: "STAGE 02",
-          title: "AI Knowledge Base & Workflow Engineering",
-          detail:
-            "Training custom AI guardrails on your SOPs and connecting APIs across WhatsApp, CRM, and ERP.",
+          title: "High-Velocity Edge Development",
+          detail: "Architecting sub-second Next.js components, Tailwind styling, and Stripe checkout.",
         },
         {
           step: "STAGE 03",
-          title: "Sandbox Stress Testing & Team Handoff Rules",
-          detail:
-            "Verifying multi language accuracy, escalation triggers, and instant human takeover notifications.",
+          title: "Autonomous Agent & Webhook Wiring",
+          detail: "Connecting WhatsApp API, CRM synchronization, and deterministic fail-safe guardrails.",
         },
         {
           step: "STAGE 04",
-          title: "Production Go Live & Telemetry Monitoring",
-          detail:
-            "Launching 24/7 autonomous operation with ongoing prompt and conversion optimization.",
+          title: "Edge Deployment & Handover",
+          detail: "Global Vercel Edge launch, Core Web Vitals verification, and full repository handover.",
         },
       ],
       technicalSpecs: [
-        { label: "SPEC ID", value: "OSP-AUT-2026" },
-        { label: "CHANNELS", value: "WhatsApp API / Web / Email / Instagram" },
-        { label: "RESPONSE LATENCY", value: "< 3.8 Seconds (24/7/365)" },
-        { label: "LANGUAGES", value: "English, Greek, Russian, German + 20 more" },
-        { label: "INTEGRATIONS", value: "HubSpot, Pipedrive, Stripe, Xero, Calendars" },
-        { label: "ROI METRIC", value: "Up to 78% Manual Workload Reduction" },
+        { label: "SPEC ID", value: "OSP-ENG-2026" },
+        { label: "FRONTEND STACK", value: "Next.js App Router / Tailwind CSS" },
+        { label: "LATENCY", value: "<1.0s First Contentful Paint (95+ Vitals)" },
+        { label: "AI RUNTIME", value: "24/7 WhatsApp & Telegram Concierge (<3s)" },
+        { label: "DIAGNOSTICS SLA", value: "48h Delivery with Exact Code Patches" },
+        { label: "SECURITY", value: "100% NDA Standard • Zero Backend Passwords" },
       ],
       cyprusSetupNotes:
-        "Tailored for Cyprus and EU businesses where WhatsApp and instant multilingual response drive customer conversion.",
+        "Engineered in studio partnership with AuditFlow (VISION CRAFT VC CY LTD).",
     },
   },
   {
-    label: "03 // CUSTOM VENTURE FOUNDRY",
+    label: "04 // CUSTOM VENTURE FOUNDRY",
     headline:
       "Your idea does not have to stay an idea. Free preliminary proposal and execution.",
     image:
@@ -465,13 +467,8 @@ const FEATURE_CAROUSEL_SPECS: {
 ];
 
 const BLUEPRINT_SHORT_CODES = [
-  "01.VENDING",
-  "02.EV_CHARGE",
-  "03.KIOSKS",
-  "04.LAUNDROMAT",
-  "05.CARWASH",
-  "06.ECOMMERCE",
-  "07.SEMI-AUTO",
+  "01.PERFUME",
+  "02.HYGIENE",
 ];
 
 export default function HomePage() {
@@ -497,10 +494,10 @@ export default function HomePage() {
   const [featureSlideIndex, setFeatureSlideIndex] = useState(0);
   const featureTotalPages = 3; // 4 items with 2 per view -> 3 pages (0, 1, 2)
 
-  // Refs & state for Section 6: Blueprints Carousel (`.c-carousel` 3-per-view, 7 cards)
+  // Refs & state for Section 6: Blueprints Carousel (`.c-carousel` 2 cards)
   const blueprintCarouselRef = useRef<HTMLDivElement | null>(null);
   const [blueprintSlideIndex, setBlueprintSlideIndex] = useState(0);
-  const blueprintTotalPages = 5; // 7 items with 3 per view -> 5 pages (0..4)
+  const blueprintTotalPages = 1;
 
   // State for Section 7: `.c-push-newsletter` ("Have an idea? Let's build it.")
   const [ideaName, setIdeaName] = useState("");
