@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="has-js is-loaded is-ready is-first-loaded w-full max-w-full overflow-x-hidden"
+      className="has-js is-loaded is-ready is-first-loaded w-full max-w-full overflow-x-clip"
       suppressHydrationWarning
     >
       <head>
@@ -64,7 +64,7 @@ export default function RootLayout({
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link rel="stylesheet" href="/lightship.css" media="all" />
       </head>
-      <body className="font-sans antialiased bg-white text-black selection:bg-black selection:text-white w-full max-w-full overflow-x-hidden relative">
+      <body className="font-sans antialiased bg-white text-black selection:bg-black selection:text-white w-full max-w-full overflow-x-clip relative">
         <IntroSplashScreen />
         <SmoothScrollProvider>
           <div id="swup" className="transition-default">
