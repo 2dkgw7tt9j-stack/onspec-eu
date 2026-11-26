@@ -32,7 +32,7 @@ const SERVICES_LIST = [
     title: "Custom Websites & Software Platforms",
     subtitle: "High performance web applications, customer portals, and conversion engineered sites.",
     description:
-      "Every modern business needs digital infrastructure that matches its physical operation. We design and build ultra-fast Next.js websites, online booking systems, client management portals, and ecommerce solutions built for speed, SEO authority, and customer conversion.",
+      "Every modern business needs digital infrastructure that matches its physical operation. We design and build ultra fast Next.js websites, online booking systems, client management portals, and ecommerce solutions built for speed, SEO authority, and customer conversion.",
     features: [
       "Next.js and React architecture with subsecond page loads",
       "Automated online booking and reservation engines",

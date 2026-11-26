@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title:
     "ONSPEC (onspec.eu) : Your Vision. Our Execution. | Business Solutions & AI Automation",
   description:
-    "From launching a turnkey business in Cyprus & the EU to automating the one you already have, Onspec makes the complicated simple. Ready-to-launch businesses, AI & automation systems, custom idea execution, and Cyprus legal network.",
+    "From launching a turnkey business in Cyprus & the EU to automating the one you already have, Onspec makes the complicated simple. Ready to launch businesses, AI & automation systems, custom idea execution, and Cyprus legal network.",
   keywords: [
     "Onspec",
     "onspec.eu",

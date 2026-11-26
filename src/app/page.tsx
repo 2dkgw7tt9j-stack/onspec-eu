@@ -416,7 +416,7 @@ const FEATURE_CAROUSEL_SPECS: {
       whatsIncluded: [
         "Structured assessment of your corporate, residency, immigration, or legal need",
         "Direct referral to a vetted independent licensed lawyer in Cyprus",
-        "Business-related legal matters: company incorporation, shareholder agreements, commercial leases",
+        "Business related legal matters: company incorporation, shareholder agreements, commercial leases",
         "Immigration & Cyprus residency permit legal guidance",
         "Criminal law representation & dedicated 1 on 1 legal consultations",
       ],
@@ -983,9 +983,9 @@ export default function HomePage() {
               style={
                 {
                   "--button-background": "#101D35",
-                  "--button-color": "#101D35",
-                  "--button-hover-background": "#101D35",
-                  "--button-hover-color": "#F7F8FA",
+                  "--button-color": "#FFFFFF",
+                  "--button-hover-background": "#000000",
+                  "--button-hover-color": "#FFFFFF",
                 } as React.CSSProperties
               }
             >

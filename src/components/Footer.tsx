@@ -262,7 +262,7 @@ export function Footer() {
           (1) Independent Legal Network Compliance Notice: Onspec connects
           clients with experienced independent licensed legal professionals in
           Cyprus through its professional network across Immigration Matters,
-          Residency Matters, Criminal Law, Business-Related Legal Matters, and
+          Residency Matters, Criminal Law, Business Related Legal Matters, and
           Legal Consultations. Onspec is a business creation and AI automation
           solutions company and does not itself practice law or operate as a law
           firm. Turnkey capital ranges and deployment timelines are preliminary

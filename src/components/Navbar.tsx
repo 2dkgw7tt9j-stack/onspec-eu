@@ -214,13 +214,13 @@ export function Navbar() {
               >
                 <span className="sr-only">ONSPEC Homepage</span>
                 <div
-                  className="c-header_logo_lottie flex items-center justify-center transition-all duration-300"
+                  className="c-header_logo_lottie flex items-center justify-center transition-all duration-300 py-1"
                   data-header-logo
                 >
                   <img 
                     src="/onspec_logo_transparent.png" 
                     alt="OnSpec / Engineered to Operate" 
-                    className="h-10 sm:h-11 md:h-12 w-auto object-contain transition-all duration-300 drop-shadow-sm" 
+                    className="h-11 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 drop-shadow-sm" 
                   />
                 </div>
               </Link>
