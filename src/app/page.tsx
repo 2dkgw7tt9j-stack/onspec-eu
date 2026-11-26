@@ -962,7 +962,7 @@ export default function HomePage() {
       <section className="container my-fluid-3xl">
         <div className="flex flex-col gap-y-10 items-center text-center mx-auto max-w-3xl">
           <p
-            className="text-lg text-[#253B5B] max-w-xl is-inview"
+            className="text-lg text-neutral-600 max-w-xl is-inview"
             data-scroll=""
             data-anim-slide=""
             style={
@@ -982,7 +982,7 @@ export default function HomePage() {
               className="c-button"
               style={
                 {
-                  "--button-background": "#101D35",
+                  "--button-background": "#000000",
                   "--button-color": "#FFFFFF",
                   "--button-hover-background": "#000000",
                   "--button-hover-color": "#FFFFFF",
@@ -1004,9 +1004,9 @@ export default function HomePage() {
               className="c-button -blur-dark"
               style={
                 {
-                  "--button-background": "#101D35",
+                  "--button-background": "#000000",
                   "--button-color": "#F7F8FA",
-                  "--button-hover-background": "#253B5B",
+                  "--button-hover-background": "#1A1A1A",
                   "--button-hover-color": "#F7F8FA",
                 } as React.CSSProperties
               }
@@ -1037,13 +1037,13 @@ export default function HomePage() {
               data-heading=""
               className="c-stacking-cards_heading container-xl"
             >
-              <div className="c-stacking-cards_heading_icon text-[#101D35]">
+              <div className="c-stacking-cards_heading_icon text-black">
                 <h2 className="sr-only">This is ONSPEC</h2>
                 <div className="flex items-center justify-between mb-2 px-1">
-                  <span className="font-mono text-xs uppercase tracking-widest text-[#101D35] font-semibold">
+                  <span className="font-mono text-xs uppercase tracking-widest text-black font-semibold">
                     [ 04 PILLARS ]
                   </span>
-                  <span className="font-mono text-xs uppercase tracking-widest text-[#253B5B]">
+                  <span className="font-mono text-xs uppercase tracking-widest text-neutral-600">
                     ONSPEC.EU // 4 EXECUTION PILLARS
                   </span>
                 </div>
@@ -1186,10 +1186,10 @@ export default function HomePage() {
                   className="c-stacking-cards_block -animated"
                   style={{ "--progress": 0 } as React.CSSProperties}
                 >
-                  <p className="text-eyebrow max-w-[15rem] text-[#101D35] font-semibold">
+                  <p className="text-eyebrow max-w-[15rem] text-black font-semibold">
                     Business, Reimagined.
                   </p>
-                  <p className="heading-2xs text-[#253B5B]/80 max-w-[15rem]">
+                  <p className="heading-2xs text-neutral-600 max-w-[15rem]">
                     Onspec bridges the gap between having an idea and turning it
                     into a functioning business. You don’t have to start from
                     scratch.
@@ -1203,10 +1203,10 @@ export default function HomePage() {
                   className="c-stacking-cards_block -animated"
                   style={{ "--progress": 0 } as React.CSSProperties}
                 >
-                  <p className="text-eyebrow max-w-[15rem] text-[#101D35] font-semibold">
+                  <p className="text-eyebrow max-w-[15rem] text-black font-semibold">
                     Four Pillars. One Execution Partner.
                   </p>
-                  <p className="heading-2xs text-[#253B5B]/80 max-w-[15rem]">
+                  <p className="heading-2xs text-neutral-600 max-w-[15rem]">
                     With turnkey physical &amp; digital business launches, 24/7
                     AI automation workflows, custom concept execution, and
                     vetted Cyprus legal professionals.
@@ -1270,10 +1270,10 @@ export default function HomePage() {
          ===================================================================== */}
       <section className="my-fluid-2xl">
         <div className="container-xl text-center flex flex-col items-center">
-          <p className="text-heading-2xl max-w-3xl text-[#101D35] font-semibold tracking-tight mx-auto">
+          <p className="text-heading-2xl max-w-3xl text-black font-semibold tracking-tight mx-auto">
             Turnkey businesses built to operate.
           </p>
-          <p className="text-xl md:text-2xl text-[#253B5B] max-w-2xl mx-auto mt-4 font-normal">
+          <p className="text-xl md:text-2xl text-neutral-600 max-w-2xl mx-auto mt-4 font-normal">
             Turnkey engineered ventures, intelligent AI workflows, and professional Cyprus execution, ready on Day 1.
           </p>
         </div>
@@ -1283,10 +1283,10 @@ export default function HomePage() {
         <div className="c-editorial-block container-xl">
           <div className="c-editorial-block_content">
             <div className="space-y-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#101D35] block">
+              <span className="font-mono text-xs uppercase tracking-widest text-black block">
                 BUILT FOR FOUNDERS. ENGINEERED FOR GROWTH.
               </span>
-              <p className="c-editorial-block_description text-[#253B5B]">
+              <p className="c-editorial-block_description text-neutral-600">
                 We built Onspec around a clear conviction: launching a new
                 venture or modernizing an existing business in Cyprus and Europe
                 should not require months of fragmented vendor hunting. From our{" "}
@@ -1335,11 +1335,11 @@ export default function HomePage() {
       <section className="c-push-newsletter pattern-background background-clip container">
         <div className="c-push-newsletter_content">
           <div className="c-push-newsletter_heading">
-            <p className="text-eyebrow text-[#253B5B]">
+            <p className="text-eyebrow text-neutral-600">
               The Execution Starts Now
             </p>
 
-            <h2 className="heading-sm text-[#101D35]">
+            <h2 className="heading-sm text-black">
               Have an idea? Tell us what you’re thinking. We’ll provide a free
               preliminary proposal.
             </h2>
@@ -1347,11 +1347,11 @@ export default function HomePage() {
 
           <div className="c-newsletter">
             {ideaResultRef ? (
-              <div className="rounded-2xl bg-white p-6 border border-[#101D35]/40 shadow-sm space-y-2">
-                <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+              <div className="rounded-2xl bg-white p-6 border border-black/40 shadow-sm space-y-2">
+                <p className="font-mono text-xs uppercase tracking-widest text-black">
                   IDEA REGISTERED // REF {ideaResultRef}
                 </p>
-                <p className="text-sm font-semibold text-[#101D35]">
+                <p className="text-sm font-semibold text-black">
                   Thank you, {ideaName}. Our Venture Foundry team is preparing
                   your free preliminary proposal.
                 </p>
@@ -1364,7 +1364,7 @@ export default function HomePage() {
                     setIdeaEmail("");
                     setIdeaDescription("");
                   }}
-                  className="text-xs font-mono underline text-[#253B5B] hover:text-[#101D35] cursor-pointer"
+                  className="text-xs font-mono underline text-neutral-600 hover:text-black cursor-pointer"
                 >
                   Submit another concept
                 </button>
@@ -1458,10 +1458,10 @@ export default function HomePage() {
                     style={
                       {
                         pointerEvents: "auto",
-                        "--button-background": "#101D35",
+                        "--button-background": "#000000",
                         "--button-hover-background": "#000000",
                         "--button-color": "#F7F8FA",
-                        "--button-hover-color": "#101D35",
+                        "--button-hover-color": "#FFFFFF",
                       } as React.CSSProperties
                     }
                   >

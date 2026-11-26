@@ -56,7 +56,7 @@ export default function RootLayout({
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link rel="stylesheet" href="/lightship.css" media="all" />
       </head>
-      <body className="font-sans antialiased bg-white text-[#101D35] selection:bg-[#101D35] selection:text-white">
+      <body className="font-sans antialiased bg-white text-black selection:bg-black selection:text-white">
         <SmoothScrollProvider>
           <div id="swup" className="transition-default">
             <Navbar />

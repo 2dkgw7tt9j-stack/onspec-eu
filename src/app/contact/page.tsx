@@ -75,7 +75,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-[#F7F8FA] text-[#101D35]">
+    <main className="bg-white text-black">
       <div className="container-xl md:grid md:grid-cols-2 pt-[var(--header-area)] md:gap-x-3 pb-fluid-2xl">
         {/* Left Sticky Architectural Visual & Cyprus Operations Desk Telemetry (1:1 Lightship contact.html) */}
         <div className="hidden md:block md:sticky md:top-[var(--header-area)] h-[calc(100svh-var(--header-area)-var(--grid-margin-xl))]">
@@ -89,14 +89,14 @@ export default function ContactPage() {
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85"
               />
             </picture>
-            {/* Dark Deep Navy Architectural Overlay with Direct Desk Triggers */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#101D35] via-[#101D35]/45 to-[#101D35]/20 flex flex-col justify-between p-8 text-[#F7F8FA]">
+            {/* Pure Black & Charcoal Architectural Overlay with Direct Desk Triggers */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-between p-8 text-white">
               <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-2 rounded-full bg-[#101D35]/80 backdrop-blur-md border border-[#A8B1BE]/30 px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-[#F7F8FA]">
+                <span className="inline-flex items-center gap-2 rounded-full bg-black/80 backdrop-blur-md border border-white/20 px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-white">
                   <span className="h-2 w-2 rounded-full bg-white" />
                   CYPRUS &amp; EU OPERATIONS DESK
                 </span>
-                <span className="font-mono text-xs uppercase tracking-widest text-[#A8B1BE]">
+                <span className="font-mono text-xs uppercase tracking-widest text-white/70">
                   {BRAND_INFO.domain}
                 </span>
               </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   <h2 className="heading-sm mt-2 text-white">
                     {BRAND_INFO.slogan}
                   </h2>
-                  <p className="text-sm text-[#A8B1BE] mt-2 max-w-md">
+                  <p className="text-sm text-white/75 mt-2 max-w-md">
                     From launching a turnkey physical or digital business in Cyprus to deploying 24/7 AI automation systems or connecting with independent legal counsel.
                   </p>
                 </div>
@@ -118,9 +118,9 @@ export default function ContactPage() {
                 <div className="grid grid-cols-2 gap-3 pt-2">
                   <a
                     href={`mailto:${BRAND_INFO.emailPrimary}`}
-                    className="rounded-xl bg-[#101D35]/85 backdrop-blur-md border border-[#A8B1BE]/30 p-4 hover:border-white/50 transition-colors"
+                    className="rounded-xl bg-black/80 backdrop-blur-md border border-white/20 p-4 hover:border-white transition-colors"
                   >
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-[#A8B1BE]">
+                    <p className="font-mono text-[10px] uppercase tracking-widest text-white/60">
                       DIRECT EMAIL DESK
                     </p>
                     <p className="mt-1 text-sm font-semibold text-white">
@@ -134,9 +134,9 @@ export default function ContactPage() {
                     href={BRAND_INFO.whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-xl bg-[#101D35]/85 backdrop-blur-md border border-[#A8B1BE]/30 p-4 hover:border-white/50 transition-colors"
+                    className="rounded-xl bg-black/80 backdrop-blur-md border border-white/20 p-4 hover:border-white transition-colors"
                   >
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-[#A8B1BE]">
+                    <p className="font-mono text-[10px] uppercase tracking-widest text-white/60">
                       DIRECT WHATSAPP
                     </p>
                     <p className="mt-1 text-sm font-semibold text-white">
@@ -148,7 +148,7 @@ export default function ContactPage() {
                   </a>
                 </div>
 
-                <div className="border-t border-[#A8B1BE]/25 pt-4 flex items-center justify-between text-xs text-[#A8B1BE]">
+                <div className="border-t border-white/20 pt-4 flex items-center justify-between text-xs text-white/60">
                   <span>{BRAND_INFO.headquarters}</span>
                   <span>Mon to Sat • 08:30 to 19:30 EET</span>
                 </div>
@@ -162,68 +162,39 @@ export default function ContactPage() {
           <div className="flex flex-col">
             <div className="text-center px-6 md:px-10 mt-fluid-2xl md:my-fluid-xl max-w-[600px] self-center">
               <h1 className="heading-md" id="page-heading">
-                <span className="text-[#101D35]/45">We&apos;re here to help.</span>
+                <span className="text-black/40">We&apos;re here to help.</span>
                 <br />
-                <span className="text-[#101D35]">Every step of the way.</span>
+                <span className="text-black font-extrabold">Every step of the way.</span>
                 <br />
               </h1>
-              <p className="text-md pt-5 text-[#253B5B]">
+              <p className="text-md pt-5 text-neutral-600">
                 Questions, curiosities, or ready to execute? Whether you want to launch a turnkey business, automate your existing operations, submit a new concept for a free preliminary proposal, or connect with vetted Cyprus legal professionals, our team is ready.
               </p>
 
-              {/* Direct Call / WhatsApp / Email Quick Triggers matching Lightship .c-button */}
+              {/* Direct Call / WhatsApp / Email Quick Triggers */}
               <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
                 <button
                   type="button"
                   onClick={() => setMeetingModalOpen(true)}
-                  className="c-button cursor-pointer"
-                  style={{
-                    backgroundColor: "#101D35",
-                    color: "#101D35",
-                  }}
+                  className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
                 >
-                  <span className="c-button_inner">
-                    <span
-                      className="c-button_label-container"
-                      data-label="Schedule Discovery Call"
-                    >
-                      <span className="c-button_label font-semibold">
-                        Schedule Discovery Call
-                      </span>
-                    </span>
-                  </span>
+                  Schedule Discovery Call
                 </button>
 
                 <a
                   href={BRAND_INFO.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="c-button -color-black"
+                  className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
                 >
-                  <span className="c-button_inner">
-                    <span
-                      className="c-button_label-container"
-                      data-label="WhatsApp Desk"
-                    >
-                      <span className="c-button_label">WhatsApp Desk</span>
-                    </span>
-                  </span>
+                  WhatsApp Desk
                 </a>
 
                 <a
                   href={`mailto:${BRAND_INFO.emailPrimary}`}
-                  className="c-button -color-grey"
+                  className="inline-flex items-center justify-center rounded-full border border-neutral-300 bg-neutral-100 px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-neutral-200 transition-colors"
                 >
-                  <span className="c-button_inner">
-                    <span
-                      className="c-button_label-container"
-                      data-label="info@onspec.eu"
-                    >
-                      <span className="c-button_label">
-                        {BRAND_INFO.emailPrimary}
-                      </span>
-                    </span>
-                  </span>
+                  {BRAND_INFO.emailPrimary}
                 </a>
               </div>
             </div>
@@ -251,18 +222,18 @@ export default function ContactPage() {
           >
             {referenceId ? (
               <div className="rounded-[20px] bg-white border border-[#A8B1BE]/45 p-8 md:p-10 text-center space-y-5 shadow-sm">
-                <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#101D35]/10 text-[#101D35]">
+                <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-black/10 text-black">
                   <svg className="h-6 w-6 fill-current" viewBox="0 0 16 16">
                     <use href="/assets/svgs/sprite.svg#checkmark" />
                   </svg>
                 </div>
-                <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+                <p className="text-eyebrow text-black uppercase tracking-widest">
                   ENQUIRY REGISTERED // ONSPEC DESK
                 </p>
-                <h2 className="heading-sm text-[#101D35]">
+                <h2 className="heading-sm text-black">
                   Reference ID: {referenceId}
                 </h2>
-                <p className="text-md text-[#253B5B] max-w-md mx-auto">
+                <p className="text-md text-neutral-600 max-w-md mx-auto">
                   Thank you, <strong>{name}</strong>. Our Cyprus &amp; EU operations desk has logged your specification enquiry under{" "}
                   <strong>{pillar}</strong> and will respond via email ({email}) or WhatsApp within 1 business day.
                 </p>
@@ -306,20 +277,20 @@ export default function ContactPage() {
                 className="rounded-[20px] bg-white border border-[#A8B1BE]/40 p-6 md:p-9 space-y-6 shadow-sm"
               >
                 <div className="border-b border-[#A8B1BE]/35 pb-5">
-                  <p className="text-eyebrow text-[#253B5B] uppercase tracking-widest">
+                  <p className="text-eyebrow text-neutral-600 uppercase tracking-widest">
                     DIRECT SPECIFICATION &amp; ADVISORY INTAKE
                   </p>
-                  <h2 className="heading-xs mt-1 text-[#101D35]">
+                  <h2 className="heading-xs mt-1 text-black">
                     Select Your Pillar &amp; Share Your Objectives
                   </h2>
                 </div>
 
-                {/* Pillar Selector Pills */}
+                {/* Pillar Selector Cards (Zero Blue Box - Clean Black and White) */}
                 <div className="space-y-2.5">
-                  <label className="block text-xs font-mono uppercase tracking-wider text-[#253B5B]">
+                  <label className="block text-xs font-mono uppercase tracking-wider text-black font-semibold">
                     01 // Select Execution Pillar *
                   </label>
-                  <div className="grid grid-cols-1 gap-2">
+                  <div className="grid grid-cols-1 gap-2.5">
                     {PILLAR_OPTIONS.map((opt) => {
                       const active = pillar === opt.value;
                       return (
@@ -327,42 +298,38 @@ export default function ContactPage() {
                           key={opt.value}
                           type="button"
                           onClick={() => setPillar(opt.value)}
-                          className={`text-left rounded-2xl border px-4 py-3 transition-all cursor-pointer flex items-center justify-between gap-3 ${
+                          className={`text-left rounded-2xl p-4 transition-all cursor-pointer flex items-center justify-between gap-4 ${
                             active
-                              ? "border-[#101D35] bg-[#101D35] text-[#F7F8FA]"
-                              : "border-[#A8B1BE]/45 bg-[#F7F8FA] text-[#101D35] hover:border-[#253B5B]"
+                              ? "border-2 border-black bg-white shadow-xs"
+                              : "border border-neutral-200 bg-white hover:border-black/50"
                           }`}
                         >
                           <div>
                             <div className="flex items-center gap-2">
                               <span
                                 className={`font-mono text-[11px] uppercase tracking-wider ${
-                                  active ? "text-white" : "text-[#253B5B]"
+                                  active ? "text-black font-bold" : "text-neutral-500"
                                 }`}
                               >
                                 {opt.code}
                               </span>
-                              <span className="text-sm font-semibold">
+                              <span className="text-sm font-bold text-black">
                                 {opt.label}
                               </span>
                             </div>
-                            <p
-                              className={`text-xs mt-0.5 ${
-                                active ? "text-[#A8B1BE]" : "text-[#253B5B]/80"
-                              }`}
-                            >
+                            <p className="text-xs mt-1 text-neutral-600">
                               {opt.desc}
                             </p>
                           </div>
                           <span
-                            className={`h-4 w-4 shrink-0 rounded-full border flex items-center justify-center ${
+                            className={`h-5 w-5 shrink-0 rounded-full border-2 flex items-center justify-center transition-colors ${
                               active
-                                ? "border-white bg-white"
-                                : "border-[#A8B1BE]"
+                                ? "border-black bg-white"
+                                : "border-neutral-300 bg-white"
                             }`}
                           >
                             {active && (
-                              <span className="h-1.5 w-1.5 rounded-full bg-[#101D35]" />
+                              <span className="h-2.5 w-2.5 rounded-full bg-black" />
                             )}
                           </span>
                         </button>
@@ -374,7 +341,7 @@ export default function ContactPage() {
                 {/* Lightship Pill Inputs */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="c-input-text-container">
-                    <label className="block text-xs font-mono uppercase tracking-wider text-[#253B5B] mb-2">
+                    <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-2">
                       Full Name *
                     </label>
                     <div className="c-input-text">
@@ -384,13 +351,13 @@ export default function ContactPage() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Andreas Georgiou"
-                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-black focus:border-black focus:outline-none"
                       />
                     </div>
                   </div>
 
                   <div className="c-input-text-container">
-                    <label className="block text-xs font-mono uppercase tracking-wider text-[#253B5B] mb-2">
+                    <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-2">
                       Email Address *
                     </label>
                     <div className="c-input-text">
@@ -400,7 +367,7 @@ export default function ContactPage() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="name@company.eu"
-                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-black focus:border-black focus:outline-none"
                       />
                     </div>
                   </div>
@@ -408,7 +375,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="c-input-text-container">
-                    <label className="block text-xs font-mono uppercase tracking-wider text-[#253B5B] mb-2">
+                    <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-2">
                       WhatsApp / Phone *
                     </label>
                     <div className="c-input-text">
@@ -418,20 +385,20 @@ export default function ContactPage() {
                         value={whatsapp}
                         onChange={(e) => setWhatsapp(e.target.value)}
                         placeholder="+357 99 000 000"
-                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-black focus:border-black focus:outline-none"
                       />
                     </div>
                   </div>
 
                   <div className="c-input-text-container">
-                    <label className="block text-xs font-mono uppercase tracking-wider text-[#253B5B] mb-2">
+                    <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-2">
                       Target City / Jurisdiction
                     </label>
                     <div className="c-input-text">
                       <select
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
-                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-black focus:border-black focus:outline-none"
                       >
                         <option value="Limassol, Cyprus">Limassol, Cyprus</option>
                         <option value="Nicosia, Cyprus">Nicosia, Cyprus</option>
@@ -452,7 +419,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="c-input-text-container">
-                  <label className="block text-xs font-mono uppercase tracking-wider text-[#253B5B] mb-2">
+                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-2">
                     Company Name (Optional)
                   </label>
                   <div className="c-input-text">
@@ -461,13 +428,13 @@ export default function ContactPage() {
                       value={companyName}
                       onChange={(e) => setCompanyName(e.target.value)}
                       placeholder="Existing business or new venture entity"
-                      className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                      className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-black focus:border-black focus:outline-none"
                     />
                   </div>
                 </div>
 
                 <div className="c-input-text-container">
-                  <label className="block text-xs font-mono uppercase tracking-wider text-[#253B5B] mb-2">
+                  <label className="block text-xs font-mono uppercase tracking-wider text-neutral-600 mb-2">
                     How can ONSPEC execute for you? *
                   </label>
                   <textarea
@@ -476,21 +443,21 @@ export default function ContactPage() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Tell us which turnkey business model, AI automation workflow, custom idea, or Cyprus legal referral you would like to discuss..."
-                    className="text-sm w-full rounded-2xl border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                    className="text-sm w-full rounded-2xl border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-black focus:border-black focus:outline-none"
                   />
                 </div>
 
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <p className="text-xs text-[#253B5B]">
+                  <p className="text-xs text-neutral-600">
                     Direct response from our Cyprus executive desk within 24h.
                   </p>
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="c-button primary cursor-pointer w-full sm:w-auto"
+                    className="c-button primary -color-black cursor-pointer w-full sm:w-auto"
                     style={{
-                      backgroundColor: "#101D35",
-                      color: "#101D35",
+                      backgroundColor: "#000000",
+                      color: "#FFFFFF",
                     }}
                   >
                     <span className="c-button_inner">
@@ -529,20 +496,20 @@ export default function ContactPage() {
                 <Link
                   key={p.id}
                   href={p.href}
-                  className="rounded-2xl bg-white border border-[#A8B1BE]/40 p-5 hover:border-[#101D35] transition-colors flex flex-col justify-between gap-3"
+                  className="rounded-2xl bg-white border border-[#A8B1BE]/40 p-5 hover:border-black transition-colors flex flex-col justify-between gap-3"
                 >
                   <div>
-                    <p className="font-mono text-[11px] uppercase tracking-widest text-[#101D35]">
+                    <p className="font-mono text-[11px] uppercase tracking-widest text-black">
                       {p.code}
                     </p>
-                    <h3 className="text-base font-bold text-[#101D35] mt-1">
+                    <h3 className="text-base font-bold text-black mt-1">
                       {p.shortTitle}
                     </h3>
-                    <p className="text-xs text-[#253B5B] mt-1">
+                    <p className="text-xs text-neutral-600 mt-1">
                       {p.coreMessage}
                     </p>
                   </div>
-                  <span className="font-mono text-xs text-[#101D35] font-semibold">
+                  <span className="font-mono text-xs text-black font-semibold">
                     {p.telemetryValue} →
                   </span>
                 </Link>
@@ -579,14 +546,14 @@ export default function ContactPage() {
             </span>
           </button>
           <div className="modal_inner p-8 md:p-12">
-            <div className="max-w-xl mx-auto space-y-6 text-[#101D35]">
-              <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+            <div className="max-w-xl mx-auto space-y-6 text-black">
+              <p className="text-eyebrow text-black uppercase tracking-widest">
                 ONSPEC EXECUTIVE BRIEFING // 15 MINUTE CALL
               </p>
               <h2 className="heading-md">
                 Book a Direct Discovery Call with Our Cyprus Desk
               </h2>
-              <p className="text-md text-[#253B5B]">
+              <p className="text-md text-neutral-600">
                 Choose your preferred communication channel for an immediate 15 minute consultation on turnkey business launches, AI automation systems, custom venture buildouts, or Cyprus legal introductions.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -594,39 +561,39 @@ export default function ContactPage() {
                   href={BRAND_INFO.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-2xl bg-[#101D35] text-white p-6 hover:bg-[#253B5B] transition-colors flex flex-col justify-between gap-4"
+                  className="rounded-2xl bg-black text-white p-6 hover:bg-neutral-800 transition-colors flex flex-col justify-between gap-4 shadow-sm"
                 >
                   <div>
-                    <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                    <span className="font-mono text-xs uppercase tracking-widest text-white/70">
                       INSTANT CHANNEL
                     </span>
-                    <h3 className="heading-2xs mt-2 text-white">
+                    <h3 className="heading-2xs mt-2 text-white font-bold">
                       WhatsApp Video / Voice Briefing
                     </h3>
-                    <p className="text-xs text-[#A8B1BE] mt-1">
+                    <p className="text-xs text-white/70 mt-1">
                       {BRAND_INFO.whatsappDisplay}
                     </p>
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#101D35]">
+                  <span className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
                     Launch WhatsApp Now →
                   </span>
                 </a>
                 <a
                   href={`mailto:${BRAND_INFO.emailPrimary}?subject=Discovery%20Call%20Request%20ONSPEC`}
-                  className="rounded-2xl bg-[#F7F8FA] border border-[#A8B1BE]/50 text-[#101D35] p-6 hover:border-[#101D35] transition-colors flex flex-col justify-between gap-4"
+                  className="rounded-2xl bg-white border border-neutral-300 text-black p-6 hover:border-black transition-colors flex flex-col justify-between gap-4 shadow-xs"
                 >
                   <div>
-                    <span className="font-mono text-xs uppercase tracking-widest text-[#253B5B]">
+                    <span className="font-mono text-xs uppercase tracking-widest text-neutral-500">
                       CALENDAR INVITE
                     </span>
-                    <h3 className="heading-2xs mt-2 text-[#101D35]">
+                    <h3 className="heading-2xs mt-2 text-black font-bold">
                       Request Google Meet / Zoom Slot
                     </h3>
-                    <p className="text-xs text-[#253B5B] mt-1">
+                    <p className="text-xs text-neutral-600 mt-1">
                       {BRAND_INFO.emailPrimary}
                     </p>
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#101D35] font-semibold">
+                  <span className="text-xs font-mono uppercase tracking-wider text-black font-semibold">
                     Send Calendar Request →
                   </span>
                 </a>

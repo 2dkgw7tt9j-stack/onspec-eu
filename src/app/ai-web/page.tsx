@@ -110,16 +110,16 @@ export default function AiWebPage() {
   };
 
   return (
-    <main className="bg-white text-[#101D35]">
+    <main className="bg-white text-black">
       {/* Editorial Header */}
       <section className="container pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
-        <p className="font-mono text-xs uppercase tracking-widest text-[#101D35] mb-4 font-semibold">
+        <p className="font-mono text-xs uppercase tracking-widest text-black mb-4 font-semibold">
           [ DIGITAL PLATFORMS &amp; INTELLIGENT AUTOMATION ]
         </p>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#101D35] mb-6 leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-black mb-6 leading-tight">
           AI &amp; Websites.
         </h1>
-        <p className="text-lg md:text-xl text-[#253B5B] max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
           High performance custom web applications, autonomous 24/7 AI customer agents, and official WhatsApp Business automation designed to eliminate manual overhead.
         </p>
       </section>
@@ -130,12 +130,12 @@ export default function AiWebPage() {
           {AI_WEB_CAPABILITIES.map((cap) => (
             <div
               key={cap.code}
-              className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl p-6 sm:p-8 md:p-10 transition-all hover:border-[#101D35]/50 hover:shadow-lg"
+              className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl p-6 sm:p-8 md:p-10 transition-all hover:border-black/50 hover:shadow-lg"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#101D35] bg-[#101D35]/10 px-2.5 py-1 rounded">
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-black bg-black/10 px-2.5 py-1 rounded">
                       {cap.code}
                     </span>
                     <span className="font-mono text-xs uppercase tracking-wider text-[#A8B1BE]">
@@ -143,18 +143,18 @@ export default function AiWebPage() {
                     </span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#101D35] mb-3">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-black mb-3">
                     {cap.title}
                   </h2>
 
-                  <p className="text-sm text-[#253B5B] mb-5 leading-relaxed">
+                  <p className="text-sm text-neutral-600 mb-5 leading-relaxed">
                     {cap.description}
                   </p>
 
-                  <ul className="space-y-2 mb-6 text-xs text-[#101D35]/90">
+                  <ul className="space-y-2 mb-6 text-xs text-neutral-900">
                     {cap.bullets.map((b, bIdx) => (
                       <li key={bIdx} className="flex items-start gap-2">
-                        <span className="text-[#101D35] font-bold">✓</span>
+                        <span className="text-black font-bold">✓</span>
                         <span>{b}</span>
                       </li>
                     ))}
@@ -163,15 +163,15 @@ export default function AiWebPage() {
                   <div className="pt-4 border-t border-[#D5DBE3] flex flex-wrap items-center justify-between gap-4">
                     <div>
                       <span className="block font-mono text-[11px] text-[#A8B1BE] uppercase">Timeline:</span>
-                      <span className="font-mono text-xs font-bold text-[#101D35]">{cap.timeline}</span>
+                      <span className="font-mono text-xs font-bold text-black">{cap.timeline}</span>
                     </div>
                     <div>
                       <span className="block font-mono text-[11px] text-[#A8B1BE] uppercase">Investment:</span>
-                      <span className="font-mono text-xs font-bold text-[#101D35]">{cap.investment}</span>
+                      <span className="font-mono text-xs font-bold text-black">{cap.investment}</span>
                     </div>
                     <Link
                       href={`/contact?type=${encodeURIComponent(cap.title)}`}
-                      className="bg-[#101D35] text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-[#253B5B] transition-colors"
+                      className="bg-black text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-neutral-900 transition-colors"
                     >
                       Enquire for this system →
                     </Link>
@@ -192,7 +192,7 @@ export default function AiWebPage() {
       </section>
 
       {/* Inquiry Form */}
-      <section className="bg-[#101D35] text-white py-16 md:py-24">
+      <section className="bg-black text-white py-16 md:py-24">
         <div className="container max-w-3xl mx-auto px-4">
           <div className="text-center mb-8">
             <p className="font-mono text-xs uppercase tracking-widest text-white/80 mb-2 font-semibold">
@@ -259,7 +259,7 @@ export default function AiWebPage() {
                   <select
                     value={projectType}
                     onChange={(e) => setProjectType(e.target.value)}
-                    className="w-full bg-[#101D35] border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-white/60"
+                    className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-white/60"
                   >
                     <option value="Custom Website Platform">Custom Website Platform</option>
                     <option value="24/7 AI Customer Support Agent">24/7 AI Customer Support Agent</option>
@@ -284,7 +284,7 @@ export default function AiWebPage() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-white text-[#101D35] font-bold py-3.5 rounded-lg text-sm uppercase tracking-wider hover:bg-[#F7F8FA] transition-colors cursor-pointer"
+                className="w-full bg-white text-black font-bold py-3.5 rounded-lg text-sm uppercase tracking-wider hover:bg-[#F7F8FA] transition-colors cursor-pointer"
               >
                 {submitting ? "Submitting..." : "Submit AI & Web Request →"}
               </button>

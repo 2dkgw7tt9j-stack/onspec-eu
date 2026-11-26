@@ -236,7 +236,7 @@ export function Navbar() {
                 </li>
                 <li className="c-header_item">
                   <Link href="/contact" className="c-header_link hover-parent">
-                    <span className="text-sm underline underline-offset-4 decoration-current/70 hover:decoration-[#101D35]">
+                    <span className="text-sm underline underline-offset-4 decoration-current/70 hover:decoration-black">
                       Contact
                     </span>
                   </Link>

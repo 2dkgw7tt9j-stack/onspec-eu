@@ -63,34 +63,34 @@ export function HomepageIdeaQuickIntake() {
   return (
     <section
       id="submit-your-idea"
-      className="relative border-b border-[#A8B1BE]/35 stripe-mesh-light py-24 text-[#101D35]"
+      className="relative border-b border-[#A8B1BE]/35 stripe-mesh-light py-24 text-black"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
           {/* Left Column: Editorial Narrative & How Idea Evaluation Works */}
           <div className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#A8B1BE]/50 bg-white px-3.5 py-1.5">
-              <Sparkles className="h-3.5 w-3.5 text-[#101D35]" />
-              <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+              <Sparkles className="h-3.5 w-3.5 text-black" />
+              <span className="font-mono text-xs uppercase tracking-widest text-black">
                 SECTION 07 // PILLAR 03 : SUBMIT YOUR IDEA
               </span>
             </div>
 
-            <h2 className="text-3xl font-extrabold tracking-tight text-[#101D35] sm:text-5xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-5xl">
               Have an idea? Let&rsquo;s build it.
             </h2>
 
-            <p className="font-mono text-sm font-semibold uppercase tracking-wider text-[#101D35]">
+            <p className="font-mono text-sm font-semibold uppercase tracking-wider text-black">
               &ldquo;Your idea doesn&rsquo;t have to stay an idea.&rdquo;
             </p>
 
-            <p className="text-base leading-relaxed text-[#253B5B]">
+            <p className="text-base leading-relaxed text-neutral-600">
               Many people have strong business ideas, software concepts, or
               physical venture plans, but don&rsquo;t know how to source the
               hardware, build the digital systems, structure the company in
               Cyprus, or bring everything together. Tell us what you are
               thinking, and Onspec will evaluate it and prepare a{" "}
-              <strong className="text-[#101D35]">
+              <strong className="text-black">
                 free preliminary proposal or quotation
               </strong>
               .
@@ -100,17 +100,17 @@ export function HomepageIdeaQuickIntake() {
             <div className="space-y-3 pt-2">
               <div className="rounded-xl border border-[#A8B1BE]/40 bg-white p-4 shadow-xs">
                 <div className="flex items-start gap-3.5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#101D35] text-white">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-black text-white">
                     <FileSearch className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="font-mono text-[11px] uppercase tracking-wider text-[#101D35] font-semibold">
+                    <p className="font-mono text-[11px] uppercase tracking-wider text-black font-semibold">
                       01 // CONFIDENTIAL CONCEPT REVIEW
                     </p>
-                    <h3 className="text-sm font-bold text-[#101D35]">
+                    <h3 className="text-sm font-bold text-black">
                       We assess feasibility & technical requirements
                     </h3>
-                    <p className="mt-1 text-xs leading-relaxed text-[#253B5B]">
+                    <p className="mt-1 text-xs leading-relaxed text-neutral-600">
                       Our team reviews your concept, operational scope, hardware
                       or software requirements, and budget parameters.
                     </p>
@@ -120,17 +120,17 @@ export function HomepageIdeaQuickIntake() {
 
               <div className="rounded-xl border border-[#A8B1BE]/40 bg-white p-4 shadow-xs">
                 <div className="flex items-start gap-3.5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#101D35] text-white">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-black text-white">
                     <Compass className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="font-mono text-[11px] uppercase tracking-wider text-[#101D35] font-semibold">
+                    <p className="font-mono text-[11px] uppercase tracking-wider text-black font-semibold">
                       02 // FREE PRELIMINARY PROPOSAL & QUOTATION
                     </p>
-                    <h3 className="text-sm font-bold text-[#101D35]">
+                    <h3 className="text-sm font-bold text-black">
                       Potential solutions, estimated costs & next steps
                     </h3>
-                    <p className="mt-1 text-xs leading-relaxed text-[#253B5B]">
+                    <p className="mt-1 text-xs leading-relaxed text-neutral-600">
                       You receive a clear breakdown of recommended architecture,
                       estimated investment range, and realistic launch timeline.
                     </p>
@@ -140,17 +140,17 @@ export function HomepageIdeaQuickIntake() {
 
               <div className="rounded-xl border border-[#A8B1BE]/40 bg-white p-4 shadow-xs">
                 <div className="flex items-start gap-3.5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#101D35] text-white">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-black text-white">
                     <Rocket className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="font-mono text-[11px] uppercase tracking-wider text-[#101D35] font-semibold">
+                    <p className="font-mono text-[11px] uppercase tracking-wider text-black font-semibold">
                       03 // TURNKEY EXECUTION & LAUNCH
                     </p>
-                    <h3 className="text-sm font-bold text-[#101D35]">
+                    <h3 className="text-sm font-bold text-black">
                       We source, build, automate & coordinate launch
                     </h3>
-                    <p className="mt-1 text-xs leading-relaxed text-[#253B5B]">
+                    <p className="mt-1 text-xs leading-relaxed text-neutral-600">
                       From vendor procurement and AI development to Cyprus legal
                       coordination, Onspec turns your blueprint into reality.
                     </p>
@@ -162,10 +162,10 @@ export function HomepageIdeaQuickIntake() {
             <div className="pt-2">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-[#101D35] hover:text-[#253B5B] transition-colors"
+                className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-black hover:text-neutral-500 transition-colors"
               >
                 <span>OPEN DEDICATED SERVICES & IDEA WORKSPACE</span>
-                <ArrowUpRight className="h-4 w-4 text-[#253B5B]" />
+                <ArrowUpRight className="h-4 w-4 text-neutral-600" />
               </Link>
             </div>
           </div>
@@ -174,30 +174,30 @@ export function HomepageIdeaQuickIntake() {
           <div className="lg:col-span-7">
             <div className="overflow-hidden rounded-2xl border border-[#A8B1BE]/45 bg-white shadow-xl">
               {/* Top Spec Header */}
-              <div className="flex items-center justify-between border-b border-[#A8B1BE]/30 bg-[#101D35] px-6 py-4 text-[#F7F8FA]">
+              <div className="flex items-center justify-between border-b border-[#A8B1BE]/30 bg-black px-6 py-4 text-[#F7F8FA]">
                 <div className="flex items-center gap-2.5">
                   <span className="h-2 w-2 rounded-full bg-white" />
                   <span className="font-mono text-xs uppercase tracking-widest text-[#F7F8FA]">
                     IDEA INTAKE ENGINE // FREE PRELIMINARY PROPOSAL
                   </span>
                 </div>
-                <span className="rounded bg-[#253B5B] px-2.5 py-0.5 font-mono text-[11px] text-white">
+                <span className="rounded bg-neutral-900 px-2.5 py-0.5 font-mono text-[11px] text-white">
                   CONFIDENTIAL
                 </span>
               </div>
 
               {referenceId ? (
                 <div className="p-8 sm:p-10 text-center space-y-5">
-                  <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#101D35]/10 text-[#101D35]">
+                  <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-black/10 text-black">
                     <ShieldCheck className="h-7 w-7" />
                   </div>
-                  <p className="font-mono text-xs uppercase tracking-widest text-[#101D35] font-semibold">
+                  <p className="font-mono text-xs uppercase tracking-widest text-black font-semibold">
                     IDEA SUBMISSION REGISTERED FOR EVALUATION
                   </p>
-                  <h3 className="text-2xl font-extrabold text-[#101D35]">
+                  <h3 className="text-2xl font-extrabold text-black">
                     Proposal Reference: {referenceId}
                   </h3>
-                  <p className="mx-auto max-w-lg text-sm leading-relaxed text-[#253B5B]">
+                  <p className="mx-auto max-w-lg text-sm leading-relaxed text-neutral-600">
                     Thank you, <strong>{name}</strong>. Your concept has been
                     logged with our Custom Execution desk. We will review your
                     objectives and prepare your{" "}
@@ -212,16 +212,16 @@ export function HomepageIdeaQuickIntake() {
                         setIdeaDescription("");
                         setGoals("");
                       }}
-                      className="rounded-lg border border-[#A8B1BE]/60 px-4 py-2.5 font-mono text-xs uppercase tracking-wider text-[#101D35] hover:border-[#101D35] transition-colors cursor-pointer"
+                      className="rounded-lg border border-[#A8B1BE]/60 px-4 py-2.5 font-mono text-xs uppercase tracking-wider text-black hover:border-black transition-colors cursor-pointer"
                     >
                       Submit Another Concept
                     </button>
                     <Link
                       href="/innovate"
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#101D35] px-5 py-2.5 font-mono text-xs uppercase tracking-wider text-[#F7F8FA] hover:bg-[#253B5B] transition-colors"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-black px-5 py-2.5 font-mono text-xs uppercase tracking-wider text-[#F7F8FA] hover:bg-neutral-900 transition-colors"
                     >
                       <span>View Full Innovate Process</span>
-                      <ArrowUpRight className="h-3.5 w-3.5 text-[#101D35]" />
+                      <ArrowUpRight className="h-3.5 w-3.5 text-black" />
                     </Link>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ export function HomepageIdeaQuickIntake() {
                 <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-5">
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                     <div>
-                      <label className="block font-mono text-[11px] uppercase tracking-wider text-[#253B5B] font-semibold">
+                      <label className="block font-mono text-[11px] uppercase tracking-wider text-neutral-600 font-semibold">
                         01. Your Name *
                       </label>
                       <input
@@ -238,11 +238,11 @@ export function HomepageIdeaQuickIntake() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Elena Constantinou"
-                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-[#101D35] focus:border-[#101D35] focus:bg-white focus:outline-none"
+                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-black focus:border-black focus:bg-white focus:outline-none"
                       />
                     </div>
                     <div>
-                      <label className="block font-mono text-[11px] uppercase tracking-wider text-[#253B5B] font-semibold">
+                      <label className="block font-mono text-[11px] uppercase tracking-wider text-neutral-600 font-semibold">
                         02. Email Address *
                       </label>
                       <input
@@ -251,11 +251,11 @@ export function HomepageIdeaQuickIntake() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="elena@domain.eu"
-                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-[#101D35] focus:border-[#101D35] focus:bg-white focus:outline-none"
+                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-black focus:border-black focus:bg-white focus:outline-none"
                       />
                     </div>
                     <div>
-                      <label className="block font-mono text-[11px] uppercase tracking-wider text-[#253B5B] font-semibold">
+                      <label className="block font-mono text-[11px] uppercase tracking-wider text-neutral-600 font-semibold">
                         03. WhatsApp Number *
                       </label>
                       <input
@@ -264,13 +264,13 @@ export function HomepageIdeaQuickIntake() {
                         value={whatsapp}
                         onChange={(e) => setWhatsapp(e.target.value)}
                         placeholder="+357 99 000 000"
-                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-[#101D35] focus:border-[#101D35] focus:bg-white focus:outline-none"
+                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-black focus:border-black focus:bg-white focus:outline-none"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block font-mono text-[11px] uppercase tracking-wider text-[#253B5B] font-semibold">
+                    <label className="block font-mono text-[11px] uppercase tracking-wider text-neutral-600 font-semibold">
                       04. Description of Your Idea *
                     </label>
                     <textarea
@@ -279,19 +279,19 @@ export function HomepageIdeaQuickIntake() {
                       value={ideaDescription}
                       onChange={(e) => setIdeaDescription(e.target.value)}
                       placeholder="Describe the business concept, service, automated retail unit, or custom software/AI platform you want to build..."
-                      className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-[#101D35] focus:border-[#101D35] focus:bg-white focus:outline-none"
+                      className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-black focus:border-black focus:bg-white focus:outline-none"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                      <label className="block font-mono text-[11px] uppercase tracking-wider text-[#253B5B] font-semibold">
+                      <label className="block font-mono text-[11px] uppercase tracking-wider text-neutral-600 font-semibold">
                         05. Estimated Budget (Optional)
                       </label>
                       <select
                         value={budget}
                         onChange={(e) => setBudget(e.target.value)}
-                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-[#101D35] focus:border-[#101D35] focus:bg-white focus:outline-none"
+                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-black focus:border-black focus:bg-white focus:outline-none"
                       >
                         {BUDGET_TIERS.map((tier) => (
                           <option key={tier} value={tier}>
@@ -301,13 +301,13 @@ export function HomepageIdeaQuickIntake() {
                       </select>
                     </div>
                     <div>
-                      <label className="block font-mono text-[11px] uppercase tracking-wider text-[#253B5B] font-semibold">
+                      <label className="block font-mono text-[11px] uppercase tracking-wider text-neutral-600 font-semibold">
                         07. Desired Timeframe
                       </label>
                       <select
                         value={timeframe}
                         onChange={(e) => setTimeframe(e.target.value)}
-                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-[#101D35] focus:border-[#101D35] focus:bg-white focus:outline-none"
+                        className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-black focus:border-black focus:bg-white focus:outline-none"
                       >
                         {TIMEFRAME_OPTIONS.map((tf) => (
                           <option key={tf} value={tf}>
@@ -319,7 +319,7 @@ export function HomepageIdeaQuickIntake() {
                   </div>
 
                   <div>
-                    <label className="block font-mono text-[11px] uppercase tracking-wider text-[#253B5B] font-semibold">
+                    <label className="block font-mono text-[11px] uppercase tracking-wider text-neutral-600 font-semibold">
                       06. Goals & Expectations *
                     </label>
                     <input
@@ -328,13 +328,13 @@ export function HomepageIdeaQuickIntake() {
                       value={goals}
                       onChange={(e) => setGoals(e.target.value)}
                       placeholder="e.g. Passive cashflow asset in Limassol, full turnkey build, or custom AI platform MVP..."
-                      className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-[#101D35] focus:border-[#101D35] focus:bg-white focus:outline-none"
+                      className="mt-1.5 w-full rounded-lg border border-[#A8B1BE]/60 bg-[#F7F8FA] px-3.5 py-2.5 text-sm text-black focus:border-black focus:bg-white focus:outline-none"
                     />
                   </div>
 
                   <div className="flex flex-col items-start justify-between gap-4 border-t border-[#A8B1BE]/30 pt-4 sm:flex-row sm:items-center">
-                    <div className="flex items-center gap-2 text-xs text-[#253B5B]">
-                      <CheckCircle2 className="h-4 w-4 shrink-0 text-[#101D35]" />
+                    <div className="flex items-center gap-2 text-xs text-neutral-600">
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-black" />
                       <span>
                         Includes free preliminary proposal, cost estimate &
                         next-step roadmap.
@@ -344,7 +344,7 @@ export function HomepageIdeaQuickIntake() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-[#101D35] px-6 py-3.5 text-xs font-mono font-bold uppercase tracking-wider text-white shadow-md hover:bg-black transition-colors cursor-pointer"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-black px-6 py-3.5 text-xs font-mono font-bold uppercase tracking-wider text-white shadow-md hover:bg-black transition-colors cursor-pointer"
                     >
                       <Send className="h-3.5 w-3.5" />
                       <span>

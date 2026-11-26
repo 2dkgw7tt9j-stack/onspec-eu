@@ -97,13 +97,13 @@ export function AutomationInteractiveConsole() {
   return (
     <section
       id="automate-systems"
-      className="relative border-y border-[#A8B1BE]/25 linear-navy-surface tech-grid-dark py-24 text-[#F7F8FA]"
+      className="relative border-y border-neutral-800 bg-black tech-grid-dark py-24 text-white"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Top Section Header */}
         <div className="flex flex-col justify-between gap-8 border-b border-[#A8B1BE]/20 pb-12 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-[#A8B1BE]/25 bg-[#253B5B]/60 px-3.5 py-1.5">
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-[#A8B1BE]/25 bg-neutral-900/70 px-3.5 py-1.5">
               <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
               <span className="font-mono text-xs uppercase tracking-widest text-[#F7F8FA]/90">
                 SECTION 05 // PILLAR 02 : AI & BUSINESS AUTOMATION
@@ -125,7 +125,7 @@ export function AutomationInteractiveConsole() {
           </div>
 
           <div className="flex flex-col items-start gap-3 sm:flex-row lg:flex-col lg:items-end">
-            <div className="rounded-lg border border-[#A8B1BE]/25 bg-[#253B5B]/50 px-4 py-3 backdrop-blur-sm">
+            <div className="rounded-lg border border-[#A8B1BE]/25 bg-neutral-900/60 px-4 py-3 backdrop-blur-sm">
               <p className="font-mono text-[10px] uppercase tracking-widest text-[#A8B1BE]">
                 FULL STACK EFFICIENCY POTENTIAL
               </p>
@@ -135,7 +135,7 @@ export function AutomationInteractiveConsole() {
             </div>
             <Link
               href="/ai-web"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-xs font-mono font-bold uppercase tracking-wider text-[#101D35] hover:bg-[#F7F8FA] transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-[#F7F8FA] transition-colors"
             >
               <span>EXPLORE ALL AI & AUTOMATION SYSTEMS</span>
               <ArrowUpRight className="h-4 w-4" />
@@ -155,8 +155,8 @@ export function AutomationInteractiveConsole() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`rounded-lg border px-3.5 py-2 font-mono text-xs uppercase tracking-wider transition-all cursor-pointer ${
                     active
-                      ? "border-white bg-white text-[#101D35] font-bold"
-                      : "border-[#A8B1BE]/25 bg-[#253B5B]/40 text-[#F7F8FA]/80 hover:border-[#A8B1BE]/60 hover:text-white"
+                      ? "border-white bg-white text-black font-bold"
+                      : "border-[#A8B1BE]/25 bg-neutral-900/50 text-[#F7F8FA]/80 hover:border-[#A8B1BE]/60 hover:text-white"
                   }`}
                 >
                   {cat}
@@ -183,8 +183,8 @@ export function AutomationInteractiveConsole() {
                   onClick={() => handleSelectModule(mod)}
                   className={`w-full text-left rounded-xl border p-4 transition-all cursor-pointer ${
                     isSelected
-                      ? "border-white/80 bg-[#253B5B] shadow-lg"
-                      : "border-[#A8B1BE]/20 bg-[#101D35]/80 hover:border-[#A8B1BE]/50 hover:bg-[#253B5B]/45"
+                      ? "border-white/80 bg-neutral-900 shadow-lg"
+                      : "border-[#A8B1BE]/20 bg-black/80 hover:border-[#A8B1BE]/50 hover:bg-neutral-900/60"
                   }`}
                 >
                   <div className="flex items-center justify-between">
@@ -194,7 +194,7 @@ export function AutomationInteractiveConsole() {
                         {mod.code}
                       </span>
                     </div>
-                    <span className="rounded bg-[#101D35]/80 px-2 py-0.5 font-mono text-[10px] text-[#A8B1BE]">
+                    <span className="rounded bg-black/80 px-2 py-0.5 font-mono text-[10px] text-[#A8B1BE]">
                       -{mod.timeSavedHoursPerWeek}h / wk
                     </span>
                   </div>
@@ -210,7 +210,7 @@ export function AutomationInteractiveConsole() {
           </div>
 
           {/* Right Column: Live Telemetry Simulation Engine */}
-          <div className="lg:col-span-7 flex flex-col justify-between rounded-2xl border border-[#A8B1BE]/30 bg-[#101D35]/95 p-6 sm:p-8 shadow-2xl">
+          <div className="lg:col-span-7 flex flex-col justify-between rounded-2xl border border-[#A8B1BE]/30 bg-black/95 p-6 sm:p-8 shadow-2xl">
             <div>
               {/* Top Console Bar */}
               <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#A8B1BE]/20 pb-5">
@@ -228,7 +228,7 @@ export function AutomationInteractiveConsole() {
                 <button
                   type="button"
                   onClick={runLiveSimulation}
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/40 bg-white/10 px-3.5 py-2 font-mono text-xs uppercase tracking-wider text-white hover:bg-white hover:text-[#101D35] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/40 bg-white/10 px-3.5 py-2 font-mono text-xs uppercase tracking-wider text-white hover:bg-white hover:text-black transition-colors cursor-pointer"
                 >
                   <RefreshCw
                     className={`h-3.5 w-3.5 ${simulating ? "animate-spin" : ""}`}
@@ -245,7 +245,7 @@ export function AutomationInteractiveConsole() {
               </p>
 
               <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#253B5B]/45 p-3.5">
+                <div className="rounded-lg border border-[#A8B1BE]/20 bg-neutral-900/60 p-3.5">
                   <div className="flex items-center gap-1.5 font-mono text-[10px] uppercase text-[#A8B1BE]">
                     <Zap className="h-3.5 w-3.5 text-white/80" />
                     <span>EFFICIENCY BENCHMARK</span>
@@ -254,7 +254,7 @@ export function AutomationInteractiveConsole() {
                     {activeModule.efficiencyMetric}
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#253B5B]/45 p-3.5">
+                <div className="rounded-lg border border-[#A8B1BE]/20 bg-neutral-900/60 p-3.5">
                   <div className="flex items-center gap-1.5 font-mono text-[10px] uppercase text-[#A8B1BE]">
                     <Clock className="h-3.5 w-3.5 text-white/80" />
                     <span>MANUAL HOURS SAVED</span>
@@ -263,7 +263,7 @@ export function AutomationInteractiveConsole() {
                     ~{activeModule.timeSavedHoursPerWeek} Hours / Week
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#253B5B]/45 p-3.5">
+                <div className="rounded-lg border border-[#A8B1BE]/20 bg-neutral-900/60 p-3.5">
                   <div className="flex items-center gap-1.5 font-mono text-[10px] uppercase text-[#A8B1BE]">
                     <Layers className="h-3.5 w-3.5 text-white/80" />
                     <span>CONNECTED NODES</span>
@@ -275,7 +275,7 @@ export function AutomationInteractiveConsole() {
               </div>
 
               {/* Live Workflow Pipeline Visualization */}
-              <div className="mt-6 rounded-xl border border-[#A8B1BE]/25 bg-[#253B5B]/30 p-5">
+              <div className="mt-6 rounded-xl border border-[#A8B1BE]/25 bg-neutral-900/40 p-5">
                 <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[#A8B1BE]">
                   <span className="inline-flex items-center gap-2">
                     <Terminal className="h-3.5 w-3.5 text-white/80" />
@@ -289,8 +289,8 @@ export function AutomationInteractiveConsole() {
                   <div
                     className={`rounded-lg border p-3.5 transition-all ${
                       simStep >= 1
-                        ? "border-white/40 bg-[#101D35]"
-                        : "border-[#A8B1BE]/20 bg-[#101D35]/50 opacity-50"
+                        ? "border-white/40 bg-black"
+                        : "border-[#A8B1BE]/20 bg-black/50 opacity-50"
                     }`}
                   >
                     <div className="flex items-center justify-between">
@@ -308,8 +308,8 @@ export function AutomationInteractiveConsole() {
                   <div
                     className={`rounded-lg border p-3.5 transition-all ${
                       simStep >= 3
-                        ? "border-white/50 bg-[#101D35]"
-                        : "border-[#A8B1BE]/20 bg-[#101D35]/50 opacity-60"
+                        ? "border-white/50 bg-black"
+                        : "border-[#A8B1BE]/20 bg-black/50 opacity-60"
                     }`}
                   >
                     <div className="flex items-center justify-between">
@@ -336,7 +336,7 @@ export function AutomationInteractiveConsole() {
                   {activeModule.capabilities.map((cap) => (
                     <div
                       key={cap}
-                      className="flex items-start gap-2 rounded-lg border border-[#A8B1BE]/15 bg-[#253B5B]/25 p-2.5 text-xs text-[#F7F8FA]/90"
+                      className="flex items-start gap-2 rounded-lg border border-[#A8B1BE]/15 bg-neutral-900/35 p-2.5 text-xs text-[#F7F8FA]/90"
                     >
                       <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white" />
                       <span>{cap}</span>
@@ -355,7 +355,7 @@ export function AutomationInteractiveConsole() {
                 {activeModule.connectedPlatforms.map((plat) => (
                   <span
                     key={plat}
-                    className="rounded border border-[#A8B1BE]/25 bg-[#253B5B]/60 px-2.5 py-1 font-mono text-[11px] text-[#F7F8FA]"
+                    className="rounded border border-[#A8B1BE]/25 bg-neutral-900/70 px-2.5 py-1 font-mono text-[11px] text-[#F7F8FA]"
                   >
                     {plat}
                   </span>
@@ -373,7 +373,7 @@ export function AutomationInteractiveConsole() {
         </div>
 
         {/* Connected Platforms Matrix (All 6 Core Platforms) */}
-        <div className="mt-12 rounded-2xl border border-[#A8B1BE]/25 bg-[#253B5B]/35 p-6 sm:p-8">
+        <div className="mt-12 rounded-2xl border border-[#A8B1BE]/25 bg-neutral-900/50 p-6 sm:p-8">
           <div className="flex flex-col justify-between gap-4 border-b border-[#A8B1BE]/20 pb-5 sm:flex-row sm:items-center">
             <div>
               <p className="font-mono text-xs uppercase tracking-widest text-white/80">
@@ -393,7 +393,7 @@ export function AutomationInteractiveConsole() {
             {CONNECTED_PLATFORMS_MATRIX.map((node) => (
               <div
                 key={node.id}
-                className="rounded-xl border border-[#A8B1BE]/20 bg-[#101D35]/85 p-4 transition-colors hover:border-white/40"
+                className="rounded-xl border border-[#A8B1BE]/20 bg-black/85 p-4 transition-colors hover:border-white/40"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[11px] text-white/90">

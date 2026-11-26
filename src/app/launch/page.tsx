@@ -136,7 +136,7 @@ export default function LaunchPage() {
   };
 
   return (
-    <main className="bg-[#F7F8FA] text-[#101D35]">
+    <main className="bg-[#F7F8FA] text-black">
       {/* Floating Sticky Sub-Navigation Pill Bar (.c-sticky-nav / .c-widget-bar from ae-1.html) */}
       <div className="c-sticky-nav -full-width is-inview">
         <div className="c-sticky-nav_inner">
@@ -149,7 +149,7 @@ export default function LaunchPage() {
                 <span className="text-md font-bold text-white shrink-0">
                   01 // {currentOpportunity.title}
                 </span>
-                <span className="text-eyebrow text-[#101D35] shrink-1">
+                <span className="text-eyebrow text-black shrink-1">
                   {currentOpportunity.estimatedCapital} •{" "}
                   {currentOpportunity.timeline}
                 </span>
@@ -189,8 +189,8 @@ export default function LaunchPage() {
                   onClick={() => setDrawerOpportunity(currentOpportunity)}
                   className="c-button -secondary shrink-0 cursor-pointer"
                   style={{
-                    backgroundColor: "#101D35",
-                    color: "#101D35",
+                    backgroundColor: "#000000",
+                    color: "#FFFFFF",
                   }}
                 >
                   <span className="c-button_inner">
@@ -263,10 +263,10 @@ export default function LaunchPage() {
         {/* Section 2: Lead Editorial Paragraph (1:1 ae-1.html lines 68-74) */}
         <section className="my-fluid-2xl">
           <div className="flex flex-col gap-y-8 items-center text-center mx-auto max-w-3xl px-4">
-            <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+            <p className="text-eyebrow text-black uppercase tracking-widest">
               TURNKEY PREFABRICATED BUSINESS CREATION
             </p>
-            <p className="text-lg text-[#253B5B] max-w-2xl">
+            <p className="text-lg text-neutral-600 max-w-2xl">
               Built around proven unit economics and remote cloud telemetry, Onspec’s ready businesses business models remove the guesswork of starting a company. We coordinate prime location scouting, commercial hardware, wholesale suppliers, Cyprus corporate registration via independent legal professionals, and complete operational commissioning.
             </p>
           </div>
@@ -277,13 +277,13 @@ export default function LaunchPage() {
           <section className="flex flex-col gap-y-fluid-xl overflow-hidden">
             <div className="container">
               <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-                <p className="text-eyebrow text-[#253B5B]">
+                <p className="text-eyebrow text-neutral-600">
                   FEATURED TURNKEY SPECIFICATIONS
                 </p>
                 <h2 className="sr-only">Discover the ONSPEC Launch Difference</h2>
                 <div
                   aria-hidden="true"
-                  className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+                  className="c-split-text anim-text-balance heading-xl text-black"
                 >
                   Discover the ONSPEC Launch Difference
                 </div>
@@ -311,7 +311,7 @@ export default function LaunchPage() {
                       </div>
                       <div className="c-tile-feature_inner">
                         <div className="c-tile-feature_content">
-                          <p className="c-tile-feature_label text-eyebrow text-[#101D35]">
+                          <p className="c-tile-feature_label text-eyebrow text-black">
                             {opp.specCode} • {opp.estimatedCapital}
                           </p>
                           <h3 className="c-tile-feature_title heading-xs">
@@ -365,12 +365,12 @@ export default function LaunchPage() {
         <section id="turntable-showcase" className="my-fluid-xl">
           <div className="c-turntable !h-auto">
             <div
-              className="c-tabs c-turntable_tabs !bg-[#101D35] text-white p-6 md:p-10"
+              className="c-tabs c-turntable_tabs !bg-black text-white p-6 md:p-10"
               style={{ clipPath: "inset(0 round var(--radius-md))" }}
             >
               {/* Top Sticky Switcher Nav for all 7 Ready Businesses Business Models */}
               <div className="flex flex-col items-center gap-4 mb-8">
-                <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                <span className="font-mono text-xs uppercase tracking-widest text-black">
                   INTERACTIVE TURNTABLE &amp; EXECUTION HOTSPOT INSPECTOR
                 </span>
                 <nav
@@ -400,7 +400,7 @@ export default function LaunchPage() {
                               }}
                               className={`rounded-full px-4 py-2.5 text-xs font-mono transition-all cursor-pointer ${
                                 active
-                                  ? "bg-[#101D35] text-[#101D35] font-bold shadow-md"
+                                  ? "bg-black text-black font-bold shadow-md"
                                   : "text-white/85 hover:bg-white/10"
                               }`}
                             >
@@ -416,20 +416,20 @@ export default function LaunchPage() {
 
               {/* Active Business Model Interactive Hotspot Canvas (.c-markers) */}
               <div className="grid lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-7 relative rounded-[18px] overflow-hidden border border-[#A8B1BE]/25 aspect-[16/11] bg-[#253B5B]">
+                <div className="lg:col-span-7 relative rounded-[18px] overflow-hidden border border-[#A8B1BE]/25 aspect-[16/11] bg-neutral-900">
                   <img
                     src={currentOpportunity.image}
                     alt={currentOpportunity.title}
                     className="h-full w-full object-cover opacity-85 transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#101D35] via-[#101D35]/25 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
 
                   {/* Top-left Telemetry Overlay */}
                   <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                    <span className="rounded-full bg-[#101D35]/85 backdrop-blur-md border border-[#A8B1BE]/30 px-3.5 py-1.5 font-mono text-xs text-[#101D35]">
+                    <span className="rounded-full bg-black/85 backdrop-blur-md border border-[#A8B1BE]/30 px-3.5 py-1.5 font-mono text-xs text-black">
                       {currentOpportunity.specCode}
                     </span>
-                    <span className="rounded-full bg-[#101D35]/85 backdrop-blur-md border border-[#A8B1BE]/30 px-3.5 py-1.5 font-mono text-xs text-white">
+                    <span className="rounded-full bg-black/85 backdrop-blur-md border border-[#A8B1BE]/30 px-3.5 py-1.5 font-mono text-xs text-white">
                       Click any + hotspot marker to inspect setup layer
                     </span>
                   </div>
@@ -455,8 +455,8 @@ export default function LaunchPage() {
                           <span
                             className={`h-7 w-7 rounded-full flex items-center justify-center text-xs font-bold transition-transform ${
                               isSelected
-                                ? "bg-white text-[#101D35] scale-125 ring-4 ring-[#101D35]"
-                                : "bg-[#101D35] text-[#101D35] hover:scale-110"
+                                ? "bg-white text-black scale-125 ring-4 ring-black"
+                                : "bg-black text-black hover:scale-110"
                             }`}
                           >
                             +
@@ -465,7 +465,7 @@ export default function LaunchPage() {
                             className="c-markers_label text-xs whitespace-nowrap"
                             style={{
                               opacity: isSelected ? 1 : undefined,
-                              backgroundColor: "#101D35",
+                              backgroundColor: "#000000",
                               color: "#F7F8FA",
                               border: "1px solid rgba(39,181,138,0.6)",
                             }}
@@ -479,15 +479,15 @@ export default function LaunchPage() {
 
                   {/* Active Hotspot Lightship .c-tile-marker Overlay Card */}
                   {activeHotspot && (
-                    <div className="absolute inset-x-4 bottom-4 z-30 rounded-2xl bg-white text-[#101D35] p-5 shadow-2xl border border-[#101D35] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div className="absolute inset-x-4 bottom-4 z-30 rounded-2xl bg-white text-black p-5 shadow-2xl border border-black flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                       <div className="space-y-1 max-w-xl">
-                        <span className="font-mono text-[10px] uppercase tracking-widest text-[#101D35] font-bold">
+                        <span className="font-mono text-[10px] uppercase tracking-widest text-black font-bold">
                           {activeHotspot.code} // TURNKEY EXECUTION LAYER
                         </span>
-                        <h4 className="text-base font-bold text-[#101D35]">
+                        <h4 className="text-base font-bold text-black">
                           {activeHotspot.title}
                         </h4>
-                        <p className="text-xs text-[#253B5B] leading-relaxed">
+                        <p className="text-xs text-neutral-600 leading-relaxed">
                           {activeHotspot.description}
                         </p>
                       </div>
@@ -504,14 +504,14 @@ export default function LaunchPage() {
                               ];
                             setActiveHotspotId(next.id);
                           }}
-                          className="rounded-full bg-[#101D35] text-white px-4 py-2 text-xs font-mono uppercase tracking-wider hover:bg-[#253B5B] cursor-pointer"
+                          className="rounded-full bg-black text-white px-4 py-2 text-xs font-mono uppercase tracking-wider hover:bg-neutral-900 cursor-pointer"
                         >
                           Next Layer →
                         </button>
                         <button
                           type="button"
                           onClick={() => setActiveHotspotId(null)}
-                          className="rounded-full border border-[#A8B1BE] px-3 py-2 text-xs font-mono text-[#101D35] hover:border-[#101D35] cursor-pointer"
+                          className="rounded-full border border-[#A8B1BE] px-3 py-2 text-xs font-mono text-black hover:border-black cursor-pointer"
                         >
                           Close
                         </button>
@@ -524,11 +524,11 @@ export default function LaunchPage() {
                 <div className="lg:col-span-5 space-y-6">
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="rounded-full bg-[#101D35]/10 px-3 py-1 font-mono text-xs text-[#101D35]">
+                      <span className="rounded-full bg-black/10 px-3 py-1 font-mono text-xs text-black">
                         {currentOpportunity.category}
                       </span>
                       {currentOpportunity.flagship && (
-                        <span className="rounded-full bg-[#101D35] px-3 py-1 font-mono text-xs font-bold text-[#101D35]">
+                        <span className="rounded-full bg-black px-3 py-1 font-mono text-xs font-bold text-black">
                           FLAGSHIP MODEL
                         </span>
                       )}
@@ -546,7 +546,7 @@ export default function LaunchPage() {
                     {currentOpportunity.technicalSpecs.map((spec) => (
                       <div
                         key={spec.label}
-                        className="rounded-xl bg-[#253B5B]/45 border border-[#A8B1BE]/20 p-3"
+                        className="rounded-xl bg-neutral-900/60 border border-[#A8B1BE]/20 p-3"
                       >
                         <span className="font-mono text-[10px] uppercase tracking-wider text-[#A8B1BE] block">
                           {spec.label}
@@ -560,7 +560,7 @@ export default function LaunchPage() {
 
                   {/* Hotspot Quick-Trigger Pills */}
                   <div className="space-y-2">
-                    <p className="font-mono text-[11px] uppercase tracking-wider text-[#101D35]">
+                    <p className="font-mono text-[11px] uppercase tracking-wider text-black">
                       6 COORDINATED TURNKEY LAYERS (CLICK TO INSPECT):
                     </p>
                     <div className="flex flex-wrap gap-1.5">
@@ -575,8 +575,8 @@ export default function LaunchPage() {
                             }
                             className={`rounded-full px-3 py-1.5 text-xs font-mono transition-colors cursor-pointer border ${
                               active
-                                ? "bg-[#101D35] text-[#101D35] border-[#101D35] font-bold"
-                                : "bg-[#253B5B]/40 text-white border-[#A8B1BE]/30 hover:border-[#101D35]"
+                                ? "bg-black text-black border-black font-bold"
+                                : "bg-neutral-900/50 text-white border-[#A8B1BE]/30 hover:border-black"
                             }`}
                           >
                             {hs.code}
@@ -592,8 +592,8 @@ export default function LaunchPage() {
                       onClick={() => setDrawerOpportunity(currentOpportunity)}
                       className="c-button cursor-pointer"
                       style={{
-                        backgroundColor: "#101D35",
-                        color: "#101D35",
+                        backgroundColor: "#000000",
+                        color: "#FFFFFF",
                       }}
                     >
                       <span className="c-button_inner">
@@ -630,7 +630,7 @@ export default function LaunchPage() {
         <section id="vending-blueprint" className="my-fluid-2xl">
           <div className="c-push-image container -full-width">
             <div className="c-push-image_content">
-              <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+              <p className="text-eyebrow text-black uppercase tracking-widest">
                 FLAGSHIP CASE STUDY // SPEC-L01
               </p>
               <h3 className="sr-only">
@@ -638,11 +638,11 @@ export default function LaunchPage() {
               </h3>
               <div
                 aria-hidden="true"
-                className="c-split-text -full-width heading-sm text-[#101D35]"
+                className="c-split-text -full-width heading-sm text-black"
               >
                 The Turnkey Smart Vending Machine Business Blueprint
               </div>
-              <p className="text-md text-[#253B5B]">
+              <p className="text-md text-neutral-600">
                 Our flagship entry-level and multi unit scalable asset in Cyprus. We handle every step from demographic opportunity analysis and prime site agreements to contactless touchscreen hardware, wholesale FMCG suppliers, Cyprus company formation via independent legal professionals, and live cloud telemetry.
               </p>
               <div className="pt-2">
@@ -687,20 +687,20 @@ export default function LaunchPage() {
             {VENDING_FLAGSHIP_BLUEPRINT.map((stage) => (
               <div
                 key={stage.step}
-                className="rounded-2xl bg-white border border-[#A8B1BE]/45 p-6 flex flex-col justify-between gap-4 hover:border-[#101D35] transition-colors"
+                className="rounded-2xl bg-white border border-[#A8B1BE]/45 p-6 flex flex-col justify-between gap-4 hover:border-black transition-colors"
               >
                 <div>
-                  <span className="font-mono text-xs uppercase tracking-widest text-[#101D35] font-bold">
+                  <span className="font-mono text-xs uppercase tracking-widest text-black font-bold">
                     {stage.step}
                   </span>
-                  <h4 className="heading-2xs text-[#101D35] mt-2">
+                  <h4 className="heading-2xs text-black mt-2">
                     {stage.title}
                   </h4>
-                  <p className="text-xs text-[#253B5B] mt-2 leading-relaxed">
+                  <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
                     {stage.detail}
                   </p>
                 </div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-[#101D35]/60">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-black/60">
                   COORDINATED BY ONSPEC
                 </span>
               </div>
@@ -713,13 +713,13 @@ export default function LaunchPage() {
           <section className="flex flex-col gap-y-fluid-xl overflow-hidden">
             <div className="container">
               <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-                <p className="text-eyebrow text-[#101D35]">
+                <p className="text-eyebrow text-black">
                   COMPLETE PREFAB VENTURE CATALOG
                 </p>
                 <h2 className="sr-only">7 Ready Businesses Business Models</h2>
                 <div
                   aria-hidden="true"
-                  className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+                  className="c-split-text anim-text-balance heading-xl text-black"
                 >
                   7 Ready Businesses Business Models
                 </div>
@@ -733,20 +733,20 @@ export default function LaunchPage() {
                     <article className="c-tile-card -default h-full">
                       <div className="c-tile-card_inner">
                         <div className="flex items-center justify-between">
-                          <h3 className="text-eyebrow text-[#101D35]">
+                          <h3 className="text-eyebrow text-black">
                             {opp.specCode}
                           </h3>
-                          <span className="font-mono text-xs text-[#253B5B]">
+                          <span className="font-mono text-xs text-neutral-600">
                             {opp.timeline}
                           </span>
                         </div>
-                        <p className="heading-2xs text-[#101D35]">
+                        <p className="heading-2xs text-black">
                           {opp.title}
                         </p>
-                        <p className="text-xs text-[#253B5B]">
+                        <p className="text-xs text-neutral-600">
                           {opp.shortDescription}
                         </p>
-                        <p className="font-mono text-xs font-bold text-[#101D35]">
+                        <p className="font-mono text-xs font-bold text-black">
                           Est. Capital: {opp.estimatedCapital}
                         </p>
                       </div>
@@ -807,7 +807,7 @@ export default function LaunchPage() {
                 <div className="c-carousel_item @container">
                   <article className="c-tile-card -image-cover min-h-[380px]">
                     <div className="c-tile-card_inner z-10">
-                      <h3 className="text-eyebrow text-[#101D35]">
+                      <h3 className="text-eyebrow text-black">
                         PILLAR 03 // INNOVATE
                       </h3>
                       <p className="heading-xs text-white">
@@ -835,8 +835,8 @@ export default function LaunchPage() {
                         className="c-button -fullwidth absolute-link"
                         href="/innovate"
                         style={{
-                          backgroundColor: "#101D35",
-                          color: "#101D35",
+                          backgroundColor: "#000000",
+                          color: "#FFFFFF",
                         }}
                       >
                         <span className="c-button_inner">
@@ -861,10 +861,10 @@ export default function LaunchPage() {
         {/* Section 7: Lightship .c-push-specs Dark Deep Navy Specification Summary Banner (1:1 ae-1.html lines 2275-2302) */}
         <section className="my-[var(--grid-margin-xl)]">
           <div
-            className="c-push-specs container-xl background-clip rounded-[20px] !bg-[#101D35] text-white py-fluid-2xl px-6"
+            className="c-push-specs container-xl background-clip rounded-[20px] !bg-black text-white py-fluid-2xl px-6"
           >
             <div className="flex flex-col gap-y-8 items-center text-center mx-auto max-w-3xl">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+              <span className="font-mono text-xs uppercase tracking-widest text-black">
                 COMPLETE TECHNICAL &amp; FINANCIAL SPECIFICATIONS
               </span>
               <h2 className="sr-only">
@@ -897,8 +897,8 @@ export default function LaunchPage() {
                   className="c-button"
                   href="/innovate"
                   style={{
-                    backgroundColor: "#101D35",
-                    color: "#101D35",
+                    backgroundColor: "#000000",
+                    color: "#FFFFFF",
                   }}
                 >
                   <span className="c-button_inner">
@@ -921,13 +921,13 @@ export default function LaunchPage() {
         <section className="my-fluid-2xl">
           <div className="container flex flex-col gap-y-fluid-xl">
             <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-              <p className="text-eyebrow text-[#101D35]">
+              <p className="text-eyebrow text-black">
                 FREQUENTLY ASKED QUESTIONS
               </p>
               <h2 className="sr-only">Turnkey Business Launch FAQ</h2>
               <div
                 aria-hidden="true"
-                className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+                className="c-split-text anim-text-balance heading-xl text-black"
               >
                 Turnkey Business Launch FAQ
               </div>
@@ -939,10 +939,10 @@ export default function LaunchPage() {
                   <div key={faq.question} className="c-accordion">
                     <details className="c-accordion_details" open={idx === 0}>
                       <summary className="c-accordion_summary text-md">
-                        <span className="c-accordion_index text-lg font-mono text-[#101D35]">
+                        <span className="c-accordion_index text-lg font-mono text-black">
                           0{idx + 1}
                         </span>
-                        <p className="text-lg font-semibold text-[#101D35] flex-1">
+                        <p className="text-lg font-semibold text-black flex-1">
                           {faq.question}
                         </p>
                         <span className="c-icon c-accordion_icon">
@@ -957,7 +957,7 @@ export default function LaunchPage() {
                       </summary>
                       <div>
                         <div className="pt-6 pb-6">
-                          <div className="c-wysiwyg text-[#253B5B]">
+                          <div className="c-wysiwyg text-neutral-600">
                             <p>{faq.answer}</p>
                           </div>
                         </div>
@@ -974,20 +974,20 @@ export default function LaunchPage() {
         <section className="c-push-newsletter pattern-background background-clip container -full-width">
           <div className="c-push-newsletter_content">
             <div className="c-push-newsletter_heading">
-              <p className="text-eyebrow text-[#101D35]">
+              <p className="text-eyebrow text-black">
                 REQUEST TURNKEY LAUNCH DOSSIER
               </p>
-              <h2 className="heading-sm text-[#101D35]">
+              <h2 className="heading-sm text-black">
                 Receive hardware specs, available Cyprus footfall slots, and a free preliminary launch proposal.
               </h2>
             </div>
 
             {referenceId ? (
-              <div className="rounded-2xl bg-white border border-[#101D35] p-5 space-y-2">
-                <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+              <div className="rounded-2xl bg-white border border-black p-5 space-y-2">
+                <p className="font-mono text-xs uppercase tracking-widest text-black">
                   LAUNCH DOSSIER REGISTERED // {referenceId}
                 </p>
-                <p className="text-xs text-[#253B5B]">
+                <p className="text-xs text-neutral-600">
                   We have logged your request for{" "}
                   <strong>{currentOpportunity.title}</strong> ({city}) and will send the prospectus to{" "}
                   <strong>{email}</strong>.

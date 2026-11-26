@@ -79,7 +79,7 @@ export default function AutomatePage() {
   const horizontalInfoModules = AUTOMATION_MODULES.slice(6, 10);
 
   return (
-    <main className="bg-[#F7F8FA] text-[#101D35]">
+    <main className="bg-[#F7F8FA] text-black">
       {/* Section 1: Full-Bleed .c-hero-visual Hero (1:1 technology.html) */}
       <div className="c-hero-visual">
         <div
@@ -134,10 +134,10 @@ export default function AutomatePage() {
       {/* Section 2: Lead Editorial Statement (1:1 technology.html) */}
       <section className="container-xl mb-fluid-xl mt-fluid-xl">
         <div className="container-xl">
-          <p className="text-eyebrow text-[#101D35] uppercase tracking-widest mb-4">
+          <p className="text-eyebrow text-black uppercase tracking-widest mb-4">
             CORE MESSAGE // PILLAR 02 : AUTOMATE
           </p>
-          <p className="text-heading-2xl max-w-[1040px] text-[#101D35]">
+          <p className="text-heading-2xl max-w-[1040px] text-black">
             &ldquo;Your business doesn&apos;t need more manual work. It needs smarter systems.&rdquo; From 24/7 multilingual AI customer support and official WhatsApp Business automation to autonomous booking assistants, CRM pipelines, and OCR invoice workflows : we engineer systems that save hours every single day.
           </p>
         </div>
@@ -158,7 +158,7 @@ export default function AutomatePage() {
       <section className="my-fluid-2xl">
         <div className="container">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-[#253B5B]">
+            <p className="text-eyebrow text-neutral-600">
               CONNECTED NERVOUS SYSTEM
             </p>
             <h2 className="sr-only">
@@ -166,7 +166,7 @@ export default function AutomatePage() {
             </h2>
             <div
               aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+              className="c-split-text anim-text-balance heading-xl text-black"
             >
               Built to Synchronize. Designed to Scale.
             </div>
@@ -177,7 +177,7 @@ export default function AutomatePage() {
           {/* First .c-push-image: Interactive 6-Platform Synchronization Hub */}
           <div className="c-push-image container">
             <div className="c-push-image_content">
-              <p className="text-eyebrow text-[#101D35]">
+              <p className="text-eyebrow text-black">
                 CROSS-PLATFORM ORCHESTRATION
               </p>
               <h3 className="sr-only">
@@ -185,11 +185,11 @@ export default function AutomatePage() {
               </h3>
               <div
                 aria-hidden="true"
-                className="c-split-text heading-sm text-[#101D35]"
+                className="c-split-text heading-sm text-black"
               >
                 WhatsApp, Email, Websites, CRM, Booking &amp; ERP in One Loop.
               </div>
-              <p className="text-md text-[#253B5B]">
+              <p className="text-md text-neutral-600">
                 Select any platform node to inspect how Onspec bridges your customer channels and back office tools with sub-second bi directional data sync.
               </p>
 
@@ -204,8 +204,8 @@ export default function AutomatePage() {
                       onClick={() => setActivePlatformId(node.id)}
                       className={`rounded-full px-3.5 py-2 text-xs font-mono transition-all cursor-pointer border ${
                         active
-                          ? "bg-[#101D35] text-[#101D35] border-[#101D35] font-semibold"
-                          : "bg-white text-[#101D35] border-[#A8B1BE]/50 hover:border-[#101D35]"
+                          ? "bg-black text-black border-black font-semibold"
+                          : "bg-white text-black border-[#A8B1BE]/50 hover:border-black"
                       }`}
                     >
                       {node.code} // {node.name.split(" (")[0]}
@@ -216,10 +216,10 @@ export default function AutomatePage() {
             </div>
 
             <div className="c-push-image_visual">
-              <div className="h-full w-full rounded-[16px] bg-[#101D35] text-[#F7F8FA] p-6 md:p-10 flex flex-col justify-between border border-[#253B5B]">
+              <div className="h-full w-full rounded-[16px] bg-black text-[#F7F8FA] p-6 md:p-10 flex flex-col justify-between border border-neutral-800">
                 <div className="flex items-center justify-between border-b border-[#A8B1BE]/20 pb-4">
-                  <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#101D35]">
-                    <span className="h-2 w-2 rounded-full bg-[#101D35] animate-pulse" />
+                  <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-black">
+                    <span className="h-2 w-2 rounded-full bg-black animate-pulse" />
                     ACTIVE NODE // {activePlatform.code}
                   </span>
                   <span className="font-mono text-xs text-[#A8B1BE]">
@@ -235,24 +235,24 @@ export default function AutomatePage() {
                     {activePlatform.role}
                   </p>
                   <div className="grid sm:grid-cols-3 gap-3 pt-2">
-                    <div className="rounded-xl bg-[#253B5B]/50 border border-[#A8B1BE]/20 p-3.5">
-                      <span className="font-mono text-[10px] uppercase text-[#101D35]">
+                    <div className="rounded-xl bg-neutral-900/60 border border-[#A8B1BE]/20 p-3.5">
+                      <span className="font-mono text-[10px] uppercase text-black">
                         01 // INBOUND TRIGGER
                       </span>
                       <p className="text-xs text-white mt-1">
                         Webhook event captured &amp; classified by AI intent router
                       </p>
                     </div>
-                    <div className="rounded-xl bg-[#253B5B]/50 border border-[#A8B1BE]/20 p-3.5">
-                      <span className="font-mono text-[10px] uppercase text-[#101D35]">
+                    <div className="rounded-xl bg-neutral-900/60 border border-[#A8B1BE]/20 p-3.5">
+                      <span className="font-mono text-[10px] uppercase text-black">
                         02 // AI PROCESSING
                       </span>
                       <p className="text-xs text-white mt-1">
                         Verifies business rules, live availability &amp; customer record
                       </p>
                     </div>
-                    <div className="rounded-xl bg-[#253B5B]/50 border border-[#A8B1BE]/20 p-3.5">
-                      <span className="font-mono text-[10px] uppercase text-[#101D35]">
+                    <div className="rounded-xl bg-neutral-900/60 border border-[#A8B1BE]/20 p-3.5">
+                      <span className="font-mono text-[10px] uppercase text-black">
                         03 // MULTI-SYSTEM SYNC
                       </span>
                       <p className="text-xs text-white mt-1">
@@ -266,7 +266,7 @@ export default function AutomatePage() {
                   <span>Connected across all 6 business layers</span>
                   <a
                     href="#automation-audit-form"
-                    className="text-[#101D35] font-mono uppercase tracking-wider hover:underline"
+                    className="text-black font-mono uppercase tracking-wider hover:underline"
                   >
                     Request Integration Blueprint →
                   </a>
@@ -278,7 +278,7 @@ export default function AutomatePage() {
           {/* Second .c-push-image: 24/7 Conversational AI & WhatsApp Pipeline */}
           <div className="c-push-image container">
             <div className="c-push-image_content">
-              <p className="text-eyebrow text-[#101D35]">
+              <p className="text-eyebrow text-black">
                 ALWAYS-ON CUSTOMER OPERATIONS
               </p>
               <h3 className="sr-only">
@@ -286,11 +286,11 @@ export default function AutomatePage() {
               </h3>
               <div
                 aria-hidden="true"
-                className="c-split-text heading-sm text-[#101D35]"
+                className="c-split-text heading-sm text-black"
               >
                 Respond in 4 Seconds. Qualify &amp; Book While You Sleep.
               </div>
-              <p className="text-md text-[#253B5B]">
+              <p className="text-md text-neutral-600">
                 Most businesses lose high-intent enquiries because nobody replied within 15 minutes. Our AI agents and WhatsApp Business workflows answer questions in English, Greek, Russian, German, and 20+ languages, send brochures, and lock in calendar bookings 24/7.
               </p>
             </div>
@@ -316,7 +316,7 @@ export default function AutomatePage() {
         <section className="flex flex-col gap-y-fluid-xl overflow-hidden">
           <div className="container">
             <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-              <p className="text-eyebrow text-[#101D35]">
+              <p className="text-eyebrow text-black">
                 CUSTOMER-FACING AI ENGINE
               </p>
               <h2 className="sr-only">
@@ -324,7 +324,7 @@ export default function AutomatePage() {
               </h2>
               <div
                 aria-hidden="true"
-                className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+                className="c-split-text anim-text-balance heading-xl text-black"
               >
                 Convert Every Conversation Automatically
               </div>
@@ -355,7 +355,7 @@ export default function AutomatePage() {
                     </div>
                     <div className="c-tile-feature_inner">
                       <div className="c-tile-feature_content">
-                        <p className="c-tile-feature_label text-eyebrow text-[#101D35]">
+                        <p className="c-tile-feature_label text-eyebrow text-black">
                           {mod.code} • {mod.efficiencyMetric}
                         </p>
                         <h3 className="c-tile-feature_title heading-xs">
@@ -456,13 +456,13 @@ export default function AutomatePage() {
         <div className="relative pattern-background pb-fluid-md md:pb-fluid-2xl pt-fluid-2xl background-clip container rounded-[20px] border border-[#A8B1BE]/30">
           <div className="flex flex-col gap-y-fluid-2xl">
             <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-              <p className="text-eyebrow text-[#101D35]">
+              <p className="text-eyebrow text-black">
                 AUTONOMOUS WORKFLOW PIPELINE
               </p>
               <h2 className="sr-only">Efficiency Comes Standard</h2>
               <div
                 aria-hidden="true"
-                className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+                className="c-split-text anim-text-balance heading-xl text-black"
               >
                 Efficiency Comes Standard
               </div>
@@ -527,13 +527,13 @@ export default function AutomatePage() {
                     <div className="c-timeline_inner">
                       <article className="c-tile-card -default c-timeline_tile">
                         <div className="c-tile-card_inner">
-                          <h3 className="text-eyebrow text-[#101D35]">
+                          <h3 className="text-eyebrow text-black">
                             {mod.code} : {mod.title}
                           </h3>
-                          <p className="text-heading-2xs text-[#101D35]">
+                          <p className="text-heading-2xs text-black">
                             {mod.tagline}
                           </p>
-                          <p className="text-xs text-[#253B5B]">
+                          <p className="text-xs text-neutral-600">
                             <strong>Trigger:</strong> {mod.sampleTrigger} →{" "}
                             <strong>Action:</strong> {mod.sampleAction}
                           </p>
@@ -561,7 +561,7 @@ export default function AutomatePage() {
             {/* 2-Column Hairline List of All 10 AI & Business Automation Services (1:1 technology.html lines 544-603) */}
             <div className="grid lg:grid-cols-2 gap-x-gutter gap-y-fluid-lg pt-8">
               <div>
-                <p className="text-eyebrow text-[#101D35] uppercase tracking-widest mb-3">
+                <p className="text-eyebrow text-black uppercase tracking-widest mb-3">
                   COMPLETE 10-MODULE CATALOG
                 </p>
                 <h3 className="sr-only">
@@ -569,11 +569,11 @@ export default function AutomatePage() {
                 </h3>
                 <div
                   aria-hidden="true"
-                  className="c-split-text text-heading-md max-w-[420px] anim-text-balance text-[#101D35]"
+                  className="c-split-text text-heading-md max-w-[420px] anim-text-balance text-black"
                 >
                   The Engineered Ease of ONSPEC Automation
                 </div>
-                <p className="text-md text-[#253B5B] mt-4 max-w-md">
+                <p className="text-md text-neutral-600 mt-4 max-w-md">
                   Every module is custom-configured to your existing software stack and business rules. Click any module to inspect its capabilities or add it to your free automation audit.
                 </p>
               </div>
@@ -584,25 +584,25 @@ export default function AutomatePage() {
                     className="border-t border-[#A8B1BE]/50 grid xs:grid-cols-2 gap-y-3 gap-x-gutter py-4 items-start"
                   >
                     <div>
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-[#101D35] block">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-black block">
                         {mod.code}
                       </span>
-                      <h4 className="text-eyebrow text-[#101D35] font-bold mt-0.5">
+                      <h4 className="text-eyebrow text-black font-bold mt-0.5">
                         {mod.title}
                       </h4>
-                      <span className="inline-block mt-1.5 rounded-full bg-[#101D35] px-2.5 py-0.5 font-mono text-[10px] text-[#101D35]">
+                      <span className="inline-block mt-1.5 rounded-full bg-black px-2.5 py-0.5 font-mono text-[10px] text-black">
                         Saves ~{mod.timeSavedHoursPerWeek}h/wk •{" "}
                         {mod.efficiencyMetric}
                       </span>
                     </div>
                     <div className="space-y-2">
-                      <p className="text-sm text-[#253B5B]">
+                      <p className="text-sm text-neutral-600">
                         {mod.description}
                       </p>
                       <button
                         type="button"
                         onClick={() => setModalModule(mod)}
-                        className="font-mono text-xs uppercase tracking-wider text-[#101D35] font-semibold hover:text-[#101D35] cursor-pointer"
+                        className="font-mono text-xs uppercase tracking-wider text-black font-semibold hover:text-black cursor-pointer"
                       >
                         Inspect Technical Spec +
                       </button>
@@ -619,13 +619,13 @@ export default function AutomatePage() {
       <section className="my-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-[#253B5B]">
+            <p className="text-eyebrow text-neutral-600">
               CRM, BOOKING &amp; INTAKE PIPELINES
             </p>
             <h2 className="sr-only">All Operations, at Your Fingertips</h2>
             <div
               aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+              className="c-split-text anim-text-balance heading-xl text-black"
             >
               All Operations, at Your Fingertips
             </div>
@@ -650,13 +650,13 @@ export default function AutomatePage() {
                       </div>
                     </div>
                     <div className="c-tile-info_inner">
-                      <h3 className="text-eyebrow text-[#101D35]">
+                      <h3 className="text-eyebrow text-black">
                         {mod.code} // {mod.title}
                       </h3>
-                      <p className="text-heading-xs text-[#101D35] mt-1">
+                      <p className="text-heading-xs text-black mt-1">
                         {mod.tagline}
                       </p>
-                      <p className="text-xs text-[#253B5B] mt-2">
+                      <p className="text-xs text-neutral-600 mt-2">
                         Connected: {mod.connectedPlatforms.join(" • ")}
                       </p>
                     </div>
@@ -672,17 +672,17 @@ export default function AutomatePage() {
       <section className="my-fluid-2xl">
         <div className="container grid md:grid-cols-12 gap-x-gutter gap-y-fluid-md">
           <div className="col-start-1 md:col-end-6 flex flex-col gap-y-6 max-w-[360px]">
-            <p className="text-eyebrow text-[#101D35]">
+            <p className="text-eyebrow text-black">
               FINANCE, ADMIN &amp; INFRASTRUCTURE
             </p>
             <h2 className="sr-only">Where AI Meets Back Office Precision.</h2>
             <div
               aria-hidden="true"
-              className="c-split-text text-heading-sm text-[#101D35]"
+              className="c-split-text text-heading-sm text-black"
             >
               Where AI Meets Back Office Precision.
             </div>
-            <p className="text-md mt-2 text-[#253B5B]">
+            <p className="text-md mt-2 text-neutral-600">
               Beyond customer chat and bookings, Onspec automates the internal backbone of your company: onboarding checklists, OCR invoice extraction, supplier purchase orders, and custom API integrations.
             </p>
           </div>
@@ -706,13 +706,13 @@ export default function AutomatePage() {
                       </div>
                     </div>
                     <div className="c-tile-info_inner">
-                      <h3 className="text-eyebrow text-[#101D35]">
+                      <h3 className="text-eyebrow text-black">
                         {mod.code} : {mod.title}
                       </h3>
-                      <p className="text-heading-xs text-[#101D35]">
+                      <p className="text-heading-xs text-black">
                         {mod.tagline}
                       </p>
-                      <p className="text-xs text-[#253B5B] mt-1">
+                      <p className="text-xs text-neutral-600 mt-1">
                         {mod.efficiencyMetric} • Saves ~
                         {mod.timeSavedHoursPerWeek} hrs/week
                       </p>
@@ -732,7 +732,7 @@ export default function AutomatePage() {
             <div className="c-stacking-cards_heading container-xl">
               <div className="c-stacking-cards_heading_icon text-center">
                 <h2 className="sr-only">AUTOMATE</h2>
-                <div className="font-bold tracking-tighter text-[#101D35] leading-none select-none text-[16vw]">
+                <div className="font-bold tracking-tighter text-black leading-none select-none text-[16vw]">
                   AUTOMATE
                 </div>
               </div>
@@ -755,10 +755,10 @@ export default function AutomatePage() {
                           src={MODULE_IMAGES[idx]}
                         />
                       </picture>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/90 via-[#101D35]/30 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
                     </div>
                     <div className="c-stacking-cards_card_content z-10 text-white">
-                      <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                      <span className="font-mono text-xs uppercase tracking-widest text-black">
                         {mod.code}
                       </span>
                       <p className="heading-md max-w-[20rem] text-white">
@@ -788,20 +788,20 @@ export default function AutomatePage() {
               </ul>
               <div className="c-stacking-cards_column -left -align-top">
                 <div className="c-stacking-cards_block">
-                  <p className="text-eyebrow max-w-[15rem] text-[#101D35]">
+                  <p className="text-eyebrow max-w-[15rem] text-black">
                     Operations, Reimagined.
                   </p>
-                  <p className="heading-2xs text-[#253B5B] max-w-[15rem] mt-2">
+                  <p className="heading-2xs text-neutral-600 max-w-[15rem] mt-2">
                     Replace repetitive admin, manual inbox sorting, and missed WhatsApp leads with deterministic AI pipelines.
                   </p>
                 </div>
               </div>
               <div className="c-stacking-cards_column -right -align-center">
                 <div className="c-stacking-cards_block">
-                  <p className="text-eyebrow max-w-[15rem] text-[#101D35]">
+                  <p className="text-eyebrow max-w-[15rem] text-black">
                     Up to 78% Less Manual Work.
                   </p>
-                  <p className="heading-2xs text-[#253B5B] max-w-[15rem] mt-2">
+                  <p className="heading-2xs text-neutral-600 max-w-[15rem] mt-2">
                     Integrated directly with your Website, WhatsApp Business API, CRM, Calendar, and Accounting systems.
                   </p>
                 </div>
@@ -815,7 +815,7 @@ export default function AutomatePage() {
       <section className="my-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-[#101D35]">
+            <p className="text-eyebrow text-black">
               TECHNICAL SPECIFICATION DRAWERS
             </p>
             <h2 className="sr-only">
@@ -823,7 +823,7 @@ export default function AutomatePage() {
             </h2>
             <div
               aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+              className="c-split-text anim-text-balance heading-xl text-black"
             >
               10 AI &amp; Automation Specifications
             </div>
@@ -835,13 +835,13 @@ export default function AutomatePage() {
                 <div key={mod.id} className="c-accordion">
                   <details className="c-accordion_details" open={idx === 0}>
                     <summary className="c-accordion_summary text-md">
-                      <span className="c-accordion_index text-lg font-mono text-[#101D35]">
+                      <span className="c-accordion_index text-lg font-mono text-black">
                         {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                       </span>
-                      <p className="text-lg font-bold text-[#101D35] flex-1">
+                      <p className="text-lg font-bold text-black flex-1">
                         {mod.title}
                       </p>
-                      <span className="font-mono text-xs text-[#253B5B] hidden sm:inline">
+                      <span className="font-mono text-xs text-neutral-600 hidden sm:inline">
                         {mod.efficiencyMetric}
                       </span>
                       <span className="c-icon c-accordion_icon">
@@ -856,21 +856,21 @@ export default function AutomatePage() {
                     </summary>
                     <div>
                       <div className="pt-6 pb-8 space-y-4">
-                        <div className="c-wysiwyg text-[#253B5B]">
+                        <div className="c-wysiwyg text-neutral-600">
                           <p>{mod.description}</p>
                         </div>
                         <div className="grid sm:grid-cols-2 gap-4 rounded-xl bg-white p-5 border border-[#A8B1BE]/40">
                           <div>
-                            <p className="font-mono text-xs uppercase tracking-wider text-[#101D35] font-semibold mb-2">
+                            <p className="font-mono text-xs uppercase tracking-wider text-black font-semibold mb-2">
                               CAPABILITIES INCLUDED:
                             </p>
                             <ul className="space-y-1.5">
                               {mod.capabilities.map((cap) => (
                                 <li
                                   key={cap}
-                                  className="text-xs text-[#253B5B] flex items-start gap-2"
+                                  className="text-xs text-neutral-600 flex items-start gap-2"
                                 >
-                                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#101D35] shrink-0" />
+                                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-black shrink-0" />
                                   <span>{cap}</span>
                                 </li>
                               ))}
@@ -878,19 +878,19 @@ export default function AutomatePage() {
                           </div>
                           <div className="space-y-3">
                             <div>
-                              <p className="font-mono text-xs uppercase tracking-wider text-[#101D35] font-semibold">
+                              <p className="font-mono text-xs uppercase tracking-wider text-black font-semibold">
                                 CONNECTED PLATFORMS:
                               </p>
-                              <p className="text-xs text-[#253B5B] mt-1">
+                              <p className="text-xs text-neutral-600 mt-1">
                                 {mod.connectedPlatforms.join(" • ")}
                               </p>
                             </div>
                             <div className="rounded-lg bg-[#F7F8FA] p-3 border border-[#A8B1BE]/30 text-xs">
-                              <p className="text-[#253B5B]">
+                              <p className="text-neutral-600">
                                 <strong>Sample Trigger:</strong>{" "}
                                 {mod.sampleTrigger}
                               </p>
-                              <p className="text-[#101D35] mt-1">
+                              <p className="text-black mt-1">
                                 <strong>Autonomous Action:</strong>{" "}
                                 {mod.sampleAction}
                               </p>
@@ -912,20 +912,20 @@ export default function AutomatePage() {
         <section className="c-push-newsletter pattern-background background-clip container rounded-[20px] border border-[#A8B1BE]/35">
           <div className="c-push-newsletter_content !max-w-xl !w-full">
             <div className="c-push-newsletter_heading">
-              <p className="text-eyebrow text-[#101D35]">
+              <p className="text-eyebrow text-black">
                 FREE AI &amp; WORKFLOW AUTOMATION AUDIT
               </p>
-              <h2 className="heading-sm text-[#101D35]">
+              <h2 className="heading-sm text-black">
                 Select the workflows you want to automate and receive a tailored system architecture &amp; quotation.
               </h2>
             </div>
 
             {referenceId ? (
-              <div className="rounded-2xl bg-white border border-[#101D35] p-6 space-y-3">
-                <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+              <div className="rounded-2xl bg-white border border-black p-6 space-y-3">
+                <p className="font-mono text-xs uppercase tracking-widest text-black">
                   AUTOMATION AUDIT REGISTERED // {referenceId}
                 </p>
-                <p className="text-sm text-[#253B5B]">
+                <p className="text-sm text-neutral-600">
                   Our AI Systems Architects have logged your selected modules (
                   <strong>{selectedModules.join(", ")}</strong>) and will reach out to{" "}
                   <strong>{email}</strong> / WhatsApp (
@@ -944,8 +944,8 @@ export default function AutomatePage() {
                         onClick={() => toggleModuleSelection(m.title)}
                         className={`rounded-full px-3 py-1.5 text-[11px] font-mono transition-colors cursor-pointer border ${
                           active
-                            ? "bg-[#101D35] text-[#101D35] border-[#101D35] font-semibold"
-                            : "bg-white text-[#101D35] border-[#A8B1BE]/50 hover:border-[#101D35]"
+                            ? "bg-black text-black border-black font-semibold"
+                            : "bg-white text-black border-[#A8B1BE]/50 hover:border-black"
                         }`}
                       >
                         {active ? "✓ " : "+ "}
@@ -962,7 +962,7 @@ export default function AutomatePage() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Full Name *"
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-black focus:border-black focus:outline-none"
                   />
                   <input
                     type="tel"
@@ -970,7 +970,7 @@ export default function AutomatePage() {
                     value={whatsapp}
                     onChange={(e) => setWhatsapp(e.target.value)}
                     placeholder="WhatsApp (+357...) *"
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-black focus:border-black focus:outline-none"
                   />
                   <input
                     type="email"
@@ -978,7 +978,7 @@ export default function AutomatePage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="name@company.eu *"
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-black focus:border-black focus:outline-none"
                   />
                 </div>
 
@@ -987,8 +987,8 @@ export default function AutomatePage() {
                   type="submit"
                   disabled={submitting}
                   style={{
-                    backgroundColor: "#101D35",
-                    color: "#101D35",
+                    backgroundColor: "#000000",
+                    color: "#FFFFFF",
                   }}
                 >
                   <span className="c-button_inner">
@@ -1065,28 +1065,28 @@ export default function AutomatePage() {
               </span>
             </button>
             <div className="modal_inner c-wysiwyg p-8 md:p-14">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+              <span className="font-mono text-xs uppercase tracking-widest text-black">
                 {modalModule.code} // {modalModule.category}
               </span>
               <h2 className="heading-lg mt-2">{modalModule.title}</h2>
-              <p className="text-lg text-[#253B5B] mt-3">
+              <p className="text-lg text-neutral-600 mt-3">
                 {modalModule.description}
               </p>
               <div className="grid md:grid-cols-2 gap-6 mt-8">
                 <div className="rounded-2xl bg-[#F7F8FA] p-6 border border-[#A8B1BE]/40">
-                  <h3 className="heading-2xs text-[#101D35] mb-3">
+                  <h3 className="heading-2xs text-black mb-3">
                     Production Capabilities
                   </h3>
                   <ul className="space-y-2">
                     {modalModule.capabilities.map((c) => (
-                      <li key={c} className="text-sm text-[#253B5B]">
+                      <li key={c} className="text-sm text-neutral-600">
                         • {c}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="rounded-2xl bg-[#101D35] text-white p-6 space-y-4">
-                  <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                <div className="rounded-2xl bg-black text-white p-6 space-y-4">
+                  <p className="font-mono text-xs uppercase tracking-widest text-black">
                     BENCHMARK PERFORMANCE
                   </p>
                   <p className="heading-sm text-white">

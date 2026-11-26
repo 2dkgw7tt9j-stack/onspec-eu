@@ -56,7 +56,7 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="bg-[#F7F8FA] text-[#101D35]">
+    <main className="bg-[#F7F8FA] text-black">
       <h1 className="sr-only">
         About ONSPEC ({BRAND_INFO.domain}) : {BRAND_INFO.slogan}
       </h1>
@@ -67,7 +67,7 @@ export default function AboutPage() {
         id="page-heading"
       >
         <div className="max-w-[740px] m-auto text-center">
-          <p className="font-mono text-xs text-[#101D35] uppercase tracking-widest mb-6 font-semibold">
+          <p className="font-mono text-xs text-black uppercase tracking-widest mb-6 font-semibold">
             ABOUT ONSPEC // {BRAND_INFO.domain.toUpperCase()}
           </p>
           <div className="c-fadein-text text-heading-md" style={{ marginTop: "1rem" }}>
@@ -89,7 +89,7 @@ export default function AboutPage() {
             </div>
             <div className="c-fadein-text_line is-active mt-4">
               <span
-                className="c-fadein-text_line_inner text-[#253B5B]"
+                className="c-fadein-text_line_inner text-neutral-600"
                 style={{ opacity: 1, transform: "translate(0)" }}
               >
                 Onspec bridges the gap between having an idea and turning it into a functioning, automated commercial operation across Cyprus and the European Union.
@@ -164,13 +164,13 @@ export default function AboutPage() {
       <section className="mt-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-2xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+            <p className="text-eyebrow text-black uppercase tracking-widest">
               FOUR PILLARS. ONE EXECUTION PARTNER.
             </p>
             <h2 className="sr-only">The Four Pillars of ONSPEC</h2>
             <div
               aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+              className="c-split-text anim-text-balance heading-xl text-black"
             >
               The Four Pillars of ONSPEC
             </div>
@@ -190,8 +190,8 @@ export default function AboutPage() {
                         src={PILLAR_IMAGES[pillar.id]}
                       />
                     </picture>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/85 via-transparent to-transparent flex flex-col justify-between p-5 text-white">
-                      <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex flex-col justify-between p-5 text-white">
+                      <span className="font-mono text-xs uppercase tracking-widest text-black">
                         {pillar.code}
                       </span>
                       <div>
@@ -205,10 +205,10 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="flex flex-col gap-y-2">
-                    <p className="body-sm font-bold text-[#101D35]">
+                    <p className="body-sm font-bold text-black">
                       {pillar.index} // {pillar.shortTitle}
                     </p>
-                    <p className="body-sm text-[#253B5B]">
+                    <p className="body-sm text-neutral-600">
                       {pillar.coreMessage}
                     </p>
                   </div>
@@ -237,7 +237,7 @@ export default function AboutPage() {
             </h2>
             <div
               aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+              className="c-split-text anim-text-balance heading-xl text-black"
             >
               We set out to simplify business creation... And built a complete operational ecosystem.
             </div>
@@ -247,11 +247,11 @@ export default function AboutPage() {
             {/* Quote Cell */}
             <div
               className="c-bento-box_quote c-bento-box_item"
-              style={{ backgroundColor: "#101D35" }}
+              style={{ backgroundColor: "#000000" }}
             >
               <div className="c-bento-box_quote_inner">
                 <div className="c-bento-box_quote_header">
-                  <span className="c-icon text-[#101D35]">
+                  <span className="c-icon text-black">
                     
                   </span>
                   <p className="heading-xs text-white">
@@ -259,7 +259,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div className="c-bento-box_quote_footer">
-                  <p className="text-md text-[#101D35]">{BRAND_INFO.name}</p>
+                  <p className="text-md text-black">{BRAND_INFO.name}</p>
                   <p className="text-xs text-[#A8B1BE]">
                     {BRAND_INFO.descriptor}
                   </p>
@@ -301,7 +301,7 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/90 via-[#101D35]/35 to-transparent flex flex-col justify-end p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent flex flex-col justify-end p-8">
                 <div className="flex items-center gap-3 text-white heading-sm">
                   <span className="c-icon text-white">
                     
@@ -328,13 +328,13 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
-              <div className="c-bento-box_stats_inner bg-[#101D35]/85 backdrop-blur-md">
+              <div className="c-bento-box_stats_inner bg-black/85 backdrop-blur-md">
                 <p className="text-heading-sm max-w-[440px] text-white">
                   Engineered for modern entrepreneurs, investors, and established operators in Cyprus &amp; Europe.
                 </p>
                 <div className="c-bento-box_stats_bottom">
                   <p className="text-md max-w-[340px] text-[#F7F8FA]/85">
-                    Our visual &amp; operational architecture balances Clean White clarity (#F7F8FA), Deep Navy authority (#101D35), Steel Blue depth (#253B5B), Pure Black precision (#000000), and Silver Grey precision (#A8B1BE).
+                    Our visual &amp; operational architecture balances Clean White clarity (#F7F8FA), Pure Black precision (#000000), Architectural Monochrome depth, Pure Black precision (#000000), and Silver Grey precision (#A8B1BE).
                   </p>
                   <ul className="c-bento-box_stats_list">
                     <li className="c-bento-box_stats_item">
@@ -361,17 +361,17 @@ export default function AboutPage() {
       <section id="customer-journey" className="mt-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+            <p className="text-eyebrow text-black uppercase tracking-widest">
               THE 6-STEP CUSTOMER JOURNEY
             </p>
             <h2 className="sr-only">From Discovery to Ongoing Support</h2>
             <div
               aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+              className="c-split-text anim-text-balance heading-xl text-black"
             >
               From Discovery to Ongoing Support
             </div>
-            <p className="text-md text-[#253B5B]">
+            <p className="text-md text-neutral-600">
               Select any stage in the 6-step protocol below to inspect how Onspec guides your project from first contact to long term operation.
             </p>
           </div>
@@ -388,13 +388,13 @@ export default function AboutPage() {
                     onClick={() => setActiveJourneyIdx(idx)}
                     className={`rounded-xl p-4 text-left border transition-all cursor-pointer flex flex-col justify-between gap-2 ${
                       active
-                        ? "bg-[#101D35] text-white border-[#101D35] shadow-md"
-                        : "bg-[#F7F8FA] text-[#101D35] border-[#A8B1BE]/40 hover:border-[#253B5B]"
+                        ? "bg-black text-white border-black shadow-md"
+                        : "bg-[#F7F8FA] text-black border-[#A8B1BE]/40 hover:border-neutral-500"
                     }`}
                   >
                     <span
                       className={`font-mono text-xs font-bold ${
-                        active ? "text-white" : "text-[#253B5B]"
+                        active ? "text-white" : "text-neutral-600"
                       }`}
                     >
                       {step.number}
@@ -403,7 +403,7 @@ export default function AboutPage() {
                       <p className="text-sm font-bold">{step.title}</p>
                       <p
                         className={`text-[11px] mt-0.5 ${
-                          active ? "text-[#A8B1BE]" : "text-[#253B5B]/75"
+                          active ? "text-[#A8B1BE]" : "text-neutral-500"
                         }`}
                       >
                         {step.subtitle}
@@ -414,9 +414,9 @@ export default function AboutPage() {
               })}
             </div>
 
-            <div className="rounded-2xl bg-[#101D35] text-[#F7F8FA] p-6 md:p-10 grid md:grid-cols-12 gap-6 items-center">
+            <div className="rounded-2xl bg-black text-[#F7F8FA] p-6 md:p-10 grid md:grid-cols-12 gap-6 items-center">
               <div className="md:col-span-8 space-y-3">
-                <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                <span className="font-mono text-xs uppercase tracking-widest text-black">
                   {activeStep.code}
                 </span>
                 <h3 className="heading-sm text-white">
@@ -427,8 +427,8 @@ export default function AboutPage() {
                   {activeStep.description}
                 </p>
               </div>
-              <div className="md:col-span-4 rounded-xl bg-[#253B5B]/55 border border-[#A8B1BE]/25 p-5 space-y-2">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-[#101D35]">
+              <div className="md:col-span-4 rounded-xl bg-neutral-900/70 border border-[#A8B1BE]/25 p-5 space-y-2">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-black">
                   STAGE DELIVERABLE
                 </span>
                 <p className="text-base font-bold text-white">
@@ -443,7 +443,7 @@ export default function AboutPage() {
                         (activeJourneyIdx + 1) % CUSTOMER_JOURNEY_STEPS.length
                       )
                     }
-                    className="text-[#101D35] font-mono uppercase tracking-wider hover:underline cursor-pointer"
+                    className="text-black font-mono uppercase tracking-wider hover:underline cursor-pointer"
                   >
                     Next Step →
                   </button>
@@ -458,17 +458,17 @@ export default function AboutPage() {
       <section className="mt-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+            <p className="text-eyebrow text-black uppercase tracking-widest">
               LONG-TERM BUSINESS ECOSYSTEM
             </p>
             <h2 className="sr-only">7-Stage Business Ecosystem</h2>
             <div
               aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+              className="c-split-text anim-text-balance heading-xl text-black"
             >
               7-Stage Business Ecosystem
             </div>
-            <p className="text-md text-[#253B5B]">
+            <p className="text-md text-neutral-600">
               A customer can start with a single ready to launch business or AI workflow and expand through every layer of the Onspec ecosystem.
             </p>
           </div>
@@ -479,13 +479,13 @@ export default function AboutPage() {
                 <div key={stage.step} className="c-accordion">
                   <details className="c-accordion_details" open={idx === 0}>
                     <summary className="c-accordion_summary text-md">
-                      <span className="c-accordion_index text-lg font-mono text-[#101D35]">
+                      <span className="c-accordion_index text-lg font-mono text-black">
                         {stage.step}
                       </span>
-                      <p className="text-lg font-semibold text-[#101D35] flex-1">
+                      <p className="text-lg font-semibold text-black flex-1">
                         {stage.title}
                       </p>
-                      <span className="font-mono text-xs uppercase tracking-wider text-[#253B5B] hidden sm:inline">
+                      <span className="font-mono text-xs uppercase tracking-wider text-neutral-600 hidden sm:inline">
                         {stage.pillarRef}
                       </span>
                       <span className="c-icon c-accordion_icon">
@@ -500,7 +500,7 @@ export default function AboutPage() {
                     </summary>
                     <div>
                       <div className="pt-6 pb-6">
-                        <div className="c-wysiwyg text-[#253B5B]">
+                        <div className="c-wysiwyg text-neutral-600">
                           <p>{stage.description}</p>
                         </div>
                       </div>
@@ -517,13 +517,13 @@ export default function AboutPage() {
       <section className="mt-fluid-2xl">
         <div className="c-push-image container">
           <div className="c-push-image_content">
-            <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+            <p className="text-eyebrow text-black uppercase tracking-widest">
               WHY FOUNDERS CHOOSE ONSPEC
             </p>
             <h3 className="sr-only">Starting From Scratch vs. ONSPEC</h3>
             <div
               aria-hidden="true"
-              className="c-split-text heading-sm text-[#101D35]"
+              className="c-split-text heading-sm text-black"
             >
               Starting From Scratch vs. ONSPEC
             </div>
@@ -533,14 +533,14 @@ export default function AboutPage() {
                   key={item.dimension}
                   className="border-t border-[#A8B1BE]/45 pt-3"
                 >
-                  <p className="font-mono text-xs uppercase tracking-wider text-[#101D35] font-bold">
+                  <p className="font-mono text-xs uppercase tracking-wider text-black font-bold">
                     {item.dimension}
                   </p>
-                  <p className="text-xs text-[#253B5B]/75 line-through mt-0.5">
+                  <p className="text-xs text-neutral-500 line-through mt-0.5">
                     Scratch: {item.scratch}
                   </p>
-                  <p className="text-xs text-[#101D35] font-medium mt-0.5">
-                    <span className="text-[#101D35] font-bold">ONSPEC:</span>{" "}
+                  <p className="text-xs text-black font-medium mt-0.5">
+                    <span className="text-black font-bold">ONSPEC:</span>{" "}
                     {item.onspec}
                   </p>
                 </div>
@@ -636,20 +636,20 @@ export default function AboutPage() {
         <section className="c-push-newsletter pattern-background background-clip container">
           <div className="c-push-newsletter_content">
             <div className="c-push-newsletter_heading">
-              <p className="text-eyebrow text-[#253B5B]">
+              <p className="text-eyebrow text-neutral-600">
                 Want the complete ONSPEC 2026 Opportunity &amp; Automation Dossier?
               </p>
-              <h2 className="heading-sm text-[#101D35]">
+              <h2 className="heading-sm text-black">
                 Turnkey Cyprus business specifications, AI workflow benchmarks, and execution timelines : delivered directly to your inbox.
               </h2>
             </div>
 
             {referenceId ? (
-              <div className="rounded-2xl bg-white border border-[#101D35] p-5 space-y-2">
-                <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+              <div className="rounded-2xl bg-white border border-black p-5 space-y-2">
+                <p className="font-mono text-xs uppercase tracking-widest text-black">
                   DOSSIER DISPATCH REGISTERED // {referenceId}
                 </p>
-                <p className="text-xs text-[#253B5B]">
+                <p className="text-xs text-neutral-600">
                   Our Cyprus operations desk has logged your request for{" "}
                   <strong>{email}</strong>.
                 </p>
@@ -766,11 +766,11 @@ export default function AboutPage() {
             </button>
             <div className="c-modal-member_inner modal_inner">
               <div className="flex flex-col gap-y-fluid-sm pt-2">
-                <span className="c-icon text-[#101D35]">
+                <span className="c-icon text-black">
                   
                 </span>
                 <div className="max-w-[32rem]">
-                  <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                  <p className="font-mono text-xs uppercase tracking-widest text-black">
                     {selectedPillarModal.code}
                   </p>
                   <h2 className="heading-md mt-1">
@@ -798,12 +798,12 @@ export default function AboutPage() {
                     {selectedPillarModal.description}
                   </p>
                   <div className="space-y-2">
-                    <p className="font-mono text-xs uppercase tracking-wider text-[#101D35] font-semibold">
+                    <p className="font-mono text-xs uppercase tracking-wider text-black font-semibold">
                       KEY DELIVERABLES:
                     </p>
                     <ul className="space-y-1.5">
                       {selectedPillarModal.deliverables.map((d) => (
-                        <li key={d} className="text-xs text-[#253B5B]">
+                        <li key={d} className="text-xs text-neutral-600">
                           • {d}
                         </li>
                       ))}

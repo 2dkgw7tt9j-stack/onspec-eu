@@ -93,12 +93,12 @@ export function InfiniteMarquee({
           className={`inline-flex items-center gap-3 px-6 py-2.5 text-xs font-mono tracking-wider uppercase whitespace-nowrap transition-colors ${
             variant === "telemetry"
               ? "text-[#F7F8FA]/85 hover:text-white"
-              : "text-[#101D35] hover:text-[#253B5B]"
+              : "text-black hover:text-neutral-500"
           } ${onItemClick ? "cursor-pointer" : "cursor-default"}`}
         >
           <span
             className={`h-1.5 w-1.5 rounded-full ${
-              variant === "telemetry" ? "bg-white/80" : "bg-[#101D35]"
+              variant === "telemetry" ? "bg-white/80" : "bg-black"
             } shrink-0`}
           />
           <span>{text}</span>

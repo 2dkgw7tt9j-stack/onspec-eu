@@ -45,7 +45,7 @@ export default function ConnectPage() {
   };
 
   return (
-    <main className="bg-[#F7F8FA] text-[#101D35]">
+    <main className="bg-[#F7F8FA] text-black">
       <h1 className="sr-only">
         PILLAR 04 : CONNECT: Cyprus Legal &amp; Professional Services Network
       </h1>
@@ -53,7 +53,7 @@ export default function ConnectPage() {
       {/* Section 1: Lightship company.html Fade-In Editorial Lead + Rotating Twin-Star .c-symbol */}
       <section className="container pt-[24svh] md:pt-[32svh] mb-fluid-2xl" id="page-heading">
         <div className="max-w-[760px] m-auto text-center">
-          <p className="text-eyebrow text-[#101D35] uppercase tracking-widest mb-6">
+          <p className="text-eyebrow text-black uppercase tracking-widest mb-6">
             PILLAR 04 // CONNECT : CYPRUS LEGAL &amp; PROFESSIONAL NETWORK
           </p>
           <div className="c-fadein-text text-heading-md">
@@ -75,7 +75,7 @@ export default function ConnectPage() {
             </div>
             <div className="c-fadein-text_line is-active mt-4">
               <span
-                className="c-fadein-text_line_inner text-[#253B5B] text-xl md:text-2xl font-normal"
+                className="c-fadein-text_line_inner text-neutral-600 text-xl md:text-2xl font-normal"
                 style={{ opacity: 1, transform: "translate(0)" }}
               >
                 Through our vetted network in Cyprus, Onspec connects individuals, founders, and businesses directly with experienced independent legal professionals across immigration, residency, corporate, and criminal law.
@@ -98,10 +98,10 @@ export default function ConnectPage() {
         {/* Mandatory Compliance Disclaimer Banner */}
         <div className="max-w-3xl mx-auto rounded-2xl bg-white border border-[#A8B1BE]/50 p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
           <div className="space-y-1">
-            <span className="font-mono text-[11px] uppercase tracking-widest text-[#101D35] font-semibold">
+            <span className="font-mono text-[11px] uppercase tracking-widest text-black font-semibold">
               INDEPENDENT PROFESSIONAL NETWORK NOTICE
             </span>
-            <p className="text-xs text-[#253B5B] leading-relaxed">
+            <p className="text-xs text-neutral-600 leading-relaxed">
               {BRAND_INFO.legalDisclaimer}
             </p>
           </div>
@@ -125,7 +125,7 @@ export default function ConnectPage() {
       <section className="mt-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-[#253B5B] uppercase tracking-widest">
+            <p className="text-eyebrow text-neutral-600 uppercase tracking-widest">
               VETTED INDEPENDENT COUNSEL IN CYPRUS
             </p>
             <h2 className="sr-only">
@@ -133,7 +133,7 @@ export default function ConnectPage() {
             </h2>
             <div
               aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+              className="c-split-text anim-text-balance heading-xl text-black"
             >
               Trusted legal connections when clarity and speed matter most.
             </div>
@@ -143,11 +143,11 @@ export default function ConnectPage() {
             {/* Bento Cell 1: Quote (Deep Navy / Architectural Statement) */}
             <div
               className="c-bento-box_quote c-bento-box_item"
-              style={{ backgroundColor: "#101D35" }}
+              style={{ backgroundColor: "#000000" }}
             >
               <div className="c-bento-box_quote_inner">
                 <div className="c-bento-box_quote_header">
-                  <span className="c-icon text-[#101D35]">
+                  <span className="c-icon text-black">
                     
                   </span>
                   <p className="heading-xs text-white">
@@ -155,7 +155,7 @@ export default function ConnectPage() {
                   </p>
                 </div>
                 <div className="c-bento-box_quote_footer">
-                  <p className="text-md text-[#101D35]">
+                  <p className="text-md text-black">
                     Independent Cyprus Counsel
                   </p>
                   <p className="text-xs text-[#A8B1BE]">
@@ -199,9 +199,9 @@ export default function ConnectPage() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/90 via-[#101D35]/30 to-transparent flex flex-col justify-end p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
                 <div className="flex items-center gap-3 text-white heading-sm">
-                  <span className="c-icon text-[#101D35]">
+                  <span className="c-icon text-black">
                     
                   </span>
                   <span>Immigration • Residency • Corporate • Criminal Law</span>
@@ -226,7 +226,7 @@ export default function ConnectPage() {
                   </div>
                 </div>
               </div>
-              <div className="c-bento-box_stats_inner bg-[#101D35]/80 backdrop-blur-md">
+              <div className="c-bento-box_stats_inner bg-black/80 backdrop-blur-md">
                 <p className="text-heading-sm max-w-[440px] text-white">
                   Finding the right legal professional in Cyprus shouldn&apos;t mean cold-calling dozens of offices or guessing who specializes in your exact need.
                 </p>
@@ -236,7 +236,7 @@ export default function ConnectPage() {
                   </p>
                   <ul className="c-bento-box_stats_list">
                     <li className="c-bento-box_stats_item">
-                      <p className="text-heading-xl text-[#101D35]">5</p>
+                      <p className="text-heading-xl text-black">5</p>
                       <p className="text-xs max-w-[110px] opacity-80">
                         Core Cyprus Legal Practice Domains
                       </p>
@@ -259,17 +259,17 @@ export default function ConnectPage() {
       <section className="mt-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+            <p className="text-eyebrow text-black uppercase tracking-widest">
               PRACTICE AREAS &amp; REFERRAL SPECIFICATIONS
             </p>
             <h2 className="sr-only">5 Cyprus Legal Practice Domains</h2>
             <div
               aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-[#101D35]"
+              className="c-split-text anim-text-balance heading-xl text-black"
             >
               Cyprus Legal Practice Domains
             </div>
-            <p className="text-md text-[#253B5B]">
+            <p className="text-md text-neutral-600">
               Click any practice domain below to inspect typical matters handled by independent legal professionals in our Cyprus network.
             </p>
           </div>
@@ -283,14 +283,14 @@ export default function ConnectPage() {
                     open={idx === 0}
                   >
                     <summary className="c-accordion_summary text-md">
-                      <span className="c-accordion_index text-lg font-mono text-[#101D35]">
+                      <span className="c-accordion_index text-lg font-mono text-black">
                         0{idx + 1}
                       </span>
                       <div className="flex-1">
-                        <p className="text-lg font-bold text-[#101D35]">
+                        <p className="text-lg font-bold text-black">
                           {cat.title}
                         </p>
-                        <p className="text-xs text-[#253B5B] mt-0.5">
+                        <p className="text-xs text-neutral-600 mt-0.5">
                           {cat.subtitle}
                         </p>
                       </div>
@@ -306,21 +306,21 @@ export default function ConnectPage() {
                     </summary>
                     <div>
                       <div className="pt-6 pb-8 space-y-6">
-                        <div className="c-wysiwyg text-[#253B5B]">
+                        <div className="c-wysiwyg text-neutral-600">
                           <p>{cat.description}</p>
                         </div>
 
                         <div className="rounded-xl bg-white border border-[#A8B1BE]/40 p-5">
-                          <p className="font-mono text-xs uppercase tracking-wider text-[#101D35] font-semibold mb-3">
+                          <p className="font-mono text-xs uppercase tracking-wider text-black font-semibold mb-3">
                             TYPICAL MATTERS HANDLED BY INDEPENDENT COUNSEL:
                           </p>
                           <ul className="grid sm:grid-cols-2 gap-2.5">
                             {cat.typicalMatters.map((matter) => (
                               <li
                                 key={matter}
-                                className="flex items-start gap-2 text-xs text-[#253B5B]"
+                                className="flex items-start gap-2 text-xs text-neutral-600"
                               >
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#101D35] shrink-0" />
+                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-black shrink-0" />
                                 <span>{matter}</span>
                               </li>
                             ))}
@@ -328,7 +328,7 @@ export default function ConnectPage() {
                         </div>
 
                         <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
-                          <span className="font-mono text-xs text-[#253B5B]">
+                          <span className="font-mono text-xs text-neutral-600">
                             {cat.referralProcess}
                           </span>
                           <div className="flex flex-wrap gap-2">
@@ -380,17 +380,17 @@ export default function ConnectPage() {
       <section className="mt-fluid-2xl">
         <div className="c-push-image container">
           <div className="c-push-image_content">
-            <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+            <p className="text-eyebrow text-black uppercase tracking-widest">
               SEAMLESS CORPORATE &amp; LEGAL COORDINATION
             </p>
             <h3 className="sr-only">How Our Cyprus Legal Network Works</h3>
             <div
               aria-hidden="true"
-              className="c-split-text heading-sm text-[#101D35]"
+              className="c-split-text heading-sm text-black"
             >
               How Our Cyprus Legal Network Works
             </div>
-            <p className="text-md text-[#253B5B]">
+            <p className="text-md text-neutral-600">
               1. Share your requirement confidentially via our referral desk or WhatsApp.
               <br />
               <br />
@@ -423,26 +423,26 @@ export default function ConnectPage() {
         <section className="c-push-newsletter pattern-background background-clip container rounded-[20px] border border-[#A8B1BE]/35">
           <div className="c-push-newsletter_content !max-w-xl !w-full">
             <div className="c-push-newsletter_heading">
-              <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
+              <p className="text-eyebrow text-black uppercase tracking-widest">
                 CONFIDENTIAL REFERRAL INTAKE // CYPRUS
               </p>
-              <h2 className="heading-sm text-[#101D35]">
+              <h2 className="heading-sm text-black">
                 Request an Introduction to an Independent Cyprus Legal Professional
               </h2>
-              <p className="text-xs text-[#253B5B] mt-2">
+              <p className="text-xs text-neutral-600 mt-2">
                 {BRAND_INFO.legalDisclaimer}
               </p>
             </div>
 
             {referenceId ? (
-              <div className="rounded-2xl bg-white border border-[#101D35] p-6 space-y-4">
-                <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+              <div className="rounded-2xl bg-white border border-black p-6 space-y-4">
+                <p className="font-mono text-xs uppercase tracking-widest text-black">
                   CONFIDENTIAL REFERRAL LOGGED
                 </p>
-                <h3 className="heading-xs text-[#101D35]">
+                <h3 className="heading-xs text-black">
                   Reference ID: {referenceId}
                 </h3>
-                <p className="text-sm text-[#253B5B]">
+                <p className="text-sm text-neutral-600">
                   Thank you, <strong>{name}</strong>. Your request for an introduction regarding{" "}
                   <strong>{selectedCategory}</strong> has been received. Our Cyprus coordination desk will match you with an independent legal specialist and contact you via{" "}
                   <strong>{email}</strong> / WhatsApp (
@@ -474,7 +474,7 @@ export default function ConnectPage() {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs font-semibold text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs font-semibold text-black focus:border-black focus:outline-none"
                   >
                     {LEGAL_NETWORK_CATEGORIES.map((c) => (
                       <option key={c.id} value={c.title}>
@@ -485,7 +485,7 @@ export default function ConnectPage() {
                   <select
                     value={urgency}
                     onChange={(e) => setUrgency(e.target.value)}
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-black focus:border-black focus:outline-none"
                   >
                     <option value="Standard Consultation (24 to 48h)">
                       Standard Consultation (24 to 48h)
@@ -506,7 +506,7 @@ export default function ConnectPage() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Full Name *"
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-black focus:border-black focus:outline-none"
                   />
                   <input
                     type="email"
@@ -514,7 +514,7 @@ export default function ConnectPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="name@email.com *"
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-black focus:border-black focus:outline-none"
                   />
                   <input
                     type="tel"
@@ -522,7 +522,7 @@ export default function ConnectPage() {
                     value={whatsapp}
                     onChange={(e) => setWhatsapp(e.target.value)}
                     placeholder="WhatsApp (+357...) *"
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-black focus:border-black focus:outline-none"
                   />
                 </div>
 
@@ -532,7 +532,7 @@ export default function ConnectPage() {
                   value={matterSummary}
                   onChange={(e) => setMatterSummary(e.target.value)}
                   placeholder="Briefly describe the nature of your legal or corporate requirement in Cyprus (kept strictly confidential)..."
-                  className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
+                  className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-black focus:border-black focus:outline-none"
                 />
 
                 <button
@@ -540,8 +540,8 @@ export default function ConnectPage() {
                   disabled={submitting}
                   className="c-button primary cursor-pointer"
                   style={{
-                    backgroundColor: "#101D35",
-                    color: "#101D35",
+                    backgroundColor: "#000000",
+                    color: "#FFFFFF",
                   }}
                 >
                   <span className="c-button_inner">
@@ -690,11 +690,11 @@ export default function ConnectPage() {
             </button>
             <div className="c-modal-member_inner modal_inner">
               <div className="flex flex-col gap-y-fluid-sm pt-2">
-                <span className="c-icon text-[#101D35]">
+                <span className="c-icon text-black">
                   
                 </span>
                 <div className="max-w-[36rem]">
-                  <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                  <p className="font-mono text-xs uppercase tracking-widest text-black">
                     {activeMemberModal.code}
                   </p>
                   <h2 className="heading-md mt-1">{activeMemberModal.title}</h2>
@@ -720,12 +720,12 @@ export default function ConnectPage() {
                     {activeMemberModal.description}
                   </p>
                   <div className="space-y-2">
-                    <p className="font-mono text-xs uppercase tracking-wider text-[#101D35] font-semibold">
+                    <p className="font-mono text-xs uppercase tracking-wider text-black font-semibold">
                       REPRESENTATIVE MATTERS:
                     </p>
                     <ul className="space-y-1.5">
                       {activeMemberModal.typicalMatters.map((m) => (
-                        <li key={m} className="text-xs text-[#253B5B]">
+                        <li key={m} className="text-xs text-neutral-600">
                           • {m}
                         </li>
                       ))}

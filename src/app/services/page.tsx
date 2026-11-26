@@ -142,16 +142,16 @@ export default function ServicesPage() {
   };
 
   return (
-    <main className="bg-white text-[#101D35]">
+    <main className="bg-white text-black">
       {/* Editorial Hero Header */}
       <section className="container pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
-        <p className="font-mono text-xs uppercase tracking-widest text-[#101D35] mb-4 font-semibold">
+        <p className="font-mono text-xs uppercase tracking-widest text-black mb-4 font-semibold">
           [ ONSPEC SERVICES DIRECTORY ]
         </p>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#101D35] mb-6 leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-black mb-6 leading-tight">
           Services Engineered to Operate.
         </h1>
-        <p className="text-lg md:text-xl text-[#253B5B] max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
           From turnkey physical ventures deployed across Cyprus to custom software, autonomous AI workflows, and corporate legal networks, we execute every layer of your business.
         </p>
       </section>
@@ -162,14 +162,14 @@ export default function ServicesPage() {
           {SERVICES_LIST.map((srv, idx) => (
             <article
               key={srv.code}
-              className="bg-[#F7F8FA] rounded-2xl p-6 sm:p-8 md:p-10 border border-[#D5DBE3] transition-all hover:border-[#101D35]/50 hover:shadow-lg"
+              className="bg-[#F7F8FA] rounded-2xl p-6 sm:p-8 md:p-10 border border-[#D5DBE3] transition-all hover:border-black/50 hover:shadow-lg"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 {/* Left Column: Details */}
                 <div className="lg:col-span-7 flex flex-col justify-between h-full">
                   <div>
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#101D35] bg-[#101D35]/10 px-2.5 py-1 rounded">
+                      <span className="font-mono text-xs font-bold uppercase tracking-wider text-black bg-black/10 px-2.5 py-1 rounded">
                         {srv.code}
                       </span>
                       <span className="font-mono text-xs uppercase tracking-wider text-[#A8B1BE]">
@@ -177,26 +177,26 @@ export default function ServicesPage() {
                       </span>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl font-extrabold text-[#101D35] tracking-tight mb-3">
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight mb-3">
                       {srv.title}
                     </h2>
 
-                    <p className="text-sm sm:text-base font-medium text-[#253B5B] mb-4 leading-normal">
+                    <p className="text-sm sm:text-base font-medium text-neutral-600 mb-4 leading-normal">
                       {srv.subtitle}
                     </p>
 
-                    <p className="text-sm text-[#101D35]/80 leading-relaxed mb-6">
+                    <p className="text-sm text-neutral-800 leading-relaxed mb-6">
                       {srv.description}
                     </p>
 
                     <div className="space-y-2 mb-6">
-                      <p className="font-mono text-xs font-semibold text-[#101D35] uppercase tracking-wider">
+                      <p className="font-mono text-xs font-semibold text-black uppercase tracking-wider">
                         Key Deliverables:
                       </p>
-                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#253B5B]">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-neutral-600">
                         {srv.features.map((feat, fIdx) => (
                           <li key={fIdx} className="flex items-start gap-2">
-                            <span className="text-[#101D35] font-bold">✓</span>
+                            <span className="text-black font-bold">✓</span>
                             <span>{feat}</span>
                           </li>
                         ))}
@@ -209,7 +209,7 @@ export default function ServicesPage() {
                       <span className="block font-mono text-[11px] text-[#A8B1BE] uppercase">
                         Timeline
                       </span>
-                      <span className="font-mono text-xs font-bold text-[#101D35]">
+                      <span className="font-mono text-xs font-bold text-black">
                         {srv.timeline}
                       </span>
                     </div>
@@ -218,14 +218,14 @@ export default function ServicesPage() {
                       <span className="block font-mono text-[11px] text-[#A8B1BE] uppercase">
                         Investment
                       </span>
-                      <span className="font-mono text-xs font-bold text-[#101D35]">
+                      <span className="font-mono text-xs font-bold text-black">
                         {srv.investment}
                       </span>
                     </div>
 
                     <Link
                       href={srv.href}
-                      className="inline-flex items-center justify-center bg-[#101D35] text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-[#253B5B] transition-colors"
+                      className="inline-flex items-center justify-center bg-black text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-neutral-900 transition-colors"
                     >
                       {srv.cta} →
                     </Link>
@@ -239,7 +239,7 @@ export default function ServicesPage() {
                     alt={srv.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/60 via-transparent to-transparent flex items-end p-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
                     <span className="font-mono text-xs text-white uppercase tracking-wider font-semibold">
                       ONSPEC.EU // {srv.pillar}
                     </span>
@@ -252,7 +252,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Quick Inquiry CTA Block */}
-      <section className="bg-[#101D35] text-white py-16 md:py-24">
+      <section className="bg-black text-white py-16 md:py-24">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <p className="font-mono text-xs uppercase tracking-widest text-white/80 mb-3 font-semibold">
             [ DIRECT SERVICE INTAKE ]
@@ -298,7 +298,7 @@ export default function ServicesPage() {
               <select
                 value={quickService}
                 onChange={(e) => setQuickService(e.target.value)}
-                className="w-full bg-[#101D35] border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-white/60"
+                className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-white/60"
               >
                 <option value="SERVICE 01 : Ready Businesses">SERVICE 01 : Ready Businesses Business Units</option>
                 <option value="SERVICE 02 : Web & Software">SERVICE 02 : Custom Websites & Software Platforms</option>
@@ -318,7 +318,7 @@ export default function ServicesPage() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-white text-[#101D35] font-bold py-3.5 rounded-lg text-sm uppercase tracking-wider hover:bg-[#F7F8FA] transition-colors cursor-pointer"
+                className="w-full bg-white text-black font-bold py-3.5 rounded-lg text-sm uppercase tracking-wider hover:bg-[#F7F8FA] transition-colors cursor-pointer"
               >
                 {submitting ? "Submitting..." : "Send Service Inquiry →"}
               </button>

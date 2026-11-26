@@ -28,37 +28,37 @@
   --svh: 1svh;
   --dvh: 1dvh;
 
-  /* ONSPEC Brand Palette Variables */
-  --bg-clean-white: #F7F8FA;
-  --deep-navy: #101D35;
-  --steel-blue: #253B5B;
+  /* ONSPEC Brand Palette Variables (Pure Black & White Minimalist Luxury) */
+  --bg-clean-white: #FFFFFF;
+  --deep-navy: #000000;
+  --steel-blue: #1A1A1A;
   --pure-black: #000000;
-  --silver-grey: #A8B1BE;
-  --border-hairline: rgba(168, 177, 190, 0.45);
-  --border-navy-hairline: rgba(16, 29, 53, 0.12);
+  --silver-grey: #9CA3AF;
+  --border-hairline: rgba(0, 0, 0, 0.15);
+  --border-navy-hairline: rgba(0, 0, 0, 0.1);
 
-  /* Lightship 1:1 Theme Overrides -> ONSPEC Brand Palette (Zero Green) */
+  /* Lightship 1:1 Theme Overrides -> Pure Black & White (Zero Blue, Zero Green) */
   --font-sans: "F37Bolton", var(--font-manrope), var(--font-inter), sans-serif;
   --default-font-family: var(--font-sans);
-  --color-black: #101D35;
-  --color-white: #ffffff;
-  --color-grey: #D5DBE3;
-  --color-grey-dark: #A8B1BE;
-  --color-grey-light: #F7F8FA;
-  --color-grey-lighter: #F7F8FA;
-  --color-red: #101D35;
-  --color-blue: #253B5B;
-  --color-beige: #EFF2F6;
-  --color-sand: #E9EEF4;
-  --color-green: #101D35;
-  --color-accent: #101D35;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-grey: #E5E7EB;
+  --color-grey-dark: #6B7280;
+  --color-grey-light: #F9FAFB;
+  --color-grey-lighter: #F3F4F6;
+  --color-red: #000000;
+  --color-blue: #000000;
+  --color-beige: #F3F4F6;
+  --color-sand: #E5E7EB;
+  --color-green: #000000;
+  --color-accent: #000000;
   --color-placeholder: var(--color-grey-lighter);
   --color-image-placeholder: var(--color-beige);
-  --color-border: rgba(168, 177, 190, 0.45);
-  --color-link: #101D35;
-  --color-link-focus: #101D35;
-  --selection-text-color: #ffffff;
-  --selection-background-color: #101D35;
+  --color-border: rgba(0, 0, 0, 0.15);
+  --color-link: #000000;
+  --color-link-focus: #000000;
+  --selection-text-color: #FFFFFF;
+  --selection-background-color: #000000;
 
   /* Preserve Lightship 1:1 Radii, Typography & Spacing against Tailwind v4 defaults */
   --spacing: 0.25rem;
