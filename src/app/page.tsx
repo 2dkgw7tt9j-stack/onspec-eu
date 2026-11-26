@@ -115,7 +115,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     title: "Vending Networks",
     subtitle: "24/7 Cashless Smart Retail",
     image:
-      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=900&q=85",
     column: "left",
     small: false,
     opportunityId: "smart-vending-network",
@@ -125,7 +125,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     title: "Automated Coffee Stations",
     subtitle: "Swiss Bean-to-Cup Kiosks",
     image:
-      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?auto=format&fit=crop&w=900&q=85",
     column: "left",
     small: true,
     opportunityId: "automated-coffee-stations",
@@ -145,7 +145,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     title: "Self Service Kiosks",
     subtitle: "Unmanned Retail & Service Pods",
     image:
-      "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1711632308710-f2e5bf722778?auto=format&fit=crop&w=900&q=85",
     column: "right",
     small: true,
     opportunityId: "self service-kiosks",
@@ -155,7 +155,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     title: "Cyprus Legal Network",
     subtitle: "Independent Counsel & Setup",
     image:
-      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85",
     column: "right",
     small: false,
     href: "/connect",
@@ -184,7 +184,7 @@ const STACKING_PILLAR_CARDS = [
       "Vending, Coffee, Kiosks, Laundromats and Car Washes : Location, equipment, suppliers and Cyprus registration coordinated end to end.",
     metric: "4 to 10 WEEKS TO LIVE",
     image:
-      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1400&q=85",
     href: "/businesses",
     cta: "Explore Ready Businesses",
   },
@@ -220,7 +220,7 @@ const STACKING_PILLAR_CARDS = [
       "Independent Cyprus Legal Network across Immigration, Residency, Corporate Formation, Commercial and Regulatory Law.",
     metric: "CYPRUS & EU COUNSEL",
     image:
-      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=85",
     href: "/contact",
     cta: "Contact Our Team",
     isFinalCard: true,
@@ -242,7 +242,7 @@ const FEATURE_CAROUSEL_SPECS: {
     headline:
       "Automated revenue. Locations, hardware, suppliers and Cyprus registration handled.",
     image:
-      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1200&q=85",
     modalSpec: PREFAB_OPPORTUNITIES[0],
   },
   {
@@ -392,7 +392,7 @@ const FEATURE_CAROUSEL_SPECS: {
     headline:
       "The right professionals. The right guidance. Without the hassle.",
     image:
-      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85",
     modalSpec: {
       id: "cyprus-legal-network-spec",
       specCode: "SPEC-C04 // LEGAL-NET",
@@ -412,7 +412,7 @@ const FEATURE_CAROUSEL_SPECS: {
       autonomyLevel: "Coordinated Professional Introduction",
       weeklyOwnerHours: "Streamlined Documentation Intake",
       image:
-        "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=85",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85",
       whatsIncluded: [
         "Structured assessment of your corporate, residency, immigration, or legal need",
         "Direct referral to a vetted independent licensed lawyer in Cyprus",
@@ -1122,27 +1122,27 @@ export default function HomePage() {
                       </div>
 
                       {card.isFinalCard ? (
-                        <div className="my-auto flex flex-col items-center gap-4">
+                        <div className="my-auto flex flex-col items-center gap-4 text-center">
                           <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
                             {card.title}
                           </p>
-                          <p className="heading-md max-w-[18rem]">
-                            Your business, turnkey.
+                          <p className="heading-md max-w-[22rem]">
+                            Independent Legal &amp; Corporate Counsel.
                           </p>
                           <p className="text-sm text-white/85 max-w-[24rem]">
                             {card.subtitle}
                           </p>
                           <Link
                             className="c-button -blur-dark mt-2"
-                            href="/launch"
+                            href={card.href}
                           >
                             <span className="c-button_inner">
                               <span
                                 className="c-button_label-container"
-                                data-label="Explore Ready Businesses Specs"
+                                data-label={card.cta}
                               >
                                 <span className="c-button_label">
-                                  Explore Ready Businesses Specs
+                                  {card.cta}
                                 </span>
                               </span>
                             </span>

@@ -14,13 +14,13 @@ import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 
 const PILLAR_IMAGES: Record<string, string> = {
   launch:
-    "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=900&q=85",
+    "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=900&q=85",
   automate:
     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
   innovate:
     "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=85",
   connect:
-    "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=900&q=85",
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85",
 };
 
 export default function AboutPage() {
@@ -122,7 +122,7 @@ export default function AboutPage() {
                       className="c-image_img is-loaded h-full w-full object-cover"
                       height={600}
                       width={900}
-                      src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=900&q=85"
+                      src="https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=900&q=85"
                     />
                   </picture>
                 </div>
@@ -556,7 +556,7 @@ export default function AboutPage() {
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={1200}
                     width={1600}
-                    src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1600&q=85"
+                    src="https://images.unsplash.com/photo-1711632308710-f2e5bf722778?auto=format&fit=crop&w=1600&q=85"
                   />
                 </picture>
               </div>
@@ -577,7 +577,7 @@ export default function AboutPage() {
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={750}
                     width={1200}
-                    src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85"
+                    src="https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1200&q=85"
                   />
                 </picture>
               </div>

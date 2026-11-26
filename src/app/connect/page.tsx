@@ -604,7 +604,7 @@ export default function ConnectPage() {
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={750}
                     width={1200}
-                    src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85"
+                    src="https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1200&q=85"
                   />
                 </picture>
               </div>

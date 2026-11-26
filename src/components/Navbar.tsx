@@ -11,7 +11,7 @@ const MENU_CARDS = [
     subtitle: "Turnkey commercial business models in Cyprus & EU",
     href: "/businesses",
     image:
-      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1200&q=85",
   },
   {
     index: 1,

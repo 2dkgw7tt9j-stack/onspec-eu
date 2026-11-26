@@ -45,7 +45,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
     xPercent: 52,
     yPercent: 28,
     image:
-      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=960&q=85",
+      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=960&q=85",
   },
   {
     id: "hs-suppliers",
@@ -57,7 +57,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
     xPercent: 74,
     yPercent: 40,
     image:
-      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=960&q=85",
+      "https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?auto=format&fit=crop&w=960&q=85",
   },
   {
     id: "hs-cyprus-reg",
@@ -93,7 +93,7 @@ const TURNKEY_HOTSPOTS: TurnkeyHotspot[] = [
     xPercent: 78,
     yPercent: 70,
     image:
-      "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=960&q=85",
+      "https://images.unsplash.com/photo-1711632308710-f2e5bf722778?auto=format&fit=crop&w=960&q=85",
   },
 ];
 
@@ -226,7 +226,7 @@ export default function LaunchPage() {
                     className="c-image_img is-loaded h-full w-full object-cover"
                     height={1400}
                     width={2000}
-                    src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=2000&q=85"
+                    src="https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=2000&q=85"
                   />
                 </picture>
               </div>

@@ -347,7 +347,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     autonomyLevel: "92% Autonomous (Cloud Telemetry + Scheduled Restock)",
     weeklyOwnerHours: "3 to 6 hrs / week",
     image:
-      "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
       "Opportunity analysis & prime location scouting/securing in Cyprus",
       "Commercial smart vending hardware with touchscreen & lift/spiral delivery",
@@ -386,7 +386,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     autonomyLevel: "90% Autonomous (Automated Rinsing + Telemetry Alerts)",
     weeklyOwnerHours: "4 to 7 hrs / week",
     image:
-      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
       "Commercial dual-grinder fresh-bean automated espresso kiosk",
       "Integrated cup dispenser, ice-module option & architectural cabinet",
@@ -430,7 +430,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
     autonomyLevel: "94% Autonomous",
     weeklyOwnerHours: "3 to 5 hrs / week",
     image:
-      "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1711632308710-f2e5bf722778?auto=format&fit=crop&w=1200&q=85",
     whatsIncluded: [
       "Weather-rated or indoor interactive touchscreen kiosk unit",
       "Robotic elevator product delivery for fragile high ticket items",
