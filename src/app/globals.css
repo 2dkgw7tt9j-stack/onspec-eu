@@ -444,31 +444,54 @@ body {
   flex-shrink: 0 !important;
 }
 
-/* Stacking Cards: Keep 'This is ONSPEC' completely uncovered while preserving smooth stacking on Desktop */
+/* Stacking Cards: Full viewport visibility on Desktop & Laptop viewports without cropping */
 @media (min-width: 1024px) {
   .c-stacking-cards {
     --heading-sticky-top: clamp(4.25rem, 6vh, 5.25rem) !important;
-    --card-sticky-top: calc(var(--heading-sticky-top) + var(--heading-height, 180px) + 1.25rem) !important;
+    --card-sticky-top: clamp(4.5rem, 6.5vh, 5.5rem) !important;
+    height: auto !important;
   }
 
   .c-stacking-cards_heading {
-    position: sticky !important;
-    top: var(--heading-sticky-top) !important;
-    z-index: 10 !important;
-    background-color: #ffffff !important;
-    padding-block: 0.5rem !important;
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 2.5rem !important;
+    z-index: 5 !important;
   }
 
   .c-stacking-cards_inner {
-    margin-top: 1.25rem !important;
+    margin-top: 1rem !important;
     position: relative !important;
     z-index: 2 !important;
+  }
+
+  .c-stacking-cards_list {
+    grid-column: 2/4 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4rem !important;
   }
 
   .c-stacking-cards_item {
     position: sticky !important;
     top: var(--card-sticky-top) !important;
-    transform-origin: top !important;
+    height: clamp(500px, 68vh, 580px) !important;
+    max-height: calc(100vh - var(--card-sticky-top) - 1.5rem) !important;
+    aspect-ratio: auto !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  .c-stacking-cards_card_content {
+    height: 100% !important;
+    min-height: 100% !important;
+    padding: clamp(1.75rem, 3vh, 2.5rem) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    text-align: left !important;
   }
 }
 

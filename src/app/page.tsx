@@ -156,7 +156,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
   {
     index: "05",
     title: "Autonomous AI Agents",
-    subtitle: "24/7 WhatsApp & Multi-App Sync",
+    subtitle: "24/7 Intelligent Multi-App Sync",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
     column: "right",
@@ -184,7 +184,7 @@ const STACKING_PILLAR_CARDS = [
     pillarCode: "PILLAR 01 : LAUNCH",
     title: "Turnkey Automated Dispensers & Hot Meal Stations",
     subtitle:
-      "Luxury Perfume Automated Dispensers, Essential Hygiene Stations & On-Demand Hot Food Heating Stations : Locations mapped, equipment sourced, and Cyprus corporate structure ready for operation.",
+      "Luxury Perfume Stations, Essential Hygiene Dispensers & On-Demand Hot Food Stations: Prime locations mapped, commercial equipment sourced, and Cyprus corporate structure ready for operation.",
     metric: "3 FLAGSHIP MODELS",
     image:
       "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1400&q=85",
@@ -194,10 +194,10 @@ const STACKING_PILLAR_CARDS = [
   {
     index: 1,
     pillarCode: "PILLAR 02 : AUTOMATE",
-    title: "Digital Engineering & AI Automations",
+    title: "AI & Business Automation",
     subtitle:
-      "Sub-second Next.js web applications, 24/7 WhatsApp & Telegram concierges, and senior-engineer website diagnostics with exact code patches.",
-    metric: "SUB-1s & 24/7 AI",
+      "24/7 Autonomous AI Customer Support Agents, Smart Booking Assistants, CRM Pipelines, Sub-Second Web Platforms, and Automated Invoice Workflows.",
+    metric: "UP TO 78% LESS MANUAL WORK",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85",
     href: "/ai-web",
@@ -208,7 +208,7 @@ const STACKING_PILLAR_CARDS = [
     pillarCode: "PILLAR 03 : INNOVATE",
     title: "Your Idea. Our Execution.",
     subtitle:
-      "Have an idea? Tell us what you are thinking. Receive a free preliminary proposal, quotation and full execution roadmap.",
+      "Have a business concept? Tell us what you are thinking. Receive a free preliminary proposal, technical feasibility study, transparent quotation and full execution roadmap.",
     metric: "FREE PRELIMINARY PROPOSAL",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85",
@@ -220,13 +220,12 @@ const STACKING_PILLAR_CARDS = [
     pillarCode: "PILLAR 04 : CONNECT",
     title: "Legal & Professional Services",
     subtitle:
-      "Independent Cyprus Legal Network across Immigration, Residency, Corporate Formation, Commercial and Regulatory Law.",
+      "Independent Cyprus Legal Network providing counsel across Corporate Formation, Commercial Licensing, Residency, Banking, and Regulatory Law.",
     metric: "CYPRUS & EU COUNSEL",
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=85",
     href: "/contact",
     cta: "Contact Our Team",
-    isFinalCard: true,
   },
 ];
 
@@ -601,28 +600,14 @@ export default function HomePage() {
       }
     }
 
-    // 2. STACKING CARDS (Desktop only: exact math tuned so 'This is ONSPEC' remains uncovered)
+    // 2. STACKING CARDS (Desktop & Laptop: smooth sticky scaling with 100% visible uncropped content)
     if (!isMobile) {
       const stackingEl = stackingContainerRef.current;
       const headingEl = stackingHeadingRef.current;
       const firstCard = stackingCardRefs.current[0];
 
       if (stackingEl && headingEl && firstCard) {
-        const iconEl = headingEl.querySelector(
-          ".c-stacking-cards_heading_icon"
-        ) as HTMLElement | null;
-        const rawHeadingHeight = iconEl
-          ? iconEl.getBoundingClientRect().height
-          : headingEl.getBoundingClientRect().height;
-
-        stackingEl.style.setProperty(
-          "--heading-height",
-          `${rawHeadingHeight.toFixed(1)}px`
-        );
-        stackingEl.style.setProperty("--padding-offset", "0px");
-
-        const headingRect = headingEl.getBoundingClientRect();
-        const cardStickyThreshold = headingRect.bottom + 20;
+        const cardStickyThreshold = window.innerHeight * 0.08 + 48; // ~80px sticky top
 
         stackingCardRefs.current.forEach((cardEl) => {
           if (!cardEl) return;
@@ -1116,81 +1101,45 @@ export default function HomePage() {
                       </picture>
                     </div>
 
-                    {/* Card Overlay Content */}
+                    {/* Gradient Overlay for 100% text readability */}
                     <div
-                      className="c-stacking-cards_card_content"
+                      className="absolute inset-0 pointer-events-none z-1"
                       style={{
-                        justifyContent: card.isFinalCard
-                          ? "center"
-                          : "space-between",
-                        alignItems: card.isFinalCard ? "center" : "flex-start",
-                        textAlign: card.isFinalCard ? "center" : "left",
+                        background:
+                          "linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.94) 100%)",
                       }}
-                    >
-                      <div className="w-full flex items-center justify-between">
-                        <span className="inline-flex items-center gap-2 rounded-full bg-black/60 backdrop-blur-md px-3.5 py-1.5 font-mono text-xs uppercase tracking-widest text-white border border-white/20">
+                    />
+
+                    {/* Card Overlay Content (Identical structure across all 4 cards) */}
+                    <div className="c-stacking-cards_card_content relative z-2 w-full h-full flex flex-col justify-between items-start text-left p-6 sm:p-8 md:p-10">
+                      {/* Top Badges */}
+                      <div className="w-full flex items-center justify-between gap-3">
+                        <span className="inline-flex items-center gap-2 rounded-full bg-black/75 backdrop-blur-md px-3.5 py-1.5 font-mono text-[11px] sm:text-xs uppercase tracking-widest text-white border border-white/20 shrink-0">
                           <span className="h-1.5 w-1.5 rounded-full bg-white" />
                           {card.pillarCode}
                         </span>
-                        <span className="font-mono text-xs uppercase tracking-wider text-white/85 bg-black/35 backdrop-blur-md px-3 py-1 rounded-full">
+                        <span className="font-mono text-[10px] sm:text-xs uppercase tracking-wider text-white/90 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 shrink-0">
                           {card.metric}
                         </span>
                       </div>
 
-                      {card.isFinalCard ? (
-                        <div className="my-auto flex flex-col items-center gap-4 text-center">
-                          <p className="font-mono text-xs uppercase tracking-widest text-white/90">
-                            {card.title}
-                          </p>
-                          <p className="heading-md max-w-[22rem]">
-                            Independent Legal &amp; Corporate Counsel.
-                          </p>
-                          <p className="text-sm text-white/85 max-w-[24rem]">
-                            {card.subtitle}
-                          </p>
+                      {/* Bottom Editorial Content */}
+                      <div className="mt-auto w-full pt-6 sm:pt-8">
+                        <h3 className="text-2xl sm:text-3xl md:text-[2rem] font-extrabold text-white max-w-xl leading-tight">
+                          {card.title}
+                        </h3>
+                        <p className="mt-2.5 text-xs sm:text-sm md:text-[15px] text-white/90 max-w-xl leading-relaxed font-normal">
+                          {card.subtitle}
+                        </p>
+                        <div className="mt-4 sm:mt-5">
                           <Link
-                            className="c-button -blur-dark mt-2"
+                            className="inline-flex items-center justify-center rounded-full bg-white text-black hover:bg-neutral-200 px-6 py-2.5 sm:py-3 text-xs font-mono font-bold uppercase tracking-wider transition-colors shadow-md"
                             href={card.href}
                           >
-                            <span className="c-button_inner">
-                              <span
-                                className="c-button_label-container"
-                                data-label={card.cta}
-                              >
-                                <span className="c-button_label">
-                                  {card.cta}
-                                </span>
-                              </span>
-                            </span>
+                            {card.cta}
                           </Link>
                         </div>
-                      ) : (
-                        <div className="mt-auto w-full pt-8">
-                          <h3 className="heading-sm text-white max-w-md">
-                            {card.title}
-                          </h3>
-                          <p className="mt-2 text-sm text-white/85 max-w-md leading-relaxed">
-                            {card.subtitle}
-                          </p>
-                          <div className="mt-5">
-                            <Link
-                              className="c-button -blur-dark"
-                              href={card.href}
-                            >
-                              <span className="c-button_inner">
-                                <span
-                                  className="c-button_label-container"
-                                  data-label={card.cta}
-                                >
-                                  <span className="c-button_label">
-                                    {card.cta}
-                                  </span>
-                                </span>
-                              </span>
-                            </Link>
-                          </div>
-                        </div>
-                      )}
+                      </div>
                     </div>
                   </li>
                 ))}
