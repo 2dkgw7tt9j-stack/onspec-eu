@@ -413,7 +413,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "High demand across Limassol commercial corridors, Nicosia business districts, and coastal highway connectors.",
   },
   {
-    id: "self service-kiosks",
+    id: "self-service-kiosks",
     specCode: "SPEC-L03 // KIOSK-OS",
     title: "Self Service Micro Retail & Service Kiosks",
     category: "Automated Retail",

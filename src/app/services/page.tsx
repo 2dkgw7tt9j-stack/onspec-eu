@@ -162,7 +162,8 @@ export default function ServicesPage() {
           {SERVICES_LIST.map((srv, idx) => (
             <article
               key={srv.code}
-              className="bg-[#F7F8FA] rounded-2xl p-6 sm:p-8 md:p-10 border border-[#D5DBE3] transition-all hover:border-black/50 hover:shadow-lg"
+              id={srv.code === "SERVICE 05" ? "legal-network" : srv.code.toLowerCase().replace(/\s+/g, "-")}
+              className="bg-[#F7F8FA] rounded-2xl p-6 sm:p-8 md:p-10 border border-[#D5DBE3] transition-all hover:border-black/50 hover:shadow-lg scroll-mt-28"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 {/* Left Column: Details */}

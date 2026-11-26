@@ -34,7 +34,8 @@ export default function BusinessesPage() {
           {PREFAB_OPPORTUNITIES.map((opp) => (
             <div
               key={opp.id}
-              className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl overflow-hidden flex flex-col justify-between transition-all hover:border-black hover:shadow-lg"
+              id={opp.id}
+              className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl overflow-hidden flex flex-col justify-between transition-all hover:border-black hover:shadow-lg scroll-mt-28"
             >
               <div>
                 <div className="h-56 relative overflow-hidden">

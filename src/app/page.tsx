@@ -119,6 +119,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     column: "left",
     small: false,
     opportunityId: "smart-vending-network",
+    href: "/businesses#smart-vending-network",
   },
   {
     index: "02",
@@ -129,6 +130,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     column: "left",
     small: true,
     opportunityId: "commercial-ev-charging",
+    href: "/businesses#commercial-ev-charging",
   },
   {
     index: "03",
@@ -138,7 +140,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
     column: "left",
     small: false,
-    href: "/automate",
+    href: "/ai-web",
   },
   {
     index: "04",
@@ -148,7 +150,8 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
       "https://images.unsplash.com/photo-1711632308710-f2e5bf722778?auto=format&fit=crop&w=900&q=85",
     column: "right",
     small: true,
-    opportunityId: "self service-kiosks",
+    opportunityId: "self-service-kiosks",
+    href: "/businesses#self-service-kiosks",
   },
   {
     index: "05",
@@ -158,7 +161,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85",
     column: "right",
     small: false,
-    href: "/connect",
+    href: "/services#legal-network",
   },
   {
     index: "06",
@@ -169,6 +172,7 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
     column: "right",
     small: true,
     opportunityId: "automated-laundromats",
+    href: "/businesses#automated-laundromats",
   },
 ];
 
@@ -812,11 +816,6 @@ export default function HomePage() {
                 style={{ justifyContent: "space-between" }}
               >
                 {leftHeroCards.map((card, i) => {
-                  const opp = card.opportunityId
-                    ? PREFAB_OPPORTUNITIES.find(
-                        (o) => o.id === card.opportunityId
-                      )
-                    : null;
                   return (
                     <div
                       key={card.index}
@@ -834,11 +833,10 @@ export default function HomePage() {
                         } as React.CSSProperties
                       }
                     >
-                      <div
-                        onClick={() => {
-                          if (opp) setSelectedOpportunity(opp);
-                        }}
-                        className="c-image c-hero-home_image -rounded-md -cover is-loaded group cursor-pointer relative overflow-hidden"
+                      <Link
+                        href={card.href || "/businesses"}
+                        className="c-image c-hero-home_image -rounded-md -cover is-loaded group cursor-pointer relative overflow-hidden block w-full h-full"
+                        aria-label={`${card.index} ${card.title} - ${card.subtitle}`}
                       >
                         <picture className="c-image_inner">
                           <img
@@ -861,7 +859,7 @@ export default function HomePage() {
                             <span className="font-mono text-[10px] uppercase tracking-widest text-white/90 block">
                               {card.index} // ONSPEC
                             </span>
-                            <p className="text-xs md:text-sm font-semibold leading-tight">
+                            <p className="text-xs md:text-sm font-semibold leading-tight group-hover:underline">
                               {card.title}
                             </p>
                           </div>
@@ -869,7 +867,11 @@ export default function HomePage() {
                             {card.subtitle}
                           </span>
                         </div>
-                      </div>
+                        {/* Hover arrow badge */}
+                        <div className="absolute top-3 right-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-black/40 backdrop-blur-xs border border-white/20 text-white transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:border-white">
+                          <span className="text-xs font-mono font-bold leading-none">&rarr;</span>
+                        </div>
+                      </Link>
                     </div>
                   );
                 })}
@@ -891,11 +893,6 @@ export default function HomePage() {
               >
                 {rightHeroCards.map((card, i) => {
                   const globalIdx = i + 3;
-                  const opp = card.opportunityId
-                    ? PREFAB_OPPORTUNITIES.find(
-                        (o) => o.id === card.opportunityId
-                      )
-                    : null;
                   return (
                     <div
                       key={card.index}
@@ -913,11 +910,10 @@ export default function HomePage() {
                         } as React.CSSProperties
                       }
                     >
-                      <div
-                        onClick={() => {
-                          if (opp) setSelectedOpportunity(opp);
-                        }}
-                        className="c-image c-hero-home_image -rounded-md -cover is-loaded group cursor-pointer relative overflow-hidden"
+                      <Link
+                        href={card.href || "/businesses"}
+                        className="c-image c-hero-home_image -rounded-md -cover is-loaded group cursor-pointer relative overflow-hidden block w-full h-full"
+                        aria-label={`${card.index} ${card.title} - ${card.subtitle}`}
                       >
                         <picture className="c-image_inner">
                           <img
@@ -940,7 +936,7 @@ export default function HomePage() {
                             <span className="font-mono text-[10px] uppercase tracking-widest text-white/90 block">
                               {card.index} // ONSPEC
                             </span>
-                            <p className="text-xs md:text-sm font-semibold leading-tight">
+                            <p className="text-xs md:text-sm font-semibold leading-tight group-hover:underline">
                               {card.title}
                             </p>
                           </div>
@@ -948,7 +944,11 @@ export default function HomePage() {
                             {card.subtitle}
                           </span>
                         </div>
-                      </div>
+                        {/* Hover arrow badge */}
+                        <div className="absolute top-3 right-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-black/40 backdrop-blur-xs border border-white/20 text-white transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:border-white">
+                          <span className="text-xs font-mono font-bold leading-none">&rarr;</span>
+                        </div>
+                      </Link>
                     </div>
                   );
                 })}
