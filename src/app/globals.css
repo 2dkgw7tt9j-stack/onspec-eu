@@ -32,13 +32,12 @@
   --bg-clean-white: #F7F8FA;
   --deep-navy: #101D35;
   --steel-blue: #253B5B;
-  --emerald-green: #27B58A;
-  --emerald-dark: #1F9470;
+  --pure-black: #000000;
   --silver-grey: #A8B1BE;
   --border-hairline: rgba(168, 177, 190, 0.45);
   --border-navy-hairline: rgba(16, 29, 53, 0.12);
 
-  /* Lightship 1:1 Theme Overrides -> ONSPEC Brand Palette */
+  /* Lightship 1:1 Theme Overrides -> ONSPEC Brand Palette (Zero Green) */
   --font-sans: "F37Bolton", var(--font-manrope), var(--font-inter), sans-serif;
   --default-font-family: var(--font-sans);
   --color-black: #101D35;
@@ -47,19 +46,19 @@
   --color-grey-dark: #A8B1BE;
   --color-grey-light: #F7F8FA;
   --color-grey-lighter: #F7F8FA;
-  --color-red: #27B58A;
+  --color-red: #101D35;
   --color-blue: #253B5B;
   --color-beige: #EFF2F6;
   --color-sand: #E9EEF4;
-  --color-green: #27B58A;
-  --color-accent: #27B58A;
+  --color-green: #101D35;
+  --color-accent: #101D35;
   --color-placeholder: var(--color-grey-lighter);
   --color-image-placeholder: var(--color-beige);
   --color-border: rgba(168, 177, 190, 0.45);
-  --color-link: #27B58A;
-  --color-link-focus: #27B58A;
-  --selection-text-color: #101D35;
-  --selection-background-color: #27B58A;
+  --color-link: #101D35;
+  --color-link-focus: #101D35;
+  --selection-text-color: #ffffff;
+  --selection-background-color: #101D35;
 
   /* Preserve Lightship 1:1 Radii, Typography & Spacing against Tailwind v4 defaults */
   --spacing: 0.25rem;

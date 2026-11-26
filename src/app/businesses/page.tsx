@@ -17,7 +17,7 @@ export default function BusinessesPage() {
     <main className="bg-white text-[#101D35]">
       {/* Editorial Header */}
       <section className="container pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
-        <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A] mb-4 font-semibold">
+        <p className="font-mono text-xs uppercase tracking-widest text-[#101D35] mb-4 font-semibold">
           [ PREFABRICATED COMMERCIAL VENTURES ]
         </p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#101D35] mb-6 leading-tight">
@@ -34,7 +34,7 @@ export default function BusinessesPage() {
           {PREFAB_OPPORTUNITIES.map((opp) => (
             <div
               key={opp.id}
-              className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl overflow-hidden flex flex-col justify-between transition-all hover:border-[#27B58A] hover:shadow-lg"
+              className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl overflow-hidden flex flex-col justify-between transition-all hover:border-[#101D35] hover:shadow-lg"
             >
               <div>
                 <div className="h-56 relative overflow-hidden">
@@ -67,7 +67,7 @@ export default function BusinessesPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="font-mono text-[#A8B1BE] uppercase">Owner Hours:</span>
-                      <span className="font-mono font-semibold text-[#27B58A]">{opp.weeklyOwnerHours}</span>
+                      <span className="font-mono font-semibold text-[#101D35]">{opp.weeklyOwnerHours}</span>
                     </div>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ export default function BusinessesPage() {
                 </button>
                 <Link
                   href={`/contact?business=${encodeURIComponent(opp.title)}`}
-                  className="bg-[#27B58A] text-[#101D35] font-bold py-2.5 px-4 rounded-xl text-xs hover:bg-[#1F9470] hover:text-white transition-colors text-center"
+                  className="bg-black text-white font-bold py-2.5 px-4 rounded-xl text-xs hover:bg-[#253B5B] transition-colors text-center"
                 >
                   Enquire
                 </Link>

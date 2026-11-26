@@ -53,7 +53,7 @@ export default function ConnectPage() {
       {/* Section 1: Lightship company.html Fade-In Editorial Lead + Rotating Twin-Star .c-symbol */}
       <section className="container pt-[24svh] md:pt-[32svh] mb-fluid-2xl" id="page-heading">
         <div className="max-w-[760px] m-auto text-center">
-          <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest mb-6">
+          <p className="text-eyebrow text-[#101D35] uppercase tracking-widest mb-6">
             PILLAR 04 // CONNECT : CYPRUS LEGAL &amp; PROFESSIONAL NETWORK
           </p>
           <div className="c-fadein-text text-heading-md">
@@ -98,7 +98,7 @@ export default function ConnectPage() {
         {/* Mandatory Compliance Disclaimer Banner */}
         <div className="max-w-3xl mx-auto rounded-2xl bg-white border border-[#A8B1BE]/50 p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
           <div className="space-y-1">
-            <span className="font-mono text-[11px] uppercase tracking-widest text-[#27B58A] font-semibold">
+            <span className="font-mono text-[11px] uppercase tracking-widest text-[#101D35] font-semibold">
               INDEPENDENT PROFESSIONAL NETWORK NOTICE
             </span>
             <p className="text-xs text-[#253B5B] leading-relaxed">
@@ -140,14 +140,14 @@ export default function ConnectPage() {
           </div>
 
           <div className="c-bento-box">
-            {/* Bento Cell 1: Quote (Deep Navy / Emerald Statement) */}
+            {/* Bento Cell 1: Quote (Deep Navy / Architectural Statement) */}
             <div
               className="c-bento-box_quote c-bento-box_item"
               style={{ backgroundColor: "#101D35" }}
             >
               <div className="c-bento-box_quote_inner">
                 <div className="c-bento-box_quote_header">
-                  <span className="c-icon text-[#27B58A]">
+                  <span className="c-icon text-[#101D35]">
                     
                   </span>
                   <p className="heading-xs text-white">
@@ -155,7 +155,7 @@ export default function ConnectPage() {
                   </p>
                 </div>
                 <div className="c-bento-box_quote_footer">
-                  <p className="text-md text-[#27B58A]">
+                  <p className="text-md text-[#101D35]">
                     Independent Cyprus Counsel
                   </p>
                   <p className="text-xs text-[#A8B1BE]">
@@ -201,7 +201,7 @@ export default function ConnectPage() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/90 via-[#101D35]/30 to-transparent flex flex-col justify-end p-8">
                 <div className="flex items-center gap-3 text-white heading-sm">
-                  <span className="c-icon text-[#27B58A]">
+                  <span className="c-icon text-[#101D35]">
                     
                   </span>
                   <span>Immigration • Residency • Corporate • Criminal Law</span>
@@ -236,7 +236,7 @@ export default function ConnectPage() {
                   </p>
                   <ul className="c-bento-box_stats_list">
                     <li className="c-bento-box_stats_item">
-                      <p className="text-heading-xl text-[#27B58A]">5</p>
+                      <p className="text-heading-xl text-[#101D35]">5</p>
                       <p className="text-xs max-w-[110px] opacity-80">
                         Core Cyprus Legal Practice Domains
                       </p>
@@ -259,7 +259,7 @@ export default function ConnectPage() {
       <section className="mt-fluid-2xl">
         <div className="container flex flex-col gap-y-fluid-xl">
           <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+            <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
               PRACTICE AREAS &amp; REFERRAL SPECIFICATIONS
             </p>
             <h2 className="sr-only">5 Cyprus Legal Practice Domains</h2>
@@ -283,7 +283,7 @@ export default function ConnectPage() {
                     open={idx === 0}
                   >
                     <summary className="c-accordion_summary text-md">
-                      <span className="c-accordion_index text-lg font-mono text-[#27B58A]">
+                      <span className="c-accordion_index text-lg font-mono text-[#101D35]">
                         0{idx + 1}
                       </span>
                       <div className="flex-1">
@@ -320,7 +320,7 @@ export default function ConnectPage() {
                                 key={matter}
                                 className="flex items-start gap-2 text-xs text-[#253B5B]"
                               >
-                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#27B58A] shrink-0" />
+                                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#101D35] shrink-0" />
                                 <span>{matter}</span>
                               </li>
                             ))}
@@ -380,7 +380,7 @@ export default function ConnectPage() {
       <section className="mt-fluid-2xl">
         <div className="c-push-image container">
           <div className="c-push-image_content">
-            <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+            <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
               SEAMLESS CORPORATE &amp; LEGAL COORDINATION
             </p>
             <h3 className="sr-only">How Our Cyprus Legal Network Works</h3>
@@ -423,7 +423,7 @@ export default function ConnectPage() {
         <section className="c-push-newsletter pattern-background background-clip container rounded-[20px] border border-[#A8B1BE]/35">
           <div className="c-push-newsletter_content !max-w-xl !w-full">
             <div className="c-push-newsletter_heading">
-              <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+              <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
                 CONFIDENTIAL REFERRAL INTAKE // CYPRUS
               </p>
               <h2 className="heading-sm text-[#101D35]">
@@ -435,8 +435,8 @@ export default function ConnectPage() {
             </div>
 
             {referenceId ? (
-              <div className="rounded-2xl bg-white border border-[#27B58A] p-6 space-y-4">
-                <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+              <div className="rounded-2xl bg-white border border-[#101D35] p-6 space-y-4">
+                <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
                   CONFIDENTIAL REFERRAL LOGGED
                 </p>
                 <h3 className="heading-xs text-[#101D35]">
@@ -474,7 +474,7 @@ export default function ConnectPage() {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs font-semibold text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs font-semibold text-[#101D35] focus:border-[#101D35] focus:outline-none"
                   >
                     {LEGAL_NETWORK_CATEGORIES.map((c) => (
                       <option key={c.id} value={c.title}>
@@ -485,7 +485,7 @@ export default function ConnectPage() {
                   <select
                     value={urgency}
                     onChange={(e) => setUrgency(e.target.value)}
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
                   >
                     <option value="Standard Consultation (24 to 48h)">
                       Standard Consultation (24 to 48h)
@@ -506,7 +506,7 @@ export default function ConnectPage() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Full Name *"
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
                   />
                   <input
                     type="email"
@@ -514,7 +514,7 @@ export default function ConnectPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="name@email.com *"
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
                   />
                   <input
                     type="tel"
@@ -522,7 +522,7 @@ export default function ConnectPage() {
                     value={whatsapp}
                     onChange={(e) => setWhatsapp(e.target.value)}
                     placeholder="WhatsApp (+357...) *"
-                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                    className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
                   />
                 </div>
 
@@ -532,7 +532,7 @@ export default function ConnectPage() {
                   value={matterSummary}
                   onChange={(e) => setMatterSummary(e.target.value)}
                   placeholder="Briefly describe the nature of your legal or corporate requirement in Cyprus (kept strictly confidential)..."
-                  className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                  className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-xs text-[#101D35] focus:border-[#101D35] focus:outline-none"
                 />
 
                 <button
@@ -540,7 +540,7 @@ export default function ConnectPage() {
                   disabled={submitting}
                   className="c-button primary cursor-pointer"
                   style={{
-                    backgroundColor: "#27B58A",
+                    backgroundColor: "#101D35",
                     color: "#101D35",
                   }}
                 >
@@ -690,11 +690,11 @@ export default function ConnectPage() {
             </button>
             <div className="c-modal-member_inner modal_inner">
               <div className="flex flex-col gap-y-fluid-sm pt-2">
-                <span className="c-icon text-[#27B58A]">
+                <span className="c-icon text-[#101D35]">
                   
                 </span>
                 <div className="max-w-[36rem]">
-                  <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                  <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
                     {activeMemberModal.code}
                   </p>
                   <h2 className="heading-md mt-1">{activeMemberModal.title}</h2>

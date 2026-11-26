@@ -92,11 +92,15 @@ export function InfiniteMarquee({
           onClick={() => onItemClick?.(text, idx)}
           className={`inline-flex items-center gap-3 px-6 py-2.5 text-xs font-mono tracking-wider uppercase whitespace-nowrap transition-colors ${
             variant === "telemetry"
-              ? "text-[#F7F8FA]/85 hover:text-[#27B58A]"
-              : "text-[#101D35] hover:text-[#27B58A]"
+              ? "text-[#F7F8FA]/85 hover:text-white"
+              : "text-[#101D35] hover:text-[#253B5B]"
           } ${onItemClick ? "cursor-pointer" : "cursor-default"}`}
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-[#27B58A] shrink-0" />
+          <span
+            className={`h-1.5 w-1.5 rounded-full ${
+              variant === "telemetry" ? "bg-white/80" : "bg-[#101D35]"
+            } shrink-0`}
+          />
           <span>{text}</span>
           <span className="text-[#A8B1BE]/40 ml-3">/</span>
         </button>

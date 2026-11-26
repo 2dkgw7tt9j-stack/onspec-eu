@@ -71,21 +71,21 @@ export function AutomationInteractiveConsole() {
     switch (id) {
       case "ai-customer-support":
       case "whatsapp-automation":
-        return <MessageSquare className="h-4 w-4 text-[#27B58A]" />;
+        return <MessageSquare className="h-4 w-4 text-white" />;
       case "email-management":
-        return <Mail className="h-4 w-4 text-[#27B58A]" />;
+        return <Mail className="h-4 w-4 text-white" />;
       case "ai-booking-assistants":
-        return <Calendar className="h-4 w-4 text-[#27B58A]" />;
+        return <Calendar className="h-4 w-4 text-white" />;
       case "customer-enquiry-handling":
       case "crm-automation":
-        return <Database className="h-4 w-4 text-[#27B58A]" />;
+        return <Database className="h-4 w-4 text-white" />;
       case "administrative-workflows":
       case "invoice-bookkeeping-workflows":
-        return <FileText className="h-4 w-4 text-[#27B58A]" />;
+        return <FileText className="h-4 w-4 text-white" />;
       case "business-process-automation":
-        return <Workflow className="h-4 w-4 text-[#27B58A]" />;
+        return <Workflow className="h-4 w-4 text-white" />;
       default:
-        return <Network className="h-4 w-4 text-[#27B58A]" />;
+        return <Network className="h-4 w-4 text-white" />;
     }
   };
 
@@ -104,7 +104,7 @@ export function AutomationInteractiveConsole() {
         <div className="flex flex-col justify-between gap-8 border-b border-[#A8B1BE]/20 pb-12 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2.5 rounded-full border border-[#A8B1BE]/25 bg-[#253B5B]/60 px-3.5 py-1.5">
-              <span className="h-2 w-2 rounded-full bg-[#27B58A] animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
               <span className="font-mono text-xs uppercase tracking-widest text-[#F7F8FA]/90">
                 SECTION 05 // PILLAR 02 : AI & BUSINESS AUTOMATION
               </span>
@@ -112,7 +112,7 @@ export function AutomationInteractiveConsole() {
             <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-[#F7F8FA] sm:text-5xl">
               Smarter systems. Less repetitive work.
             </h2>
-            <p className="mt-3 font-mono text-sm uppercase tracking-wider text-[#27B58A]">
+            <p className="mt-3 font-mono text-sm uppercase tracking-wider text-white/80">
               &ldquo;Your business doesn&rsquo;t need more manual work. It needs
               smarter systems.&rdquo;
             </p>
@@ -129,13 +129,13 @@ export function AutomationInteractiveConsole() {
               <p className="font-mono text-[10px] uppercase tracking-widest text-[#A8B1BE]">
                 FULL STACK EFFICIENCY POTENTIAL
               </p>
-              <p className="mt-1 text-xl font-extrabold text-[#27B58A]">
+              <p className="mt-1 text-xl font-extrabold text-white">
                 {totalWeeklyHoursSaved}+ hrs / week saved
               </p>
             </div>
             <Link
-              href="/automate"
-              className="inline-flex items-center gap-2 rounded-lg bg-[#27B58A] px-5 py-3 text-xs font-mono font-bold uppercase tracking-wider text-[#101D35] hover:bg-[#1F9470] hover:text-white transition-colors"
+              href="/ai-web"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-xs font-mono font-bold uppercase tracking-wider text-[#101D35] hover:bg-[#F7F8FA] transition-colors"
             >
               <span>EXPLORE ALL AI & AUTOMATION SYSTEMS</span>
               <ArrowUpRight className="h-4 w-4" />
@@ -155,7 +155,7 @@ export function AutomationInteractiveConsole() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`rounded-lg border px-3.5 py-2 font-mono text-xs uppercase tracking-wider transition-all cursor-pointer ${
                     active
-                      ? "border-[#27B58A] bg-[#27B58A] text-[#101D35] font-bold"
+                      ? "border-white bg-white text-[#101D35] font-bold"
                       : "border-[#A8B1BE]/25 bg-[#253B5B]/40 text-[#F7F8FA]/80 hover:border-[#A8B1BE]/60 hover:text-white"
                   }`}
                 >
@@ -165,7 +165,7 @@ export function AutomationInteractiveConsole() {
             })}
           </div>
           <div className="flex items-center gap-2 font-mono text-xs text-[#A8B1BE]">
-            <Activity className="h-3.5 w-3.5 text-[#27B58A]" />
+            <Activity className="h-3.5 w-3.5 text-white/80" />
             <span>INTERACTIVE SYSTEM TELEMETRY SIMULATOR</span>
           </div>
         </div>
@@ -183,14 +183,14 @@ export function AutomationInteractiveConsole() {
                   onClick={() => handleSelectModule(mod)}
                   className={`w-full text-left rounded-xl border p-4 transition-all cursor-pointer ${
                     isSelected
-                      ? "border-[#27B58A] bg-[#253B5B] shadow-lg"
+                      ? "border-white/80 bg-[#253B5B] shadow-lg"
                       : "border-[#A8B1BE]/20 bg-[#101D35]/80 hover:border-[#A8B1BE]/50 hover:bg-[#253B5B]/45"
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       {getModuleIcon(mod.id)}
-                      <span className="font-mono text-[11px] uppercase tracking-wider text-[#27B58A]">
+                      <span className="font-mono text-[11px] uppercase tracking-wider text-white/90">
                         {mod.code}
                       </span>
                     </div>
@@ -216,8 +216,8 @@ export function AutomationInteractiveConsole() {
               <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#A8B1BE]/20 pb-5">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
-                    <span className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                    <span className="h-2 w-2 rounded-full bg-white" />
+                    <span className="font-mono text-xs uppercase tracking-widest text-white/80">
                       {activeModule.code} // {activeModule.category}
                     </span>
                   </div>
@@ -228,7 +228,7 @@ export function AutomationInteractiveConsole() {
                 <button
                   type="button"
                   onClick={runLiveSimulation}
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#27B58A]/60 bg-[#253B5B]/70 px-3.5 py-2 font-mono text-xs uppercase tracking-wider text-[#27B58A] hover:bg-[#27B58A] hover:text-[#101D35] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/40 bg-white/10 px-3.5 py-2 font-mono text-xs uppercase tracking-wider text-white hover:bg-white hover:text-[#101D35] transition-colors cursor-pointer"
                 >
                   <RefreshCw
                     className={`h-3.5 w-3.5 ${simulating ? "animate-spin" : ""}`}
@@ -247,7 +247,7 @@ export function AutomationInteractiveConsole() {
               <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
                 <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#253B5B]/45 p-3.5">
                   <div className="flex items-center gap-1.5 font-mono text-[10px] uppercase text-[#A8B1BE]">
-                    <Zap className="h-3.5 w-3.5 text-[#27B58A]" />
+                    <Zap className="h-3.5 w-3.5 text-white/80" />
                     <span>EFFICIENCY BENCHMARK</span>
                   </div>
                   <p className="mt-1 text-sm font-bold text-[#F7F8FA]">
@@ -256,16 +256,16 @@ export function AutomationInteractiveConsole() {
                 </div>
                 <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#253B5B]/45 p-3.5">
                   <div className="flex items-center gap-1.5 font-mono text-[10px] uppercase text-[#A8B1BE]">
-                    <Clock className="h-3.5 w-3.5 text-[#27B58A]" />
+                    <Clock className="h-3.5 w-3.5 text-white/80" />
                     <span>MANUAL HOURS SAVED</span>
                   </div>
-                  <p className="mt-1 text-sm font-bold text-[#27B58A]">
+                  <p className="mt-1 text-sm font-bold text-white">
                     ~{activeModule.timeSavedHoursPerWeek} Hours / Week
                   </p>
                 </div>
                 <div className="rounded-lg border border-[#A8B1BE]/20 bg-[#253B5B]/45 p-3.5">
                   <div className="flex items-center gap-1.5 font-mono text-[10px] uppercase text-[#A8B1BE]">
-                    <Layers className="h-3.5 w-3.5 text-[#27B58A]" />
+                    <Layers className="h-3.5 w-3.5 text-white/80" />
                     <span>CONNECTED NODES</span>
                   </div>
                   <p className="mt-1 text-sm font-bold text-[#F7F8FA]">
@@ -278,10 +278,10 @@ export function AutomationInteractiveConsole() {
               <div className="mt-6 rounded-xl border border-[#A8B1BE]/25 bg-[#253B5B]/30 p-5">
                 <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-[#A8B1BE]">
                   <span className="inline-flex items-center gap-2">
-                    <Terminal className="h-3.5 w-3.5 text-[#27B58A]" />
+                    <Terminal className="h-3.5 w-3.5 text-white/80" />
                     REAL-TIME AUTOMATION EXECUTION TRACE
                   </span>
-                  <span className="text-[#27B58A]">STATUS: AUTONOMOUS</span>
+                  <span className="text-white font-semibold">STATUS: AUTONOMOUS</span>
                 </div>
 
                 <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
@@ -289,7 +289,7 @@ export function AutomationInteractiveConsole() {
                   <div
                     className={`rounded-lg border p-3.5 transition-all ${
                       simStep >= 1
-                        ? "border-[#27B58A]/60 bg-[#101D35]"
+                        ? "border-white/40 bg-[#101D35]"
                         : "border-[#A8B1BE]/20 bg-[#101D35]/50 opacity-50"
                     }`}
                   >
@@ -297,7 +297,7 @@ export function AutomationInteractiveConsole() {
                       <span className="font-mono text-[10px] uppercase tracking-wider text-[#A8B1BE]">
                         01 // INBOUND EVENT TRIGGER
                       </span>
-                      <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
+                      <span className="h-2 w-2 rounded-full bg-white" />
                     </div>
                     <p className="mt-2 text-xs font-medium leading-relaxed text-[#F7F8FA]">
                       &ldquo;{activeModule.sampleTrigger}&rdquo;
@@ -308,15 +308,15 @@ export function AutomationInteractiveConsole() {
                   <div
                     className={`rounded-lg border p-3.5 transition-all ${
                       simStep >= 3
-                        ? "border-[#27B58A] bg-[#101D35]"
+                        ? "border-white/50 bg-[#101D35]"
                         : "border-[#A8B1BE]/20 bg-[#101D35]/50 opacity-60"
                     }`}
                   >
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-[#27B58A]">
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-white/90">
                         02 // ONSPEC AUTONOMOUS ACTION
                       </span>
-                      <span className="font-mono text-[10px] text-[#27B58A]">
+                      <span className="font-mono text-[10px] text-white/90">
                         {simStep >= 3 ? "COMPLETED < 400ms" : "PROCESSING..."}
                       </span>
                     </div>
@@ -338,7 +338,7 @@ export function AutomationInteractiveConsole() {
                       key={cap}
                       className="flex items-start gap-2 rounded-lg border border-[#A8B1BE]/15 bg-[#253B5B]/25 p-2.5 text-xs text-[#F7F8FA]/90"
                     >
-                      <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#27B58A]" />
+                      <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white" />
                       <span>{cap}</span>
                     </div>
                   ))}
@@ -362,8 +362,8 @@ export function AutomationInteractiveConsole() {
                 ))}
               </div>
               <Link
-                href="/automate"
-                className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-[#27B58A] hover:underline"
+                href="/ai-web"
+                className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-white hover:underline"
               >
                 <span>Deploy This Module</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
@@ -376,14 +376,14 @@ export function AutomationInteractiveConsole() {
         <div className="mt-12 rounded-2xl border border-[#A8B1BE]/25 bg-[#253B5B]/35 p-6 sm:p-8">
           <div className="flex flex-col justify-between gap-4 border-b border-[#A8B1BE]/20 pb-5 sm:flex-row sm:items-center">
             <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+              <p className="font-mono text-xs uppercase tracking-widest text-white/80">
                 UNIFIED INTEGRATION BUS // CONNECTED PLATFORMS
               </p>
               <h3 className="mt-1 text-xl font-bold text-[#F7F8FA]">
                 Every communication, booking, and management tool synchronized.
               </h3>
             </div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#27B58A]/40 bg-[#101D35] px-3.5 py-1.5 font-mono text-xs text-[#27B58A]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 font-mono text-xs text-white">
               <Cpu className="h-3.5 w-3.5" />
               BI-DIRECTIONAL REAL-TIME SYNC
             </span>
@@ -393,14 +393,14 @@ export function AutomationInteractiveConsole() {
             {CONNECTED_PLATFORMS_MATRIX.map((node) => (
               <div
                 key={node.id}
-                className="rounded-xl border border-[#A8B1BE]/20 bg-[#101D35]/85 p-4 transition-colors hover:border-[#27B58A]/60"
+                className="rounded-xl border border-[#A8B1BE]/20 bg-[#101D35]/85 p-4 transition-colors hover:border-white/40"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[11px] text-[#27B58A]">
+                  <span className="font-mono text-[11px] text-white/90">
                     {node.code}
                   </span>
                   <span className="inline-flex items-center gap-1.5 font-mono text-[10px] text-[#A8B1BE]">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#27B58A]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-white" />
                     SYNC {node.latency}
                   </span>
                 </div>

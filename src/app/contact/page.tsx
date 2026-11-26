@@ -13,7 +13,7 @@ const PILLAR_OPTIONS: { value: EnquiryPillar; label: string; code: string; desc:
     value: "01_LAUNCH",
     code: "01 // LAUNCH",
     label: "Ready Businesses Business",
-    desc: "Smart Vending, Coffee Stations, Kiosks, Laundromats, Car Wash, Ecommerce",
+    desc: "Smart Vending, EV Charging Stations, Kiosks, Laundromats, Car Wash, Ecommerce",
   },
   {
     value: "02_AUTOMATE",
@@ -93,7 +93,7 @@ export default function ContactPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#101D35] via-[#101D35]/45 to-[#101D35]/20 flex flex-col justify-between p-8 text-[#F7F8FA]">
               <div className="flex items-center justify-between">
                 <span className="inline-flex items-center gap-2 rounded-full bg-[#101D35]/80 backdrop-blur-md border border-[#A8B1BE]/30 px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-[#F7F8FA]">
-                  <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
+                  <span className="h-2 w-2 rounded-full bg-white" />
                   CYPRUS &amp; EU OPERATIONS DESK
                 </span>
                 <span className="font-mono text-xs uppercase tracking-widest text-[#A8B1BE]">
@@ -103,7 +103,7 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 <div>
-                  <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+                  <p className="text-eyebrow text-white/80 uppercase tracking-widest font-mono">
                     {BRAND_INFO.descriptor}
                   </p>
                   <h2 className="heading-sm mt-2 text-white">
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 <div className="grid grid-cols-2 gap-3 pt-2">
                   <a
                     href={`mailto:${BRAND_INFO.emailPrimary}`}
-                    className="rounded-xl bg-[#101D35]/85 backdrop-blur-md border border-[#A8B1BE]/30 p-4 hover:border-[#27B58A] transition-colors"
+                    className="rounded-xl bg-[#101D35]/85 backdrop-blur-md border border-[#A8B1BE]/30 p-4 hover:border-white/50 transition-colors"
                   >
                     <p className="font-mono text-[10px] uppercase tracking-widest text-[#A8B1BE]">
                       DIRECT EMAIL DESK
@@ -126,7 +126,7 @@ export default function ContactPage() {
                     <p className="mt-1 text-sm font-semibold text-white">
                       {BRAND_INFO.emailPrimary}
                     </p>
-                    <p className="mt-0.5 text-xs text-[#27B58A]">
+                    <p className="mt-0.5 text-xs text-white/70">
                       {BRAND_INFO.emailSecondary} →
                     </p>
                   </a>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                     href={BRAND_INFO.whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-xl bg-[#101D35]/85 backdrop-blur-md border border-[#A8B1BE]/30 p-4 hover:border-[#27B58A] transition-colors"
+                    className="rounded-xl bg-[#101D35]/85 backdrop-blur-md border border-[#A8B1BE]/30 p-4 hover:border-white/50 transition-colors"
                   >
                     <p className="font-mono text-[10px] uppercase tracking-widest text-[#A8B1BE]">
                       DIRECT WHATSAPP
@@ -142,7 +142,7 @@ export default function ContactPage() {
                     <p className="mt-1 text-sm font-semibold text-white">
                       {BRAND_INFO.whatsappDisplay}
                     </p>
-                    <p className="mt-0.5 text-xs text-[#27B58A]">
+                    <p className="mt-0.5 text-xs text-white/70">
                       Instant Executive Chat →
                     </p>
                   </a>
@@ -178,7 +178,7 @@ export default function ContactPage() {
                   onClick={() => setMeetingModalOpen(true)}
                   className="c-button cursor-pointer"
                   style={{
-                    backgroundColor: "#27B58A",
+                    backgroundColor: "#101D35",
                     color: "#101D35",
                   }}
                 >
@@ -251,12 +251,12 @@ export default function ContactPage() {
           >
             {referenceId ? (
               <div className="rounded-[20px] bg-white border border-[#A8B1BE]/45 p-8 md:p-10 text-center space-y-5 shadow-sm">
-                <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#27B58A]/15 text-[#27B58A]">
+                <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#101D35]/10 text-[#101D35]">
                   <svg className="h-6 w-6 fill-current" viewBox="0 0 16 16">
                     <use href="/assets/svgs/sprite.svg#checkmark" />
                   </svg>
                 </div>
-                <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+                <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
                   ENQUIRY REGISTERED // ONSPEC DESK
                 </p>
                 <h2 className="heading-sm text-[#101D35]">
@@ -329,7 +329,7 @@ export default function ContactPage() {
                           onClick={() => setPillar(opt.value)}
                           className={`text-left rounded-2xl border px-4 py-3 transition-all cursor-pointer flex items-center justify-between gap-3 ${
                             active
-                              ? "border-[#27B58A] bg-[#101D35] text-[#F7F8FA]"
+                              ? "border-[#101D35] bg-[#101D35] text-[#F7F8FA]"
                               : "border-[#A8B1BE]/45 bg-[#F7F8FA] text-[#101D35] hover:border-[#253B5B]"
                           }`}
                         >
@@ -337,7 +337,7 @@ export default function ContactPage() {
                             <div className="flex items-center gap-2">
                               <span
                                 className={`font-mono text-[11px] uppercase tracking-wider ${
-                                  active ? "text-[#27B58A]" : "text-[#253B5B]"
+                                  active ? "text-white" : "text-[#253B5B]"
                                 }`}
                               >
                                 {opt.code}
@@ -357,7 +357,7 @@ export default function ContactPage() {
                           <span
                             className={`h-4 w-4 shrink-0 rounded-full border flex items-center justify-center ${
                               active
-                                ? "border-[#27B58A] bg-[#27B58A]"
+                                ? "border-white bg-white"
                                 : "border-[#A8B1BE]"
                             }`}
                           >
@@ -384,7 +384,7 @@ export default function ContactPage() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Andreas Georgiou"
-                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
                       />
                     </div>
                   </div>
@@ -400,7 +400,7 @@ export default function ContactPage() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="name@company.eu"
-                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
                       />
                     </div>
                   </div>
@@ -418,7 +418,7 @@ export default function ContactPage() {
                         value={whatsapp}
                         onChange={(e) => setWhatsapp(e.target.value)}
                         placeholder="+357 99 000 000"
-                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
                       />
                     </div>
                   </div>
@@ -431,7 +431,7 @@ export default function ContactPage() {
                       <select
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
-                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                        className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
                       >
                         <option value="Limassol, Cyprus">Limassol, Cyprus</option>
                         <option value="Nicosia, Cyprus">Nicosia, Cyprus</option>
@@ -461,7 +461,7 @@ export default function ContactPage() {
                       value={companyName}
                       onChange={(e) => setCompanyName(e.target.value)}
                       placeholder="Existing business or new venture entity"
-                      className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                      className="c-input-text_input text-sm w-full rounded-full border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
                     />
                   </div>
                 </div>
@@ -476,7 +476,7 @@ export default function ContactPage() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Tell us which turnkey business model, AI automation workflow, custom idea, or Cyprus legal referral you would like to discuss..."
-                    className="text-sm w-full rounded-2xl border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                    className="text-sm w-full rounded-2xl border border-[#A8B1BE]/60 bg-[#F7F8FA] px-5 py-3.5 text-[#101D35] focus:border-[#101D35] focus:outline-none"
                   />
                 </div>
 
@@ -489,7 +489,7 @@ export default function ContactPage() {
                     disabled={submitting}
                     className="c-button primary cursor-pointer w-full sm:w-auto"
                     style={{
-                      backgroundColor: "#27B58A",
+                      backgroundColor: "#101D35",
                       color: "#101D35",
                     }}
                   >
@@ -529,10 +529,10 @@ export default function ContactPage() {
                 <Link
                   key={p.id}
                   href={p.href}
-                  className="rounded-2xl bg-white border border-[#A8B1BE]/40 p-5 hover:border-[#27B58A] transition-colors flex flex-col justify-between gap-3"
+                  className="rounded-2xl bg-white border border-[#A8B1BE]/40 p-5 hover:border-[#101D35] transition-colors flex flex-col justify-between gap-3"
                 >
                   <div>
-                    <p className="font-mono text-[11px] uppercase tracking-widest text-[#27B58A]">
+                    <p className="font-mono text-[11px] uppercase tracking-widest text-[#101D35]">
                       {p.code}
                     </p>
                     <h3 className="text-base font-bold text-[#101D35] mt-1">
@@ -580,7 +580,7 @@ export default function ContactPage() {
           </button>
           <div className="modal_inner p-8 md:p-12">
             <div className="max-w-xl mx-auto space-y-6 text-[#101D35]">
-              <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+              <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
                 ONSPEC EXECUTIVE BRIEFING // 15 MINUTE CALL
               </p>
               <h2 className="heading-md">
@@ -597,7 +597,7 @@ export default function ContactPage() {
                   className="rounded-2xl bg-[#101D35] text-white p-6 hover:bg-[#253B5B] transition-colors flex flex-col justify-between gap-4"
                 >
                   <div>
-                    <span className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                    <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
                       INSTANT CHANNEL
                     </span>
                     <h3 className="heading-2xs mt-2 text-white">
@@ -607,13 +607,13 @@ export default function ContactPage() {
                       {BRAND_INFO.whatsappDisplay}
                     </p>
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#27B58A]">
+                  <span className="text-xs font-mono uppercase tracking-wider text-[#101D35]">
                     Launch WhatsApp Now →
                   </span>
                 </a>
                 <a
                   href={`mailto:${BRAND_INFO.emailPrimary}?subject=Discovery%20Call%20Request%20ONSPEC`}
-                  className="rounded-2xl bg-[#F7F8FA] border border-[#A8B1BE]/50 text-[#101D35] p-6 hover:border-[#27B58A] transition-colors flex flex-col justify-between gap-4"
+                  className="rounded-2xl bg-[#F7F8FA] border border-[#A8B1BE]/50 text-[#101D35] p-6 hover:border-[#101D35] transition-colors flex flex-col justify-between gap-4"
                 >
                   <div>
                     <span className="font-mono text-xs uppercase tracking-widest text-[#253B5B]">

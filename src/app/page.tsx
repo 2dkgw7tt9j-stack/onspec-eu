@@ -122,13 +122,13 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
   },
   {
     index: "02",
-    title: "Automated Coffee Stations",
-    subtitle: "Swiss Bean-to-Cup Kiosks",
+    title: "EV Fast Charging Hubs",
+    subtitle: "24/7 Cashless Power Bays",
     image:
-      "https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1744973179090-73ec820176e9?auto=format&fit=crop&w=900&q=85",
     column: "left",
     small: true,
-    opportunityId: "automated-coffee-stations",
+    opportunityId: "commercial-ev-charging",
   },
   {
     index: "03",
@@ -181,7 +181,7 @@ const STACKING_PILLAR_CARDS = [
     pillarCode: "PILLAR 01 : LAUNCH",
     title: "Ready Businesses",
     subtitle:
-      "Vending, Coffee, Kiosks, Laundromats and Car Washes : Location, equipment, suppliers and Cyprus registration coordinated end to end.",
+      "Vending, EV Charging, Kiosks, Laundromats and Car Washes : Location, equipment, suppliers and Cyprus registration coordinated end to end.",
     metric: "4 to 10 WEEKS TO LIVE",
     image:
       "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=1400&q=85",
@@ -462,7 +462,7 @@ const FEATURE_CAROUSEL_SPECS: {
 
 const BLUEPRINT_SHORT_CODES = [
   "01.VENDING",
-  "02.COFFEE",
+  "02.EV_CHARGE",
   "03.KIOSKS",
   "04.LAUNDROMAT",
   "05.CARWASH",
@@ -858,7 +858,7 @@ export default function HomePage() {
                         />
                         <div className="absolute bottom-3 left-3.5 right-3.5 z-10 flex items-end justify-between text-white">
                           <div>
-                            <span className="font-mono text-[10px] uppercase tracking-widest text-[#27B58A] block">
+                            <span className="font-mono text-[10px] uppercase tracking-widest text-white/90 block">
                               {card.index} // ONSPEC
                             </span>
                             <p className="text-xs md:text-sm font-semibold leading-tight">
@@ -937,7 +937,7 @@ export default function HomePage() {
                         />
                         <div className="absolute bottom-3 left-3.5 right-3.5 z-10 flex items-end justify-between text-white">
                           <div>
-                            <span className="font-mono text-[10px] uppercase tracking-widest text-[#27B58A] block">
+                            <span className="font-mono text-[10px] uppercase tracking-widest text-white/90 block">
                               {card.index} // ONSPEC
                             </span>
                             <p className="text-xs md:text-sm font-semibold leading-tight">
@@ -982,7 +982,7 @@ export default function HomePage() {
               className="c-button"
               style={
                 {
-                  "--button-background": "#27B58A",
+                  "--button-background": "#101D35",
                   "--button-color": "#101D35",
                   "--button-hover-background": "#101D35",
                   "--button-hover-color": "#F7F8FA",
@@ -1112,8 +1112,8 @@ export default function HomePage() {
                       }}
                     >
                       <div className="w-full flex items-center justify-between">
-                        <span className="inline-flex items-center gap-2 rounded-full bg-[#101D35]/80 backdrop-blur-md px-3.5 py-1.5 font-mono text-xs uppercase tracking-widest text-[#27B58A] border border-white/15">
-                          <span className="h-1.5 w-1.5 rounded-full bg-[#27B58A]" />
+                        <span className="inline-flex items-center gap-2 rounded-full bg-black/60 backdrop-blur-md px-3.5 py-1.5 font-mono text-xs uppercase tracking-widest text-white border border-white/20">
+                          <span className="h-1.5 w-1.5 rounded-full bg-white" />
                           {card.pillarCode}
                         </span>
                         <span className="font-mono text-xs uppercase tracking-wider text-white/85 bg-black/35 backdrop-blur-md px-3 py-1 rounded-full">
@@ -1123,7 +1123,7 @@ export default function HomePage() {
 
                       {card.isFinalCard ? (
                         <div className="my-auto flex flex-col items-center gap-4 text-center">
-                          <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+                          <p className="font-mono text-xs uppercase tracking-widest text-white/90">
                             {card.title}
                           </p>
                           <p className="heading-md max-w-[22rem]">
@@ -1283,7 +1283,7 @@ export default function HomePage() {
         <div className="c-editorial-block container-xl">
           <div className="c-editorial-block_content">
             <div className="space-y-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#27B58A] block">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#101D35] block">
                 BUILT FOR FOUNDERS. ENGINEERED FOR GROWTH.
               </span>
               <p className="c-editorial-block_description text-[#253B5B]">
@@ -1347,8 +1347,8 @@ export default function HomePage() {
 
           <div className="c-newsletter">
             {ideaResultRef ? (
-              <div className="rounded-2xl bg-white p-6 border border-[#27B58A]/40 shadow-sm space-y-2">
-                <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+              <div className="rounded-2xl bg-white p-6 border border-[#101D35]/40 shadow-sm space-y-2">
+                <p className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
                   IDEA REGISTERED // REF {ideaResultRef}
                 </p>
                 <p className="text-sm font-semibold text-[#101D35]">
@@ -1459,7 +1459,7 @@ export default function HomePage() {
                       {
                         pointerEvents: "auto",
                         "--button-background": "#101D35",
-                        "--button-hover-background": "#27B58A",
+                        "--button-hover-background": "#000000",
                         "--button-color": "#F7F8FA",
                         "--button-hover-color": "#101D35",
                       } as React.CSSProperties

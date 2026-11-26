@@ -145,7 +145,7 @@ export default function ServicesPage() {
     <main className="bg-white text-[#101D35]">
       {/* Editorial Hero Header */}
       <section className="container pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
-        <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A] mb-4 font-semibold">
+        <p className="font-mono text-xs uppercase tracking-widest text-[#101D35] mb-4 font-semibold">
           [ ONSPEC SERVICES DIRECTORY ]
         </p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#101D35] mb-6 leading-tight">
@@ -162,14 +162,14 @@ export default function ServicesPage() {
           {SERVICES_LIST.map((srv, idx) => (
             <article
               key={srv.code}
-              className="bg-[#F7F8FA] rounded-2xl p-6 sm:p-8 md:p-10 border border-[#D5DBE3] transition-all hover:border-[#27B58A]/50 hover:shadow-lg"
+              className="bg-[#F7F8FA] rounded-2xl p-6 sm:p-8 md:p-10 border border-[#D5DBE3] transition-all hover:border-[#101D35]/50 hover:shadow-lg"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 {/* Left Column: Details */}
                 <div className="lg:col-span-7 flex flex-col justify-between h-full">
                   <div>
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#27B58A] bg-[#27B58A]/10 px-2.5 py-1 rounded">
+                      <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#101D35] bg-[#101D35]/10 px-2.5 py-1 rounded">
                         {srv.code}
                       </span>
                       <span className="font-mono text-xs uppercase tracking-wider text-[#A8B1BE]">
@@ -196,7 +196,7 @@ export default function ServicesPage() {
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#253B5B]">
                         {srv.features.map((feat, fIdx) => (
                           <li key={fIdx} className="flex items-start gap-2">
-                            <span className="text-[#27B58A] font-bold">✓</span>
+                            <span className="text-[#101D35] font-bold">✓</span>
                             <span>{feat}</span>
                           </li>
                         ))}
@@ -218,14 +218,14 @@ export default function ServicesPage() {
                       <span className="block font-mono text-[11px] text-[#A8B1BE] uppercase">
                         Investment
                       </span>
-                      <span className="font-mono text-xs font-bold text-[#27B58A]">
+                      <span className="font-mono text-xs font-bold text-[#101D35]">
                         {srv.investment}
                       </span>
                     </div>
 
                     <Link
                       href={srv.href}
-                      className="inline-flex items-center justify-center bg-[#101D35] text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-[#27B58A] transition-colors"
+                      className="inline-flex items-center justify-center bg-[#101D35] text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-[#253B5B] transition-colors"
                     >
                       {srv.cta} →
                     </Link>
@@ -254,7 +254,7 @@ export default function ServicesPage() {
       {/* Quick Inquiry CTA Block */}
       <section className="bg-[#101D35] text-white py-16 md:py-24">
         <div className="container max-w-4xl mx-auto px-4 text-center">
-          <p className="font-mono text-xs uppercase tracking-widest text-[#27B58A] mb-3 font-semibold">
+          <p className="font-mono text-xs uppercase tracking-widest text-white/80 mb-3 font-semibold">
             [ DIRECT SERVICE INTAKE ]
           </p>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
@@ -265,10 +265,10 @@ export default function ServicesPage() {
           </p>
 
           {referenceId ? (
-            <div className="bg-[#27B58A]/20 border border-[#27B58A] p-6 rounded-xl max-w-md mx-auto text-center">
+            <div className="bg-white/10 border border-white/25 p-6 rounded-xl max-w-md mx-auto text-center">
               <p className="text-lg font-bold text-white mb-2">Inquiry Confirmed</p>
               <p className="text-xs text-[#D5DBE3] mb-3">
-                Reference ID: <span className="font-mono text-[#27B58A]">{referenceId}</span>
+                Reference ID: <span className="font-mono text-white font-bold">{referenceId}</span>
               </p>
               <p className="text-xs text-[#D5DBE3]">
                 An Onspec specialist will contact you on WhatsApp or email within 24 hours.
@@ -283,7 +283,7 @@ export default function ServicesPage() {
                   required
                   value={quickName}
                   onChange={(e) => setQuickName(e.target.value)}
-                  className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#27B58A]"
+                  className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/60"
                 />
                 <input
                   type="email"
@@ -291,14 +291,14 @@ export default function ServicesPage() {
                   required
                   value={quickEmail}
                   onChange={(e) => setQuickEmail(e.target.value)}
-                  className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#27B58A]"
+                  className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/60"
                 />
               </div>
 
               <select
                 value={quickService}
                 onChange={(e) => setQuickService(e.target.value)}
-                className="w-full bg-[#101D35] border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#27B58A]"
+                className="w-full bg-[#101D35] border border-white/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-white/60"
               >
                 <option value="SERVICE 01 : Ready Businesses">SERVICE 01 : Ready Businesses Business Units</option>
                 <option value="SERVICE 02 : Web & Software">SERVICE 02 : Custom Websites & Software Platforms</option>
@@ -312,13 +312,13 @@ export default function ServicesPage() {
                 placeholder="Briefly describe what you are looking for..."
                 value={quickMessage}
                 onChange={(e) => setQuickMessage(e.target.value)}
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#27B58A]"
+                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/60"
               />
 
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-[#27B58A] text-[#101D35] font-bold py-3.5 rounded-lg text-sm uppercase tracking-wider hover:bg-[#1F9470] hover:text-white transition-colors cursor-pointer"
+                className="w-full bg-white text-[#101D35] font-bold py-3.5 rounded-lg text-sm uppercase tracking-wider hover:bg-[#F7F8FA] transition-colors cursor-pointer"
               >
                 {submitting ? "Submitting..." : "Send Service Inquiry →"}
               </button>

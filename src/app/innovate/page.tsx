@@ -143,7 +143,7 @@ export default function InnovatePage() {
       {/* Section 1: Lightship specs.html Centered Split-Text Hero Header */}
       <section className="container mt-fluid-4xl mb-fluid-md">
         <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-4xl">
-          <p className="text-eyebrow text-[#27B58A] uppercase tracking-widest">
+          <p className="text-eyebrow text-[#101D35] uppercase tracking-widest">
             PILLAR 03 // INNOVATE : SUBMIT YOUR IDEA
           </p>
           <h1 className="sr-only">
@@ -179,7 +179,7 @@ export default function InnovatePage() {
           </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-[#101D35]/85 via-[#101D35]/30 to-transparent flex items-end p-6 md:p-12">
             <div className="max-w-2xl text-white">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#27B58A]">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#101D35]">
                 CUSTOM CONCEPT EVALUATION &amp; BUILD ENGINE
               </span>
               <h2 className="heading-sm mt-2 text-white">
@@ -212,7 +212,7 @@ export default function InnovatePage() {
             </span>
           </li>
           <li className="bg-sand p-5 rounded-md flex flex-col justify-between gap-y-4 pattern-background min-h-[160px] border border-[#A8B1BE]/30">
-            <span className="heading-2xs text-[#27B58A]">Cyprus &amp; EU</span>
+            <span className="heading-2xs text-[#101D35]">Cyprus &amp; EU</span>
             <span className="text-md text-[#253B5B]">
               04 // Independent Legal &amp; Corporate Network Ready
             </span>
@@ -229,8 +229,8 @@ export default function InnovatePage() {
         <div className="lg:col-span-5 lg:sticky lg:top-[calc(var(--header-area)+1.5rem)] space-y-4">
           <div className="rounded-[20px] bg-[#101D35] text-[#F7F8FA] p-7 md:p-8 border border-[#253B5B] shadow-xl space-y-6">
             <div className="flex items-center justify-between border-b border-[#A8B1BE]/20 pb-4">
-              <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#27B58A]">
-                <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
+              <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                <span className="h-2 w-2 rounded-full bg-[#101D35]" />
                 LIVE PROPOSAL SPECIFICATION
               </span>
               <span className="font-mono text-xs text-[#A8B1BE]">
@@ -268,15 +268,15 @@ export default function InnovatePage() {
                 <span className="font-mono uppercase text-[#A8B1BE]">
                   PRELIMINARY PROPOSAL
                 </span>
-                <span className="font-mono font-semibold text-[#27B58A]">
+                <span className="font-mono font-semibold text-[#101D35]">
                   FREE QUOTATION
                 </span>
               </div>
             </div>
 
             {/* Free Preliminary Proposal Guarantee Box */}
-            <div className="rounded-xl bg-[#F7F8FA]/5 border border-[#27B58A]/40 p-5 space-y-2">
-              <p className="font-mono text-xs uppercase tracking-wider text-[#27B58A]">
+            <div className="rounded-xl bg-[#F7F8FA]/5 border border-[#101D35]/40 p-5 space-y-2">
+              <p className="font-mono text-xs uppercase tracking-wider text-[#101D35]">
                 THE ONSPEC PROPOSAL GUARANTEE
               </p>
               <p className="text-xs text-[#F7F8FA]/90 leading-relaxed">
@@ -349,9 +349,9 @@ export default function InnovatePage() {
         {/* Right Column: Hairline-Divided Interactive Intake & Specification Configurator (1:1 specs.html) */}
         <div className="lg:col-span-7">
           {referenceId ? (
-            <div className="bg-sand p-unit-md rounded-md border border-[#27B58A] space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#27B58A]/15 px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-[#101D35]">
-                <span className="h-2 w-2 rounded-full bg-[#27B58A]" />
+            <div className="bg-sand p-unit-md rounded-md border border-[#101D35] space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#101D35]/10 px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-[#101D35]">
+                <span className="h-2 w-2 rounded-full bg-[#101D35]" />
                 CONCEPT LOGGED FOR PRELIMINARY PROPOSAL
               </div>
               <h2 className="heading-md text-[#101D35]">
@@ -385,7 +385,7 @@ export default function InnovatePage() {
                   </div>
                   <div>
                     <span className="text-[#253B5B]/70 block">STATUS</span>
-                    <strong className="text-[#27B58A]">
+                    <strong className="text-[#101D35]">
                       Stage 03 Assessment Queued
                     </strong>
                   </div>
@@ -449,13 +449,13 @@ export default function InnovatePage() {
                         onClick={() => setArchetype(item.id)}
                         className={`text-left rounded-xl p-4 border transition-all cursor-pointer flex flex-col justify-between gap-2 ${
                           active
-                            ? "bg-[#101D35] text-white border-[#27B58A] shadow-md"
+                            ? "bg-[#101D35] text-white border-[#101D35] shadow-md"
                             : "bg-white text-[#101D35] border-[#A8B1BE]/45 hover:border-[#253B5B]"
                         }`}
                       >
                         <span
                           className={`font-mono text-[10px] uppercase tracking-widest ${
-                            active ? "text-[#27B58A]" : "text-[#253B5B]"
+                            active ? "text-[#101D35]" : "text-[#253B5B]"
                           }`}
                         >
                           {item.code}
@@ -503,7 +503,7 @@ export default function InnovatePage() {
                         value={ideaDescription}
                         onChange={(e) => setIdeaDescription(e.target.value)}
                         placeholder="Describe your concept, target customers, preferred location in Cyprus or EU, and any equipment or software you envision..."
-                        className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                        className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-sm text-[#101D35] focus:border-[#101D35] focus:outline-none"
                       />
                     </div>
                   </li>
@@ -525,7 +525,7 @@ export default function InnovatePage() {
                         value={goals}
                         onChange={(e) => setGoals(e.target.value)}
                         placeholder="e.g. Passive/semi-automated monthly cashflow, turnkey location + hardware setup in Limassol, or full MVP + AI customer pipeline..."
-                        className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                        className="w-full rounded-2xl border border-[#A8B1BE]/60 bg-white px-4 py-3 text-sm text-[#101D35] focus:border-[#101D35] focus:outline-none"
                       />
                     </div>
                   </li>
@@ -550,7 +550,7 @@ export default function InnovatePage() {
                             onClick={() => setBudget(tier)}
                             className={`rounded-full px-4 py-2 text-xs font-mono transition-colors cursor-pointer border ${
                               active
-                                ? "bg-[#101D35] text-[#27B58A] border-[#101D35]"
+                                ? "bg-[#101D35] text-[#101D35] border-[#101D35]"
                                 : "bg-white text-[#101D35] border-[#A8B1BE]/50 hover:border-[#101D35]"
                             }`}
                           >
@@ -581,7 +581,7 @@ export default function InnovatePage() {
                             onClick={() => setTimeframe(tf)}
                             className={`rounded-full px-4 py-2 text-xs font-mono transition-colors cursor-pointer border ${
                               active
-                                ? "bg-[#27B58A] text-[#101D35] border-[#27B58A] font-semibold"
+                                ? "bg-[#101D35] text-[#101D35] border-[#101D35] font-semibold"
                                 : "bg-white text-[#101D35] border-[#A8B1BE]/50 hover:border-[#101D35]"
                             }`}
                           >
@@ -616,7 +616,7 @@ export default function InnovatePage() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Your full name"
-                      className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-5 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                      className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-5 py-3 text-sm text-[#101D35] focus:border-[#101D35] focus:outline-none"
                     />
                   </li>
                   <li className="grid sm:grid-cols-2 gap-x-gutter gap-y-4 border-t border-grey py-6 items-center">
@@ -629,7 +629,7 @@ export default function InnovatePage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="name@company.eu"
-                      className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-5 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                      className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-5 py-3 text-sm text-[#101D35] focus:border-[#101D35] focus:outline-none"
                     />
                   </li>
                   <li className="grid sm:grid-cols-2 gap-x-gutter gap-y-4 border-t border-grey py-6 items-center">
@@ -642,7 +642,7 @@ export default function InnovatePage() {
                       value={whatsapp}
                       onChange={(e) => setWhatsapp(e.target.value)}
                       placeholder="+357 99 000 000"
-                      className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-5 py-3 text-sm text-[#101D35] focus:border-[#27B58A] focus:outline-none"
+                      className="w-full rounded-full border border-[#A8B1BE]/60 bg-white px-5 py-3 text-sm text-[#101D35] focus:border-[#101D35] focus:outline-none"
                     />
                   </li>
                 </ul>
@@ -656,7 +656,7 @@ export default function InnovatePage() {
                     disabled={submitting}
                     className="c-button primary cursor-pointer w-full sm:w-auto"
                     style={{
-                      backgroundColor: "#27B58A",
+                      backgroundColor: "#101D35",
                       color: "#101D35",
                     }}
                   >
@@ -740,7 +740,7 @@ export default function InnovatePage() {
                 <h3 className="heading-2xs text-[#101D35]">
                   {step.number}. {step.title}
                 </h3>
-                <span className="font-mono text-xs text-[#27B58A]">
+                <span className="font-mono text-xs text-[#101D35]">
                   {step.code}
                 </span>
               </div>
@@ -753,7 +753,7 @@ export default function InnovatePage() {
                 </li>
                 <li className="grid sm:grid-cols-2 gap-x-gutter gap-y-4 border-t border-grey py-5">
                   <span className="text-eyebrow text-[#253B5B]">Deliverable</span>
-                  <span className="text-md text-[#27B58A] font-semibold">
+                  <span className="text-md text-[#101D35] font-semibold">
                     {step.deliverable}
                   </span>
                 </li>

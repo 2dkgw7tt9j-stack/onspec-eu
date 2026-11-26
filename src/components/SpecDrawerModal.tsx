@@ -168,7 +168,7 @@ export function SpecDrawerModal({
                   <div className="text-xs text-black/50 uppercase">
                     Investment Tier
                   </div>
-                  <div className="text-md font-bold mt-1 text-[#27B58A]">
+                  <div className="text-md font-bold mt-1 text-[#101D35]">
                     {opportunity.investmentTier}
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export function SpecDrawerModal({
                           key={stage.step}
                           className="p-4 rounded-[12px] bg-[#F7F8FA] border border-black/10"
                         >
-                          <div className="text-xs font-bold text-[#27B58A] uppercase">
+                          <div className="text-xs font-bold text-[#101D35] uppercase">
                             {stage.step} : {stage.title}
                           </div>
                           <div className="text-sm text-black/75 mt-1">
@@ -229,7 +229,7 @@ export function SpecDrawerModal({
                     </table>
 
                     <div className="p-5 rounded-[12px] bg-[#101D35] text-white mt-6">
-                      <div className="text-xs font-bold uppercase tracking-wider text-[#27B58A]">
+                      <div className="text-xs font-bold uppercase tracking-wider text-white/90 font-mono">
                         Cyprus &amp; EU Deployment Note
                       </div>
                       <p className="text-sm text-white/85 mt-2">
@@ -244,7 +244,7 @@ export function SpecDrawerModal({
               <div className="p-6 md:p-8 rounded-[18px] bg-[#F7F8FA] border border-black/10 mt-4">
                 {referenceId ? (
                   <div className="py-4 text-center space-y-3">
-                    <div className="text-xs font-bold uppercase tracking-widest text-[#27B58A]">
+                    <div className="text-xs font-bold uppercase tracking-widest text-[#101D35]">
                       Turnkey Specification Dossier Registered
                     </div>
                     <h3 className="text-heading-sm">
@@ -279,7 +279,7 @@ export function SpecDrawerModal({
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                       <div>
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#27B58A]">
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#101D35]">
                           Instant Reserve &amp; Feasibility Dossier //{" "}
                           {opportunity.specCode}
                         </span>
