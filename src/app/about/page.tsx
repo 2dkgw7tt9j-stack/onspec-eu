@@ -63,7 +63,7 @@ export default function AboutPage() {
 
       {/* Section 1: Giant Editorial Statement */}
       <section
-        className="container pt-[20svh] md:pt-[24svh] mb-fluid-2xl"
+        className="container px-4 sm:px-6 pt-[16svh] md:pt-[24svh] mb-fluid-2xl"
         id="page-heading"
       >
         <div className="max-w-[740px] m-auto text-center">

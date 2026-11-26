@@ -72,12 +72,12 @@ export function IntroSplashScreen() {
       />
 
       {/* Top Telemetry Header */}
-      <header className="relative z-10 flex items-center justify-between px-6 py-6 sm:px-12 sm:py-8 font-mono text-[11px] sm:text-xs uppercase tracking-widest text-neutral-400">
-        <div className="flex items-center gap-2.5">
+      <header className="relative z-10 flex items-center justify-between px-4 py-4 sm:px-12 sm:py-8 font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-400">
+        <div className="flex items-center gap-2">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
           <span>ONSPEC // CYPRUS &amp; EU</span>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <span className="text-neutral-500 hidden sm:inline">INITIALIZING</span>
           <span className="text-white font-bold tabular-nums">
             [{progress.toString().padStart(3, "0")}%]
@@ -86,44 +86,44 @@ export function IntroSplashScreen() {
       </header>
 
       {/* Center Cinematic Brand Composition */}
-      <main className="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-4xl mx-auto my-auto py-12">
+      <main className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto my-auto py-6 sm:py-12">
         {/* White Onspec Logo with Crisp Transparent Background */}
-        <div className="relative mb-8 transform transition-all duration-1000 ease-out">
+        <div className="relative mb-6 sm:mb-8 transform transition-all duration-1000 ease-out">
           <img
             src="/onspec_logo_dark_bg.png"
             alt="ONSPEC Logo"
-            className="h-14 sm:h-20 md:h-24 w-auto object-contain mx-auto drop-shadow-[0_0_35px_rgba(255,255,255,0.12)]"
+            className="h-11 sm:h-20 md:h-24 w-auto object-contain mx-auto drop-shadow-[0_0_35px_rgba(255,255,255,0.12)]"
           />
         </div>
 
         {/* Monospace Architectural Eyebrow */}
-        <p className="font-mono text-xs sm:text-sm tracking-[0.3em] uppercase text-neutral-400 font-semibold mb-3">
+        <p className="font-mono text-[11px] sm:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase text-neutral-400 font-semibold mb-2 sm:mb-3">
           Welcome to Onspec
         </p>
 
         {/* Slogan */}
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight font-sans">
+        <h1 className="text-2xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight font-sans">
           Your vision. Our execution.
         </h1>
 
         {/* Status Indicator */}
-        <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-950 px-4 py-1.5 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-neutral-300">
+        <div className="mt-6 sm:mt-8 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-950 px-3.5 py-1.5 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-neutral-300">
           <span className="h-1.5 w-1.5 rounded-full bg-white" />
           <span>Engineered To Operate : Fully Prepared</span>
         </div>
       </main>
 
       {/* Bottom Telemetry & Controls */}
-      <footer className="relative z-10 px-6 pb-6 sm:px-12 sm:pb-8">
-        <div className="flex items-center justify-between font-mono text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mb-3">
-          <span>SPEC // READY BUSINESSES &amp; AUTOMATION</span>
+      <footer className="relative z-10 px-4 pb-4 sm:px-12 sm:pb-8">
+        <div className="flex items-center justify-between font-mono text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mb-2.5">
+          <span className="truncate max-w-[190px] sm:max-w-none">SPEC // READY BUSINESSES</span>
           <button
             type="button"
             onClick={dismiss}
-            className="group inline-flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors cursor-pointer py-1 px-2 -mr-2"
+            className="group inline-flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors cursor-pointer py-1 px-2 -mr-1 shrink-0"
           >
             <span>Skip</span>
-            <span className="text-[10px] text-neutral-600 group-hover:text-neutral-400">[ESC]</span>
+            <span className="text-[10px] text-neutral-600 sm:inline hidden group-hover:text-neutral-400">[ESC]</span>
             <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
           </button>
         </div>

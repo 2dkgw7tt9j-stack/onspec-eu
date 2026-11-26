@@ -144,7 +144,7 @@ export default function ServicesPage() {
   return (
     <main className="bg-white text-black">
       {/* Editorial Hero Header */}
-      <section className="container pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
+      <section className="container px-4 sm:px-6 pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
         <p className="font-mono text-xs uppercase tracking-widest text-black mb-4 font-semibold">
           [ ONSPEC SERVICES DIRECTORY ]
         </p>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid Section */}
-      <section className="container pb-20 md:pb-28">
+      <section className="container px-4 sm:px-6 pb-20 md:pb-28">
         <div className="grid grid-cols-1 gap-12 md:gap-16 max-w-5xl mx-auto">
           {SERVICES_LIST.map((srv, idx) => (
             <article

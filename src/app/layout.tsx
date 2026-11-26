@@ -1,9 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { IntroSplashScreen } from "@/components/IntroSplashScreen";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#000000",
+};
 
 export const metadata: Metadata = {
   title:
@@ -30,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="has-js is-loaded is-ready is-first-loaded"
+      className="has-js is-loaded is-ready is-first-loaded w-full max-w-full overflow-x-hidden"
       suppressHydrationWarning
     >
       <head>
@@ -57,7 +64,7 @@ export default function RootLayout({
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link rel="stylesheet" href="/lightship.css" media="all" />
       </head>
-      <body className="font-sans antialiased bg-white text-black selection:bg-black selection:text-white">
+      <body className="font-sans antialiased bg-white text-black selection:bg-black selection:text-white w-full max-w-full overflow-x-hidden relative">
         <IntroSplashScreen />
         <SmoothScrollProvider>
           <div id="swup" className="transition-default">

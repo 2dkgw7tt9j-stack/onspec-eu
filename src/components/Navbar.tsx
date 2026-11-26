@@ -187,17 +187,17 @@ export function Navbar() {
               </button>
 
               <ul className="c-header_nav">
-                <li className="c-header_item">
+                <li className="c-header_item max-md:hidden">
                   <Link href="/businesses" className="c-header_link hover-parent">
                     <span className="text-sm hover-underline">Businesses</span>
                   </Link>
                 </li>
-                <li className="c-header_item max-sm:hidden">
+                <li className="c-header_item max-md:hidden">
                   <Link href="/ai-web" className="c-header_link hover-parent">
                     <span className="text-sm hover-underline">AI &amp; Web</span>
                   </Link>
                 </li>
-                <li className="c-header_item max-sm:hidden">
+                <li className="c-header_item max-md:hidden">
                   <Link href="/services" className="c-header_link hover-parent">
                     <span className="text-sm hover-underline">Services</span>
                   </Link>
@@ -220,7 +220,7 @@ export function Navbar() {
                   <img 
                     src="/onspec_logo_transparent.png" 
                     alt="OnSpec / Engineered to Operate" 
-                    className="h-11 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 drop-shadow-sm" 
+                    className="h-9 sm:h-11 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 drop-shadow-sm" 
                   />
                 </div>
               </Link>
@@ -229,14 +229,14 @@ export function Navbar() {
             {/* Right nav links: About + Contact */}
             <div className="c-header_right">
               <ul className="c-header_nav">
-                <li className="c-header_item max-sm:hidden">
+                <li className="c-header_item max-md:hidden">
                   <Link href="/about" className="c-header_link hover-parent">
                     <span className="text-sm hover-underline">About</span>
                   </Link>
                 </li>
                 <li className="c-header_item">
                   <Link href="/contact" className="c-header_link hover-parent">
-                    <span className="text-sm underline underline-offset-4 decoration-current/70 hover:decoration-black">
+                    <span className="text-sm font-semibold underline underline-offset-4 decoration-current/70 hover:decoration-black">
                       Contact
                     </span>
                   </Link>

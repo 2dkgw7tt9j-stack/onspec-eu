@@ -112,7 +112,7 @@ export default function AiWebPage() {
   return (
     <main className="bg-white text-black">
       {/* Editorial Header */}
-      <section className="container pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
+      <section className="container px-4 sm:px-6 pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
         <p className="font-mono text-xs uppercase tracking-widest text-black mb-4 font-semibold">
           [ DIGITAL PLATFORMS &amp; INTELLIGENT AUTOMATION ]
         </p>
@@ -125,7 +125,7 @@ export default function AiWebPage() {
       </section>
 
       {/* Capabilities List */}
-      <section className="container pb-20 md:pb-28 max-w-5xl mx-auto">
+      <section className="container px-4 sm:px-6 pb-20 md:pb-28 max-w-5xl mx-auto">
         <div className="space-y-12 md:space-y-16">
           {AI_WEB_CAPABILITIES.map((cap) => (
             <div

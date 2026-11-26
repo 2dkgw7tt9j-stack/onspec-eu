@@ -172,11 +172,11 @@ export default function ContactPage() {
               </p>
 
               {/* Direct Call / WhatsApp / Email Quick Triggers */}
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-3">
                 <button
                   type="button"
                   onClick={() => setMeetingModalOpen(true)}
-                  className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
                 >
                   Schedule Discovery Call
                 </button>
@@ -185,14 +185,14 @@ export default function ContactPage() {
                   href={BRAND_INFO.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
                 >
                   WhatsApp Desk
                 </a>
 
                 <a
                   href={`mailto:${BRAND_INFO.emailPrimary}`}
-                  className="inline-flex items-center justify-center rounded-full border border-neutral-300 bg-neutral-100 px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-neutral-200 transition-colors"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-neutral-300 bg-neutral-100 px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-neutral-200 transition-colors"
                 >
                   {BRAND_INFO.emailPrimary}
                 </a>

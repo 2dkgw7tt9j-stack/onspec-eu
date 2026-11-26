@@ -728,12 +728,12 @@ export default function HomePage() {
                       fetchPriority="high"
                     />
                   </picture>
-                  {/* Deep Navy architectural tint for high-contrast Lightship typography */}
+                  {/* Deep black architectural tint for high-contrast Lightship typography */}
                   <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
                       background:
-                        "linear-gradient(180deg, rgba(16,29,53,0.48) 0%, rgba(16,29,53,0.28) 50%, rgba(16,29,53,0.68) 100%)",
+                        "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.75) 100%)",
                     }}
                   />
                 </div>
@@ -853,7 +853,7 @@ export default function HomePage() {
                           className="absolute inset-0 pointer-events-none"
                           style={{
                             background:
-                              "linear-gradient(180deg, rgba(16,29,53,0.1) 0%, rgba(16,29,53,0.72) 100%)",
+                              "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 100%)",
                           }}
                         />
                         <div className="absolute bottom-3 left-3.5 right-3.5 z-10 flex items-end justify-between text-white">
@@ -932,7 +932,7 @@ export default function HomePage() {
                           className="absolute inset-0 pointer-events-none"
                           style={{
                             background:
-                              "linear-gradient(180deg, rgba(16,29,53,0.1) 0%, rgba(16,29,53,0.72) 100%)",
+                              "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 100%)",
                           }}
                         />
                         <div className="absolute bottom-3 left-3.5 right-3.5 z-10 flex items-end justify-between text-white">

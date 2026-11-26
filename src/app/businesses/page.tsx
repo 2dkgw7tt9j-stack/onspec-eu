@@ -16,7 +16,7 @@ export default function BusinessesPage() {
   return (
     <main className="bg-white text-black">
       {/* Editorial Header */}
-      <section className="container pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
+      <section className="container px-4 sm:px-6 pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
         <p className="font-mono text-xs uppercase tracking-widest text-black mb-4 font-semibold">
           [ PREFABRICATED COMMERCIAL VENTURES ]
         </p>
@@ -29,7 +29,7 @@ export default function BusinessesPage() {
       </section>
 
       {/* Ready Businesses Grid */}
-      <section className="container pb-20 md:pb-28 max-w-6xl mx-auto">
+      <section className="container px-4 sm:px-6 pb-20 md:pb-28 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PREFAB_OPPORTUNITIES.map((opp) => (
             <div
