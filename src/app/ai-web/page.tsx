@@ -26,59 +26,8 @@ interface PracticeCapability {
 
 const AUDITFLOW_PRACTICES: PracticeCapability[] = [
   {
-    code: "PRACTICE 01 // WEB-ENGINEERING",
-    tagline: "FLAGSHIP ENGINEERING",
-    title: "High-Converting Web Development",
-    subtitle: "Engineered for Measurable Growth & Sub-Second Speed",
-    description:
-      "Most agency websites are pretty but slow and fail to convert. We architect sub-second, visually stunning digital platforms from scratch using Next.js App Router, Tailwind CSS, and behavioral conversion psychology with guaranteed 95+ Core Web Vitals.",
-    capabilities: [
-      {
-        title: "High-Converting Landing Pages",
-        description:
-          "Engineered specifically for paid traffic, product launches, and SaaS lead generation with single-minded focus on visitor conversion.",
-      },
-      {
-        title: "Full Website Rebuilds & Redesigns",
-        description:
-          "Transform outdated, sluggish sites into sleek, modern, authoritative digital experiences that establish instant credibility.",
-      },
-      {
-        title: "Custom Web Applications & Portals",
-        description:
-          "Full-stack React and Next.js applications featuring user authentication, Supabase backends, and dedicated customer dashboards.",
-      },
-      {
-        title: "Stripe E-Commerce & Subscriptions",
-        description:
-          "Custom checkout flows, customer billing portals, webhook synchronization, and automated invoice delivery with 100% reliability.",
-      },
-      {
-        title: "Mobile Ergonomics & Touch Perfection",
-        description:
-          "Flawless mobile viewports with verified 48×48px tap boundaries, zero layout shift (CLS), and thumb-friendly navigation.",
-      },
-      {
-        title: "95+ Core Web Vitals & Technical SEO",
-        description:
-          "Sub-second load times, automatic image optimization, Schema.org JSON-LD structured data, and semantic HTML for search engines.",
-      },
-    ],
-    metrics: [
-      { label: "Core Web Vitals", value: "95+" },
-      { label: "First Contentful Paint", value: "<1.0s" },
-      { label: "Sprint Turnaround", value: "2 Weeks" },
-      { label: "Payment & Security", value: "100% Stripe" },
-    ],
-    timeline: "2-Week Rapid Sprint Turnaround",
-    sla: "Edge Deployment & 95+ Guarantee",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
-    anchorId: "web-development",
-  },
-  {
-    code: "PRACTICE 02 // AUTONOMOUS-AI",
-    tagline: "AUTONOMOUS SYSTEMS",
+    code: "PRACTICE 01 // AUTONOMOUS-AI",
+    tagline: "AUTONOMOUS SYSTEMS (DEFAULT)",
     title: "Autonomous AI & Workflow Automations",
     subtitle: "Engineered to Eliminate Operational Friction",
     description:
@@ -128,59 +77,60 @@ const AUDITFLOW_PRACTICES: PracticeCapability[] = [
     anchorId: "ai-automations",
   },
   {
-    code: "PRACTICE 03 // DIAGNOSTICS-CRO",
-    tagline: "DIAGNOSTIC PRACTICE",
-    title: "Professional Website Diagnostics & CRO Teardowns",
-    subtitle: "Uncovering Hidden Conversion Leaks with Exact Code Patches",
+    code: "PRACTICE 02 // WEB-ENGINEERING-CRO",
+    tagline: "FLAGSHIP WEB & CRO DIAGNOSTICS",
+    title: "High-Converting Web Platforms & Website Diagnostics",
+    subtitle: "Sub-Second Next.js Architecture, CRO Diagnostics & Exact Code Patches",
     description:
-      "Generic automated bot crawlers spit out generic warnings and leave you stranded. We deliver rigorous, senior-engineer manual and programmatic teardowns — identifying conversion leaks, mobile UX friction, and Core Web Vitals issues with exact production-ready CSS, Next.js, and HTML code patches.",
+      "Most agency websites are pretty but slow and fail to convert. We architect sub-second, visually stunning digital platforms from scratch using Next.js App Router and Stripe, and deliver rigorous senior-engineer teardowns with ready-to-merge code patches to eliminate conversion leaks and guarantee 95+ Core Web Vitals.",
     capabilities: [
+      {
+        title: "High-Converting Next.js Web Platforms",
+        description:
+          "Architected from scratch using Next.js App Router, Tailwind CSS, and behavioral conversion psychology with sub-second page loads and zero layout shift.",
+      },
+      {
+        title: "Professional Website Diagnostics & CRO Teardowns",
+        description:
+          "Granular screen-by-screen breakdown of visitor hesitation points, cognitive friction in your copy, visual hierarchy gaps, and CTA positioning flaws.",
+      },
       {
         title: "Production-Ready Code Patches",
         description:
-          "We don't give generic advice like 'compress images'. We provide ready-to-merge CSS rules, Next.js image configurations, and HTML markup patches tailored to your exact stack.",
+          "We don't give generic advice like 'compress images'. We provide ready-to-merge CSS rules, Next.js image configurations, and HTML markup patches tailored to your stack.",
       },
       {
-        title: "Conversion Psychology Teardown",
+        title: "Custom Web Applications & Portals",
         description:
-          "A granular screen-by-screen breakdown of visitor hesitation points, cognitive friction in your copy, visual hierarchy gaps, and CTA positioning flaws.",
+          "Full-stack React and Next.js applications featuring user authentication, Supabase backends, and dedicated customer dashboards.",
       },
       {
-        title: "Mobile Touch & Ergonomics Audit",
+        title: "Stripe E-Commerce & Automated Subscriptions",
         description:
-          "Detailed inspection of responsive layout shifts, touch target sizes, keyboard avoidance on input fields, and mobile viewport ergonomics.",
+          "Custom checkout flows, customer billing portals, webhook synchronization, and automated invoice delivery with 100% reliability.",
       },
       {
-        title: "Core Web Vitals Code-Level Fixes",
+        title: "15-Minute Senior Engineer Loom Walkthrough & Debrief",
         description:
-          "Pinpoint diagnoses for Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), and Interaction to Next Paint (INP) with concrete remediation commits.",
-      },
-      {
-        title: "15-Minute Senior Engineer Loom Walkthrough",
-        description:
-          "A comprehensive, highly personalized video walkthrough by our lead engineer walking step-by-step through every critical finding on your live site.",
-      },
-      {
-        title: "30-Minute Debrief & Action Plan Call",
-        description:
-          "A direct 30-minute debrief call via Google Meet with our senior engineer to review findings, prioritize fixes, or plan full studio execution.",
+          "Personalized video walkthrough by our lead engineer walking step-by-step through every critical finding, followed by a direct 30-minute debrief call.",
       },
     ],
     metrics: [
-      { label: "Turnaround Time", value: "48 Hours" },
-      { label: "Code Patches", value: "Ready to Merge" },
-      { label: "Video Debrief", value: "15-Min Loom" },
-      { label: "Access Required", value: "Zero Passwords" },
+      { label: "Core Web Vitals", value: "95+" },
+      { label: "First Contentful Paint", value: "<1.0s" },
+      { label: "Diagnostics SLA", value: "48 Hours" },
+      { label: "Payment & Security", value: "100% Stripe" },
     ],
-    timeline: "48-Hour Delivery SLA",
-    sla: "Senior Engineer Delivery Guaranteed",
+    timeline: "2-Week Sprints / 48h Diagnostics",
+    sla: "Edge Deployment & 95+ Guarantee",
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85",
-    anchorId: "cro-diagnostics",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
+    anchorId: "web-diagnostics",
   },
 ];
 
 export default function AiWebPage() {
+  // Autonomous AI is index 0 and active by default
   const [activePracticeIndex, setActivePracticeIndex] = useState(0);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -219,13 +169,13 @@ export default function AiWebPage() {
   return (
     <main className="bg-white text-black min-h-screen">
       {/* Editorial Studio Hero Header */}
-      <section className="container px-4 sm:px-6 pt-[14svh] md:pt-[18svh] pb-10 text-center max-w-4xl mx-auto">
+      <section className="container px-4 sm:px-6 pt-[14svh] md:pt-[18svh] pb-10 text-center max-w-4xl mx-auto scroll-reveal">
         <div className="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-neutral-100 px-3.5 py-1 text-[11px] font-mono uppercase tracking-widest text-black mb-4">
           <span className="h-1.5 w-1.5 rounded-full bg-black animate-pulse" />
           DIGITAL ENGINEERING STUDIO &bull; AUDITFLOW CAPABILITIES
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-black mb-4 leading-tight">
-          Web Engineering &amp; Autonomous AI.
+          Autonomous AI &amp; High-Converting Web Platforms.
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
           We architect sub-second Next.js web applications, deploy autonomous 24/7 AI pipelines, and deliver rigorous senior-engineer website diagnostics with ready-to-merge code patches.
@@ -234,6 +184,9 @@ export default function AiWebPage() {
         {/* Live Studio Telemetry Strip */}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-neutral-700">
           <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-bold text-black">
+            24/7 Autonomous AI
+          </span>
+          <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-semibold">
             LCP &lt;1.0s
           </span>
           <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-semibold">
@@ -241,9 +194,6 @@ export default function AiWebPage() {
           </span>
           <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-semibold">
             2-Week Sprints
-          </span>
-          <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-semibold">
-            24/7 AI Concierges
           </span>
           <span className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full font-semibold">
             48h Diagnostics SLA
@@ -254,51 +204,55 @@ export default function AiWebPage() {
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
             href="#project-brief"
-            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs hover-lift"
           >
             Submit Project Brief →
           </a>
           <a
             href="#practices-section"
-            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-neutral-300 bg-white px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-neutral-100 transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-neutral-300 bg-white px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-black hover:bg-neutral-100 transition-colors hover-lift"
           >
             Explore Practices
           </a>
         </div>
       </section>
 
-      {/* Streamlined Onspec Practice Showcase (Tabs + Compact Editorial Presentation) */}
+      {/* Streamlined Practice Showcase (Tabs + Compact Editorial Presentation) */}
       <section
         id="practices-section"
-        className="container px-4 sm:px-6 pb-16 md:pb-24 max-w-5xl mx-auto scroll-mt-24"
+        className="container px-4 sm:px-6 pb-16 md:pb-24 max-w-5xl mx-auto scroll-mt-24 scroll-reveal"
       >
-        {/* Sleek Practice Tabs Switcher */}
+        {/* Sleek Practice Tabs Switcher: 01 Autonomous AI (Default) & 02 Web & Diagnostics */}
         <div className="flex justify-center mb-8 border-b border-neutral-200 pb-4 overflow-x-auto">
           <div className="inline-flex p-1 rounded-full bg-neutral-100 border border-neutral-200">
             {AUDITFLOW_PRACTICES.map((practice, idx) => {
               const active = idx === activePracticeIndex;
+              const shortLabels = [
+                "01 // Autonomous AI & Workflows (Default)",
+                "02 // Web Engineering & Diagnostics",
+              ];
               return (
                 <button
                   key={practice.code}
                   type="button"
                   onClick={() => setActivePracticeIndex(idx)}
-                  className={`rounded-full px-4 sm:px-5 py-2 text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                  className={`rounded-full px-4 sm:px-6 py-2.5 text-xs font-mono font-bold transition-all cursor-pointer whitespace-nowrap ${
                     active
                       ? "bg-black text-white shadow-xs"
                       : "text-neutral-600 hover:text-black"
                   }`}
                 >
-                  0{idx + 1} // {practice.title.split(" ")[0]} {practice.title.split(" ")[1] || ""}
+                  {shortLabels[idx] || practice.title}
                 </button>
               );
             })}
           </div>
         </div>
 
-        {/* Active Practice Editorial Layout (Zero Bulky Nested Boxes) */}
+        {/* Active Practice Editorial Layout */}
         <article
           key={currentPractice.code}
-          className="border border-neutral-300 rounded-2xl p-6 sm:p-8 md:p-10 bg-white shadow-xs transition-all animate-fadeIn"
+          className="border border-neutral-300 rounded-2xl p-6 sm:p-8 md:p-10 bg-white shadow-xs transition-all duration-300 animate-fadeIn"
         >
           {/* Header Eyebrow */}
           <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-neutral-200">
@@ -347,7 +301,7 @@ export default function AiWebPage() {
             </div>
 
             {/* Practice Media Preview */}
-            <div className="lg:col-span-5 h-52 lg:h-64 rounded-xl overflow-hidden border border-neutral-200 relative bg-neutral-900">
+            <div className="lg:col-span-5 h-52 lg:h-64 rounded-xl overflow-hidden border border-neutral-200 relative bg-neutral-900 hover-lift">
               <img
                 src={currentPractice.image}
                 alt={currentPractice.title}
@@ -365,7 +319,7 @@ export default function AiWebPage() {
             </div>
           </div>
 
-          {/* Granular Capabilities (Clean Hairline Grid - Zero Bulky White Boxes) */}
+          {/* Granular Capabilities (Clean Hairline Grid - Zero Bulky Boxes) */}
           <div className="border-t border-neutral-200 pt-6">
             <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-4 font-bold">
               CORE PRACTICE CAPABILITIES &amp; DELIVERABLES
@@ -374,7 +328,7 @@ export default function AiWebPage() {
               {currentPractice.capabilities.map((cap, cIdx) => (
                 <div
                   key={cap.title}
-                  className="p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/40 hover:border-black/40 hover:bg-white transition-all space-y-1.5"
+                  className="p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/40 hover:border-black/40 hover:bg-white transition-all space-y-1.5 hover-lift"
                 >
                   <div className="flex items-center gap-1.5 font-mono text-[10px] text-neutral-400 font-semibold">
                     <span>0{cIdx + 1}</span>
@@ -399,7 +353,7 @@ export default function AiWebPage() {
             <a
               href="#project-brief"
               onClick={() => setProjectType(currentPractice.title)}
-              className="inline-flex items-center gap-2 rounded-full bg-black text-white px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 rounded-full bg-black text-white px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer hover-lift"
             >
               Request {currentPractice.title.split(" ")[0]} Brief →
             </a>
@@ -408,8 +362,8 @@ export default function AiWebPage() {
       </section>
 
       {/* Studio Confidentiality Standard */}
-      <section className="container px-4 sm:px-6 pb-12 max-w-5xl mx-auto">
-        <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <section className="container px-4 sm:px-6 pb-12 max-w-5xl mx-auto scroll-reveal">
+        <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 hover-lift">
           <div className="space-y-1 max-w-2xl">
             <span className="font-mono text-xs uppercase tracking-widest text-black font-bold">
               STUDIO CONFIDENTIALITY &amp; ZERO-CREDENTIAL SECURITY PROTOCOL
@@ -427,7 +381,7 @@ export default function AiWebPage() {
       </section>
 
       {/* Interactive Project Brief Consultation Form */}
-      <section id="project-brief" className="container px-4 sm:px-6 pb-16 max-w-3xl mx-auto scroll-mt-24">
+      <section id="project-brief" className="container px-4 sm:px-6 pb-16 max-w-3xl mx-auto scroll-mt-24 scroll-reveal">
         <div className="border border-neutral-300 rounded-2xl p-6 sm:p-8 bg-white shadow-xs">
           <div className="text-center mb-6 border-b border-neutral-200 pb-5">
             <span className="font-mono text-xs uppercase tracking-widest text-black font-semibold block mb-1">
@@ -470,16 +424,13 @@ export default function AiWebPage() {
                   onChange={(e) => setProjectType(e.target.value)}
                   className="w-full rounded-full border border-neutral-300 bg-neutral-50 px-4 py-2.5 text-xs font-mono text-black focus:border-black focus:bg-white focus:outline-hidden transition-colors"
                 >
-                  <option value="High-Converting Web Development">
-                    High-Converting Web Development (Next.js &amp; E-Commerce)
-                  </option>
                   <option value="Autonomous AI & Workflow Automations">
-                    Autonomous AI &amp; Workflow Automations (24/7 Ops)
+                    Autonomous AI &amp; Workflow Automations (24/7 Ops) [Default]
                   </option>
-                  <option value="Professional Website Diagnostics & CRO">
-                    Professional Website Diagnostics &amp; CRO (Exact Code Patches)
+                  <option value="High-Converting Web Platforms & Website Diagnostics">
+                    High-Converting Web Platforms &amp; Diagnostics (Next.js &amp; Code Patches)
                   </option>
-                  <option value="Full Studio Sprint (Web + AI + CRO)">
+                  <option value="Full Studio Sprint (Web + AI + Diagnostics)">
                     Full Studio Sprint (Web + AI + Diagnostics)
                   </option>
                 </select>
@@ -558,7 +509,7 @@ export default function AiWebPage() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full rounded-full bg-black py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors disabled:opacity-50 cursor-pointer shadow-xs"
+                className="w-full rounded-full bg-black py-3 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-neutral-800 transition-colors disabled:opacity-50 cursor-pointer shadow-xs hover-lift"
               >
                 {submitting ? "Submitting Brief..." : "Submit Project Brief →"}
               </button>

@@ -36,24 +36,30 @@ export function SmoothScrollProvider({
         });
       },
       {
-        rootMargin: "50px 0px 50px 0px",
-        threshold: 0.05,
+        rootMargin: "0px 0px -40px 0px",
+        threshold: 0.08,
       }
     );
 
     const observeElements = () => {
       const targets = document.querySelectorAll(
-        "[data-reveal], [data-scroll], .reveal-on-scroll, .c-tile-feature, .c-hero-home_image-container"
+        ".scroll-reveal, [data-scroll], [data-anim-slide], .c-tile-feature, .c-hero-home_image-container, .hover-lift"
       );
+      const viewportHeight = window.innerHeight;
       targets.forEach((el) => {
-        if (!el.classList.contains("is-revealed")) {
-          revealObserver.observe(el);
+        if (!el.classList.contains("is-inview")) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < viewportHeight - 30) {
+            el.classList.add("is-revealed", "is-inview");
+          } else {
+            revealObserver.observe(el);
+          }
         }
       });
     };
 
     observeElements();
-    const observerTimer = setTimeout(observeElements, 500);
+    const observerTimer = setTimeout(observeElements, 400);
 
     // On mobile touch devices, disable Lenis touch hijacking to preserve buttery-smooth native momentum scrolling (60/120Hz)
     const isTouchDevice =

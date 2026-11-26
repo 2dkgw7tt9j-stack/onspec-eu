@@ -35,7 +35,8 @@ export default function BusinessesPage() {
             <div
               key={opp.id}
               id={opp.id}
-              className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-black hover:-translate-y-1 hover:shadow-md scroll-mt-24 group"
+              style={{ transitionDelay: `${idx * 0.12}s` }}
+              className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-black hover:-translate-y-1.5 hover:shadow-lg scroll-mt-24 group scroll-reveal hover-lift"
             >
               <div>
                 {/* Compact Media Header */}

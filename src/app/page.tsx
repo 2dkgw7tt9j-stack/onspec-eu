@@ -953,7 +953,7 @@ export default function HomePage() {
       </div>
 
       {/* Editorial Lead Statement & Dual Pill CTAs below the Hero Grid Reveal */}
-      <section className="container my-fluid-3xl">
+      <section className="container my-fluid-3xl scroll-reveal">
         <div className="flex flex-col gap-y-10 items-center text-center mx-auto max-w-3xl">
           <p
             className="text-lg text-neutral-600 max-w-xl is-inview"
@@ -1180,7 +1180,7 @@ export default function HomePage() {
           SECTION 4 : `.c-fullscreen-push`
           Full-Viewport Rounded Architectural Banner with Parallax
          ===================================================================== */}
-      <div className="container-xl">
+      <div className="container-xl scroll-reveal">
         <div className="c-fullscreen-push">
           <div className="c-fullscreen-push_content">
             
@@ -1191,7 +1191,7 @@ export default function HomePage() {
               className="text-heading-lg"
             />
 
-            <Link className="c-button -blur-dark -large" href="/launch">
+            <Link className="c-button -blur-dark -large hover-lift" href="/launch">
               <span className="c-button_inner">
                 <span
                   className="c-button_label-container"
@@ -1226,7 +1226,7 @@ export default function HomePage() {
           "Built for Founders. Engineered for Growth."
           Asymmetric Split Headline + 2-Column Editorial Narrative & Journey
          ===================================================================== */}
-      <section className="my-fluid-2xl">
+      <section className="my-fluid-2xl scroll-reveal">
         <div className="container-xl text-center flex flex-col items-center">
           <p className="text-heading-2xl max-w-3xl text-black font-semibold tracking-tight mx-auto">
             Turnkey businesses built to operate.
@@ -1237,7 +1237,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="my-fluid-2xl">
+      <section className="my-fluid-2xl scroll-reveal">
         <div className="c-editorial-block container-xl">
           <div className="c-editorial-block_content">
             <div className="space-y-4">

@@ -495,7 +495,7 @@ body {
   }
 }
 
-/* Smooth Animations & Elevation */
+/* Smooth Scroll Animations & Elevation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -511,10 +511,34 @@ body {
   animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-[data-reveal],
-.reveal-on-scroll {
-  opacity: 1;
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+/* Universal Smooth Scroll Reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-inview,
+.scroll-reveal.is-revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+/* Fallback for JavaScript-disabled */
+html.has-no-js .scroll-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Micro-interaction hover elevation for all interactive cards */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.12) !important;
 }
 
 
