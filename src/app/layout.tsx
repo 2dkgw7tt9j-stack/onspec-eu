@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
+import { IntroSplashScreen } from "@/components/IntroSplashScreen";
 
 export const metadata: Metadata = {
   title:
@@ -57,6 +58,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/lightship.css" media="all" />
       </head>
       <body className="font-sans antialiased bg-white text-black selection:bg-black selection:text-white">
+        <IntroSplashScreen />
         <SmoothScrollProvider>
           <div id="swup" className="transition-default">
             <Navbar />
