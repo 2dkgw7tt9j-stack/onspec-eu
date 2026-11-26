@@ -13,8 +13,7 @@ import {
 import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 
 const PILLAR_IMAGES: Record<string, string> = {
-  launch:
-    "https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=900&q=85",
+  launch: "/images/perfume-station.jpg",
   automate:
     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
   innovate:
@@ -61,166 +60,107 @@ export default function AboutPage() {
         About ONSPEC ({BRAND_INFO.domain}) : {BRAND_INFO.slogan}
       </h1>
 
-      {/* Section 1: Giant Editorial Statement */}
+      {/* Section 1: Hero Header leading directly into The Four Pillars */}
       <section
-        className="container px-4 sm:px-6 pt-[16svh] md:pt-[24svh] mb-fluid-2xl"
+        className="container px-4 sm:px-6 pt-[14svh] md:pt-[18svh] mb-8 md:mb-12"
         id="page-heading"
       >
-        <div className="max-w-[740px] m-auto text-center">
-          <p className="font-mono text-xs text-black uppercase tracking-widest mb-6 font-semibold">
-            About Onspec • {BRAND_INFO.domain.toUpperCase()}
+        <div className="max-w-[780px] m-auto text-center space-y-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/5 px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-black">
+            <span className="h-1.5 w-1.5 rounded-full bg-black inline-block animate-pulse" />
+            <span>About Onspec • {BRAND_INFO.domain.toUpperCase()}</span>
+          </div>
+
+          <h1 className="heading-xl text-black font-extrabold tracking-tight">
+            The Four Pillars of ONSPEC
+          </h1>
+
+          <p className="font-mono text-sm uppercase tracking-wider text-black font-semibold">
+            Your vision. Our execution.
           </p>
-          <div className="c-fadein-text text-heading-md" style={{ marginTop: "1rem" }}>
-            <div className="c-fadein-text_line is-active">
-              <span
-                className="c-fadein-text_line_inner"
-                style={{ opacity: 1, transform: "translate(0)" }}
-              >
-                Your vision. Our execution.
-              </span>
-            </div>
-            <div className="c-fadein-text_line is-active mt-2">
-              <span
-                className="c-fadein-text_line_inner"
-                style={{ opacity: 1, transform: "translate(0)" }}
-              >
-                We believe you shouldn&apos;t have to start from scratch to build or modernize a business.
-              </span>
-            </div>
-            <div className="c-fadein-text_line is-active mt-4">
-              <span
-                className="c-fadein-text_line_inner text-neutral-600"
-                style={{ opacity: 1, transform: "translate(0)" }}
-              >
-                Onspec bridges the gap between having an idea and turning it into a functioning, automated commercial operation across Cyprus and the European Union.
-              </span>
-            </div>
-          </div>
-        </div>
 
-        <div className="my-fluid-2xl">
-          <div
-            className="c-symbol"
-            style={{ "--smooth-progress": 1 } as React.CSSProperties}
-          >
-            
-            
-          </div>
+          <p className="text-base sm:text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+            We believe you shouldn&apos;t have to start from scratch to build or modernize a business. Onspec bridges the gap between having an idea and turning it into a functioning, automated commercial operation across Cyprus and the European Union.
+          </p>
         </div>
       </section>
 
-      {/* Section 2: Lightship .c-company-intro-images Staggered Photo Grid (1:1 company.html) */}
-      <section className="mt-fluid-2xl">
-        <section className="c-company-intro-images mt-fluid-2xl">
-          <div className="c-company-intro-images_container">
-            <div className="c-company-intro-images_block">
-              <div className="c-company-intro-images_image1">
-                <div className="c-image -cover -rounded-md rounded-[10px] h-full -lazy-load is-loaded">
-                  <picture className="c-image_inner h-full w-full block">
-                    <img
-                      alt="Turnkey Automated Retail Infrastructure"
-                      className="c-image_img is-loaded h-full w-full object-cover"
-                      height={600}
-                      width={900}
-                      src="https://images.unsplash.com/photo-1787499670012-359385f575e8?auto=format&fit=crop&w=900&q=85"
-                    />
-                  </picture>
-                </div>
-              </div>
-              <div className="c-company-intro-images_image2">
-                <div className="c-image -cover -rounded-md rounded-[10px] h-full -lazy-load is-loaded">
-                  <picture className="c-image_inner h-full w-full block">
-                    <img
-                      alt="AI & Business Process Automation Systems"
-                      className="c-image_img is-loaded h-full w-full object-cover"
-                      height={467}
-                      width={700}
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=85"
-                    />
-                  </picture>
-                </div>
-              </div>
-            </div>
-            <div className="c-company-intro-images_block2">
-              <div className="c-company-intro-images_image3">
-                <div className="c-image -cover -rounded-md rounded-[10px] h-full -lazy-load is-loaded">
-                  <picture className="c-image_inner h-full w-full block">
-                    <img
-                      alt="ONSPEC Cyprus & EU Venture Execution Desk"
-                      className="c-image_img is-loaded h-full w-full object-cover"
-                      height={1500}
-                      width={2000}
-                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85"
-                    />
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      {/* Section 3: Lightship company.html 4-Column Portrait Cards for the 4 Pillars */}
-      <section className="mt-fluid-2xl">
-        <div className="container flex flex-col gap-y-fluid-2xl">
-          <div className="flex flex-col gap-y-6 items-center text-center mx-auto max-w-3xl">
-            <p className="text-eyebrow text-black uppercase tracking-widest">
-              FOUR PILLARS. ONE EXECUTION PARTNER.
-            </p>
-            <h2 className="sr-only">The Four Pillars of ONSPEC</h2>
-            <div
-              aria-hidden="true"
-              className="c-split-text anim-text-balance heading-xl text-black"
-            >
-              The Four Pillars of ONSPEC
-            </div>
+      {/* Section 2: The Four Pillars Grid with Interactive Scroll & Staggered Animations */}
+      <section id="four-pillars" className="container px-4 sm:px-6 mb-fluid-2xl">
+        <div className="flex flex-col gap-y-8">
+          <div className="flex items-center justify-between border-b border-black/10 pb-4">
+            <span className="font-mono text-xs uppercase tracking-widest text-neutral-500">
+              FOUR CORE PILLARS • 01 TO 04
+            </span>
+            <span className="font-mono text-xs uppercase tracking-wider text-black font-semibold hidden sm:inline-block">
+              Click Any Card to Inspect Blueprint
+            </span>
           </div>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-gutter gap-y-fluid-md">
-            {PILLARS.map((pillar) => (
-              <li key={pillar.id}>
-                <div className="relative flex flex-col gap-y-5 group">
-                  <div className="c-image -rounded-md aspect-4/5 -cover -lazy-load is-loaded overflow-hidden relative">
-                    <picture className="c-image_inner h-full w-full block">
-                      <img
-                        alt={pillar.fullTitle}
-                        className="c-image_img is-loaded h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        height={750}
-                        width={600}
-                        src={PILLAR_IMAGES[pillar.id]}
-                      />
-                    </picture>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex flex-col justify-between p-5 text-white">
-                      <span className="font-mono text-xs uppercase tracking-widest text-black">
-                        {pillar.code}
-                      </span>
-                      <div>
-                        <p className="font-mono text-[10px] uppercase tracking-wider text-[#A8B1BE]">
-                          {pillar.telemetryMetric}
-                        </p>
-                        <p className="text-sm font-bold text-white">
-                          {pillar.telemetryValue}
-                        </p>
-                      </div>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PILLARS.map((pillar, idx) => (
+              <li
+                key={pillar.id}
+                className="group relative rounded-2xl border border-neutral-200/90 bg-white p-4 shadow-sm hover:shadow-2xl hover:-translate-y-2.5 transition-all duration-500 ease-out flex flex-col justify-between"
+                style={{
+                  transitionDelay: `${idx * 60}ms`,
+                }}
+              >
+                <div>
+                  {/* Card Header */}
+                  <div className="flex items-center justify-between mb-3 text-xs font-mono">
+                    <span className="px-2.5 py-1 rounded-md bg-black text-white font-bold text-[10px] tracking-wider uppercase">
+                      Pillar 0{idx + 1}
+                    </span>
+                    <span className="text-neutral-500 font-semibold tracking-wider uppercase text-[10px]">
+                      {pillar.id}
+                    </span>
+                  </div>
+
+                  {/* Card Visual with Smooth Hover Zoom */}
+                  <div className="relative aspect-4/5 w-full rounded-xl overflow-hidden bg-neutral-100 mb-4 border border-neutral-100">
+                    <img
+                      alt={pillar.fullTitle}
+                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                      src={PILLAR_IMAGES[pillar.id]}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-4 text-white">
+                      <p className="font-mono text-[9px] uppercase tracking-wider text-neutral-300">
+                        {pillar.telemetryMetric}
+                      </p>
+                      <p className="text-xs font-bold text-white tracking-wide">
+                        {pillar.telemetryValue}
+                      </p>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-y-2">
-                    <p className="body-sm font-bold text-black">
-                      {pillar.index}. {pillar.shortTitle}
-                    </p>
-                    <p className="body-sm text-neutral-600">
+
+                  {/* Card Body */}
+                  <div className="flex flex-col gap-y-1.5 mb-4">
+                    <h2 className="text-base font-bold text-black group-hover:text-neutral-800 transition-colors">
+                      {pillar.shortTitle}
+                    </h2>
+                    <p className="text-xs text-neutral-600 line-clamp-3 leading-relaxed">
                       {pillar.coreMessage}
                     </p>
                   </div>
+                </div>
+
+                {/* Card Action Row */}
+                <div className="pt-3 border-t border-neutral-100 flex items-center justify-between text-xs font-mono">
                   <button
                     type="button"
                     onClick={() => setSelectedPillarModal(pillar)}
-                    className="absolute-link cursor-pointer"
+                    className="font-bold text-black group-hover:underline inline-flex items-center gap-1 cursor-pointer"
                   >
-                    <span className="sr-only">
-                      Inspect {pillar.shortTitle}
-                    </span>
+                    <span>View Blueprint</span>
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                   </button>
+                  <Link
+                    href={pillar.href}
+                    className="text-neutral-500 hover:text-black uppercase text-[10px] tracking-wider transition-colors"
+                  >
+                    Open Page
+                  </Link>
                 </div>
               </li>
             ))}
@@ -338,7 +278,7 @@ export default function AboutPage() {
                   </p>
                   <ul className="c-bento-box_stats_list">
                     <li className="c-bento-box_stats_item">
-                      <p className="text-heading-xl text-white">7</p>
+                      <p className="text-heading-xl text-white">3</p>
                       <p className="text-xs max-w-[100px] opacity-75">
                         Turnkey Prefab Business Models
                       </p>
@@ -416,11 +356,11 @@ export default function AboutPage() {
 
             <div className="rounded-2xl bg-black text-[#F7F8FA] p-6 md:p-10 grid md:grid-cols-12 gap-6 items-center">
               <div className="md:col-span-8 space-y-3">
-                <span className="font-mono text-xs uppercase tracking-widest text-black">
+                <span className="font-mono text-xs uppercase tracking-widest text-neutral-400">
                   {activeStep.code}
                 </span>
                 <h3 className="heading-sm text-white">
-                  {activeStep.number}. {activeStep.title} , {" "}
+                  {activeStep.number}. {activeStep.title} •{" "}
                   <span className="text-[#A8B1BE]">{activeStep.subtitle}</span>
                 </h3>
                 <p className="text-md text-[#F7F8FA]/85 max-w-2xl">
@@ -428,7 +368,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="md:col-span-4 rounded-xl bg-neutral-900/70 border border-[#A8B1BE]/25 p-5 space-y-2">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-black">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-400">
                   STAGE DELIVERABLE
                 </span>
                 <p className="text-base font-bold text-white">
@@ -443,7 +383,7 @@ export default function AboutPage() {
                         (activeJourneyIdx + 1) % CUSTOMER_JOURNEY_STEPS.length
                       )
                     }
-                    className="text-black font-mono uppercase tracking-wider hover:underline cursor-pointer"
+                    className="text-white font-mono uppercase tracking-wider hover:underline cursor-pointer"
                   >
                     Next Step →
                   </button>
