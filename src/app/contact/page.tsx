@@ -12,8 +12,8 @@ const PILLAR_OPTIONS: { value: EnquiryPillar; label: string; code: string; desc:
   {
     value: "01_LAUNCH",
     code: "01 // LAUNCH",
-    label: "Turnkey Automated Dispensers",
-    desc: "Luxury Perfume Stations & Essential Hygiene/Period Wellness Vending",
+    label: "Turnkey Automated Dispensers & Hot Meal Stations",
+    desc: "Luxury Perfume Stations, Essential Hygiene Dispensers & On-Demand Hot Food Stations (Locations & Legal Ready)",
   },
   {
     value: "02_AUTOMATE",

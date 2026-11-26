@@ -134,33 +134,34 @@ const HERO_SURROUND_CARDS: SurroundHeroCard[] = [
   },
   {
     index: "03",
+    title: "Hot Food Heating Stations",
+    subtitle: "On-Demand Meals for Workplaces & Sites",
+    image:
+      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=85",
+    column: "left",
+    small: false,
+    opportunityId: "hot-food-meal-station",
+    href: "/businesses#hot-food-meal-station",
+  },
+  {
+    index: "04",
     title: "High-Converting Web Platforms",
     subtitle: "Sub-Second Next.js & Stripe",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=85",
-    column: "left",
-    small: false,
+    column: "right",
+    small: true,
     href: "/ai-web#web-development",
   },
   {
-    index: "04",
+    index: "05",
     title: "Autonomous AI Agents",
     subtitle: "24/7 WhatsApp & Multi-App Sync",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
     column: "right",
-    small: true,
-    href: "/ai-web#ai-automations",
-  },
-  {
-    index: "05",
-    title: "Website CRO Diagnostics",
-    subtitle: "Senior Engineer Code Patches",
-    image:
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85",
-    column: "right",
     small: false,
-    href: "/ai-web#diagnostics",
+    href: "/ai-web#ai-automations",
   },
   {
     index: "06",
@@ -181,10 +182,10 @@ const STACKING_PILLAR_CARDS = [
   {
     index: 0,
     pillarCode: "PILLAR 01 : LAUNCH",
-    title: "Turnkey Automated Dispensers",
+    title: "Turnkey Automated Dispensers & Hot Meal Stations",
     subtitle:
-      "Luxury Perfume Automated Dispensers & Essential Hygiene/Period Wellness Vending Stations : Location, equipment, suppliers and Cyprus registration coordinated end to end.",
-    metric: "2 FLAGSHIP MODELS",
+      "Luxury Perfume Automated Dispensers, Essential Hygiene Stations & On-Demand Hot Food Heating Stations : Locations mapped, equipment sourced, and Cyprus corporate structure ready for operation.",
+    metric: "3 FLAGSHIP MODELS",
     image:
       "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1400&q=85",
     href: "/businesses",
@@ -256,7 +257,15 @@ const FEATURE_CAROUSEL_SPECS: {
     modalSpec: PREFAB_OPPORTUNITIES[1],
   },
   {
-    label: "03 // WEB ENGINEERING & AI STUDIO",
+    label: "03 // HOT FOOD HEATING STATIONS",
+    headline:
+      "24/7 refrigerated on-demand heated chef-quality meals for construction sites & workplaces.",
+    image:
+      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85",
+    modalSpec: PREFAB_OPPORTUNITIES[2],
+  },
+  {
+    label: "04 // WEB ENGINEERING & AI STUDIO",
     headline:
       "Sub-second Next.js web applications, 24/7 autonomous AI agents, and website diagnostics.",
     image:
@@ -323,7 +332,7 @@ const FEATURE_CAROUSEL_SPECS: {
     },
   },
   {
-    label: "04 // CUSTOM VENTURE FOUNDRY",
+    label: "05 // CUSTOM VENTURE FOUNDRY",
     headline:
       "Your idea does not have to stay an idea. Free preliminary proposal and execution.",
     image:
@@ -876,7 +885,7 @@ export default function HomePage() {
                         </div>
                         {/* Hover arrow badge */}
                         <div className="absolute top-3 right-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-black/40 backdrop-blur-xs border border-white/20 text-white transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:border-white">
-                          <span className="text-xs font-mono font-bold leading-none">&rarr;</span>
+                          <span className="text-xs font-mono font-bold leading-none">→</span>
                         </div>
                       </Link>
                     </div>
@@ -953,7 +962,7 @@ export default function HomePage() {
                         </div>
                         {/* Hover arrow badge */}
                         <div className="absolute top-3 right-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-black/40 backdrop-blur-xs border border-white/20 text-white transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:border-white">
-                          <span className="text-xs font-mono font-bold leading-none">&rarr;</span>
+                          <span className="text-xs font-mono font-bold leading-none">→</span>
                         </div>
                       </Link>
                     </div>

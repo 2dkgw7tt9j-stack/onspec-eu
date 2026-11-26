@@ -8,19 +8,19 @@ const SERVICES_LIST = [
   {
     code: "SERVICE 01",
     pillar: "TURNKEY VENTURES",
-    title: "Ready Business Units",
-    subtitle: "Complete turnkey engineered businesses ready to operate on Day 1 in Cyprus and the EU.",
+    title: "Turnkey Automated Dispensers & Meal Stations",
+    subtitle: "Luxury fragrance, hygiene wellness, and on-demand hot food machines deployed end to end in Cyprus.",
     description:
-      "We source prime physical locations, negotiate commercial placement agreements, procure commercial hardware, install contactless payment telemetry, and coordinate Cyprus legal registration. You receive a fully operational venture ready to generate revenue in 4 to 10 weeks.",
+      "Launch an autonomous physical cashflow business without operational guesswork. We deliver three turnkey models: automated luxury perfume dispensers, essential period hygiene & antiseptic wellness stations, and refrigerated on-demand hot meal stations for workplaces and construction sites. All prime locations are mapped and legal structures are ready for immediate execution.",
     features: [
-      "Physical site scouting and footfall verification",
-      "EMV contactless payment and telemetry integration",
-      "Supplier and inventory supply chain establishment",
-      "Cyprus company incorporation and VAT registration",
-      "Ongoing remote telemetry monitoring and owner dashboard",
+      "Physical site scouting and pre-vetted host venue placement agreements",
+      "EMV contactless payment, refrigeration/heating IoT and telemetry integration",
+      "Wholesale fragrance, medical hygiene, and certified catering supply chains",
+      "Cyprus company incorporation, tax/VAT and health compliance registration",
+      "Ongoing remote telemetry monitoring, maintenance protocols and owner dashboard",
     ],
-    timeline: "4 to 10 Weeks to Live Operation",
-    investment: "From €12,500 turnkey",
+    timeline: "3 to 5 Weeks to Live Operation",
+    investment: "Turnkey Scope on Request (Locations & Legal Ready)",
     href: "/businesses",
     cta: "Explore Ready Businesses",
     image:
@@ -41,7 +41,7 @@ const SERVICES_LIST = [
       "Fully responsive mobile first UI tailored to your brand",
     ],
     timeline: "2 to 4 Weeks to Deployment",
-    investment: "From €2,500 tailored",
+    investment: "Custom Sprint Scope on Request",
     href: "/ai-web",
     cta: "Explore Web & AI",
     image:
@@ -62,7 +62,7 @@ const SERVICES_LIST = [
       "OCR receipt scanning and accounting workflow routing",
     ],
     timeline: "1 to 3 Weeks to Integration",
-    investment: "From €1,800 modular",
+    investment: "Modular Scope on Request",
     href: "/ai-web",
     cta: "Explore AI Workflows",
     image:
@@ -83,7 +83,7 @@ const SERVICES_LIST = [
       "Turnkey handover with full documentation and training",
     ],
     timeline: "48 to 72 Hours for Free Preliminary Proposal",
-    investment: "Custom Scope & Milestone Pricing",
+    investment: "Custom Scope & Milestone Sprints (Free Preliminary Proposal)",
     href: "/contact?service=idea",
     cta: "Submit Your Idea",
     image:

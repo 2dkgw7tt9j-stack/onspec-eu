@@ -23,14 +23,14 @@ export default function BusinessesPage() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-black mb-6 leading-tight">
           Ready Businesses.
         </h1>
-        <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-          Engineered turnkey automated dispensary models ready to deploy across Cyprus and Europe in 3 to 5 weeks. Prime venues, commercial hardware, telemetry, supplier lines, and Cyprus corporate structure coordinated end to end.
+        <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          Engineered turnkey automated dispensary &amp; hot meal models ready to deploy across Cyprus and Europe in 3 to 5 weeks. Pre-vetted host venues mapped and independent legal structures are ready for immediate execution.
         </p>
       </section>
 
-      {/* Ready Businesses Grid (2 Flagship Automated Dispensers) */}
-      <section className="container px-4 sm:px-6 pb-20 md:pb-28 max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Ready Businesses Grid (3 Flagship Automated Models) */}
+      <section className="container px-4 sm:px-6 pb-20 md:pb-28 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PREFAB_OPPORTUNITIES.map((opp) => (
             <div
               key={opp.id}
@@ -65,7 +65,7 @@ export default function BusinessesPage() {
 
                   <div className="space-y-2.5 py-4 border-y border-[#D5DBE3] text-xs">
                     <div className="flex justify-between items-center">
-                      <span className="font-mono text-[#A8B1BE] uppercase">Capital:</span>
+                      <span className="font-mono text-[#A8B1BE] uppercase">Execution Scope:</span>
                       <span className="font-mono font-bold text-black">{opp.estimatedCapital}</span>
                     </div>
                     <div className="flex justify-between items-center">
@@ -79,6 +79,10 @@ export default function BusinessesPage() {
                     <div className="flex justify-between items-start pt-1">
                       <span className="font-mono text-[#A8B1BE] uppercase">Placement:</span>
                       <span className="text-right text-xs text-black font-medium max-w-[65%]">{opp.locationStrategy}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 pt-2 text-xs font-mono font-bold text-black">
+                      <span className="h-1.5 w-1.5 rounded-full bg-black inline-block" />
+                      <span>Locations &amp; Legal Structure Ready</span>
                     </div>
                   </div>
                 </div>

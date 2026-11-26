@@ -167,7 +167,7 @@ export default function LaunchPage() {
                   href="#turntable-showcase"
                   className="rounded-full px-3 py-1.5 hover:bg-white/10 hover:text-white transition-colors"
                 >
-                  7 Opportunities
+                  3 Opportunities
                 </a>
                 <a
                   href="#vending-blueprint"
@@ -255,7 +255,7 @@ export default function LaunchPage() {
 
             <div className="c-hero-visual_bottom flex items-end justify-between text-xs font-mono uppercase tracking-widest text-white/85 z-10">
               <span>PILLAR 01 // READY-TO-LAUNCH BUSINESSES</span>
-              <span>7 PROVEN MODELS • CYPRUS &amp; EU TURNKEY EXECUTION</span>
+              <span>3 FLAGSHIP MODELS • LOCATIONS &amp; LEGAL READY</span>
             </div>
           </div>
         </div>
@@ -375,7 +375,7 @@ export default function LaunchPage() {
                 </span>
                 <nav
                   className="c-tabs_nav flex justify-center w-full overflow-x-auto pb-2"
-                  aria-label="7 Ready Business Models"
+                  aria-label="3 Ready Business Models"
                 >
                   <div className="c-switcher -background-light !pointer-events-auto">
                     <ul className="c-switcher_inner flex-wrap justify-center gap-1">
@@ -384,6 +384,7 @@ export default function LaunchPage() {
                         const shortLabels = [
                           "01 Luxury Perfume Stations",
                           "02 Hygiene & Period Wellness",
+                          "03 Hot Food & Meal Heating",
                         ];
                         return (
                           <li key={opp.id} className="c-switcher_item">
@@ -711,18 +712,18 @@ export default function LaunchPage() {
                 <p className="text-eyebrow text-black">
                   COMPLETE PREFAB VENTURE CATALOG
                 </p>
-                <h2 className="sr-only">2 Flagship Ready Business Models</h2>
+                <h2 className="sr-only">3 Flagship Ready Business Models</h2>
                 <div
                   aria-hidden="true"
                   className="c-split-text anim-text-balance heading-xl text-black"
                 >
-                  2 Flagship Ready Business Models
+                  3 Flagship Ready Business Models
                 </div>
               </div>
             </div>
 
-            <div className="c-carousel" data-items-per-view="2">
-              <div className="c-carousel_container grid grid-cols-1 md:grid-cols-2 gap-6 container max-w-5xl mx-auto">
+            <div className="c-carousel" data-items-per-view="3">
+              <div className="c-carousel_container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container max-w-7xl mx-auto">
                 {PREFAB_OPPORTUNITIES.map((opp) => (
                   <div key={opp.id} className="c-carousel_item @container">
                     <article className="c-tile-card -default h-full">
@@ -742,7 +743,7 @@ export default function LaunchPage() {
                           {opp.shortDescription}
                         </p>
                         <p className="font-mono text-xs font-bold text-black">
-                          Est. Capital: {opp.estimatedCapital}
+                          {opp.estimatedCapital}
                         </p>
                       </div>
                       <div className="c-tile-card_image aspect-[16/10]">

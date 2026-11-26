@@ -553,7 +553,7 @@ export default function AiWebPage() {
               POWERED BY AUDITFLOW
             </span>
             <span className="font-mono text-[10px] uppercase text-neutral-600 border-l border-neutral-300 pl-2.5 group-hover:text-black transition-colors font-semibold">
-              // AUDITFLOW.INK &rarr;
+              // AUDITFLOW.INK →
             </span>
           </a>
           <p className="text-xs font-mono text-neutral-600 mt-4 max-w-lg mx-auto leading-relaxed">

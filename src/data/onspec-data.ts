@@ -17,6 +17,7 @@ export interface PillarSpec {
 
 export type OpportunityCategory =
   | "Automated Retail"
+  | "Automated Food & Hospitality"
   | "Physical Infrastructure"
   | "Digital & Ecommerce"
   | "Semi-Automated";
@@ -113,8 +114,8 @@ export const HERO_TELEMETRY_ITEMS = [
   {
     index: "01",
     code: "LAUNCH // AUTOMATED DISPENSERS",
-    title: "Turnkey Perfume & Hygiene Dispensers",
-    metric: "2 Flagship Models",
+    title: "Turnkey Automated Dispensers & Meal Stations",
+    metric: "3 Flagship Models",
     href: "/businesses",
   },
   {
@@ -141,12 +142,12 @@ export const HERO_TELEMETRY_ITEMS = [
 ];
 
 export const MARQUEE_TICKER_ITEMS = [
-  "01 // LUXURY PERFUME AUTOMATED DISPENSERS : CYPRUS & EU",
-  "02 // HYGIENE, PERIOD CARE & ANTISEPTIC VENDING STATIONS",
-  "03 // HIGH-CONVERTING NEXT.JS WEB PLATFORMS & PORTALS",
-  "04 // 24/7 AUTONOMOUS AI & WHATSAPP CUSTOMER CONCIERGES",
-  "05 // PROFESSIONAL WEBSITE DIAGNOSTICS & CRO TEARDOWNS",
-  "06 // CYPRUS CORPORATE & LEGAL PROFESSIONAL NETWORK",
+  "01 // LUXURY PERFUME AUTOMATED DISPENSERS : LOCATIONS & LEGAL READY",
+  "02 // HYGIENE, PERIOD WELLNESS & ANTISEPTIC VENDING STATIONS",
+  "03 // ON-DEMAND HOT FOOD & REFRIGERATED MEAL HEATING STATIONS",
+  "04 // HIGH-CONVERTING NEXT.JS WEB PLATFORMS & PORTALS",
+  "05 // 24/7 AUTONOMOUS AI & WHATSAPP CUSTOMER CONCIERGES",
+  "06 // SENIOR WEBSITE CRO DIAGNOSTICS & CYPRUS LEGAL NETWORK",
 ];
 
 export const PILLARS: PillarSpec[] = [
@@ -154,24 +155,24 @@ export const PILLARS: PillarSpec[] = [
     id: "launch",
     index: "01",
     code: "PILLAR 01 // LAUNCH",
-    name: "Turnkey Automated Dispensers",
-    shortTitle: "Ready Dispensers",
-    fullTitle: "Turnkey Automated Perfume & Hygiene Dispensary Stations",
+    name: "Turnkey Automated Dispensers & Hot Meal Stations",
+    shortTitle: "Ready Dispensers & Meal Stations",
+    fullTitle: "Turnkey Automated Perfume, Hygiene & Hot Meal Stations",
     coreMessage: "You don’t have to start from scratch.",
-    headline: "High-margin automated retail dispensers engineered for rapid deployment.",
+    headline: "High-margin automated retail dispensers & hot meal stations engineered for rapid deployment.",
     description:
-      "We engineer, import, and install high-margin, fully autonomous retail machines across prime Cyprus locations: luxury automated perfume dispensers and essential period hygiene & antiseptic wellness stations.",
+      "We engineer, import, and install high-margin, fully autonomous retail and hot meal machines across prime Cyprus locations: luxury automated perfume dispensers, essential period hygiene & antiseptic wellness stations, and refrigerated on-demand hot food heating stations for workplaces and construction sites. All host locations and legal structures are ready for immediate execution.",
     href: "/businesses",
     ctaLabel: "Explore Ready Businesses",
     deliverables: [
-      "Prime location scouting & host agreements (Hotels, Clubs, Malls, Campuses)",
+      "Prime location scouting & host agreements (Hotels, Clubs, Malls, Workplaces, Sites)",
       "CE-certified smart dispensing hardware with contactless payment & telemetry",
-      "Direct wholesale fragrance and certified feminine/medical hygiene suppliers",
+      "Direct wholesale fragrance, medical hygiene, and certified fresh food suppliers",
       "Cyprus company incorporation & VAT registration via vetted independent counsel",
       "Turnkey installation, inventory commissioning & live owner mobile dashboard",
     ],
     telemetryMetric: "TURNKEY ASSETS",
-    telemetryValue: "2 Flagship Models",
+    telemetryValue: "3 Flagship Models",
   },
   {
     id: "automate",
@@ -336,8 +337,8 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "Turnkey luxury smart fragrance dispensing machines deployed in upscale beach clubs, 5-star hotel lobbies, nightlife venues, airport lounges, and high-end shopping malls.",
     fullDescription:
       "An ultra-high-margin automated retail asset engineered for modern luxury foot-traffic environments. Dispenses precision micro-mists and pocket travel decants of designer and niche fragrances. Features capacitive touchscreens, airtight anti-evaporation seals, pneumatic dosing, contactless Apple Pay / Google Pay, and cloud telemetry monitoring real-time fragrance levels, daily sales, and temperature regulation across Cyprus venues.",
-    investmentTier: "Tier 1 : High Margin Luxury Asset (85%+ Gross Margins)",
-    estimatedCapital: "€8,500 to €28,000 (1 to 3 Turnkey Units)",
+    investmentTier: "Turnkey Asset (Locations & Legal Structure Ready)",
+    estimatedCapital: "Scope on Request (Locations & Legal Structure Ready)",
     timeline: "3 to 5 Weeks to Live Operation",
     locationStrategy: "Luxury Beach Clubs, 5-Star Hotel Lobbies, Nightclubs, Marina Plazas & Premium Malls in Limassol, Nicosia, Paphos & Ayia Napa",
     autonomyLevel: "95% Autonomous (Cloud Telemetry + Rapid Cartridge Swap)",
@@ -358,7 +359,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       { step: "STAGE 02", title: "Host Location Agreements", detail: "Negotiating revenue-share or fixed monthly floor-space lease contracts with venue operators." },
       { step: "STAGE 03", title: "Hardware Procurement", detail: "Importing CE-certified precision pneumatic fragrance dispensers with tamper-resistant casing." },
       { step: "STAGE 04", title: "Wholesale Fragrance Supply Lines", detail: "Securing certified original fragrance stock and specialized decant refill cartridges." },
-      { step: "STAGE 05", title: "Financial Modeling & Pricing", detail: "Configuring micro-spray pricing (€2 to €5) and pocket decants (€10 to €25) delivering 85%+ margins." },
+      { step: "STAGE 05", title: "Financial Modeling & Pricing", detail: "Configuring micro-spray and pocket decant margin optimization delivering high gross yields." },
       { step: "STAGE 06", title: "Cyprus Corporate Setup", detail: "Company formation, bank accounts, and VAT compliance via independent legal counsel." },
       { step: "STAGE 07", title: "Telemetry & Payment Configuration", detail: "Activating 4G SIM, Nayax cashless reader, and real-time smartphone revenue/volume dashboard." },
       { step: "STAGE 08", title: "Commissioning & Handover", detail: "On-site calibration, initial fragrance loading, test transactions, and full operational sign-off." },
@@ -370,7 +371,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       { label: "PAYMENT SYSTEM", value: "EMV Contactless / Apple Pay / Google Pay" },
       { label: "TELEMETRY", value: "4G Cloud Telemetry (Live Volume & Sales)" },
       { label: "FOOTPRINT", value: "0.45m² Compact Luxury Freestanding / Wall-Mount" },
-      { label: "GROSS MARGIN", value: "82% to 91% on Sprays & Decants" },
+      { label: "GROSS MARGIN", value: "High Yield / Turnkey Revenue" },
       { label: "JURISDICTION", value: "Cyprus & European Union Compliant" },
     ],
     cyprusSetupNotes:
@@ -388,8 +389,8 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       "Discreet, cloud-connected self-service hygiene stations installed in corporate towers, universities, shopping malls, fitness clubs, beach clubs, and transit hubs.",
     fullDescription:
       "Essential, recession-proof automated retail addressing immediate personal care needs. Dispenses premium organic tampons, pads, menstrual cups, sanitary disposal kits, pocket antiseptic sprays, first-aid cleaning wipes, antibacterial hand kits, and emergency travel personal care. Engineered with antimicrobial steel, contactless EMV/NFC payment, optical drop sensors, and 24/7 cloud telemetry tracking inventory thresholds and restocking alerts.",
-    investmentTier: "Tier 1 : Essential Recurring Demand & Fast Payback",
-    estimatedCapital: "€7,500 to €24,000 (1 to 3 Turnkey Units)",
+    investmentTier: "Turnkey Asset (Locations & Legal Structure Ready)",
+    estimatedCapital: "Scope on Request (Locations & Legal Structure Ready)",
     timeline: "3 to 5 Weeks to Live Operation",
     locationStrategy: "Corporate Office Restrooms & Lobbies, Universities, Gym & Wellness Complexes, Shopping Malls, Beach Promenades & High-Traffic Public Venues in Cyprus",
     autonomyLevel: "94% Autonomous (Cloud Telemetry + Scheduled Monthly Restock)",
@@ -410,7 +411,7 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       { step: "STAGE 02", title: "Placement Agreement Negotiation", detail: "Securing multi-year host agreements with university boards, property managers, and facility executives." },
       { step: "STAGE 03", title: "Machine Fabrication & Delivery", detail: "Procuring slimline, vandal-resistant dispensers with antimicrobial touch surfaces." },
       { step: "STAGE 04", title: "Certified Supplier Sourcing", detail: "Establishing supply chains with certified organic period care brands, antiseptic manufacturers, and travel kit distributors." },
-      { step: "STAGE 05", title: "Planogram & Price Strategy", detail: "Optimizing slot layout for rapid-need items: emergency period care, antiseptic wipes, sanitizers, oral care." },
+      { step: "STAGE 05", title: "Planogram & Yield Strategy", detail: "Optimizing slot layout for rapid-need items: emergency period care, antiseptic wipes, sanitizers, oral care." },
       { step: "STAGE 06", title: "Legal & Compliance Structuring", detail: "Cyprus business setup and health/sanitary trade registration managed via independent counsel." },
       { step: "STAGE 07", title: "Telemetry & Threshold Alert Setup", detail: "Cloud system sends automated SMS/email alerts when any SKU drops below 20% inventory." },
       { step: "STAGE 08", title: "Commissioning & Restock Route Handover", detail: "Initial loading, cashless payment validation, and restocking logistics playbook delivery." },
@@ -423,11 +424,63 @@ export const PREFAB_OPPORTUNITIES: PrefabOpportunity[] = [
       { label: "HOUSING", value: "Heavy-Gauge Antimicrobial Powder-Coated Steel" },
       { label: "TELEMETRY", value: "4G Cloud Stock Monitoring & Restock Alerts" },
       { label: "POWER", value: "Low-Power 12V DC / Standard 230V or Battery Backup" },
-      { label: "GROSS MARGIN", value: "65% to 78% on Medical & Hygiene Goods" },
+      { label: "GROSS MARGIN", value: "High Yield / Turnkey Revenue" },
       { label: "JURISDICTION", value: "Cyprus & European Union Compliant" },
     ],
     cyprusSetupNotes:
       "Includes corporate restroom placement coordination across Limassol financial district, university facilities in Nicosia, fitness chains, and commercial airport/transit hubs.",
+  },
+  {
+    id: "hot-food-meal-station",
+    specCode: "SPEC-L03 // HOT-MEAL-STATION",
+    title: "Automated Hot Food & On-Demand Meal Heating Station",
+    category: "Automated Food & Hospitality",
+    featured: true,
+    flagship: true,
+    tagline: "24/7 refrigerated on-demand heated chef-quality meals for construction sites, industrial zones & workplaces.",
+    shortDescription:
+      "Turnkey automated meal station that stores fresh, refrigerated prepared meals at <4°C and automatically heats them on-demand in seconds via rapid convection/induction chambers upon contactless order.",
+    fullDescription:
+      "An automated fresh food solution engineered for hungry shift workers, industrial workforces, and corporate teams where high quality hot meals are otherwise unavailable. It is not merely a microwave: the machine is an integrated commercial refrigeration and rapid heating system. It stores sealed, chef-prepared meals under strict digital temperature regulation (<4°C), and upon contactless payment, an internal robotic transfer delivers the meal into a high-speed convection/induction chamber, serving a piping-hot, gourmet meal in 45 to 90 seconds. Fully managed with cloud telemetry tracking shelf-life, HACCP safety compliance, real-time inventory, and automated restocking schedules across Cyprus locations.",
+    investmentTier: "Turnkey Asset (Locations & Legal Structure Ready)",
+    estimatedCapital: "Scope on Request (Locations & Legal Structure Ready)",
+    timeline: "3 to 5 Weeks to Live Operation",
+    locationStrategy: "Active Construction Sites, Industrial Logistics Hubs, Corporate Office Complexes & 24/7 Shift Work Centers in Cyprus (Limassol, Nicosia, Larnaca)",
+    autonomyLevel: "94% Autonomous (Automated Food Safety Log + Scheduled Daily Restock)",
+    weeklyOwnerHours: "3 to 5 hrs / week",
+    image:
+      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85",
+    whatsIncluded: [
+      "Host venue placement agreements pre-mapped for active construction developments, business parks & industrial facilities",
+      "Commercial smart hot meal dispensing station with integrated <4°C refrigeration and rapid heating chamber",
+      "Automated internal robotic transfer mechanism serving hot meals in 45-90 seconds upon contactless order",
+      "Contactless payment suite supporting Visa, Mastercard, Apple Pay, Google Pay & employee meal pass NFC",
+      "Wholesale partnerships with certified commercial catering kitchens and meal prep suppliers in Cyprus",
+      "Cyprus company incorporation, food safety / health compliance (HACCP) & municipal permits coordinated via legal network",
+      "White-glove delivery, site electrical commissioning, IoT temperature monitoring & owner management portal handover",
+    ],
+    executionStages: [
+      { step: "STAGE 01", title: "Site Demand & Footfall Mapping", detail: "Targeting large-scale construction sites, industrial parks, and corporate hubs lacking on-site hot food cafeterias." },
+      { step: "STAGE 02", title: "Host Location Agreements", detail: "Securing turnkey placement agreements with general contractors, facility managers, and business park operators." },
+      { step: "STAGE 03", title: "Station Hardware Procurement", detail: "Importing CE-certified dual-zone refrigerated and rapid-heat automated meal stations." },
+      { step: "STAGE 04", title: "Certified Culinary Supply Lines", detail: "Partnering with licensed local commercial kitchens for daily delivery of fresh, balanced, ready-to-heat gourmet meals." },
+      { step: "STAGE 05", title: "Menu Engineering & Shelf-Life Protocol", detail: "Optimizing hearty menu options (proteins, pastas, stews, vegetarian bowls) with tamper-evident sealed packaging." },
+      { step: "STAGE 06", title: "Food Safety & Cyprus Corporate Setup", detail: "Cyprus entity incorporation, sanitary licensing, and HACCP digital logging handled via legal counsel." },
+      { step: "STAGE 07", title: "IoT Cold-Chain & Cashless Setup", detail: "Connecting 4G IoT sensors for constant <4°C cold-chain verification, expiration date auto-lockout, and contactless telemetry." },
+      { step: "STAGE 08", title: "Site Launch & Restock Operations", detail: "On-site electrical connection, test heating cycles, and onboarding daily delivery restock routing." },
+    ],
+    technicalSpecs: [
+      { label: "SPEC ID", value: "OSP-MEAL-2026" },
+      { label: "HEATING TECH", value: "Rapid Dual Convection / Induction Chamber (45-90s)" },
+      { label: "STORAGE TEMP", value: "Continuous <4°C Active Commercial Refrigeration" },
+      { label: "MEAL CAPACITY", value: "60 to 110 Fresh Prepared Meal Trays" },
+      { label: "PAYMENT SYSTEM", value: "Contactless EMV / Apple Pay / Google Pay / RFID" },
+      { label: "SAFETY PROTOCOL", value: "Automated Expiration Lockout & Digital HACCP Log" },
+      { label: "TELEMETRY", value: "4G Cloud Monitoring (Live Stock, Temp & Sales)" },
+      { label: "JURISDICTION", value: "Cyprus & European Union Food Safety Compliant" },
+    ],
+    cyprusSetupNotes:
+      "Includes pre-negotiated placement agreements across high-growth construction developments in Limassol & Larnaca, port logistics zones, and suburban industrial work centers.",
   },
 ];
 
@@ -663,7 +716,7 @@ export const ECOSYSTEM_STAGES: EcosystemStage[] = [
   {
     step: "01",
     title: "Launch a Ready to Run Business",
-    description: "Start with a structured turnkey model (e.g., Smart Vending, Commercial EV Charging, Kiosk, or Ecommerce).",
+    description: "Start with a structured turnkey model (e.g., Luxury Perfume Stations, Essential Hygiene Dispensers, or On-Demand Hot Meal Stations).",
     pillarRef: "01 LAUNCH",
   },
   {
@@ -798,7 +851,7 @@ export const LAUNCH_FAQS = [
   {
     question: "Can I start with a single machine or kiosk and scale later?",
     answer:
-      "Yes. Many clients start with 1 to 2 smart vending units or a commercial EV charging station to validate cashflow and remote telemetry before expanding into a multi unit route across Limassol, Nicosia, Larnaca, or Paphos.",
+      "Yes. Many clients start with 1 to 2 automated dispenser units or a hot meal station to validate cashflow and remote telemetry before expanding into a multi unit route across Limassol, Nicosia, Larnaca, or Paphos.",
   },
   {
     question: "What happens if I have my own custom business idea that isn't listed in the catalog?",

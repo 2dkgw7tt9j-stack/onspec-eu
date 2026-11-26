@@ -15,11 +15,11 @@ import {
 import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 
 const BUDGET_TIERS = [
-  "Flexible / Need Quotation",
-  "< €10,000",
-  "€10,000 to €25,000",
-  "€25,000 to €50,000",
-  "€50,000 to €100,000+",
+  "Flexible / Need Scoping",
+  "Pilot / Seed Scope",
+  "Growth / Multi-Unit Rollout",
+  "Commercial Infrastructure",
+  "Custom Scope on Request",
 ];
 
 const TIMEFRAME_OPTIONS = [

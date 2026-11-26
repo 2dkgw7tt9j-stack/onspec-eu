@@ -33,11 +33,11 @@ const IDEA_ARCHETYPES = [
 ];
 
 const BUDGET_TIERS = [
-  "Need Onspec Cost Estimation (Open)",
-  "€10,000 to €25,000",
-  "€25,000 to €50,000",
-  "€50,000 to €100,000",
-  "€100,000+",
+  "Need Onspec Scope Estimation (Open)",
+  "Seed / Pilot Scope",
+  "Growth / Commercial Rollout",
+  "Enterprise Infrastructure",
+  "Custom Scope on Request",
 ];
 
 const TIMEFRAME_OPTIONS = [
@@ -53,7 +53,7 @@ const FOUNDRY_SPECS = [
     rows: [
       {
         label: "Preliminary Proposal Cost",
-        value: "€0 : Free Preliminary Proposal & Quotation",
+        value: "Free Preliminary Proposal & Feasibility Quotation",
       },
       {
         label: "Turnaround Window",

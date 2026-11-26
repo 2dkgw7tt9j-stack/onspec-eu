@@ -124,7 +124,7 @@ export function IntroSplashScreen() {
           >
             <span>Skip</span>
             <span className="text-[10px] text-neutral-600 sm:inline hidden group-hover:text-neutral-400">[ESC]</span>
-            <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+            <span className="transition-transform group-hover:translate-x-0.5">→</span>
           </button>
         </div>
 
