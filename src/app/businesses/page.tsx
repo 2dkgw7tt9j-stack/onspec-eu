@@ -35,7 +35,6 @@ export default function BusinessesPage() {
             <div
               key={opp.id}
               id={opp.id}
-              data-reveal=""
               className="bg-[#F7F8FA] border border-[#D5DBE3] rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-black hover:-translate-y-1 hover:shadow-md scroll-mt-24 group"
             >
               <div>

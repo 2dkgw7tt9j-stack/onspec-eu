@@ -298,8 +298,7 @@ export default function AiWebPage() {
         {/* Active Practice Editorial Layout (Zero Bulky Nested Boxes) */}
         <article
           key={currentPractice.code}
-          data-reveal=""
-          className="border border-neutral-300 rounded-2xl p-6 sm:p-8 md:p-10 bg-white shadow-xs transition-all"
+          className="border border-neutral-300 rounded-2xl p-6 sm:p-8 md:p-10 bg-white shadow-xs transition-all animate-fadeIn"
         >
           {/* Header Eyebrow */}
           <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-neutral-200">
