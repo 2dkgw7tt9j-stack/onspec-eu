@@ -18,6 +18,8 @@ const publicPaths = [
   "/legal/cookies",
   "/sitemap.xml",
   "/robots.txt",
+  "/llms.txt",
+  "/llms-full.txt",
   "/manifest.webmanifest",
 ];
 

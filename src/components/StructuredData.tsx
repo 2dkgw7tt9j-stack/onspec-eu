@@ -42,10 +42,13 @@ export function StructuredData() {
         availableLanguage: ["English", "Greek"],
       },
     ],
-    sameAs: [
-      "https://linkedin.com",
-      "https://youtube.com",
-      "https://x.com",
+    knowsAbout: [
+      "Turnkey Business Creation",
+      "Automated Retail & Dispensaries",
+      "Autonomous AI Agents",
+      "Next.js High Performance Web Engineering",
+      "WhatsApp Business API Pipelines",
+      "Cyprus Corporate Structuring & Legal Introductions",
     ],
   };
 

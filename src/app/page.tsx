@@ -742,14 +742,13 @@ export default function HomePage() {
                 className="c-hero-home_title text-heading-xl"
                 id="page-heading"
               >
-                <span className="sr-only">Your Vision.</span>
+                <span className="sr-only">ONSPEC — Your Vision. Our Execution. Ready Businesses and AI Automation in Cyprus and Europe.</span>
                 <SplitText
                   text="Your Vision."
                   className="c-hero-home_title_line"
                   extraDelay="0s"
                 />
 
-                <span className="sr-only">Our Execution.</span>
                 <div ref={titleLineRef}>
                   <SplitText
                     text="Our Execution."

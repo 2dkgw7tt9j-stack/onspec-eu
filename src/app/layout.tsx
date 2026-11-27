@@ -77,6 +77,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+  },
 };
 
 export default function RootLayout({
@@ -92,6 +95,8 @@ export default function RootLayout({
     >
       <head>
         <StructuredData />
+        <link rel="author" href="https://onspec.eu/about" />
+        <link rel="alternate" type="text/plain" href="https://onspec.eu/llms.txt" title="LLM Agent Manifest" />
         <script dangerouslySetInnerHTML={{ __html: "window.__pageLoadTime = Date.now();" }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
