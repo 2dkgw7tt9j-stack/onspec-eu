@@ -67,14 +67,24 @@ const STORAGE_KEY = "onspec_eu_submissions_v1";
 export async function submitOnspecEnquiry(
   payload: LeadSubmissionPayload
 ): Promise<SubmissionResult> {
+  // Attach invisible anti-bot timing token & empty honeypot trap
+  const enhancedPayload = {
+    ...payload,
+    _hp_ts: typeof window !== "undefined" && (window as unknown as { __pageLoadTime?: number }).__pageLoadTime
+      ? (window as unknown as { __pageLoadTime?: number }).__pageLoadTime
+      : Date.now() - 2500, // Safe default above bot latency threshold
+    _hp_trap: "", // Bots often populate all fields blindly
+  };
+
   // Attempt secure server API intake route first
   try {
     const res = await fetch("/api/enquiry", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "X-Requested-With": "XMLHttpRequest",
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify(enhancedPayload),
     });
 
     if (res.ok) {

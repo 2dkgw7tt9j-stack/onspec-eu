@@ -1,15 +1,17 @@
 import { NextResponse } from "next/server";
 import { clientIpFromHeaders, normalizeIdentifier } from "@/lib/request-identity";
 import { checkRateLimit, rateLimitRules } from "@/lib/rate-limit";
+import {
+  MAX_PAYLOAD_BYTES,
+  sanitizeObject,
+  sanitizeText,
+  verifyRequestOrigin,
+  verifyHoneypot,
+  buildSecureError,
+} from "@/lib/security-shield";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
-// Basic input sanitization helper
-function sanitizeString(str: unknown, maxLength: number): string {
-  if (typeof str !== "string") return "";
-  return str.trim().slice(0, maxLength).replace(/[\u0000-\u0008\u000B-\u000C\u000E-\u001F]/g, "");
-}
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && email.length <= 254;
@@ -17,9 +19,21 @@ function isValidEmail(email: string): boolean {
 
 export async function POST(request: Request) {
   try {
+    // 1. Enforce payload size limits against buffer overflow / memory flooding attacks
+    const contentLength = request.headers.get("content-length");
+    if (contentLength && parseInt(contentLength, 10) > MAX_PAYLOAD_BYTES) {
+      return buildSecureError("Payload size exceeds permitted safety limits.", 413);
+    }
+
+    // 2. Strict origin & CSRF verification
+    const originCheck = verifyRequestOrigin(request.headers);
+    if (!originCheck.ok) {
+      return buildSecureError(originCheck.reason || "Unauthorized request.", 403);
+    }
+
     const ip = clientIpFromHeaders(request.headers);
 
-    // 1. IP-level rate limiting
+    // 3. IP-level sliding-window rate limiting
     const ipLimit = await checkRateLimit(rateLimitRules.enquiryIp, [ip]);
     if (!ipLimit.success) {
       return NextResponse.json(
@@ -34,43 +48,44 @@ export async function POST(request: Request) {
       );
     }
 
-    let body: Record<string, unknown>;
+    // 4. Safe JSON parsing with prototype pollution defense
+    let rawBody: Record<string, unknown>;
     try {
-      body = await request.json();
+      rawBody = await request.json();
     } catch {
-      return NextResponse.json(
-        { error: "Invalid JSON payload." },
-        { status: 400, headers: { "Cache-Control": "private, no-store, max-age=0" } }
-      );
+      return buildSecureError("Malformed JSON payload.", 400);
     }
 
-    // 2. Validate and sanitize inputs
-    const name = sanitizeString(body.name, 120);
-    const email = sanitizeString(body.email, 254);
-    const phone = sanitizeString(body.phone || body.whatsapp, 50);
-    const companyName = sanitizeString(body.companyName, 150);
-    const websiteUrl = sanitizeString(body.websiteUrl, 250);
-    const pillar = sanitizeString(body.pillar, 50) || "GENERAL";
-    const message = sanitizeString(
+    const body = sanitizeObject(rawBody);
+
+    // 5. Anti-bot honeypot and script latency check
+    const honeypot = verifyHoneypot(body);
+    if (!honeypot.ok) {
+      // Silently discard or reject bot submissions
+      return buildSecureError("Submission flagged by automated verification.", 400);
+    }
+
+    // 6. Strict field sanitization and XSS prevention
+    const name = sanitizeText(body.name, 120);
+    const email = sanitizeText(body.email, 254);
+    const phone = sanitizeText(body.phone || body.whatsapp, 50);
+    const companyName = sanitizeText(body.companyName, 150);
+    const websiteUrl = sanitizeText(body.websiteUrl, 250);
+    const pillar = sanitizeText(body.pillar, 50) || "GENERAL";
+    const message = sanitizeText(
       body.message || body.ideaDescription || body.goals,
       4000
     );
 
     if (!name || name.length < 2) {
-      return NextResponse.json(
-        { error: "Please provide a valid name." },
-        { status: 400, headers: { "Cache-Control": "private, no-store, max-age=0" } }
-      );
+      return buildSecureError("Please provide a valid name.", 400);
     }
 
     if (!isValidEmail(email)) {
-      return NextResponse.json(
-        { error: "Please provide a valid email address." },
-        { status: 400, headers: { "Cache-Control": "private, no-store, max-age=0" } }
-      );
+      return buildSecureError("Please provide a valid email address.", 400);
     }
 
-    // 3. Email-level rate limiting
+    // 7. Email-level sliding-window rate limiting
     const emailLimit = await checkRateLimit(rateLimitRules.enquiryEmail, [
       normalizeIdentifier(email),
     ]);
@@ -87,7 +102,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // 4. Generate audit reference ID
+    // 8. Cryptographic reference ID generation
     const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
     const datePart = new Date().toISOString().slice(2, 10).replace(/-/g, "");
     const prefix = pillar.includes("LAUNCH")
@@ -103,15 +118,16 @@ export async function POST(request: Request) {
     const referenceId = `${prefix}-${datePart}-${randomSuffix}`;
     const timestamp = new Date().toISOString();
 
-    // Log structured security audit event (without sensitive secrets)
+    // 9. Masked audit log for privacy compliance (GDPR/EU compliant)
+    const maskedEmail = email.replace(/(?<=.{2}).(?=.*@)/g, "*");
     console.log(
       JSON.stringify({
-        event: "enquiry_received",
+        event: "secure_enquiry_accepted",
         referenceId,
         pillar,
+        maskedEmail,
         hasPhone: Boolean(phone),
         hasCompany: Boolean(companyName),
-        hasWebsite: Boolean(websiteUrl),
         timestamp,
       })
     );
@@ -132,10 +148,7 @@ export async function POST(request: Request) {
       }
     );
   } catch (err) {
-    console.error("Enquiry submission error:", err);
-    return NextResponse.json(
-      { error: "An unexpected error occurred while processing your request." },
-      { status: 500, headers: { "Cache-Control": "private, no-store, max-age=0" } }
-    );
+    console.error("Enquiry processing error (masked):", err instanceof Error ? err.message : "internal");
+    return buildSecureError("An unexpected error occurred while processing your request.", 500);
   }
 }

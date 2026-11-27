@@ -15,6 +15,7 @@ const contentSecurityPolicy = [
   "worker-src 'self' blob:",
   "manifest-src 'self'",
   "upgrade-insecure-requests",
+  "report-uri /api/csp-report",
 ].join("; ");
 
 const securityHeaders = [
@@ -54,6 +55,18 @@ const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
     value: "off",
+  },
+  {
+    key: "X-Permitted-Cross-Domain-Policies",
+    value: "none",
+  },
+  {
+    key: "X-Download-Options",
+    value: "noopen",
+  },
+  {
+    key: "Expect-CT",
+    value: "max-age=86400, enforce",
   },
   {
     key: "Strict-Transport-Security",
