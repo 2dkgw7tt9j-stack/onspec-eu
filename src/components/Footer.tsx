@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
+import { CookieSettingsButton } from "@/components/CookieConsentBanner";
 
 const FOOTER_PRIMARY_NAV = [
   { label: "Ready Businesses", href: "/businesses" },
@@ -277,18 +278,31 @@ export function Footer() {
             </p>
           </div>
           <div className="c-footer_legal_links">
-            <div className="c-footer_legal_terms">
+            <div className="c-footer_legal_terms flex flex-wrap items-center gap-x-4 gap-y-1">
               <Link
-                className="text-xs text-black/40 hover-underline"
-                href="/contact"
+                className="text-xs text-black/40 hover:text-black hover-underline"
+                href="/privacy"
               >
                 Privacy Policy
               </Link>
               <Link
-                className="text-xs text-black/40 hover-underline"
-                href="/contact"
+                className="text-xs text-black/40 hover:text-black hover-underline"
+                href="/terms"
               >
                 Terms of Use
+              </Link>
+              <Link
+                className="text-xs text-black/40 hover:text-black hover-underline"
+                href="/cookies"
+              >
+                Cookie Policy
+              </Link>
+              <CookieSettingsButton className="text-xs text-black/40 hover:text-black hover-underline" />
+              <Link
+                className="text-xs text-black/40 hover:text-black hover-underline"
+                href="/legal"
+              >
+                Legal Hub
               </Link>
             </div>
           </div>

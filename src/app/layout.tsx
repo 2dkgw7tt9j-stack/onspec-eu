@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { IntroSplashScreen } from "@/components/IntroSplashScreen";
+import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -72,6 +73,7 @@ export default function RootLayout({
             <Navbar />
             <main>{children}</main>
             <Footer />
+            <CookieConsentBanner />
           </div>
         </SmoothScrollProvider>
       </body>

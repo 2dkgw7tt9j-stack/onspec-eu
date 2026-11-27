@@ -9,6 +9,13 @@ const publicPaths = [
   "/services",
   "/about",
   "/contact",
+  "/legal",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/legal/privacy",
+  "/legal/terms",
+  "/legal/cookies",
   "/robots.txt",
   "/manifest.webmanifest",
 ];
