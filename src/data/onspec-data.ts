@@ -110,6 +110,49 @@ export const BRAND_INFO = {
     "Onspec connects clients with experienced independent legal professionals in Cyprus through its professional network. Onspec is a business solutions company and does not itself practice law or operate as a law firm.",
 };
 
+export interface WhatsAppDeskConfig {
+  id: "turnkey" | "ai" | "legal";
+  title: string;
+  subtitle: string;
+  phoneDisplay: string;
+  phoneNumber: string;
+  badge: string;
+  defaultMessage: string;
+}
+
+export const WHATSAPP_DESKS: WhatsAppDeskConfig[] = [
+  {
+    id: "turnkey",
+    title: "Turnkey Commercial Models",
+    subtitle: "Automated perfume kiosks, wellness stations & hot meal units",
+    phoneDisplay: "+357 94 055553",
+    phoneNumber: "35794055553",
+    badge: "Pillar 01",
+    defaultMessage:
+      "Hello ONSPEC Turnkey Desk, I would like to inquire about deploying an automated commercial model in Cyprus / EU.",
+  },
+  {
+    id: "ai",
+    title: "AI & Software Automation",
+    subtitle: "24/7 autonomous AI agents, WhatsApp API pipelines & web engineering",
+    phoneDisplay: "+357 95 604442",
+    phoneNumber: "35795604442",
+    badge: "Pillar 02",
+    defaultMessage:
+      "Hello ONSPEC AI Desk, I would like to inquire about autonomous AI workflow automation or custom software engineering.",
+  },
+  {
+    id: "legal",
+    title: "Legal Network & Consultations",
+    subtitle: "Cyprus Bar Association advocates, corporate structuring & residency",
+    phoneDisplay: "+357 94 055552",
+    phoneNumber: "35794055552",
+    badge: "Pillar 04",
+    defaultMessage:
+      "Hello ONSPEC Legal Desk, I would like to request an introduction to an independent Cyprus Bar Association advocate.",
+  },
+];
+
 export const HERO_TELEMETRY_ITEMS = [
   {
     index: "01",

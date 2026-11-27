@@ -139,16 +139,24 @@ export function FeasibilityCalculator() {
     setCalculated(false);
   };
 
+  // Dynamically route to the dedicated specialist desk
+  const targetDesk =
+    selections[0]?.id === "turnkey"
+      ? { phone: "35794055553", label: "Turnkey Desk (+357 94 055553)" }
+      : selections[0]?.id === "ai"
+      ? { phone: "35795604442", label: "AI Desk (+357 95 604442)" }
+      : { phone: "35794055552", label: "Legal & Venture Desk (+357 94 055552)" };
+
   // Generate customized WhatsApp inquiry URL
   const whatsappSummary = encodeURIComponent(
-    `Hello ONSPEC Desk, I ran the Operational Feasibility Calculator:\n` +
+    `Hello ONSPEC ${targetDesk.label}, I ran the Operational Feasibility Calculator:\n` +
       `• Track: ${selections[0]?.label || "Turnkey"}\n` +
       `• Location: ${selections[1]?.label || "Cyprus"}\n` +
       `• Objective: ${selections[2]?.label || "Automation"}\n` +
       `• Target Velocity: ${selections[3]?.label || "3-5 Weeks"}\n\n` +
       `I would like to review the formal Preliminary Proposal.`
   );
-  const whatsappUrl = `https://wa.me/35795604442?text=${whatsappSummary}`;
+  const whatsappUrl = `https://wa.me/${targetDesk.phone}?text=${whatsappSummary}`;
 
   return (
     <section className="my-fluid-2xl container" id="calculator">
@@ -439,7 +447,7 @@ export function FeasibilityCalculator() {
                   >
                     <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                   </svg>
-                  <span>Chat on WhatsApp (+357 95 604442)</span>
+                  <span>Chat with {targetDesk.label}</span>
                 </a>
 
                 <Link

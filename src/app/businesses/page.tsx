@@ -201,7 +201,7 @@ export default function BusinessesPage() {
             <p className="text-xs text-neutral-400">Our engineering team provides location suitability audits and hardware schematics.</p>
           </div>
           <a
-            href="https://wa.me/35795604442?text=Hello%20ONSPEC%20Desk%2C%20I%20would%20like%20to%20request%20the%20technical%20hardware%20blueprint%20and%20location%20suitability%20audit."
+            href="https://wa.me/35794055553?text=Hello%20ONSPEC%20Turnkey%20Desk%2C%20I%20would%20like%20to%20request%20the%20technical%20hardware%20blueprint%20and%20location%20suitability%20audit."
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-full bg-white text-black text-xs font-mono font-bold uppercase tracking-wider hover:bg-neutral-200 transition-colors shrink-0 cursor-pointer flex items-center gap-2"
@@ -209,7 +209,7 @@ export default function BusinessesPage() {
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
             </svg>
-            <span>Inquire on WhatsApp (+357 95 604442)</span>
+            <span>Inquire on WhatsApp (+357 94 055553)</span>
           </a>
         </div>
       </section>

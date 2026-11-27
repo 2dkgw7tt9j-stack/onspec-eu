@@ -131,22 +131,40 @@ export default function ContactPage() {
                       {BRAND_INFO.emailSecondary} →
                     </p>
                   </a>
-                  <a
-                    href={BRAND_INFO.whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-xl bg-black/80 backdrop-blur-md border border-white/20 p-4 hover:border-white transition-colors"
-                  >
+                  <div className="rounded-xl bg-black/80 backdrop-blur-md border border-white/20 p-4 space-y-2">
                     <p className="font-mono text-[10px] uppercase tracking-widest text-white/60">
-                      DIRECT WHATSAPP
+                      DIRECT WHATSAPP DESKS
                     </p>
-                    <p className="mt-1 text-sm font-semibold text-white">
-                      {BRAND_INFO.whatsappDisplay}
-                    </p>
-                    <p className="mt-0.5 text-xs text-white/70">
-                      Instant Executive Chat →
-                    </p>
-                  </a>
+                    <div className="space-y-2 text-xs">
+                      <a
+                        href="https://wa.me/35794055553?text=Hello%20ONSPEC%20Turnkey%20Desk%2C%20I%20would%20like%20to%20inquire%20about%20a%20commercial%20deployment."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between text-white hover:text-neutral-300 transition-colors"
+                      >
+                        <span className="truncate pr-2">Turnkey Commercial:</span>
+                        <span className="font-mono font-semibold shrink-0">+357 94 055553 →</span>
+                      </a>
+                      <a
+                        href="https://wa.me/35795604442?text=Hello%20ONSPEC%20AI%20Desk%2C%20I%20would%20like%20to%20inquire%20about%20AI%20automation."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between text-white hover:text-neutral-300 transition-colors"
+                      >
+                        <span className="truncate pr-2">AI & Software:</span>
+                        <span className="font-mono font-semibold shrink-0">+357 95 604442 →</span>
+                      </a>
+                      <a
+                        href="https://wa.me/35794055552?text=Hello%20ONSPEC%20Legal%20Desk%2C%20I%20would%20like%20to%20request%20a%20legal%20network%20consultation."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between text-white hover:text-neutral-300 transition-colors"
+                      >
+                        <span className="truncate pr-2">Legal Network:</span>
+                        <span className="font-mono font-semibold shrink-0">+357 94 055552 →</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="border-t border-white/20 pt-4 flex items-center justify-between text-xs text-white/60">
