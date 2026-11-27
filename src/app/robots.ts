@@ -1,0 +1,58 @@
+import type { MetadataRoute } from "next";
+
+const siteOrigin = "https://onspec.eu";
+
+const publicPaths = [
+  "/",
+  "/businesses",
+  "/ai-web",
+  "/services",
+  "/about",
+  "/contact",
+  "/robots.txt",
+  "/manifest.webmanifest",
+];
+
+const privatePaths = [
+  "/api",
+  "/api/",
+  "/api/*",
+  "/admin",
+  "/admin/",
+  "/admin/*",
+  "/internal",
+  "/internal/",
+  "/internal/*",
+];
+
+const crawlerUserAgents = [
+  "Googlebot",
+  "Google-Extended",
+  "Bingbot",
+  "Applebot",
+  "OAI-SearchBot",
+  "GPTBot",
+  "ChatGPT-User",
+  "ClaudeBot",
+  "Claude-User",
+  "PerplexityBot",
+  "Perplexity-User",
+];
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: crawlerUserAgents,
+        allow: publicPaths,
+        disallow: privatePaths,
+      },
+      {
+        userAgent: "*",
+        allow: publicPaths,
+        disallow: privatePaths,
+      },
+    ],
+    host: siteOrigin,
+  };
+}
