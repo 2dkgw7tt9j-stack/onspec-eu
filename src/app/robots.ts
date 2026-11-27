@@ -21,6 +21,7 @@ const publicPaths = [
   "/llms.txt",
   "/llms-full.txt",
   "/manifest.webmanifest",
+  "/favicon.ico",
 ];
 
 const privatePaths = [
