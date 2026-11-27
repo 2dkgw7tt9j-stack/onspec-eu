@@ -6,6 +6,7 @@ import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { IntroSplashScreen } from "@/components/IntroSplashScreen";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { FloatingNavPill } from "@/components/FloatingNavPill";
+import { StructuredData } from "@/components/StructuredData";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -15,20 +16,67 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "ONSPEC (onspec.eu) : Your Vision. Our Execution. | Business Solutions & AI Automation",
+  metadataBase: new URL("https://onspec.eu"),
+  title: {
+    default: "ONSPEC (onspec.eu) : Your Vision. Our Execution. | Business Solutions & AI Automation",
+    template: "%s | ONSPEC",
+  },
   description:
     "From launching a turnkey business in Cyprus & the EU to automating the one you already have, Onspec makes the complicated simple. Ready to launch businesses, AI & automation systems, custom idea execution, and Cyprus legal network.",
   keywords: [
     "Onspec",
     "onspec.eu",
     "Launch a business Cyprus",
+    "Turnkey business Cyprus",
     "Vending machine business Cyprus",
+    "Automated retail Cyprus",
     "AI automation Cyprus",
-    "WhatsApp automation",
+    "WhatsApp automation Cyprus",
     "Turnkey business Europe",
     "Cyprus legal network",
+    "Business automation Limassol",
   ],
+  authors: [{ name: "ONSPEC", url: "https://onspec.eu" }],
+  creator: "ONSPEC",
+  publisher: "ONSPEC",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://onspec.eu",
+    siteName: "ONSPEC",
+    title: "ONSPEC : Your Vision. Our Execution. | Business Solutions & AI Automation",
+    description:
+      "Turnkey businesses across Cyprus & the EU, 24/7 autonomous AI agents, and custom venture engineering. Engineered to operate.",
+    images: [
+      {
+        url: "/onspec_logo_dark_bg.png",
+        width: 1200,
+        height: 630,
+        alt: "ONSPEC — Engineered to Operate across Cyprus & the EU",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ONSPEC : Your Vision. Our Execution.",
+    description:
+      "Turnkey businesses in Cyprus & the EU, 24/7 autonomous AI agents, and custom venture engineering.",
+    images: ["/onspec_logo_dark_bg.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -43,6 +91,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <StructuredData />
         <script dangerouslySetInnerHTML={{ __html: "window.__pageLoadTime = Date.now();" }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
