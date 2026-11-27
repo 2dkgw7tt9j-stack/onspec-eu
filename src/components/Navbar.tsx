@@ -258,6 +258,36 @@ export function Navbar() {
                 maxHeight: "calc(100vh - 80px)",
               }}
             >
+              {/* Menu Header Close & Back Controls */}
+              <div className="flex items-center justify-between pb-4 mb-4 border-b border-black/10 w-full">
+                <button
+                  type="button"
+                  onClick={() => setMenuOpen(false)}
+                  className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-black/70 hover:text-black font-semibold cursor-pointer transition-all hover:-translate-x-0.5"
+                >
+                  <svg
+                    className="w-3.5 h-3.5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M10 13L5 8l5-5" />
+                  </svg>
+                  <span>Back to Page</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMenuOpen(false)}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono uppercase tracking-wider text-black/70 hover:text-black bg-black/5 hover:bg-black/10 rounded-full transition-colors cursor-pointer"
+                >
+                  <span>Close Menu</span>
+                  <span className="font-bold">✕</span>
+                </button>
+              </div>
+
               {/* Right side on desktop: 4 oversized primary links + 2-column secondary link list */}
               <div className="c-menu_navigations">
                 <nav className="c-menu_primary" aria-label="Primary menu">

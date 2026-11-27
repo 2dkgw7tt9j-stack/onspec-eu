@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
+import { PageReturnBar } from "@/components/PageReturnBar";
 
 const SERVICES_LIST = [
   {
@@ -144,6 +145,7 @@ export default function ServicesPage() {
     <main className="bg-white text-black">
       {/* Editorial Hero Header */}
       <section className="container px-4 sm:px-6 pt-[16svh] md:pt-[22svh] pb-12 md:pb-16 text-center max-w-4xl mx-auto">
+        <PageReturnBar currentPage="Services" />
         <p className="font-mono text-xs uppercase tracking-widest text-black mb-4 font-semibold">
           [ ONSPEC SERVICES DIRECTORY ]
         </p>

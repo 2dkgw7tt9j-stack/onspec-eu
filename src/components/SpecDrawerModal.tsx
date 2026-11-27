@@ -113,6 +113,36 @@ export function SpecDrawerModal({
 
         {opportunity && (
           <div className="modal_inner c-wysiwyg w-full" data-modal-feature-inner>
+            {/* Top Navigation & Return Bar */}
+            <div className="flex items-center justify-between gap-4 pb-4 mb-4 border-b border-black/10">
+              <button
+                type="button"
+                onClick={onClose}
+                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-black/70 hover:text-black hover:-translate-x-0.5 transition-all cursor-pointer font-semibold"
+              >
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M10 13L5 8l5-5" />
+                </svg>
+                <span>Back to Opportunities</span>
+              </button>
+              <button
+                type="button"
+                onClick={onClose}
+                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono uppercase tracking-wider text-black/70 hover:text-black bg-black/5 hover:bg-black/10 rounded-full transition-colors cursor-pointer"
+              >
+                <span>Close</span>
+                <span className="font-bold">✕</span>
+              </button>
+            </div>
+
             {/* Category micro-label */}
             <span className="text-eyebrow block text-black/50 mb-2 pr-12">
               {opportunity.category} : {opportunity.specCode}
@@ -402,6 +432,35 @@ export function SpecDrawerModal({
                     </div>
                   </form>
                 )}
+
+                {/* Bottom Quick Return Bar */}
+                <div className="mt-8 pt-6 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <button
+                    type="button"
+                    onClick={onClose}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-black/20 text-xs font-mono uppercase tracking-wider text-black hover:bg-black hover:text-white transition-all cursor-pointer font-semibold"
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M10 13L5 8l5-5" />
+                    </svg>
+                    <span>Back to All Ready Businesses</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={onClose}
+                    className="text-xs font-mono uppercase tracking-wider text-black/50 hover:text-black underline transition-colors cursor-pointer"
+                  >
+                    Close Specification (✕)
+                  </button>
+                </div>
               </div>
             </div>
           </div>

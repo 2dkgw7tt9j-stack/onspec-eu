@@ -11,6 +11,7 @@ import {
   SCRATCH_VS_ONSPEC_COMPARISON,
 } from "@/data/onspec-data";
 import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
+import { PageReturnBar } from "@/components/PageReturnBar";
 
 const PILLAR_IMAGES: Record<string, string> = {
   launch: "/images/perfume-station.jpg",
@@ -66,6 +67,7 @@ export default function AboutPage() {
         id="page-heading"
       >
         <div className="max-w-[780px] m-auto space-y-6">
+          <PageReturnBar currentPage="About Onspec" />
           <p className="font-mono text-xs text-black uppercase tracking-widest font-semibold">
             ABOUT ONSPEC • {BRAND_INFO.domain.toUpperCase()}
           </p>

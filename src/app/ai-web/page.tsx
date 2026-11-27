@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
+import { PageReturnBar } from "@/components/PageReturnBar";
 
 interface PracticeCapability {
   code: string;
@@ -170,6 +171,7 @@ export default function AiWebPage() {
     <main className="bg-white text-black min-h-screen">
       {/* Editorial Studio Hero Header */}
       <section className="container px-4 sm:px-6 pt-[14svh] md:pt-[18svh] pb-10 text-center max-w-4xl mx-auto scroll-reveal">
+        <PageReturnBar currentPage="AI & Web" />
         <div className="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-neutral-100 px-3.5 py-1 text-[11px] font-mono uppercase tracking-widest text-black mb-4">
           <span className="h-1.5 w-1.5 rounded-full bg-black animate-pulse" />
           DIGITAL ENGINEERING STUDIO &bull; AUDITFLOW CAPABILITIES

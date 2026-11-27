@@ -7,6 +7,7 @@ import {
   EnquiryPillar,
   submitOnspecEnquiry,
 } from "@/lib/integrations-placeholder";
+import { PageReturnBar } from "@/components/PageReturnBar";
 
 const PILLAR_OPTIONS: { value: EnquiryPillar; label: string; code: string; desc: string }[] = [
   {
@@ -160,7 +161,8 @@ export default function ContactPage() {
         {/* Right Column: Lightship Split Editorial Heading + Pill Intake Form */}
         <div>
           <div className="flex flex-col">
-            <div className="text-center px-6 md:px-10 mt-fluid-2xl md:my-fluid-xl max-w-[600px] self-center">
+            <div className="text-center px-6 md:px-10 mt-fluid-2xl md:my-fluid-xl max-w-[600px] self-center w-full">
+              <PageReturnBar currentPage="Contact Desk" className="mb-6" />
               <h1 className="heading-md" id="page-heading">
                 <span className="text-black/40">We&apos;re here to help.</span>
                 <br />

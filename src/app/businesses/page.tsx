@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { PREFAB_OPPORTUNITIES, PrefabOpportunity } from "@/data/onspec-data";
 import { SpecDrawerModal } from "@/components/SpecDrawerModal";
+import { PageReturnBar } from "@/components/PageReturnBar";
 
 export default function BusinessesPage() {
   const [selectedOpportunity, setSelectedOpportunity] =
@@ -17,6 +18,7 @@ export default function BusinessesPage() {
     <main className="bg-white text-black min-h-screen">
       {/* Editorial Header */}
       <section className="container px-4 sm:px-6 pt-[14svh] md:pt-[18svh] pb-8 md:pb-12 text-center max-w-4xl mx-auto">
+        <PageReturnBar currentPage="Ready Businesses" />
         <p className="font-mono text-xs uppercase tracking-widest text-black mb-3 font-semibold">
           [ 03 PREFABRICATED COMMERCIAL MODELS ]
         </p>
