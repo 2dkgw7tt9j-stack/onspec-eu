@@ -16,6 +16,7 @@ const publicPaths = [
   "/legal/privacy",
   "/legal/terms",
   "/legal/cookies",
+  "/sitemap.xml",
   "/robots.txt",
   "/manifest.webmanifest",
 ];
@@ -60,6 +61,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: privatePaths,
       },
     ],
+    sitemap: `${siteOrigin}/sitemap.xml`,
     host: siteOrigin,
   };
 }
