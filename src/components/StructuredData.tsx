@@ -1,4 +1,5 @@
 import React from "react";
+import { HOMEPAGE_FAQS } from "@/data/onspec-data";
 
 export function StructuredData() {
   const organizationSchema = {
@@ -6,13 +7,30 @@ export function StructuredData() {
     "@type": "Organization",
     "@id": "https://onspec.eu/#organization",
     name: "ONSPEC",
-    alternateName: ["Onspec EU", "Onspec Solutions"],
+    alternateName: [
+      "Onspec",
+      "onspec.eu",
+      "ONSPEC EU",
+      "ONSPEC Cyprus",
+      "ONSPEC Solutions",
+      "Vision Craft & Ragi Group ONSPEC",
+    ],
     legalName: "ONSPEC (Vision Craft & Ragi Group)",
     url: "https://onspec.eu",
     logo: "https://onspec.eu/onspec_logo_transparent.png",
     image: "https://onspec.eu/onspec_logo_dark_bg.png",
     description:
-      "Onspec is a business creation and AI automation engineering firm based in Cyprus. We engineer ready to launch turnkey businesses, autonomous AI agents, and corporate legal networks across the European Union.",
+      "ONSPEC is a business venture creation and AI automation engineering firm based in Limassol, Cyprus. Engineered by Vision Craft & Ragi Group, we deliver ready-to-launch turnkey businesses, 24/7 autonomous AI agents, and corporate legal network introductions across Cyprus and the European Union.",
+    parentOrganization: {
+      "@type": "Organization",
+      name: "Vision Craft & Ragi Group",
+    },
+    brand: {
+      "@type": "Brand",
+      name: "ONSPEC",
+      slogan: "Your Vision. Our Execution. Engineered to Operate.",
+      logo: "https://onspec.eu/onspec_logo_transparent.png",
+    },
     address: {
       "@type": "PostalAddress",
       addressLocality: "Limassol",
@@ -58,11 +76,56 @@ export function StructuredData() {
     "@id": "https://onspec.eu/#website",
     url: "https://onspec.eu",
     name: "ONSPEC",
-    description: "Your Vision. Our Execution. Engineered to Operate.",
+    alternateName: ["Onspec", "ONSPEC EU", "onspec.eu", "ONSPEC Cyprus"],
+    description: "Your Vision. Our Execution. Engineered to Operate across Cyprus & the EU.",
     publisher: {
       "@id": "https://onspec.eu/#organization",
     },
     inLanguage: "en-US",
+  };
+
+  const siteNavigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://onspec.eu/#navigation",
+    name: "ONSPEC Primary Navigation",
+    itemListElement: [
+      {
+        "@type": "SiteNavigationElement",
+        position: 1,
+        name: "Ready Businesses",
+        description: "Turnkey prefabricated commercial business models in Cyprus & EU",
+        url: "https://onspec.eu/businesses",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 2,
+        name: "AI & Websites",
+        description: "Autonomous AI agents, WhatsApp pipelines & sub-second web apps",
+        url: "https://onspec.eu/ai-web",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 3,
+        name: "Services Directory",
+        description: "Complete venture capability catalog & custom execution",
+        url: "https://onspec.eu/services",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 4,
+        name: "About Onspec",
+        description: "The Four Pillars of Onspec & Vision Craft partnership",
+        url: "https://onspec.eu/about",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 5,
+        name: "Contact Desk",
+        description: "Direct Limassol operations desk & preliminary proposals",
+        url: "https://onspec.eu/contact",
+      },
+    ],
   };
 
   const servicesCatalogSchema = {
@@ -131,40 +194,14 @@ export function StructuredData() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What does Onspec do?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Onspec bridges the gap between having an idea and turning it into a functioning, automated commercial operation across Cyprus and the European Union. We engineer ready-to-launch physical business setups, autonomous AI software systems, and provide vetted Cyprus legal introductions.",
-        },
+    mainEntity: HOMEPAGE_FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
       },
-      {
-        "@type": "Question",
-        name: "How fast can a turnkey business be deployed in Cyprus?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Onspec's prefabricated automated units (such as luxury fragrance stations, wellness hygiene dispensers, and on-demand hot meal stations) deploy in 3 to 5 weeks end to end, with prime venues mapped and legal structures ready for execution.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What AI automation systems does Onspec build?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We architect sub-second Next.js web platforms, deploy 24/7 autonomous AI customer concierges, WhatsApp Business API pipelines, and multi-app webhook synchronizations that save businesses 25 to 35+ operational hours per week.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Does Onspec provide legal representation?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Onspec is a technology and business creation firm, not a law firm. For immigration, residency, and corporate law, Onspec connects clients directly with independent licensed advocates registered with the Cyprus Bar Association.",
-        },
-      },
-    ],
+    })),
   };
 
   return (
@@ -176,6 +213,10 @@ export function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationSchema) }}
       />
       <script
         type="application/ld+json"

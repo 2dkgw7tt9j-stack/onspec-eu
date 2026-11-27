@@ -14,12 +14,13 @@ const FOOTER_PRIMARY_NAV = [
 ];
 
 const FOOTER_SUBNAV = [
-  { label: "About OnSpec", href: "/about" },
+  { label: "About Onspec", href: "/about" },
   { label: "Ready Businesses", href: "/businesses" },
   { label: "Services Portfolio", href: "/services" },
   { label: "AI & Websites", href: "/ai-web" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Frequently Asked Questions", href: "/#faq" },
   { label: "Customer Journey", href: "/about#customer-journey" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export function Footer() {

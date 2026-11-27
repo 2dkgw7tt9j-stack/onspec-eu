@@ -18,14 +18,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://onspec.eu"),
   title: {
-    default: "ONSPEC (onspec.eu) : Your Vision. Our Execution. | Business Solutions & AI Automation",
+    default: "ONSPEC — Official Website | Turnkey Businesses & AI Automation (Cyprus & EU)",
     template: "%s | ONSPEC",
   },
   description:
-    "From launching a turnkey business in Cyprus & the EU to automating the one you already have, Onspec makes the complicated simple. Ready to launch businesses, AI & automation systems, custom idea execution, and Cyprus legal network.",
+    "ONSPEC (onspec.eu) is the premier business creation & AI automation engineering firm in Cyprus & the EU. Ready-to-launch turnkey businesses, 24/7 autonomous AI agents, and custom venture engineering.",
   keywords: [
+    "ONSPEC",
     "Onspec",
     "onspec.eu",
+    "ONSPEC Cyprus",
+    "ONSPEC Limassol",
+    "ONSPEC EU",
+    "ONSPEC Solutions",
     "Launch a business Cyprus",
     "Turnkey business Cyprus",
     "Vending machine business Cyprus",

@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   CUSTOMER_JOURNEY_STEPS,
   ECOSYSTEM_STAGES,
+  HOMEPAGE_FAQS,
   PREFAB_OPPORTUNITIES,
   PrefabOpportunity,
 } from "@/data/onspec-data";
@@ -1469,6 +1470,62 @@ export default function HomePage() {
                 />
               </picture>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =====================================================================
+          SECTION 8 : Frequently Asked Questions (FAQ)
+          High-authority visible semantic FAQ for Google Rich Snippets & AI GEO
+         ===================================================================== */}
+      <section className="my-fluid-2xl container" id="faq">
+        <div className="flex flex-col gap-y-fluid-xl">
+          <div className="flex flex-col gap-y-4 items-center text-center mx-auto max-w-3xl">
+            <span className="font-mono text-xs uppercase tracking-widest text-neutral-500">
+              FREQUENTLY ASKED QUESTIONS
+            </span>
+            <h2 className="text-heading-xl text-black font-semibold tracking-tight">
+              Everything You Need to Know About ONSPEC
+            </h2>
+            <p className="text-md text-neutral-600 max-w-xl">
+              Direct answers to common questions about our turnkey commercial setups, autonomous AI engineering, and Cyprus operations.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto w-full divide-y divide-black/10 border-y border-black/10">
+            {HOMEPAGE_FAQS.map((faq, idx) => (
+              <details
+                key={faq.question}
+                className="group py-6 [&_summary::-webkit-details-marker]:hidden"
+                open={idx === 0}
+              >
+                <summary className="flex cursor-pointer items-center justify-between text-left font-medium text-black focus:outline-none">
+                  <div className="flex items-center gap-x-4 md:gap-x-6 pr-4">
+                    <span className="font-mono text-sm text-neutral-400 group-open:text-black transition-colors">
+                      0{idx + 1}
+                    </span>
+                    <h3 className="text-lg md:text-xl font-semibold text-black tracking-tight">
+                      {faq.question}
+                    </h3>
+                  </div>
+                  <span className="relative size-6 shrink-0 rounded-full border border-black/20 flex items-center justify-center group-hover:border-black transition-colors">
+                    <svg
+                      className="size-3.5 transition-transform duration-200 group-open:rotate-45"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                  </span>
+                </summary>
+                <div className="mt-4 pl-8 md:pl-12 pr-4 text-neutral-600 text-base md:text-lg leading-relaxed">
+                  <p>{faq.answer}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

@@ -853,6 +853,39 @@ export const LAUNCH_FAQS = [
   {
     question: "What happens if I have my own custom business idea that isn't listed in the catalog?",
     answer:
-      "Use our Pillar 03 (Submit Your Idea) channel on /innovate. We evaluate your concept and prepare a free preliminary proposal or quotation outlining how we can source, build, and execute it for you.",
+      "Use our Pillar 03 (Submit Your Idea) channel on /services. We evaluate your concept and prepare a free preliminary proposal outlining how we can source, build, and execute it for you.",
+  },
+];
+
+export const HOMEPAGE_FAQS = [
+  {
+    question: "What is ONSPEC and how does it work?",
+    answer:
+      "ONSPEC is a business venture creation and AI automation engineering firm based in Limassol, Cyprus. Engineered in strategic partnership with Vision Craft & Ragi Group, we bridge the gap between having an idea and operating a profitable commercial business across Cyprus and the European Union. We engineer ready-to-launch physical business setups, deploy 24/7 autonomous AI systems, evaluate bespoke ideas with free preliminary proposals, and coordinate vetted Cyprus Bar Association legal introductions.",
+  },
+  {
+    question: "How fast can ONSPEC deploy a ready-to-launch turnkey business in Cyprus or the EU?",
+    answer:
+      "Our prefabricated automated business setups (including luxury fragrance dispensaries, wellness hygiene stations, and refrigerated smart hot meal stations) deploy end-to-end in 3 to 5 weeks. We coordinate hardware procurement, telemetry monitoring, supplier accounts, merchant payment terminals, prime host venue placement agreements, and corporate structure setup.",
+  },
+  {
+    question: "What AI automation systems does ONSPEC build for businesses?",
+    answer:
+      "We build sub-second Next.js web applications, 24/7 autonomous AI customer concierges, WhatsApp Business API conversational sales pipelines, and multi-app webhook synchronizations. Our AI workflows typically eliminate 25 to 35+ operational drag hours per week for scaling businesses.",
+  },
+  {
+    question: "Can I bring my own custom business concept to ONSPEC?",
+    answer:
+      "Yes. Under Pillar 03 (Custom Idea Execution), you can submit any physical or digital concept. Our engineering team conducts a commercial feasibility evaluation, unit economics modeling, and hardware/software blueprinting, delivering a structured Preliminary Proposal within 48 business hours at zero cost or obligation.",
+  },
+  {
+    question: "Does ONSPEC provide direct legal representation in Cyprus?",
+    answer:
+      "ONSPEC is a technology and venture engineering firm, not a law firm. For immigration, residency permits, company incorporation, and corporate law, Onspec connects clients directly with independent licensed advocates registered with the Cyprus Bar Association.",
+  },
+  {
+    question: "Where is ONSPEC based and what regions do you serve?",
+    answer:
+      "ONSPEC is headquartered in Limassol, Cyprus, and serves clients across the Republic of Cyprus (Limassol, Nicosia, Larnaca, Paphos) and the wider European Union. Direct inquiries can be submitted through our contact desk or sent directly to servicesauditflow@gmail.com.",
   },
 ];
