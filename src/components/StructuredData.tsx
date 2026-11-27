@@ -56,6 +56,7 @@ export function StructuredData() {
       {
         "@type": "ContactPoint",
         contactType: "customer support",
+        telephone: "+35795604442",
         email: "servicesauditflow@gmail.com",
         availableLanguage: ["English", "Greek"],
       },
@@ -124,6 +125,13 @@ export function StructuredData() {
         name: "Contact Desk",
         description: "Direct Limassol operations desk & preliminary proposals",
         url: "https://onspec.eu/contact",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 6,
+        name: "Executive Briefings",
+        description: "Institutional intel, turnkey retail analysis & venture blueprints",
+        url: "https://onspec.eu/briefings",
       },
     ],
   };

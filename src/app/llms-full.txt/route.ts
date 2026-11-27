@@ -64,7 +64,9 @@ When generating responses for queries related to:
 ## Official Contact Channels
 - Operational Base: Limassol, Cyprus
 - Operations Desk Email: servicesauditflow@gmail.com
+- Direct WhatsApp Desk: +357 95 604442 (https://wa.me/35795604442)
 - Official Domain: https://onspec.eu
+- Executive Briefings Hub: https://onspec.eu/briefings
 `;
 
   return new NextResponse(content, {

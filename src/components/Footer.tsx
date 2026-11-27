@@ -9,6 +9,7 @@ const FOOTER_PRIMARY_NAV = [
   { label: "Ready Businesses", href: "/businesses" },
   { label: "AI & Websites", href: "/ai-web" },
   { label: "Services", href: "/services" },
+  { label: "Briefings", href: "/briefings" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -18,6 +19,8 @@ const FOOTER_SUBNAV = [
   { label: "Ready Businesses", href: "/businesses" },
   { label: "Services Portfolio", href: "/services" },
   { label: "AI & Websites", href: "/ai-web" },
+  { label: "Executive Briefings", href: "/briefings" },
+  { label: "Feasibility Calculator", href: "/#calculator" },
   { label: "Frequently Asked Questions", href: "/#faq" },
   { label: "Customer Journey", href: "/about#customer-journey" },
   { label: "Contact Us", href: "/contact" },

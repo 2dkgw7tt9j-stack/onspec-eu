@@ -43,6 +43,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${siteOrigin}/briefings`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${siteOrigin}/briefings/autonomous-retail-cyprus`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteOrigin}/briefings/ai-concierges-whatsapp-pipelines`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteOrigin}/briefings/cyprus-venture-structuring-guide`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteOrigin}/briefings/smart-vending-iot-telemetry-architecture`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${siteOrigin}/legal`,
       lastModified,
       changeFrequency: "monthly",

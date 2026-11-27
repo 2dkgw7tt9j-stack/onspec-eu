@@ -6,6 +6,7 @@ import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { IntroSplashScreen } from "@/components/IntroSplashScreen";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { FloatingNavPill } from "@/components/FloatingNavPill";
+import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 import { StructuredData } from "@/components/StructuredData";
 
 export const viewport: Viewport = {
@@ -145,6 +146,7 @@ export default function RootLayout({
             <Footer />
             <CookieConsentBanner />
             <FloatingNavPill />
+            <WhatsAppFloatingButton />
           </div>
         </SmoothScrollProvider>
       </body>

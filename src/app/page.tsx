@@ -10,6 +10,7 @@ import {
   PrefabOpportunity,
 } from "@/data/onspec-data";
 import { SpecDrawerModal } from "@/components/SpecDrawerModal";
+import { FeasibilityCalculator } from "@/components/FeasibilityCalculator";
 import { submitOnspecEnquiry } from "@/lib/integrations-placeholder";
 
 /**
@@ -1473,6 +1474,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* =====================================================================
+          SECTION 7.5 : Interactive Operational Feasibility Calculator
+         ===================================================================== */}
+      <FeasibilityCalculator />
 
       {/* =====================================================================
           SECTION 8 : Frequently Asked Questions (FAQ)

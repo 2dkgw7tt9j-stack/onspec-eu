@@ -9,6 +9,8 @@ const publicPaths = [
   "/services",
   "/about",
   "/contact",
+  "/briefings",
+  "/briefings/*",
   "/legal",
   "/privacy",
   "/terms",

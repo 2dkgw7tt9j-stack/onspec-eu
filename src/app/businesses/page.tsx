@@ -120,6 +120,100 @@ export default function BusinessesPage() {
         </div>
       </section>
 
+      {/* =====================================================================
+          TECHNICAL HARDWARE & ARCHITECTURE BLUEPRINT SECTION
+         ===================================================================== */}
+      <section className="container px-4 sm:px-6 pb-20 md:pb-28 max-w-6xl mx-auto border-t border-neutral-200 pt-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <span className="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-2">
+            ENGINEERING SPECIFICATION
+          </span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-black">
+            Hardware Architecture & Remote Telemetry
+          </h2>
+          <p className="text-neutral-600 text-sm sm:text-base mt-3 max-w-2xl mx-auto">
+            Industrial components engineered for continuous unattended operation across Cyprus and the European Union. Zero cashier overhead, encrypted payment routing, and real-time cloud oversight.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Spec Card 01 */}
+          <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-200/80 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-xs text-neutral-400">01 // TELEMETRY</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            </div>
+            <h3 className="text-base font-semibold text-black tracking-tight">
+              4G LTE / 5G Cloud Bus
+            </h3>
+            <p className="text-xs text-neutral-600 leading-relaxed">
+              Industrial dual-band cellular modem sending 30-second heartbeats to your smartphone dashboard. Remote reboot, over-the-air firmware updates, and live transaction logs.
+            </p>
+          </div>
+
+          {/* Spec Card 02 */}
+          <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-200/80 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-xs text-neutral-400">02 // TRANSACTIONS</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            </div>
+            <h3 className="text-base font-semibold text-black tracking-tight">
+              Contactless NFC & EMV
+            </h3>
+            <p className="text-xs text-neutral-600 leading-relaxed">
+              PCI-PTS certified cashless terminals supporting Apple Pay, Google Pay, Visa, and Mastercard with instant settlement into your independent Cyprus bank account.
+            </p>
+          </div>
+
+          {/* Spec Card 03 */}
+          <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-200/80 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-xs text-neutral-400">03 // SENSORS</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            </div>
+            <h3 className="text-base font-semibold text-black tracking-tight">
+              Active Environmental Safety
+            </h3>
+            <p className="text-xs text-neutral-600 leading-relaxed">
+              Precision temperature probes, optical fluid-level gauges, tilt/vibration tamper sensors, and automated WhatsApp replenishment alerts when inventory drops below 15%.
+            </p>
+          </div>
+
+          {/* Spec Card 04 */}
+          <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-200/80 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-xs text-neutral-400">04 // ENCLOSURE</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            </div>
+            <h3 className="text-base font-semibold text-black tracking-tight">
+              1.5mm Cold-Rolled Steel
+            </h3>
+            <p className="text-xs text-neutral-600 leading-relaxed">
+              Anti-shatter capacitive HD touch displays, electronic solenoid locks, corrosion-resistant powder coat, and bespoke brand vinyl wraps tailored to your venue.
+            </p>
+          </div>
+        </div>
+
+        {/* Action bar */}
+        <div className="mt-10 p-6 rounded-2xl bg-black text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="space-y-1 text-center sm:text-left">
+            <p className="text-sm font-semibold">Want to review the technical blueprint for a specific host venue?</p>
+            <p className="text-xs text-neutral-400">Our engineering team provides location suitability audits and hardware schematics.</p>
+          </div>
+          <a
+            href="https://wa.me/35795604442?text=Hello%20ONSPEC%20Desk%2C%20I%20would%20like%20to%20request%20the%20technical%20hardware%20blueprint%20and%20location%20suitability%20audit."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 rounded-full bg-white text-black text-xs font-mono font-bold uppercase tracking-wider hover:bg-neutral-200 transition-colors shrink-0 cursor-pointer flex items-center gap-2"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            <span>Inquire on WhatsApp (+357 95 604442)</span>
+          </a>
+        </div>
+      </section>
+
       {/* Blueprint Detail Drawer */}
       <SpecDrawerModal
         opportunity={selectedOpportunity}

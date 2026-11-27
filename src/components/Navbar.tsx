@@ -34,6 +34,7 @@ const PRIMARY_LINKS = [
   { label: "Ready Businesses", href: "/businesses" },
   { label: "AI & Websites", href: "/ai-web" },
   { label: "Services", href: "/services" },
+  { label: "Briefings", href: "/briefings" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -44,6 +45,8 @@ const SECONDARY_LINKS = [
   { label: "Ready Businesses", href: "/businesses" },
   { label: "Services Portfolio", href: "/services" },
   { label: "AI & Automation", href: "/ai-web" },
+  { label: "Executive Briefings", href: "/briefings" },
+  { label: "Feasibility Engine", href: "/#calculator" },
   { label: "Customer Journey", href: "/about#customer-journey" },
   { label: "Direct Contact", href: "/contact" },
 ];

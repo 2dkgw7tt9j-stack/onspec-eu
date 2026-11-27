@@ -103,8 +103,8 @@ export const BRAND_INFO = {
   region: "Cyprus & European Union",
   emailPrimary: "info@onspec.eu",
   emailSecondary: "hello@onspec.eu",
-  whatsappDisplay: "+357 99 000 000",
-  whatsappLink: "https://wa.me/35799000000",
+  whatsappDisplay: "+357 95 604442",
+  whatsappLink: "https://wa.me/35795604442",
   headquarters: "Limassol & Nicosia, Cyprus : EU Operations Desk",
   legalDisclaimer:
     "Onspec connects clients with experienced independent legal professionals in Cyprus through its professional network. Onspec is a business solutions company and does not itself practice law or operate as a law firm.",
