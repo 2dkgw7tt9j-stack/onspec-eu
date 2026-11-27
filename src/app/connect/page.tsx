@@ -27,6 +27,30 @@ export default function ConnectPage() {
     document.documentElement.classList.add("is-ready", "is-loaded");
   }, []);
 
+  // Prevent background scrolling when legal modal is open
+  useEffect(() => {
+    const html = document.documentElement;
+    if (activeMemberModal) {
+      html.classList.add("has-modal-open");
+    } else {
+      html.classList.remove("has-modal-open");
+    }
+    return () => {
+      html.classList.remove("has-modal-open");
+    };
+  }, [activeMemberModal]);
+
+  // Escape key closes modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && activeMemberModal) {
+        setActiveMemberModal(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeMemberModal]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -666,10 +690,20 @@ export default function ConnectPage() {
         className={`c-modal-member modal ${
           activeMemberModal ? "is-active" : ""
         }`}
+        data-lenis-prevent
+        role="dialog"
+        aria-modal="true"
         aria-hidden={!activeMemberModal}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) setActiveMemberModal(null);
+        }}
       >
         {activeMemberModal && (
-          <div className="c-modal-member_container modal_container">
+          <div
+            className="c-modal-member_container modal_container"
+            data-lenis-prevent
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               type="button"
               aria-label="Close"

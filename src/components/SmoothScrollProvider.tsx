@@ -46,6 +46,23 @@ export function SmoothScrollProvider({
 
       lenisRef.current = lenis;
 
+      // Stop background smooth scrolling when modal or menu is active
+      const modalObserver = new MutationObserver(() => {
+        const isLocked =
+          html.classList.contains("has-modal-open") ||
+          html.classList.contains("has-menu-open");
+        if (isLocked) {
+          lenis.stop();
+        } else {
+          lenis.start();
+        }
+      });
+
+      modalObserver.observe(html, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+
       let rafId: number;
       function raf(time: number) {
         lenis.raf(time);
@@ -56,6 +73,7 @@ export function SmoothScrollProvider({
 
       return () => {
         window.removeEventListener("resize", updateViewportVars);
+        modalObserver.disconnect();
         cancelAnimationFrame(rafId);
         lenis.destroy();
         lenisRef.current = null;

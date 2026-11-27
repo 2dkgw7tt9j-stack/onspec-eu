@@ -551,6 +551,41 @@ body {
   box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.12) !important;
 }
 
+/* ==========================================================================
+   Modal Background Lock & Internal Smooth Scrolling
+   Prevents background page from scrolling while modal is active;
+   ensures modal content scrolls effortlessly with contained overscroll.
+   ========================================================================== */
+html.has-modal-open,
+body.has-modal-open {
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none !important;
+  overscroll-behavior: none !important;
+}
+
+.modal {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overscroll-behavior: contain !important;
+  z-index: 99999 !important;
+}
+
+.modal.is-active {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-y !important;
+  overscroll-behavior: contain !important;
+}
+
+.modal_container,
+.c-modal-member_container,
+.c-modal-feature_container {
+  overscroll-behavior: contain !important;
+}
+
 
 
 

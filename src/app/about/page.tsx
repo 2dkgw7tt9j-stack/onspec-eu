@@ -36,6 +36,30 @@ export default function AboutPage() {
     document.documentElement.classList.add("is-ready", "is-loaded");
   }, []);
 
+  // Prevent background scrolling when pillar modal is open
+  useEffect(() => {
+    const html = document.documentElement;
+    if (selectedPillarModal) {
+      html.classList.add("has-modal-open");
+    } else {
+      html.classList.remove("has-modal-open");
+    }
+    return () => {
+      html.classList.remove("has-modal-open");
+    };
+  }, [selectedPillarModal]);
+
+  // Escape key closes modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && selectedPillarModal) {
+        setSelectedPillarModal(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedPillarModal]);
+
   const activeStep =
     CUSTOMER_JOURNEY_STEPS[activeJourneyIdx] || CUSTOMER_JOURNEY_STEPS[0];
 
@@ -702,10 +726,21 @@ export default function AboutPage() {
         className={`c-modal-member modal ${
           selectedPillarModal ? "is-active" : ""
         }`}
+        data-lenis-prevent
+        role="dialog"
+        aria-modal="true"
         aria-hidden={!selectedPillarModal}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) setSelectedPillarModal(null);
+        }}
       >
         {selectedPillarModal && (
-          <div className="c-modal-member_container modal_container">
+          <div
+            className="c-modal-member_container modal_container"
+            data-lenis-prevent
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Circular Dark X Close Button in top-right */}
             <button
               type="button"
               aria-label="Close"
@@ -717,14 +752,49 @@ export default function AboutPage() {
                   <svg
                     aria-hidden="true"
                     className="svg-close"
+                    viewBox="0 0 20 20"
                     focusable="false"
                   >
-                    <use href="/assets/svgs/sprite.svg#close" />
+                    <path
+                      fill="currentColor"
+                      d="m10 9.2 6.5-6.3.3.4.3.4-6.5 6.3 6.5 6.3-.7.7-6.4-6.4-6.8 6.7-.7-.7L9.3 10 2.5 3.2l.3-.4.3-.4L10 9.2z"
+                    />
                   </svg>
                 </span>
               </span>
             </button>
+
             <div className="c-modal-member_inner modal_inner">
+              {/* Top Navigation & Return Bar */}
+              <div className="flex items-center justify-between gap-4 pb-4 mb-2 border-b border-black/10 pr-12">
+                <button
+                  type="button"
+                  onClick={() => setSelectedPillarModal(null)}
+                  className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-black/70 hover:text-black hover:-translate-x-0.5 transition-all cursor-pointer font-semibold"
+                >
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M10 13L5 8l5-5" />
+                  </svg>
+                  <span>Back to Four Pillars</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedPillarModal(null)}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono uppercase tracking-wider text-black/70 hover:text-black bg-black/5 hover:bg-black/10 rounded-full transition-colors cursor-pointer"
+                >
+                  <span>Close (Esc)</span>
+                  <span className="font-bold">✕</span>
+                </button>
+              </div>
+
               <div className="flex flex-col gap-y-fluid-sm pt-2">
                 <span className="c-icon text-black">
                   
@@ -785,6 +855,35 @@ export default function AboutPage() {
                     </span>
                   </Link>
                 </div>
+              </div>
+
+              {/* Bottom Quick Return Bar */}
+              <div className="mt-8 pt-6 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <button
+                  type="button"
+                  onClick={() => setSelectedPillarModal(null)}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-black/20 text-xs font-mono uppercase tracking-wider text-black hover:bg-black hover:text-white transition-all cursor-pointer font-semibold"
+                >
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M10 13L5 8l5-5" />
+                  </svg>
+                  <span>Back to Four Pillars</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedPillarModal(null)}
+                  className="text-xs font-mono uppercase tracking-wider text-black/50 hover:text-black underline transition-colors cursor-pointer"
+                >
+                  Close Modal (✕)
+                </button>
               </div>
             </div>
           </div>
